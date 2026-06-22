@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work-in-Progress (WIP) Tracking – Industrial RTLS Glossary</title>
+<meta name="description" content="The use of RTLS to monitor materials and products currently being processed through production. Provides real-time visibility to production status, identif">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#D97706;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Industrial Applications</span>
+  <span>›</span>
+  <span>Work-in-Progress (WIP) Tracking</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Industrial Applications</div>
+    <h1 class="term-title">Work-in-Progress (WIP) Tracking</h1>
+  </header>
+  <p class="def-short">The use of RTLS to monitor materials and products currently being processed through production. Provides real-time visibility to production status, identifies bottlenecks, and enables accurate production scheduling. Essential for lean manufacturing and just-in-time production.</p><p class="def-long">Work-in-Progress (WIP) tracking monitors semi-finished products, assemblies, and materials as they flow through manufacturing processes, providing real-time visibility of production status, inventory levels, and process performance. RTLS-based WIP tracking provides capabilities manual systems cannot match: Real-time location and status - knowing precisely where every WIP item is located at any moment without scanning, identifying which production step each item is in, and determining how long items have been in current state.</p><p class="def-long">Benefits from RTLS-based WIP tracking include: 30-50% reduction in WIP inventory levels through improved visibility enabling leaner production, 20-40% improvement in inventory accuracy from continuous tracking vs. periodic cycle counts, 15-30% cycle time reductions from bottleneck identification and elimination, 10-25% throughput improvements from optimized production flow and reduced delays, and enhanced customer responsiveness with accurate production status for delivery commitments.</p><p class="def-long">Technical implementation of WIP tracking includes: tagging strategies (attaching RTLS tags to product carriers, pallets, or containers vs. direct product attachment), zone definition creating virtual process areas matching production layout and workflow, tag-product association maintaining database linking tag IDs to product serial numbers, lots, or orders, and capacity planning ensuring RTLS supports maximum concurrent WIP volume with headroom for growth. ROI for WIP tracking stems primarily from: inventory reduction (WIP inventory decreasing 30-50% reducing carrying costs and freeing capital), cycle time improvement (faster production improving responsiveness and capacity), inventory accuracy (eliminating stock discrepancies and lost WIP reducing write-offs), and productivity (reduced search time, automated tracking eliminating manual data entry).</p>
+  <nav class="term-nav">
+    <a href="workflow-management.html" class="nav-prev">← Workflow Management</a>
+    <a href="yard-management.html" class="nav-next">Yard Management →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

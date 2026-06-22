@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penetration – Industrial RTLS Glossary</title>
+<meta name="description" content="The ability of radio signals to pass through obstacles like walls, floors, and materials. Varies significantly by frequency and material: lower frequencies">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#6B7280;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Technical Parameters</span>
+  <span>›</span>
+  <span>Penetration</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Technical Parameters</div>
+    <h1 class="term-title">Penetration</h1>
+  </header>
+  <p class="def-short">The ability of radio signals to pass through obstacles like walls, floors, and materials. Varies significantly by frequency and material: lower frequencies penetrate better but provide less positioning accuracy, concrete and metal severely attenuate signals. Understanding penetration characteristics is critical for RTLS design and anchor placement.</p><p class="def-long">Ability of radio signals to pass through obstacles, critical factor affecting RTLS coverage and accuracy. Material penetration characteristics for RTLS frequencies: (1) Drywall/wood - minimal attenuation (2-3 dB loss), signals easily penetrate multiple walls. (2) Concrete - moderate attenuation (8-15 dB per 15cm wall), multiple walls significantly reduce signal. (3) Brick - similar to concrete (6-12 dB), common in older industrial buildings. (4) Metal - severe attenuation (20-50+ dB), effectively blocks signals, causes reflections. (5) Glass - minimal attenuation for regular glass (2-5 dB), significant for metallized/tinted glass (10-20+ dB). (6) Water - high attenuation (significant absorption), includes human bodies (~70% water, causing 6-10 dB loss). Frequency penetration relationship: lower frequencies penetrate better (433 MHz better than 2.4 GHz better than 6 GHz better than UWB ~6-8 GHz). However, lower frequencies also mean larger antennas and reduced positioning accuracy, so frequency selection involves tradeoffs. Coverage planning tools simulate penetration: inputting facility construction materials and equipment layouts, propagation models predict signal strength and coverage, though actual measurements often show 20-40% worse performance than models (due to undocumented obstacles, irregular geometries). Understanding penetration characteristics of different RTLS technologies helps technology selection: UWB moderate penetration (good through drywall, challenging through concrete/metal), BLE/Wi-Fi similar penetration to UWB (2.4 GHz frequency), lower-frequency RFID better penetration (433/868/915 MHz), and optical systems (IR, laser) zero penetration (requiring strict line-of-sight).</p><p class="def-long">Penetration specifications rarely provided by vendors: manufacturers typically cite range in open environments, not real-world penetration performance.</p>
+  <nav class="term-nav">
+    <a href="pattern-recognition.html" class="nav-prev">← Pattern Recognition</a>
+    <a href="perimeter-control.html" class="nav-next">Perimeter Control →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

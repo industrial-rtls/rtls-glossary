@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Capacity – Industrial RTLS Glossary</title>
+<meta name="description" content="The maximum operational load an RTLS can handle including concurrent tags, updates per second, and data storage. Must account for peak scenarios. Exceeding">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#059669;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Performance Metrics &amp; KPIs</span>
+  <span>›</span>
+  <span>System Capacity</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Performance Metrics &amp; KPIs</div>
+    <h1 class="term-title">System Capacity</h1>
+  </header>
+  <p class="def-short">The maximum operational load an RTLS can handle including concurrent tags, updates per second, and data storage. Must account for peak scenarios. Exceeding capacity causes increased latency, missed updates, and potential instability.</p><p class="def-long">System capacity in industrial RTLS defines the maximum operational load the system can handle while maintaining specified performance levels including positioning accuracy, update rates, and latency. Tag capacity is often the primary specification: industrial RTLS systems range from small deployments (50-200 tags) through medium scale (500-2,000 tags) to enterprise scale (5,000+ tags). However, raw tag count oversimplifies capacity - system load depends on tag update rates: 1,000 tags at 1 Hz update rate generates 1,000 position calculations per second, while 100 tags at 10 Hz generates the same computational load. Capacity specifications should therefore state maximum tags at specified update rates (eg., 2,000 tags at 1 Hz or 500 tags at 10 Hz). Proper capacity planning requires: understanding application requirements (how many assets need tracking, required update rates for different applications, expected growth trajectory), analyzing system specifications (maximum capacity at different configuration levels), calculating total system load (sum of all concurrent demands), and including margin for growth and peak loads (typically 20-30% headroom beyond normal operation). Testing system capacity before full deployment is essential: stress testing with expected maximum tag count and update rates, monitoring performance metrics (CPU, memory, network utilization) under load, identifying bottlenecks and scaling limits, and validating that performance remains acceptable at maximum specified capacity. Industrial customers should specify capacity requirements clearly during procurement: expected tag count (current and 3-5 year projection), required update rates by application type, geographical coverage area, number of concurrent users and applications, and historical data retention requirements.</p>
+  <nav class="term-nav">
+    <a href="system-backup.html" class="nav-prev">← System Backup</a>
+    <a href="system-integration.html" class="nav-next">System Integration →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

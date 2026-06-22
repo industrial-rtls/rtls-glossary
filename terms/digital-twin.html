@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Twin – Industrial RTLS Glossary</title>
+<meta name="description" content="A virtual representation of physical facilities or processes integrating real-time RTLS data to mirror actual state and behavior. Combines RTLS position da">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#0369A1;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Industry-Specific Terms</span>
+  <span>›</span>
+  <span>Digital Twin</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Industry-Specific Terms</div>
+    <h1 class="term-title">Digital Twin</h1>
+  </header>
+  <p class="def-short">A virtual representation of physical facilities or processes integrating real-time RTLS data to mirror actual state and behavior. Combines RTLS position data with CAD models, IoT sensors, equipment status, and business systems. Enables real-time 3D visualization, historical replay, predictive simulation, and process mining. Applications include virtual facility tours, training environments, design validation, and optimization testing.</p><p class="def-long">Virtual replica of physical facility, assets, and processes that updates in real-time based on RTLS and other sensor data. Industrial digital twins integrate: 3D facility models (CAD-based or photogrammetric), real-time asset positions from RTLS (updated 1-10 Hz), equipment status from IoT sensors (temperature, vibration, power consumption), process data from MES/SCADA (production counts, quality metrics), and simulation engines predicting future states. Digital twin applications include: virtual facility monitoring (remote viewing of operations), scenario simulation (testing layout changes or process modifications without disrupting production), predictive analytics (forecasting bottlenecks or failures), training (operators practice on virtual facility before real operations), and remote troubleshooting (experts diagnose issues without site visits).</p><p class="def-long">Implementation challenges include: data integration from disparate sources, maintaining model accuracy as facility evolves, computational requirements for real-time updates (typical twin requires 8-32 GB RAM, multi-core processing), and justifying ROI (development costs $50k-500k depending on complexity). Most valuable for complex, high-value facilities where simulation and optimization benefits justify investment - automotive assembly plants, semiconductor fabs, large distribution centers. Basic digital twins (facility map with real-time positions) achievable at lower cost; sophisticated simulation-enabled twins require significant investment.</p>
+  <nav class="term-nav">
+    <a href="deployment.html" class="nav-prev">← Deployment</a>
+    <a href="direction-finding.html" class="nav-next">Direction Finding →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

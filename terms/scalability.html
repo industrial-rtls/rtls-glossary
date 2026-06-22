@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scalability – Industrial RTLS Glossary</title>
+<meta name="description" content="The ability of RTLS systems to grow and handle increasing loads without performance degradation. Includes scaling number of tracked tags, coverage area, da">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#6B7280;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Technical Parameters</span>
+  <span>›</span>
+  <span>Scalability</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Technical Parameters</div>
+    <h1 class="term-title">Scalability</h1>
+  </header>
+  <p class="def-short">The ability of RTLS systems to grow and handle increasing loads without performance degradation. Includes scaling number of tracked tags, coverage area, data volume, and concurrent users. Scalable architectures use distributed processing, cloud resources, and efficient data management. Critical consideration for large or growing deployments.</p><p class="def-long">Scalability in industrial RTLS refers to the system's ability to grow and adapt to changing requirements without fundamental redesign or performance degradation. As industrial facilities expand operations, add tracking applications, or extend deployments to additional areas, RTLS infrastructure must accommodate growth efficiently. Scalability manifests across multiple dimensions: tag capacity (supporting increasing numbers of simultaneously tracked assets from hundreds to thousands), geographical coverage (extending from pilot areas to entire facilities or multiple sites), positioning update rates (maintaining performance as demand increases), data storage and processing (handling growing volumes of historical location data), and user capacity (supporting more concurrent application users and API consumers). Industrial RTLS scalability requirements vary significantly: a pilot tracking 50 assets in a single department differs fundamentally from enterprise deployment tracking 5,000 assets across multiple facilities. System architecture determines scalability potential - distributed architectures with multiple positioning servers, load balancing, and horizontal scaling capabilities outperform monolithic designs with inherent capacity limits. Industrial deployments often implement phased scaling: starting with pilot deployments (50-200 tags) to validate technology and ROI, expanding to facility-wide coverage (500-2,000 tags), and ultimately achieving enterprise deployment (5,000+ tags across multiple sites). Testing scalability before full deployment is critical - proof-of-concept projects should include stress testing at expected maximum capacity to verify performance. Vendor specifications should clearly state system capacity limits: maximum tags per anchor, maximum anchors per positioning server, maximum concurrent positions calculated per second, and maximum historical data retention with acceptable query performance.</p>
+  <nav class="term-nav">
+    <a href="sage-analytics.html" class="nav-prev">← Sage Analytics</a>
+    <a href="sensmap.html" class="nav-next">Sensmap →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

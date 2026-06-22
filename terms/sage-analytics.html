@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sage Analytics – Industrial RTLS Glossary</title>
+<meta name="description" content="Sewio's starter analytics tool designed for pilots and proof-of-concept projects that demonstrates insights available from RTLS data. Presents and analyzes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#0D9488;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Software &amp; Data Management</span>
+  <span>›</span>
+  <span>Sage Analytics</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Software &amp; Data Management</div>
+    <h1 class="term-title">Sage Analytics</h1>
+  </header>
+  <p class="def-short">Sewio's starter analytics tool designed for pilots and proof-of-concept projects that demonstrates insights available from RTLS data. Presents and analyzes tracking results through trajectory maps, heat maps, spaghetti diagrams, and zone analytics. Not intended for full production analytics but showcases what can be achieved with location data to support decision-making about process optimization and efficiency improvements. Integrated within RTLS Studio.</p><p class="def-long">Sage Analytics is Sewio Networks' advanced analytics platform that transforms raw RTLS location data into actionable business intelligence for industrial operations. This comprehensive analytics solution goes beyond basic position tracking to deliver insights that drive operational improvements, cost reductions, and productivity enhancements across manufacturing, warehousing, and logistics operations. The platform automatically collects and processes location data from thousands of tags continuously, applying analytical algorithms to identify patterns, anomalies, and optimization opportunities. The platform generates both real-time insights (current conditions requiring immediate attention) and historical analytics (trend analysis over days, weeks, or months). Visualization capabilities include heat maps showing asset density and traffic patterns, Sankey diagrams illustrating material flow between areas, trend charts displaying KPI evolution over time, comparison reports benchmarking performance across shifts or facilities, and customizable dashboards for different stakeholder groups.</p><p class="def-long">Key performance indicators (KPIs) automatically calculated include: search time (time spent locating assets), utilization rates (productive time vs. total time), process efficiency (actual vs. theoretical cycle times), inventory turnover (movement frequency of stored items), and space utilization (how effectively facility space is used). Sage Analytics enables data-driven decision making by quantifying operational performance with objective metrics rather than anecdotal observations. Integration with business intelligence tools (Power BI, Tableau) and enterprise systems (ERP, MES, WMS) enables enterprise-wide analytics. ROI justification for RTLS investments often relies on Sage Analytics demonstrating measurable improvements: 20-40% reductions in search time, 15-30% improvements in asset utilization, 10-25% throughput increases, and 5-15% labor productivity gains are typical results documented through analytics.</p>
+  <nav class="term-nav">
+    <a href="safety-zone-enforcement.html" class="nav-prev">← Safety Zone Enforcement</a>
+    <a href="scalability.html" class="nav-next">Scalability →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restricted Area – Industrial RTLS Glossary</title>
+<meta name="description" content="A facility zone where access is controlled and limited to authorized personnel only. RTLS monitors restricted area access, logging entries and exits, alert">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#BE185D;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Geofencing &amp; Zones</span>
+  <span>›</span>
+  <span>Restricted Area</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Geofencing &amp; Zones</div>
+    <h1 class="term-title">Restricted Area</h1>
+  </header>
+  <p class="def-short">A facility zone where access is controlled and limited to authorized personnel only. RTLS monitors restricted area access, logging entries and exits, alerting on unauthorized access attempts, and providing compliance documentation. Examples include clean rooms, secure storage, and hazardous material areas.</p><p class="def-long">A restricted area in industrial RTLS is a defined geographical zone within a facility where access is limited to authorized personnel or assets, monitored and enforced through real-time location tracking. These areas may include hazardous zones with dangerous machinery or processes, secure areas containing valuable materials or intellectual property, quality control sections requiring contamination prevention, or maintenance zones where only certified technicians should enter. RTLS systems enforce restricted area policies by continuously monitoring tag positions and triggering alerts when unauthorized entries are detected.</p><p class="def-long">Implementation involves defining zone boundaries in the RTLS software (typically through polygon drawing on digital floor plans), assigning access permissions to specific tags or tag groups based on personnel roles or asset types, configuring alert types (visual warnings, audible alarms, email/SMS notifications), and optionally integrating with physical access control systems (doors, gates) for automated enforcement. Response times for restricted area violations typically range from 1-3 seconds for critical safety zones to 5-10 seconds for security applications. Industrial facilities commonly implement multiple restricted area types: safety zones around moving AGVs or robots, clean rooms requiring special protocols, high-voltage electrical areas, chemical storage zones, and executive or R&amp;D areas. Analytics on restricted area violations help identify training needs, process bottlenecks, or security vulnerabilities. System reliability is critical - false alarms erode trust while missed violations create safety or security risks, requiring careful zone definition, tag reliability, and positioning accuracy. Integration with incident management systems ensures violations are logged, investigated, and tracked to resolution.</p>
+  <nav class="term-nav">
+    <a href="rest-api.html" class="nav-prev">← REST API</a>
+    <a href="rfid-radio-frequency-identification.html" class="nav-next">RFID (Radio-Frequency Identification) →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

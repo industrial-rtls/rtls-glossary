@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Synchronization – Industrial RTLS Glossary</title>
+<meta name="description" content="The process of coordinating system clocks to a common time reference. Essential for time-based positioning methods. Methods include GPS time synchronizatio">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#9333EA;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Installation &amp; Configuration</span>
+  <span>›</span>
+  <span>Time Synchronization</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Installation &amp; Configuration</div>
+    <h1 class="term-title">Time Synchronization</h1>
+  </header>
+  <p class="def-short">The process of coordinating system clocks to a common time reference. Essential for time-based positioning methods. Methods include GPS time synchronization, network time protocols (NTP, PTP), and wired synchronization signals. Synchronization accuracy directly affects positioning accuracy.</p><p class="def-long">Time synchronization in industrial RTLS refers to aligning the clocks of distributed anchors to a common time reference with high precision. Accurate time synchronization is absolutely critical for TDoA positioning - synchronization errors directly translate to positioning errors at approximately 30 cm per nanosecond. This is far more demanding than typical IT network time synchronization (NTP achieves millisecond accuracy, six orders of magnitude less precise than RTLS requirements). Synchronization approaches include: Wired synchronization using dedicated cables distributing reference clock signals from master clock to all anchors - achieves excellent accuracy (picosecond to sub-nanosecond) but adds cabling complexity and cost. GPS-disciplined oscillators where each anchor receives GPS timing signals - provides excellent accuracy (tens of nanoseconds) but fails indoors where signals unavailable. IEEE 1588 Precision Time Protocol distributes time over standard Ethernet networks - can achieve microsecond to sub-microsecond accuracy, though this is borderline inadequate for highest-accuracy RTLS. The synchronization architecture typically designates one master clock serving as time reference, with all other anchors as slaves synchronizing to the master. The relationship between synchronization accuracy and positioning accuracy is direct: for TDoA positioning, RMS positioning error includes a component proportional to synchronization RMS error multiplied by speed of light and geometric factors. Achieving 30 cm positioning accuracy requires better than 1 nanosecond RMS synchronization under good anchor geometry. Environmental challenges impact synchronization: temperature variations (factory floors from 0-50°C) causing crystal oscillator drift, vibration from machinery accelerating aging, electromagnetic interference disrupting synchronization protocols, and physical obstacles attenuating wireless synchronization signals.</p>
+  <nav class="term-nav">
+    <a href="time-of-arrival-toa.html" class="nav-prev">← Time of Arrival (ToA)</a>
+    <a href="time-of-flight-tof.html" class="nav-next">Time-of-Flight (ToF) →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

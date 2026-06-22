@@ -1,0 +1,1514 @@
+[
+  {
+    "term": "5G Positioning",
+    "category": "Localization Technologies",
+    "short": "A localization technology leveraging 5G cellular networks to determine asset or personnel positions. Offers high accuracy (sub-meter level), low latency, and works both indoors and outdoors. Uses advanced techniques like beamforming, TDOA, and AoA. Particularly valuable in smart factories where GPS signals are unavailable.",
+    "slug": "5g-positioning"
+  },
+  {
+    "term": "Access Control",
+    "category": "Safety & Security",
+    "short": "A security mechanism regulating who or what can enter specific facility areas. RTLS-integrated systems automatically grant or deny access based on credentials and real-time location. Enables features like anti-passback, time-based restrictions, and complete audit trails. Enhances both security and safety compliance.",
+    "slug": "access-control"
+  },
+  {
+    "term": "Access Point",
+    "category": "Hardware Components",
+    "short": "A hardware device serving as a communication hub in wireless RTLS networks. Receives signals from tags and transmits data to the central system. Strategically positioned throughout facilities to ensure comprehensive coverage. Also called readers, anchors, or base stations depending on technology.",
+    "slug": "access-point"
+  },
+  {
+    "term": "Accuracy",
+    "category": "Technical Parameters",
+    "short": "The degree of closeness between measured and actual physical positions, typically expressed as distance (e.g., \u00b130 cm). Requirements vary by application: warehouse tracking might need 1-3 meters, while precision assembly requires 10-30 cm. Affected by technology choice, environmental conditions, anchor placement, and calibration quality.",
+    "slug": "accuracy"
+  },
+  {
+    "term": "Active RFID",
+    "category": "Localization Technologies",
+    "short": "Radio frequency identification technology where battery-powered tags actively transmit signals at regular intervals. Communicates over much longer distances (30-100+ meters) than passive RFID and enables real-time tracking. Commonly used for tracking high-value assets, vehicles, and personnel. Tags are more expensive but offer superior range and functionality.",
+    "slug": "active-rfid"
+  },
+  {
+    "term": "Active Tag",
+    "category": "Hardware Components",
+    "short": "A battery-powered tracking device that actively broadcasts signals containing its unique identifier and optional sensor data. Transmits at defined intervals (e.g., every 1-10 seconds) for real-time location tracking. Used for tracking forklifts, containers, equipment, and personnel. Battery life typically ranges from 2-7 years.",
+    "slug": "active-tag"
+  },
+  {
+    "term": "Ad-Hoc Mode",
+    "category": "System Architecture",
+    "short": "A network configuration where RTLS devices communicate directly peer-to-peer without centralized infrastructure. Each device can relay messages for others, creating a self-organizing mesh network. Offers rapid deployment, resilience to failures, and suitability for temporary installations. Particularly useful in construction sites or mining operations.",
+    "slug": "ad-hoc-mode"
+  },
+  {
+    "term": "AGV (Automated Guided Vehicle) Navigation",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to guide and track autonomous vehicles within industrial facilities. Combines real-time position data with control systems for precise routing, collision avoidance, and fleet coordination. Enables dynamic navigation without physical guides while maintaining centimeter-level accuracy. Provides continuous position updates typically 1-10 times per second.",
+    "slug": "agv-automated-guided-vehicle-navigation"
+  },
+  {
+    "term": "Alert System",
+    "category": "Software & Data Management",
+    "short": "Software that monitors RTLS data in real-time and generates notifications when predefined conditions occur. Common alerts include geofencing violations, dwell time exceedances, proximity warnings, and safety compliance issues. Delivers notifications via mobile push, SMS, email, audible alarms, or dashboard displays. Uses intelligent filtering to avoid alert fatigue.",
+    "slug": "alert-system"
+  },
+  {
+    "term": "Analytics Dashboard",
+    "category": "Software & Data Management",
+    "short": "A visual interface aggregating and displaying RTLS data to support decision-making and operational monitoring. Presents KPIs, real-time location maps, historical tracking, and analytical insights through charts, graphs, and heat maps. Features include asset locations, utilization rates, cycle times, and traffic patterns. Customizable views for different user roles.",
+    "slug": "analytics-dashboard"
+  },
+  {
+    "term": "Anchor",
+    "category": "Hardware Components",
+    "short": "A fixed-position reference device with known coordinates that receives signals from mobile tags to determine positions. Forms the foundational infrastructure by establishing the coordinate system for tracking. Typically requires 4+ anchors for 2D positioning, optimally positioned in corners or elevated locations. Placement, density, and synchronization significantly impact system performance.",
+    "slug": "anchor"
+  },
+  {
+    "term": "Anchor Density",
+    "category": "Installation & Configuration",
+    "short": "The number of anchors deployed per unit area, typically per 100 square meters. Higher density improves accuracy, provides redundancy, and reduces coverage gaps. Optimal density balances performance requirements against infrastructure costs, typically ranging from one anchor per 100-400 square meters.",
+    "slug": "anchor-density"
+  },
+  {
+    "term": "Anchor Placement",
+    "category": "Installation & Configuration",
+    "short": "The strategic positioning of anchors/access points to achieve optimal tracking performance, coverage, and accuracy. Considers geometric dilution of precision, line-of-sight, coverage requirements, mounting height (typically 2.5-5 meters), environmental factors, and density. Site surveys, simulation tools, and iterative testing optimize placement before final installation. Critical for successful RTLS deployment.",
+    "slug": "anchor-placement"
+  },
+  {
+    "term": "Angle of Arrival (AoA)",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique determining tag location by measuring the angle at which signals arrive at receiving antennas. Uses antenna arrays to detect phase or time differences across elements, calculating the signal's incident angle. Particularly valuable in BLE 5.1 systems, enabling sub-meter accuracy without UWB hardware. Accuracy degrades with signal reflections and obstructions.",
+    "slug": "angle-of-arrival-aoa"
+  },
+  {
+    "term": "Angle of Departure (AoD)",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique where fixed infrastructure transmits signals from antenna arrays with known geometry, and mobile devices calculate their position by measuring the departure angle. Complementary to Angle of Arrival (AoA). Used in BLE 5.1+ systems where the antenna array is located in the infrastructure rather than the tag, enabling simpler and cheaper mobile devices while maintaining sub-meter accuracy.",
+    "slug": "angle-of-departure-aod"
+  },
+  {
+    "term": "Anomaly Detection",
+    "category": "Data & Analytics",
+    "short": "Automated identification of unusual patterns or behaviors in RTLS data deviating from expected norms. Detects unexpected movements, abnormal process durations, unusual travel patterns, and abnormal dwell times. Advanced systems use machine learning to establish baseline patterns and flag deviations. Helps identify equipment failures, security breaches, and safety issues before they escalate.",
+    "slug": "anomaly-detection"
+  },
+  {
+    "term": "API (Application Programming Interface)",
+    "category": "Software & Data Management",
+    "short": "Protocols and tools enabling different software applications to communicate and exchange data with RTLS systems. Facilitates integration with WMS, ERP, MES, and business intelligence tools. Exposes functionality for real-time position queries, historical data retrieval, geofence management, and alert configuration. Modern APIs follow RESTful or WebSocket architectures with JSON/XML support.",
+    "slug": "api-application-programming-interface"
+  },
+  {
+    "term": "Artificial Intelligence (AI) in RTLS",
+    "category": "Data & Analytics",
+    "short": "The application of artificial intelligence techniques to RTLS data for positioning improvement, operational analytics, and automated decision-making. AI applied to poor or incomplete location data produces unreliable outputs - the quality of AI-generated insights is directly proportional to the quality and completeness of the underlying RTLS data. Real-time location data is particularly valuable for AI: unlike static datasets, RTLS continuously feeds current operational reality into AI models, enabling decisions based on what is happening now rather than historical averages.",
+    "slug": "artificial-intelligence-ai-in-rtls"
+  },
+  {
+    "term": "Asset Tag",
+    "category": "Hardware Components",
+    "short": "A physical tracking device attached to assets enabling identification and location tracking. Comes in various form factors (adhesive labels, rugged enclosures, bolt-on mounts) optimized for different conditions. Industrial tags must withstand temperature extremes, moisture, vibration, and physical impacts. Key considerations include technology type, power source, size, environmental rating, and battery life.",
+    "slug": "asset-tag"
+  },
+  {
+    "term": "Asset Tracking",
+    "category": "Industrial Applications",
+    "short": "Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to large equipment and vehicles. Serves purposes including quick location, inventory verification, movement monitoring, loss prevention, and utilization analysis. Tracking granularity varies from zone-level to centimeter-level precision.",
+    "slug": "asset-tracking"
+  },
+  {
+    "term": "Asset Utilization",
+    "category": "Performance Metrics & KPIs",
+    "short": "A metric measuring how effectively assets are used relative to availability, calculated through RTLS tracking data. Enables precise measurement of active versus idle time, location patterns, and usage frequency. Common metrics include active time percentage, distance traveled, and time in productive zones. Reveals opportunities for redeployment, fleet reduction, and capacity optimization.",
+    "slug": "asset-utilization"
+  },
+  {
+    "term": "Base Station",
+    "category": "Hardware Components",
+    "short": "A fixed infrastructure component communicating with mobile tags and relaying information to the central system. Performs functions including receiving/interrogating tags, timestamping signals, forwarding data, and synchronizing with other stations. Requires reliable power and network connectivity. Hardened for harsh environments with appropriate IP ratings and temperature ranges.",
+    "slug": "base-station"
+  },
+  {
+    "term": "Battery Life",
+    "category": "Technical Parameters",
+    "short": "The operational duration of battery-powered tags before replacement or recharging is required. Typical lifespans range from months to 7+ years depending on transmission frequency, power, sensor operations, and environmental conditions. Industrial applications balance battery life against functionality. Features like sleep modes and adaptive transmission rates help optimize battery life.",
+    "slug": "battery-life"
+  },
+  {
+    "term": "Beacon",
+    "category": "Hardware Components",
+    "short": "A small wireless transmitter broadcasting signals at regular intervals, typically using BLE technology. Serves as tracked tags or fixed infrastructure for positioning. Popular due to low cost ($10-30), small form factor, long battery life (1-5 years), and smartphone compatibility. Common protocols include iBeacon, Eddystone, and AltBeacon. Typically offers zone-level or room-level accuracy (2-5 meters).",
+    "slug": "beacon"
+  },
+  {
+    "term": "BI Connector",
+    "category": "Software & Data Management",
+    "short": "Software enabling RTLS data integration with Business Intelligence platforms and analytics tools. Facilitates data flow into enterprise analytics ecosystems for comprehensive analysis. Supports platforms like Tableau, Power BI, and QlikView with pre-built data models and visualizations. Enables custom reports combining RTLS data with ERP, MES, and WMS information.",
+    "slug": "bi-connector"
+  },
+  {
+    "term": "Bi-directional Integration",
+    "category": "Software & Data Management",
+    "short": "System integration where data flows in both directions between RTLS and connected applications. Enables external systems to control or configure RTLS operations, not just receive data. Examples include WMS updating geofences, MES triggering alerts, and ERP assigning tags automatically. Reduces manual administration and enables sophisticated automated workflows.",
+    "slug": "bi-directional-integration"
+  },
+  {
+    "term": "Big Data",
+    "category": "Data & Analytics",
+    "short": "The massive volumes of data generated by RTLS deployments requiring specialized storage, processing, and analysis technologies. Tracking thousands of tags updating every few seconds produces millions of daily records. Requires time-series databases, distributed storage, stream processing platforms, and machine learning. Uncovers insights like predictive maintenance patterns and subtle process optimizations.",
+    "slug": "big-data"
+  },
+  {
+    "term": "BLE (Bluetooth Low Energy)",
+    "category": "Localization Technologies",
+    "short": "An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning. Operates in 2.4 GHz band with low power consumption enabling months or years of battery operation. Offers low-cost infrastructure, smartphone compatibility, reasonable range (10-50 meters), and adequate accuracy (room-level to 1-3 meters with 5.1). Cost-effective for large-scale deployments.",
+    "slug": "ble-bluetooth-low-energy"
+  },
+  {
+    "term": "BLE Gateway",
+    "category": "Hardware Components",
+    "short": "The primary fixed infrastructure device in BLE-based RTLS, equivalent to the anchor in UWB systems. Receives BLE advertisement packets from mobile tags, measures signal characteristics (RSSI or direction via AoA/AoD), timestamps detections, and forwards data to the positioning engine. Deployed at known fixed positions throughout the facility to provide coverage. Typically powered via PoE and connected via Ethernet.",
+    "slug": "ble-gateway"
+  },
+  {
+    "term": "Bluetooth 5.x",
+    "category": "Standards & Protocols",
+    "short": "The latest Bluetooth generation offering significant improvements for industrial RTLS. Provides doubled range (200+ meters line-of-sight), quadrupled throughput, increased broadcast capacity, and lower power consumption. Bluetooth 5.1 introduced direction finding through AoA/AoD enabling accurate positioning. Widespread consumer adoption drives down costs and improves component availability.",
+    "slug": "bluetooth-5-x"
+  },
+  {
+    "term": "Business Intelligence",
+    "category": "Data & Analytics",
+    "short": "Strategic use of RTLS data combined with enterprise information to gain actionable insights for business decisions. Transforms raw tracking data into meaningful metrics for strategic planning and performance management. Applications include operational efficiency analysis, financial insights, capacity forecasting, and predictive analytics. Combines RTLS with ERP, MES, and WMS data.",
+    "slug": "business-intelligence"
+  },
+  {
+    "term": "Calibration",
+    "category": "Installation & Configuration",
+    "short": "Configuring and fine-tuning RTLS to ensure accurate position measurements matching real-world coordinates. Involves anchor surveying, environment characterization, reference point measurement, algorithm tuning, and verification testing. Industrial calibration addresses challenges from metal structures, changing layouts, and temperature variations. Modern systems employ self-calibration using machine learning for continuous refinement.",
+    "slug": "calibration"
+  },
+  {
+    "term": "Capacity",
+    "category": "Technical Parameters",
+    "short": "The maximum number of tags, assets, or transactions an RTLS can reliably track simultaneously without performance degradation. Encompasses tag capacity, update rate capacity, peak throughput, data storage, and concurrent users. Limitations arise from network bandwidth, processing power, database performance, and wireless spectrum. Exceeding capacity causes missed updates, increased latency, and system instability.",
+    "slug": "capacity"
+  },
+  {
+    "term": "Cell of Origin (CoO)",
+    "category": "Positioning Methods & Techniques",
+    "short": "A basic positioning method determining location based on which anchor/access point is communicating with a tag. Provides zone-level or room-level accuracy (5-50 meters) by assuming the tag is within the cell's coverage area. Simplest and least expensive technique requiring no signal strength or timing calculations. Sufficient for applications needing general location awareness like department or zone identification.",
+    "slug": "cell-of-origin-coo"
+  },
+  {
+    "term": "Centimeter-Level Accuracy",
+    "category": "Technical Parameters",
+    "short": "The highest precision positioning category with measurements within \u00b15-30 cm of true location. Achieved primarily using UWB technology with time-of-flight measurements. Essential for precision applications including AGV docking, robotic operations, and automated warehouse systems.",
+    "slug": "centimeter-level-accuracy"
+  },
+  {
+    "term": "Centralized System",
+    "category": "System Architecture",
+    "short": "An architecture where all positioning calculations and data processing occur on a central server. Anchors act as simple data collectors forwarding raw signals to the central system. Offers simplified infrastructure, consistent algorithms, centralized management, and easier updates. Drawbacks include single point of failure, network dependency, higher latency, and scalability limitations.",
+    "slug": "centralized-system"
+  },
+  {
+    "term": "Cloud-Based RTLS",
+    "category": "Software & Data Management",
+    "short": "An architecture where processing, storage, and hosting occur on remote cloud servers accessed via internet. Offers lower upfront costs, scalable computing resources, automatic updates, global accessibility, and built-in redundancy. Considerations include internet dependency, potential latency, data security concerns, and subscription costs. Many deployments use hybrid approaches with local edge computing for critical functions.",
+    "slug": "cloud-based-rtls"
+  },
+  {
+    "term": "Collision Avoidance",
+    "category": "Safety & Security",
+    "short": "A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors positions and velocities, predicts collision scenarios, and triggers alerts or interventions. Includes visual/audible warnings, automatic speed reduction, emergency braking, and access control. Advanced systems incorporate 3D tracking and virtual safety bubbles around pedestrians.",
+    "slug": "collision-avoidance"
+  },
+  {
+    "term": "Commissioning",
+    "category": "Installation & Configuration",
+    "short": "The systematic process of configuring, testing, and validating RTLS installation before operational handover. Involves infrastructure verification, system configuration, calibration, functional testing, performance validation, and user acceptance testing. Includes stress testing, integration testing, documentation delivery, and training. Proper commissioning identifies issues, validates performance, and establishes baseline metrics.",
+    "slug": "commissioning"
+  },
+  {
+    "term": "Compliance Monitoring",
+    "category": "Safety & Security",
+    "short": "Automated tracking and verification of adherence to safety regulations, operational procedures, and quality standards using RTLS. Enables continuous monitoring of safety compliance (PPE, hazardous zone time), process compliance (material routing, dwell times), access compliance (restricted area logging), and training compliance. Provides automatic documentation for audits and real-time alerts for violations.",
+    "slug": "compliance-monitoring"
+  },
+  {
+    "term": "Computer Vision Tracking",
+    "category": "Localization Technologies",
+    "short": "Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel. Analyzes video feeds to identify and locate objects within camera fields of view. Advantages include no tags required, rich contextual information, and visual verification. Limitations include line-of-sight requirements, lighting dependency, processing intensity, and privacy concerns.",
+    "slug": "computer-vision-tracking"
+  },
+  {
+    "term": "Condition Monitoring",
+    "category": "Industry-Specific Terms",
+    "short": "Continuous observation and analysis of asset health parameters using sensors integrated with RTLS tags. Extends location tracking by incorporating environmental sensors (temperature, humidity, vibration, shock). Enables predictive maintenance by detecting bearing wear, overheating, impacts, and unsuitable storage conditions. Transforms maintenance from reactive or time-based to predictive.",
+    "slug": "condition-monitoring"
+  },
+  {
+    "term": "Configuration",
+    "category": "Installation & Configuration",
+    "short": "The process of defining and customizing RTLS parameters, settings, and behaviors to match operational requirements. Encompasses infrastructure configuration, zone definition, tag configuration, alert rules, user management, and integration settings. Proper configuration is crucial for system effectiveness. Requires ongoing maintenance as facilities change and requirements evolve.",
+    "slug": "configuration"
+  },
+  {
+    "term": "Connected Worker",
+    "category": "Industry-Specific Terms",
+    "short": "An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety through automatic hazardous zone detection, man-down alerts, and evacuation assistance. Improves efficiency by guiding workers to tasks and optimizing allocation. Ensures compliance by verifying required training and tracking restricted zone time.",
+    "slug": "connected-worker"
+  },
+  {
+    "term": "Coverage Area",
+    "category": "Technical Parameters",
+    "short": "The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement density, transmission power, facility layout, and required accuracy. Industrial facilities prioritize coverage in critical operational areas while accepting lower accuracy in peripheral spaces. Coverage planning involves site surveys, 3D modeling, and identifying shadow zones.",
+    "slug": "coverage-area"
+  },
+  {
+    "term": "Coverage Gap",
+    "category": "Installation & Configuration",
+    "short": "An area where RTLS cannot reliably track tags due to insufficient anchor coverage or signal blocking. Creates tracking blind spots with lost or inaccurate position updates. Mitigation includes adding anchors, repositioning infrastructure, or implementing dead reckoning.",
+    "slug": "coverage-gap"
+  },
+  {
+    "term": "Coverage Planning",
+    "category": "Installation & Configuration",
+    "short": "The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analysis, technology selection, preliminary design, site survey, refined design, and validation. Industrial planning addresses challenges from metal structures, changing layouts, and harsh environments. Balances maximizing coverage, meeting accuracy requirements, and minimizing costs.",
+    "slug": "coverage-planning"
+  },
+  {
+    "term": "CSS (Chirp Spread Spectrum)",
+    "category": "Localization Technologies",
+    "short": "A wireless modulation technique where signals are transmitted using frequency sweeps (chirps) across wide bandwidth. Most notably used in LoRa technology for industrial IoT and some RTLS deployments. Offers exceptional range (kilometers outdoors, hundreds of meters indoors), low power consumption, and good obstacle penetration. Lower positioning accuracy (10-50 meters) but excellent for applications prioritizing range and battery life.",
+    "slug": "css-chirp-spread-spectrum"
+  },
+  {
+    "term": "Cycle Time",
+    "category": "Performance Metrics & KPIs",
+    "short": "The total time required for a process or operation to complete from start to finish, measured using RTLS tracking. RTLS provides objective, automated measurement by tracking items through process stages. Captures data for every item enabling comprehensive analysis of averages, variability, outliers, and trends. Enables lean manufacturing initiatives and process optimization.",
+    "slug": "cycle-time"
+  },
+  {
+    "term": "Data Mining",
+    "category": "Data & Analytics",
+    "short": "Discovering patterns, correlations, and insights from large volumes of historical RTLS data using statistical analysis and machine learning. Extracts valuable knowledge from massive datasets to identify process inefficiencies, equipment degradation patterns, and optimization opportunities. Applications include process discovery, predictive modeling, anomaly detection, and causal analysis. Requires both technical expertise and domain knowledge.",
+    "slug": "data-mining"
+  },
+  {
+    "term": "Data Visualization",
+    "category": "Software & Data Management",
+    "short": "Graphical representation of RTLS data making complex tracking information easily understandable. Common visualizations include facility maps with real-time positions, heat maps, trajectory plots, timeline views, and dashboards with KPI gauges. Effective visualizations use appropriate chart types, clear visual hierarchy, intuitive color coding, and interactive capabilities. Bridges the gap between complex systems and non-technical users.",
+    "slug": "data-visualization"
+  },
+  {
+    "term": "Dead Reckoning",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique estimating current location by calculating movement from a known starting position using motion sensors (accelerometers, gyroscopes). Maintains position estimates when primary positioning signals are temporarily unavailable. Particularly valuable for personnel tracking in areas with intermittent coverage like stairwells or elevators. Accuracy degrades over time due to sensor drift, requiring periodic corrections.",
+    "slug": "dead-reckoning"
+  },
+  {
+    "term": "DGPS (Differential GPS)",
+    "category": "Localization Technologies",
+    "short": "An enhancement to standard GPS using a fixed reference station at a known position to calculate and broadcast correction signals, improving positioning accuracy from 3-10 meters to 1-3 meters. Commonly used in outdoor industrial applications including port operations, construction sites, and large yard management where standard GPS accuracy is insufficient. Requires a ground-based reference station within 200-300 km.",
+    "slug": "dgps-differential-gps"
+  },
+  {
+    "term": "Deployment",
+    "category": "Installation & Configuration",
+    "short": "The comprehensive process of planning, installing, configuring, and operationalizing RTLS in an industrial facility. Encompasses requirements gathering, system design, procurement, installation, configuration, calibration, testing, training, and cutover. Industrial deployments face challenges including minimizing operational disruption, coordinating stakeholders, and dealing with harsh environments. Deployment approaches include phased rollouts or big-bang implementations.",
+    "slug": "deployment"
+  },
+  {
+    "term": "Digital Twin",
+    "category": "Industry-Specific Terms",
+    "short": "A virtual representation of physical facilities or processes integrating real-time RTLS data to mirror actual state and behavior. Combines RTLS position data with CAD models, IoT sensors, equipment status, and business systems. Enables real-time 3D visualization, historical replay, predictive simulation, and process mining. Applications include virtual facility tours, training environments, design validation, and optimization testing.",
+    "slug": "digital-twin"
+  },
+  {
+    "term": "Direction Finding",
+    "category": "Positioning Methods & Techniques",
+    "short": "A set of techniques determining the bearing or angle between a transmitter and receiver using multi-element antenna arrays. Introduced in Bluetooth 5.1 as a standardized feature enabling sub-meter BLE positioning without UWB hardware. Encompasses both Angle of Arrival (AoA) and Angle of Departure (AoD) methods. Significantly improves BLE positioning accuracy from 3-8 meters (RSSI-based) to 0.5-2 meters.",
+    "slug": "direction-finding"
+  },
+  {
+    "term": "Dilution of Precision (DOP)",
+    "category": "Technical Parameters",
+    "short": "A measure of geometric quality in positioning systems indicating how anchor placement affects position accuracy. Lower DOP values indicate better geometry and higher accuracy potential. Optimal anchor placement minimizes DOP by positioning anchors to form strong geometric patterns around tracking areas.",
+    "slug": "dilution-of-precision-dop"
+  },
+  {
+    "term": "Distributed System",
+    "category": "System Architecture",
+    "short": "An architecture where positioning calculations occur across multiple distributed nodes rather than a central server. Intelligent anchors or edge processors handle calculations locally, reducing latency and network requirements. Offers lower latency, resilience to failures, scalability, and reduced bandwidth. Challenges include complex management, higher infrastructure costs, and synchronization requirements.",
+    "slug": "distributed-system"
+  },
+  {
+    "term": "Dock Management",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to optimize loading dock operations by tracking vehicles, shipments, personnel, and equipment. Monitors entire receiving/shipping processes including truck arrival, dock assignment, loading/unloading duration, and equipment coordination. Enables automated check-in, assignment optimization, dwell time reduction, and safety enhancement. Often a high-ROI RTLS application.",
+    "slug": "dock-management"
+  },
+  {
+    "term": "Dwell Time",
+    "category": "Geofencing & Zones",
+    "short": "The duration an asset, material, or person remains in a defined location or zone, automatically tracked by RTLS. Critical metric for analyzing process efficiency and identifying bottlenecks. Applications include manufacturing station analysis, warehouse operation optimization, maintenance monitoring, and safety compliance. Automatically captures data for every item enabling statistical analysis and proactive alerts.",
+    "slug": "dwell-time"
+  },
+  {
+    "term": "Dwell Time Analysis",
+    "category": "Performance Metrics & KPIs",
+    "short": "Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. Applies statistical methods including distribution analysis, trend analysis, comparative analysis, and correlation analysis. Reveals improvement opportunities like unnecessary wait times, process inconsistencies, and scheduling issues. Combines quantitative methods with qualitative investigation for understanding root causes.",
+    "slug": "dwell-time-analysis"
+  },
+  {
+    "term": "Dynamic Geofencing",
+    "category": "Geofencing & Zones",
+    "short": "Geofencing capability where virtual boundaries are created, modified, or removed programmatically in real-time based on conditions. Enables time-based zones, event-triggered zones, load-dependent zones, and person-dependent zones. Benefits include eliminating manual reconfiguration and supporting complex workflow scenarios impossible with static zones. Requires bi-directional integration with business systems providing context.",
+    "slug": "dynamic-geofencing"
+  },
+  {
+    "term": "Edge Computing",
+    "category": "System Architecture",
+    "short": "A distributed computing paradigm where data processing occurs on devices at the network edge near data sources. In RTLS, edge computing processes tracking data locally providing ultra-low latency, reduced bandwidth requirements, improved reliability, and enhanced privacy. Particularly valuable for time-critical applications like collision avoidance and real-time AGV navigation requiring sub-second response.",
+    "slug": "edge-computing"
+  },
+  {
+    "term": "Emergency Response",
+    "category": "Safety & Security",
+    "short": "The use of RTLS to enhance safety and effectiveness during emergencies such as fires, spills, or security threats. Enables instant personnel location, guided evacuation, efficient responder dispatch, complete accountability, and situational awareness. Features include panic buttons, man-down detection, hazardous material tracking, and emergency mustering. Dramatically improves response by reducing search time and enabling safer operations.",
+    "slug": "emergency-response"
+  },
+  {
+    "term": "Environmental Sensor",
+    "category": "Hardware Components",
+    "short": "Sensors integrated with RTLS tags measuring conditions beyond location. Common types include temperature, humidity, vibration, pressure, and light sensors. Sensor data transmitted with position information enabling combined location and condition monitoring.",
+    "slug": "environmental-sensor"
+  },
+  {
+    "term": "Equipment Monitoring",
+    "category": "Industrial Applications",
+    "short": "Continuous tracking and analysis of equipment location, usage, condition, and performance using RTLS combined with sensors. Extends basic asset tracking with deeper insights into equipment health and utilization. Applications include mobile equipment fleets, production equipment, and rental equipment. Benefits include reduced equipment purchases through better utilization and preventive maintenance scheduling.",
+    "slug": "equipment-monitoring"
+  },
+  {
+    "term": "ERP Integration",
+    "category": "Software & Data Management",
+    "short": "Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation. Connects location intelligence with core business processes including asset management, inventory management, production planning, and maintenance management. Eliminates manual data entry, ensures data consistency, and enables process automation. Typically uses standard APIs or middleware platforms.",
+    "slug": "erp-integration"
+  },
+  {
+    "term": "Evacuation Management",
+    "category": "Safety & Security",
+    "short": "The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountability, identification of missing individuals, and evacuation progress tracking. Features include pre-defined muster point zones, evacuation route guidance, zone-by-zone clearance, and emergency contact notification. Provides incident commanders with comprehensive situational awareness.",
+    "slug": "evacuation-management"
+  },
+  {
+    "term": "Facility Layout",
+    "category": "Installation & Configuration",
+    "short": "The physical arrangement of equipment, workstations, and infrastructure within a building. Layout significantly impacts RTLS design including anchor placement and coverage. RTLS data helps optimize layout by revealing traffic patterns and space utilization.",
+    "slug": "facility-layout"
+  },
+  {
+    "term": "Factory Defaults",
+    "category": "Software & Data Management",
+    "short": "Original configuration settings programmed into RTLS devices at manufacture, restorable to return devices to known baseline state. Typically includes standard communication parameters, default network credentials, basic operational modes, and baseline calibration values. Used for establishing starting points, troubleshooting, reconfiguring for different applications, and recovering from configuration errors.",
+    "slug": "factory-defaults"
+  },
+  {
+    "term": "Factory Restore",
+    "category": "Software & Data Management",
+    "short": "The process of returning RTLS devices or systems to original factory default state, erasing all custom configurations and stored data. More comprehensive than simple reset, including clearing configurations, deleting data, resetting security credentials, and sometimes reverting firmware. Used for device decommissioning, major reconfiguration, troubleshooting severe issues, and compliance requirements.",
+    "slug": "factory-restore"
+  },
+  {
+    "term": "Fingerprinting",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique creating a database mapping signal characteristics to specific locations, then matching observed signals against this database. Involves offline training phase (surveying and building database) and online positioning phase (comparing real-time signals). Can compensate for complex RF environments where simple models don't work. Labor-intensive but works in challenging environments using lower-cost hardware.",
+    "slug": "fingerprinting"
+  },
+  {
+    "term": "FiRa Consortium",
+    "category": "Standards & Protocols",
+    "short": "A global industry consortium established in 2019 to promote and support UWB technology development for secure fine ranging and positioning. Establishes standardized UWB protocols ensuring multi-vendor interoperability, defines certification programs, and promotes best practices. Members include major technology companies whose participation drives UWB adoption and reduces costs.",
+    "slug": "fira-consortium"
+  },
+  {
+    "term": "Fixed Infrastructure",
+    "category": "Hardware Components",
+    "short": "The stationary network components of RTLS including anchors, access points, gateways, servers, and network equipment. Establishes the spatial reference framework and communication backbone enabling mobile tag tracking. Design determines coverage area, positioning accuracy, system capacity, reliability, and long-term costs. Represents major capital investment typically lasting 10+ years.",
+    "slug": "fixed-infrastructure"
+  },
+  {
+    "term": "FMS Integration",
+    "category": "Software & Data Management",
+    "short": "Integration of RTLS with Fleet Management Systems for comprehensive tracking of industrial vehicles including forklifts, tuggers, and pallet jacks. Combines RTLS location data with vehicle telematics, operator assignment, usage analytics, and impact detection. Enables operator accountability, access control, zone-based speed limits, and route optimization. Benefits include reduced damage, improved utilization, and enhanced safety.",
+    "slug": "fms-integration"
+  },
+  {
+    "term": "Fog Computing",
+    "category": "System Architecture",
+    "short": "A distributed computing architecture extending cloud capabilities to the network edge while maintaining connection to central cloud resources. Gateway devices or local servers aggregate data, perform intermediate processing, make local decisions, and manage bidirectional data flow. Offers lower latency than pure cloud, reduced bandwidth requirements, and improved reliability.",
+    "slug": "fog-computing"
+  },
+  {
+    "term": "Forklift Tracking",
+    "category": "Industrial Applications",
+    "short": "Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves objectives including location visibility, utilization monitoring, operator assignment, safety monitoring, traffic management, and maintenance scheduling. Benefits include improved safety (20-40% accident reduction), increased productivity, reduced costs (10-20% fleet reduction), and better maintenance.",
+    "slug": "forklift-tracking"
+  },
+  {
+    "term": "Gateway",
+    "category": "Hardware Components",
+    "short": "A network device bridging between RTLS infrastructure components and central systems. Collects data from multiple anchors or tags and forwards it to servers or cloud platforms. Functions include data aggregation, protocol translation, data preprocessing, and network management. Enables scalable architectures and simplifies network topology.",
+    "slug": "gateway"
+  },
+  {
+    "term": "Geofence",
+    "category": "Geofencing & Zones",
+    "short": "A virtual boundary or zone defined in RTLS software representing a physical facility area. Enables automatic alerts and actions when assets or personnel enter, exit, or dwell within defined spaces. Types include operational zones, safety zones, logical zones, and administrative zones. Fundamental to most industrial RTLS applications for translating raw position data into meaningful location context.",
+    "slug": "geofence"
+  },
+  {
+    "term": "Geofencing",
+    "category": "Positioning Methods & Techniques",
+    "short": "The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Enables location-based automation including alerts, access control, and process verification. Geofences can be simple shapes or complex 3D volumes, static or dynamic based on operational conditions.",
+    "slug": "geofencing"
+  },
+  {
+    "term": "GNSS (Global Navigation Satellite System)",
+    "category": "Localization Technologies",
+    "short": "The generic term for satellite-based positioning systems providing global coverage for outdoor tracking. Encompasses GPS, GLONASS, Galileo, and BeiDou constellations. Used primarily for outdoor industrial applications like vehicles in yards, shipping containers in ports, and construction equipment on job sites. Signals don't penetrate buildings requiring alternative technologies for indoor tracking.",
+    "slug": "gnss-global-navigation-satellite-system"
+  },
+  {
+    "term": "GNSS Antenna",
+    "category": "Hardware Components",
+    "short": "The receiving element in GNSS-enabled devices that captures satellite signals for positioning. Requires unobstructed sky view, limiting GNSS to outdoor and open-air applications. Antenna design significantly impacts signal reception quality, multipath rejection, and positioning accuracy. Industrial GNSS tags integrate compact patch antennas, while high-precision applications use larger ground-plane antennas to minimize multipath errors.",
+    "slug": "gnss-antenna"
+  },
+  {
+    "term": "GPS (Global Positioning System)",
+    "category": "Localization Technologies",
+    "short": "The United States' satellite-based navigation system providing global positioning, navigation, and timing services. Commonly used for outdoor asset tracking, fleet management, and construction equipment monitoring. Typical accuracy 5-10 meters with standard receivers. Limitations include no indoor coverage, limited accuracy without RTK, and susceptibility to interference.",
+    "slug": "gps-global-positioning-system"
+  },
+  {
+    "term": "Hazardous Zone",
+    "category": "Geofencing & Zones",
+    "short": "A designated facility area where dangerous conditions exist requiring special safety protocols and monitoring. RTLS hazardous zones are defined as geofences with specialized rules protecting personnel and assets. Examples include confined spaces, high-temperature areas, chemical storage, and energized equipment zones. Monitoring provides access control, time tracking, emergency response capabilities, and compliance documentation.",
+    "slug": "hazardous-zone"
+  },
+  {
+    "term": "Heatmap",
+    "category": "Software & Data Management",
+    "short": "A data visualization displaying RTLS tracking density or dwell time using color intensity overlaid on facility maps. Reveals patterns including traffic density, dwell time patterns, utilization patterns, and temporal variations. Colors range from cool (blue, green) for low activity to hot (yellow, orange, red) for high activity. Applications include identifying bottlenecks, optimizing layout, and validating process flow.",
+    "slug": "heatmap"
+  },
+  {
+    "term": "Historical Data Analysis",
+    "category": "Data & Analytics",
+    "short": "Systematic examination of past RTLS tracking data to identify trends, patterns, and improvement opportunities. Serves purposes including performance trending, root cause analysis, process optimization, benchmarking, and compliance documentation. Common analyses include cycle time analysis, utilization analysis, flow analysis, and correlation analysis. Requires long-term data retention and analytical tools.",
+    "slug": "historical-data-analysis"
+  },
+  {
+    "term": "Historical Playback",
+    "category": "Software & Data Management",
+    "short": "A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. Enables users to \"rewind time\" and observe what actually happened. Used for incident investigation, process validation, training, optimization analysis, and compliance demonstration. Features include time controls, speed adjustment, filtering, and synchronization with other data sources.",
+    "slug": "historical-playback"
+  },
+  {
+    "term": "Hybrid Architecture",
+    "category": "System Architecture",
+    "short": "An RTLS system design combining multiple positioning technologies, computing approaches, or architectural patterns to optimize performance, cost, and coverage. Common patterns include technology hybridization (UWB + BLE), indoor-outdoor hybridization (RTLS + GPS), and computing hybridization (edge + cloud). Benefits include optimized cost-performance, comprehensive coverage, and enhanced reliability.",
+    "slug": "hybrid-architecture"
+  },
+  {
+    "term": "iBeacon / Eddystone",
+    "category": "Standards & Protocols",
+    "short": "Standardized BLE beacon advertisement protocols defining how beacons broadcast their identity and data. iBeacon was introduced by Apple in 2013; Eddystone was introduced by Google in 2015 (now deprecated). Both define the format of BLE advertisement packets enabling any compatible receiver to detect and interpret beacon signals. Widely used as the foundation for proximity detection, indoor positioning, and asset tracking in BLE RTLS deployments.",
+    "slug": "ibeacon-eddystone"
+  },
+  {
+    "term": "IEEE 802.15.4",
+    "category": "Standards & Protocols",
+    "short": "A technical standard defining the physical layer and media access control for low-rate wireless personal area networks. Provides the foundation for several industrial wireless protocols including Zigbee and some UWB implementations. Specifies operation in various frequency bands including 2.4 GHz. Important for RTLS as many positioning technologies build upon this standard.",
+    "slug": "ieee-802-15-4"
+  },
+  {
+    "term": "Indoor Navigation",
+    "category": "Industry-Specific Terms",
+    "short": "The use of RTLS technology to provide real-time routing and guidance for personnel moving within buildings or facilities. Similar to GPS navigation but for indoor environments where satellite signals are unavailable. Applications include guiding workers to task locations, visitor wayfinding, emergency evacuation routing, and new employee orientation. Typically displayed on smartphones or mobile devices.",
+    "slug": "indoor-navigation"
+  },
+  {
+    "term": "Indoor Positioning System (IPS)",
+    "category": "Industry-Specific Terms",
+    "short": "A general term for any technology enabling location determination within buildings where GPS is unavailable. Encompasses various technologies including Wi-Fi, BLE, UWB, RFID, and magnetic positioning. IPS is essentially synonymous with indoor RTLS. Accuracy ranges from room-level (5-10 meters) to centimeter-level depending on technology.",
+    "slug": "indoor-positioning-system-ips"
+  },
+  {
+    "term": "Indoor-Outdoor Handover",
+    "category": "System Architecture",
+    "short": "The process of seamlessly transitioning a tracked asset or person between indoor positioning (UWB or BLE) and outdoor positioning (GNSS) systems as they move through building entrances. Critical for facilities with significant indoor-outdoor workflows such as manufacturing with outdoor yards, distribution centers with loading docks, and logistics campuses. Requires a unified software platform and coordinated transition logic to avoid position gaps or jumps.",
+    "slug": "indoor-outdoor-handover"
+  },
+  {
+    "term": "Industrial IoT (IIoT)",
+    "category": "Industry-Specific Terms",
+    "short": "The use of Internet of Things technologies in industrial settings to connect equipment, sensors, and systems for data collection and analysis. RTLS is a key component of IIoT ecosystems, providing location context for other sensor data. Integration enables comprehensive operational visibility combining location with temperature, vibration, production status, and other parameters.",
+    "slug": "industrial-iot-iiot"
+  },
+  {
+    "term": "Industry 4.0",
+    "category": "Industry-Specific Terms",
+    "short": "The fourth industrial revolution characterized by automation, data exchange, cyber-physical systems, and smart factories. RTLS plays a critical role in Industry 4.0 by providing real-time location intelligence enabling automation, optimization, and integration. Connects physical operations with digital systems for comprehensive visibility and control.",
+    "slug": "industry-4-0"
+  },
+  {
+    "term": "Infrastructure Mode",
+    "category": "System Architecture",
+    "short": "A network configuration where RTLS devices communicate through centralized access points or base stations rather than directly with each other. Contrasts with ad-hoc mode. Most common architecture for industrial RTLS providing centralized management, deterministic communication, and reliable performance. Requires fixed infrastructure but offers better scalability and control.",
+    "slug": "infrastructure-mode"
+  },
+  {
+    "term": "Integration Layer",
+    "category": "Software & Data Management",
+    "short": "The software component or middleware facilitating communication and data exchange between RTLS and other enterprise systems. Handles protocol translation, data transformation, message routing, and error handling. Enables RTLS integration with ERP, WMS, MES, and other business applications. Often uses standard protocols like REST APIs, message queues, or enterprise service buses.",
+    "slug": "integration-layer"
+  },
+  {
+    "term": "Intrusion Detection",
+    "category": "Safety & Security",
+    "short": "The use of RTLS to identify unauthorized access or movement within facilities. Detects when unregistered tags enter facilities, when assets or personnel enter restricted areas without authorization, or when movement patterns suggest security breaches. Generates immediate alerts enabling rapid security response. Often integrated with access control and video surveillance systems.",
+    "slug": "intrusion-detection"
+  },
+  {
+    "term": "Inventory Management",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to track and manage inventory locations, movements, and levels in real-time. Enables automated receiving, dynamic bin management, real-time stock level updates, FIFO enforcement, and pick verification. Benefits include near-perfect inventory accuracy (>99%), reduced labor, improved order fulfillment, and enhanced traceability.",
+    "slug": "inventory-management"
+  },
+  {
+    "term": "IP Rating",
+    "category": "Technical Parameters",
+    "short": "Ingress Protection rating indicating device resistance to dust and water, expressed as two digits (e.g., IP65, IP67). First digit rates solid particle protection (0-6), second rates liquid protection (0-9). Industrial RTLS tags typically require IP65 or IP67 for harsh environments.",
+    "slug": "ip-rating"
+  },
+  {
+    "term": "IR (Infrared) Positioning",
+    "category": "Localization Technologies",
+    "short": "A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offers high accuracy in line-of-sight conditions and is immune to RF interference. Limitations include requiring line-of-sight, susceptibility to ambient light interference, and limited range. Used in some industrial applications but less common than RF-based technologies.",
+    "slug": "ir-infrared-positioning"
+  },
+  {
+    "term": "ISO/IEC 24730",
+    "category": "Standards & Protocols",
+    "short": "An international standard for real-time locating systems defining air interface protocols, system architecture, and performance testing methods. Provides standardized framework for RTLS implementations ensuring interoperability and performance consistency. Parts include requirements for 2.4 GHz, UWB, and other frequency bands. Important reference for industrial RTLS deployments.",
+    "slug": "iso-iec-24730"
+  },
+  {
+    "term": "Just-in-Time (JIT) Manufacturing",
+    "category": "Industrial Applications",
+    "short": "A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibility of material locations and movements. Ensures materials are available precisely when required while avoiding excess inventory. Supports lean manufacturing principles by reducing waste and improving flow.",
+    "slug": "just-in-time-jit-manufacturing"
+  },
+  {
+    "term": "Latency",
+    "category": "Technical Parameters",
+    "short": "The time delay between an event occurring (tag moving, entering zone) and the system detecting and responding to that event. Critical for time-sensitive applications like collision avoidance, automated control, and safety alerts. Affected by factors including positioning calculation time, network transmission delays, and processing overhead. Edge computing reduces latency for critical applications.",
+    "slug": "latency"
+  },
+  {
+    "term": "Lean Manufacturing",
+    "category": "Industrial Applications",
+    "short": "A production methodology focused on minimizing waste while maximizing productivity. RTLS supports lean manufacturing by providing visibility to identify and eliminate waste including motion waste, waiting waste, and inventory waste. Enables continuous improvement through data-driven analysis of material flow, cycle times, and process efficiency.",
+    "slug": "lean-manufacturing"
+  },
+  {
+    "term": "LiDAR (Light Detection and Ranging)",
+    "category": "Localization Technologies",
+    "short": "A remote sensing technology using laser light to measure distances and create detailed 3D maps. In RTLS contexts, LiDAR can be used for precise positioning, obstacle detection, and environment mapping. Commonly used in autonomous vehicle navigation and can complement other RTLS technologies. Offers high accuracy but is expensive and requires line-of-sight.",
+    "slug": "lidar-light-detection-and-ranging"
+  },
+  {
+    "term": "Line of Sight (LoS)",
+    "category": "Technical Parameters",
+    "short": "A direct, unobstructed path between transmitter and receiver allowing signals to travel without reflection or diffraction. LoS conditions typically provide best positioning accuracy and reliability. Many industrial environments have limited LoS due to equipment, racks, walls, and other obstructions. RTLS systems must be designed to handle non-line-of-sight (NLoS) conditions.",
+    "slug": "line-of-sight-los"
+  },
+  {
+    "term": "Location Badge",
+    "category": "Hardware Components",
+    "short": "A wearable RTLS tag designed for personnel tracking, typically worn on lanyards, belts, or hard hats. Contains identification credentials, positioning technology, and often additional features like panic buttons, displays, or two-way communication. Used for worker safety, access control, time tracking, and emergency response. Designed for comfort and durability in industrial environments.",
+    "slug": "location-badge"
+  },
+  {
+    "term": "Location Data",
+    "category": "Software & Data Management",
+    "short": "The position information and associated metadata generated by RTLS including coordinates (x, y, z), timestamps, tag identifiers, quality indicators, and contextual information. Forms the foundation for all RTLS analytics and applications. Typically stored in time-series databases optimized for temporal queries. Volume can be massive in large deployments.",
+    "slug": "location-data"
+  },
+  {
+    "term": "Location Engine",
+    "category": "Software & Data Management",
+    "short": "The software component performing position calculations based on raw measurements from anchors and tags. Implements positioning algorithms like trilateration, triangulation, or fingerprinting to convert signal data into coordinates. May include filtering, prediction, and optimization to improve accuracy and smooth movements. Core component of RTLS architecture determining system performance.",
+    "slug": "location-engine"
+  },
+  {
+    "term": "Location History",
+    "category": "Performance Metrics & KPIs",
+    "short": "The historical record of where assets or personnel have been over time. Enables track playback, pattern analysis, compliance documentation, and incident investigation. Retention periods vary based on use case from days to years. Stored efficiently using time-series databases. Critical for analytics and continuous improvement.",
+    "slug": "location-history"
+  },
+  {
+    "term": "Location Intelligence",
+    "category": "Software & Data Management",
+    "short": "The insights and actionable information derived from RTLS location data through analysis and visualization. Transforms raw position data into business value through understanding patterns, optimizing processes, and enabling data-driven decisions. Applications include process optimization, resource allocation, safety improvement, and strategic planning.",
+    "slug": "location-intelligence"
+  },
+  {
+    "term": "Logistics 4.0",
+    "category": "Industry-Specific Terms",
+    "short": "The application of Industry 4.0 principles to logistics and supply chain operations. RTLS is a key enabling technology providing real-time visibility of goods, vehicles, and equipment throughout logistics networks. Enables automation, optimization, and integration of logistics processes. Supports goals of transparency, efficiency, and responsiveness.",
+    "slug": "logistics-4-0"
+  },
+  {
+    "term": "Lone Worker Protection",
+    "category": "Safety & Security",
+    "short": "The use of RTLS to enhance safety for personnel working alone or in isolated locations. Features include man-down detection, check-in requirements, location monitoring, and panic button alerts. Ensures rapid response if workers need assistance. Particularly important in hazardous environments or remote areas. Addresses regulatory requirements for lone worker safety.",
+    "slug": "lone-worker-protection"
+  },
+  {
+    "term": "LoRaWAN",
+    "category": "Localization Technologies",
+    "short": "A low-power wide-area network protocol designed for wireless battery-operated devices. Uses CSS modulation providing long range (kilometers outdoors) with low power consumption. In RTLS, LoRaWAN enables tracking across large outdoor areas like ports, campuses, or mining sites. Lower accuracy (10-50 meters) but excellent for applications prioritizing coverage and battery life.",
+    "slug": "lorawan"
+  },
+  {
+    "term": "Machine Learning",
+    "category": "Data & Analytics",
+    "short": "Artificial intelligence techniques enabling systems to learn from data and improve performance without explicit programming. In RTLS, machine learning applications include anomaly detection, predictive maintenance, process optimization, and automated calibration. Analyzes patterns in massive historical datasets to identify insights humans would miss. Increasingly important for advanced RTLS analytics.",
+    "slug": "machine-learning"
+  },
+  {
+    "term": "Magnetic Positioning",
+    "category": "Localization Technologies",
+    "short": "A positioning technology using variations in Earth's magnetic field or artificially generated magnetic fields for location determination. Works indoors where GPS is unavailable and doesn't require line-of-sight. Used in some smartphone indoor positioning applications. Accuracy typically 1-5 meters. Requires initial magnetic mapping of facilities.",
+    "slug": "magnetic-positioning"
+  },
+  {
+    "term": "Man-Down Detection",
+    "category": "Safety & Security",
+    "short": "A safety feature automatically detecting when a worker falls or becomes motionless and generating emergency alerts. Uses accelerometers and motion sensors in wearable tags to identify fall events or prolonged lack of movement. Critical for lone worker protection and hazardous environment safety. Enables rapid emergency response potentially saving lives.",
+    "slug": "man-down-detection"
+  },
+  {
+    "term": "Material Flow",
+    "category": "Industrial Applications",
+    "short": "The movement of materials through production or logistics processes. RTLS provides visibility to actual material flow patterns enabling optimization. Analysis reveals bottlenecks, unnecessary movements, and opportunities to improve layout or processes. Supports lean manufacturing principles and process efficiency improvements.",
+    "slug": "material-flow"
+  },
+  {
+    "term": "Material Handling",
+    "category": "Industrial Applications",
+    "short": "The movement, storage, and control of materials throughout manufacturing and warehousing. RTLS optimizes material handling by providing real-time visibility, optimizing transport routes, and identifying bottlenecks. Directly impacts operational efficiency and costs.",
+    "slug": "material-handling"
+  },
+  {
+    "term": "Mesh Network",
+    "category": "System Architecture",
+    "short": "A network topology where devices connect to multiple neighbors, each device able to relay data for others. Creates resilient, self-healing networks that continue operating if individual devices fail. Used in some RTLS implementations for extended coverage and redundancy. Particularly valuable in ad-hoc mode deployments.",
+    "slug": "mesh-network"
+  },
+  {
+    "term": "Mesh Networking",
+    "category": "Positioning Methods & Techniques",
+    "short": "A network topology where devices connect to multiple neighbors and relay data for each other, creating self-healing networks. Enables extended coverage without additional infrastructure and automatic route optimization. Common in Zigbee and some BLE implementations.",
+    "slug": "mesh-networking"
+  },
+  {
+    "term": "Meter-Level Accuracy",
+    "category": "Technical Parameters",
+    "short": "Positioning accuracy determining positions within 1-3 meters of true location. Sufficient for many industrial applications including asset tracking, warehouse management, and personnel monitoring. Commonly achieved with BLE systems or Wi-Fi positioning.",
+    "slug": "meter-level-accuracy"
+  },
+  {
+    "term": "Middleware",
+    "category": "Software & Data Management",
+    "short": "Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformation, protocol translation, message routing, and business logic. Enables integration without direct point-to-point connections. Provides flexibility and reduces coupling between systems.",
+    "slug": "middleware"
+  },
+  {
+    "term": "Mobile Infrastructure",
+    "category": "Hardware Components",
+    "short": "RTLS infrastructure components that are not permanently fixed, including portable anchors, mobile gateways, and vehicle-mounted equipment. Enables temporary tracking deployments, coverage in changing environments, and flexibility for dynamic operations. Used in construction, mining, and other applications where permanent infrastructure is impractical.",
+    "slug": "mobile-infrastructure"
+  },
+  {
+    "term": "Movement Pattern",
+    "category": "Performance Metrics & KPIs",
+    "short": "The characteristic ways assets or personnel move through facilities over time. RTLS analysis identifies typical patterns, deviations, and optimization opportunities. Patterns reveal normal operations, inefficiencies, safety risks, and process improvements. Machine learning can automatically classify and predict movement patterns.",
+    "slug": "movement-pattern"
+  },
+  {
+    "term": "MQTT Protocol",
+    "category": "Standards & Protocols",
+    "short": "A lightweight messaging protocol designed for IoT applications with low bandwidth and unreliable networks. Often used for RTLS data transmission between devices and servers. Provides publish-subscribe model enabling efficient one-to-many communication. Well-suited for industrial environments with constrained network resources.",
+    "slug": "mqtt-protocol"
+  },
+  {
+    "term": "Multilateration",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Arrival). Tag transmits a signal received by multiple anchors at slightly different times. Differences reveal distances enabling position calculation. Commonly used in UWB and other RF-based RTLS.",
+    "slug": "multilateration"
+  },
+  {
+    "term": "Multipath Propagation",
+    "category": "Technical Parameters",
+    "short": "The phenomenon where radio signals reach receivers via multiple paths due to reflections, diffractions, and scattering. Common in industrial environments with metal structures causing signal reflections. Degrades positioning accuracy by creating signal distortion and ambiguity. Advanced RTLS technologies and algorithms mitigate multipath effects.",
+    "slug": "multipath-propagation"
+  },
+  {
+    "term": "Multi-Technology RTLS",
+    "category": "System Architecture",
+    "short": "An RTLS deployment combining two or more positioning technologies within a unified platform to optimize accuracy, coverage, and cost across different facility zones. The most common industrial combination is UWB (precision indoor), BLE (cost-effective indoor coverage), and GNSS (outdoor), each technology serving zones where it offers the best cost-performance ratio. A single software platform aggregates all position data into one operational view.",
+    "slug": "multi-technology-rtls"
+  },
+  {
+    "term": "Mustering",
+    "category": "Safety & Security",
+    "short": "The process of accounting for all personnel during emergencies by gathering them at designated assembly points. RTLS-enabled mustering automatically detects when personnel reach muster points, identifies missing individuals, and provides accountability. Dramatically faster and more reliable than manual headcounts. Critical for emergency response and safety.",
+    "slug": "mustering"
+  },
+  {
+    "term": "myRTLS Insights",
+    "category": "Software & Data Management",
+    "short": "Sewio's analytics application that transforms raw RTLS location data into clear, actionable insights through simple graphs and dashboards. Processes location data, filters it, and presents metrics for operators, team leaders, and managers including material flow, dwell times, production trends, and workstation efficiency. Bridges the gap between raw data and business applications, serving as a foundation for digital Lean manufacturing. Can be deployed on-premises or in the cloud and integrates with BI tools via BI Connector.",
+    "slug": "myrtls-insights"
+  },
+  {
+    "term": "Network Bandwidth",
+    "category": "Technical Parameters",
+    "short": "The data transmission capacity available for RTLS communication, measured in bits per second or packets per second. Requirements depend on tag count, update rates, and data payload size. Insufficient bandwidth causes delays, data loss, and system instability.",
+    "slug": "network-bandwidth"
+  },
+  {
+    "term": "Network Topology",
+    "category": "System Architecture",
+    "short": "The arrangement and configuration of RTLS network components including tags, anchors, gateways, and servers. Common topologies include star (devices connect to central hub), mesh (devices interconnect), and hybrid. Topology choice affects performance, reliability, scalability, and cost.",
+    "slug": "network-topology"
+  },
+  {
+    "term": "Non-Line of Sight (NLoS)",
+    "category": "Technical Parameters",
+    "short": "Conditions where direct path between transmitter and receiver is blocked by obstacles like walls, equipment, or structures. Signals must reflect, diffract, or penetrate obstacles to reach receivers. Common in industrial environments and more challenging for positioning than LoS. Advanced algorithms and UWB technology mitigate NLoS effects.",
+    "slug": "non-line-of-sight-nlos"
+  },
+  {
+    "term": "Notification Engine",
+    "category": "Software & Data Management",
+    "short": "The software component managing alert generation, delivery, and escalation in RTLS systems. Evaluates conditions, determines appropriate recipients, selects delivery channels (SMS, email, push), and handles escalation for unacknowledged alerts. Includes features like alert filtering, priority management, and delivery confirmation.",
+    "slug": "notification-engine"
+  },
+  {
+    "term": "Occupancy Analytics",
+    "category": "Data & Analytics",
+    "short": "Analysis of how many people or assets occupy specific areas over time. Reveals space utilization patterns, peak occupancy times, underutilized areas, and compliance with capacity limits. Supports facility planning, safety management (maximum occupancy enforcement), and process optimization.",
+    "slug": "occupancy-analytics"
+  },
+  {
+    "term": "OMLOX Standard",
+    "category": "Standards & Protocols",
+    "short": "An open standard for industrial locating services enabling interoperability between different RTLS technologies and applications. Developed by consortium of technology companies and users. Defines standard APIs, data formats, and protocols ensuring multi-vendor compatibility. Aims to avoid vendor lock-in and enable best-of-breed solutions.",
+    "slug": "omlox-standard"
+  },
+  {
+    "term": "On-Premise RTLS",
+    "category": "Software & Data Management",
+    "short": "An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud. Provides complete control over data and infrastructure but requires capital investment and internal IT management. Suitable for organizations with security requirements preventing cloud use.",
+    "slug": "on-premise-rtls"
+  },
+  {
+    "term": "Open API",
+    "category": "Software & Data Management",
+    "short": "An application programming interface publicly documented and available for third-party developers to integrate with. Open APIs enable ecosystem development around RTLS platforms allowing custom applications, integrations, and extensions. Contrasts with proprietary or closed APIs. Important for flexibility and avoiding vendor lock-in.",
+    "slug": "open-api"
+  },
+  {
+    "term": "Passive RFID",
+    "category": "Localization Technologies",
+    "short": "Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID but with limited range (typically centimeters to a few meters). Used for inventory management, access control, and zone detection at doorways or choke points. Not suitable for real-time tracking but excellent for item-level identification.",
+    "slug": "passive-rfid"
+  },
+  {
+    "term": "Passive Tag",
+    "category": "Hardware Components",
+    "short": "An RFID tag without its own power source, activated by electromagnetic energy from readers. Very inexpensive, unlimited lifespan (no battery to replace), but limited range and functionality. Used for item-level tagging, asset identification at fixed read points, and applications not requiring real-time location.",
+    "slug": "passive-tag"
+  },
+  {
+    "term": "Pattern Recognition",
+    "category": "Data & Analytics",
+    "short": "The use of algorithms and machine learning to identify meaningful patterns in RTLS data. Applications include recognizing normal versus abnormal movement patterns, classifying activities, predicting future behaviors, and detecting emerging trends. Enables automated insights from massive datasets that would be impossible to analyze manually.",
+    "slug": "pattern-recognition"
+  },
+  {
+    "term": "Penetration",
+    "category": "Technical Parameters",
+    "short": "The ability of radio signals to pass through obstacles like walls, floors, and materials. Varies significantly by frequency and material: lower frequencies penetrate better but provide less positioning accuracy, concrete and metal severely attenuate signals. Understanding penetration characteristics is critical for RTLS design and anchor placement.",
+    "slug": "penetration"
+  },
+  {
+    "term": "Perimeter Control",
+    "category": "Geofencing & Zones",
+    "short": "The use of RTLS to monitor and control movement across facility boundaries. Detects when assets or personnel cross defined perimeters, preventing unauthorized exits, managing access, and providing security. Applications include theft prevention, visitor management, and controlled area access. Often integrated with physical security systems.",
+    "slug": "perimeter-control"
+  },
+  {
+    "term": "Personnel Tracking",
+    "category": "Industrial Applications",
+    "short": "The real-time monitoring of worker locations within facilities for safety, efficiency, and compliance purposes. Applications include lone worker protection, emergency response, time and attendance, access control, and productivity analysis. Privacy considerations important - systems should focus on safety and operations rather than surveillance.",
+    "slug": "personnel-tracking"
+  },
+  {
+    "term": "Phase Difference Measurement",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique measuring differences in RF signal phase at multiple antennas to determine angle of arrival. Used in some BLE AoA systems for accurate positioning. Phase measurements provide precise angle information but require careful antenna array design and calibration. Can achieve sub-meter accuracy.",
+    "slug": "phase-difference-measurement"
+  },
+  {
+    "term": "Positioning Accuracy",
+    "category": "Technical Parameters",
+    "short": "The degree of correctness in position measurements, encompassing both systematic and random errors. Should specify measurement conditions and confidence levels. Accuracy varies across coverage area, typically best near anchors and degrading at edges.",
+    "slug": "positioning-accuracy"
+  },
+  {
+    "term": "Positioning Algorithm",
+    "category": "Software & Data Management",
+    "short": "The mathematical method used to calculate tag locations from raw signal measurements. Common algorithms include trilateration (distances), triangulation (angles), and multilateration (time differences). Algorithm choice affects accuracy, processing requirements, and environmental suitability.",
+    "slug": "positioning-algorithm"
+  },
+  {
+    "term": "Positioning Engine",
+    "category": "Software & Data Management",
+    "short": "Software that calculates tag positions from raw signal measurements. Implements positioning algorithms, applies filtering, handles outliers, and may include prediction. Can run centrally or distributed across edge devices. Performance impacts system capacity and latency.",
+    "slug": "positioning-engine"
+  },
+  {
+    "term": "PPE (Personal Protective Equipment) Compliance",
+    "category": "Safety & Security",
+    "short": "The use of RTLS to verify workers wear required safety equipment in designated areas. Tags on PPE (hard hats, vests, safety glasses) detected in conjunction with personnel badges confirm compliance. Automated alerts when workers enter hazardous areas without required PPE. Supports safety culture and regulatory compliance.",
+    "slug": "ppe-personal-protective-equipment-compliance"
+  },
+  {
+    "term": "Precision",
+    "category": "Technical Parameters",
+    "short": "The repeatability or consistency of position measurements - how close repeated measurements are to each other. Different from accuracy (closeness to true position). High precision with low accuracy means measurements are consistent but systematically off. High precision and accuracy means consistent measurements close to truth. Both important for RTLS performance.",
+    "slug": "precision"
+  },
+  {
+    "term": "Predictive Analytics",
+    "category": "Data & Analytics",
+    "short": "The use of statistical techniques and machine learning to forecast future events, behaviors, or conditions based on historical RTLS data. Applications include predicting equipment failures, forecasting bottlenecks, anticipating maintenance needs, and estimating completion times. Enables proactive rather than reactive management.",
+    "slug": "predictive-analytics"
+  },
+  {
+    "term": "Predictive Maintenance",
+    "category": "Industry-Specific Terms",
+    "short": "A maintenance strategy using condition monitoring and predictive analytics to service equipment just before failure is likely. RTLS enables predictive maintenance by tracking equipment usage patterns, operating hours, and environmental conditions. Reduces unplanned downtime while avoiding unnecessary preventive maintenance.",
+    "slug": "predictive-maintenance"
+  },
+  {
+    "term": "Preventive Maintenance",
+    "category": "Industrial Applications",
+    "short": "Maintenance strategy where equipment is serviced on fixed schedules to prevent failures. RTLS supports preventive maintenance by accurately tracking operating hours and usage patterns. More effective than calendar-based schedules when using actual usage data.",
+    "slug": "preventive-maintenance"
+  },
+  {
+    "term": "Process Optimization",
+    "category": "Industrial Applications",
+    "short": "The systematic improvement of operational processes using insights from RTLS data analysis. Identifies and eliminates bottlenecks, reduces cycle times, improves material flow, optimizes resource allocation, and enhances efficiency. RTLS provides objective data revealing actual versus intended processes enabling data-driven improvements.",
+    "slug": "process-optimization"
+  },
+  {
+    "term": "Production Floor",
+    "category": "Industry-Specific Terms",
+    "short": "The manufacturing area where actual production activities occur, including assembly lines and work cells. Also called shop floor. RTLS provides visibility to work-in-progress, material flow, and process performance.",
+    "slug": "production-floor"
+  },
+  {
+    "term": "Production Monitoring",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to track work-in-progress, materials, and equipment through production processes. Provides real-time visibility to production status, cycle times, and bottlenecks. Enables proactive management, rapid problem identification, and performance analysis. Often integrates with MES for comprehensive production control.",
+    "slug": "production-monitoring"
+  },
+  {
+    "term": "Productivity Metrics",
+    "category": "Performance Metrics & KPIs",
+    "short": "Key performance indicators derived from RTLS data measuring operational efficiency. Examples include cycle times, throughput rates, equipment utilization, distance traveled, and task completion times. Objective metrics enable performance tracking, benchmarking, and continuous improvement.",
+    "slug": "productivity-metrics"
+  },
+  {
+    "term": "Proximity Alert",
+    "category": "Geofencing & Zones",
+    "short": "An alert generated when two or more tracked objects come within a defined distance of each other. Used for collision avoidance (warning when vehicles approach pedestrians), social distancing (maintaining separation), contact tracing (recording interactions), and operational safety. Threshold distances configurable based on application requirements.",
+    "slug": "proximity-alert"
+  },
+  {
+    "term": "Proximity Detection",
+    "category": "Positioning Methods & Techniques",
+    "short": "The capability to detect when tracked objects are near each other or near specific locations. Enables applications including collision avoidance, interaction tracking, contact tracing, and proximity-based access control. Detection typically based on signal strength, ranging measurements, or geofence overlap.",
+    "slug": "proximity-detection"
+  },
+  {
+    "term": "Proximity Warning",
+    "category": "Safety & Security",
+    "short": "A subset of proximity alert specifically focused on safety applications. Warns operators or workers when dangerous proximity conditions exist such as forklifts approaching pedestrians or equipment nearing hazards. Graduated warnings increase in urgency as distance decreases.",
+    "slug": "proximity-warning"
+  },
+  {
+    "term": "Range",
+    "category": "Technical Parameters",
+    "short": "The maximum distance over which RTLS components can reliably communicate. Varies significantly by technology: passive RFID centimeters to meters, BLE 10-50 meters, UWB 50-200 meters, active RFID 30-100+ meters, LoRa kilometers. Range requirements influence technology selection. Environmental conditions significantly affect actual achievable range.",
+    "slug": "range"
+  },
+  {
+    "term": "Reader",
+    "category": "Hardware Components",
+    "short": "A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID systems, readers also energize tags. Readers forward collected data to the RTLS processing system. Reader placement, density, and configuration determine system coverage and performance.",
+    "slug": "reader"
+  },
+  {
+    "term": "Real-Time",
+    "category": "Technical Parameters",
+    "short": "The capability to process and respond to events within milliseconds to seconds of occurrence. In RTLS, means position updates and alerts occur fast enough for immediate operational use without perceptible lag. Critical for time-sensitive applications like collision avoidance and safety alerts.",
+    "slug": "real-time"
+  },
+  {
+    "term": "Real-Time Analytics",
+    "category": "Data & Analytics",
+    "short": "The processing and analysis of RTLS data as it is generated, enabling immediate insights and responses. Supports time-critical applications like collision avoidance, process control, and dynamic optimization. Requires edge computing or high-performance processing infrastructure. Contrasts with batch analytics processing historical data.",
+    "slug": "real-time-analytics"
+  },
+  {
+    "term": "Real-Time Monitoring",
+    "category": "Software & Data Management",
+    "short": "The continuous observation of current RTLS data showing asset and personnel positions, status, and activities as they happen. Enables immediate awareness of operational state, rapid problem detection, and timely intervention. Displayed through dashboards, maps, and mobile applications.",
+    "slug": "real-time-monitoring"
+  },
+  {
+    "term": "Received Signal Strength Indicator (RSSI)",
+    "category": "Positioning Methods & Techniques",
+    "short": "A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably with distance. Less accurate than time-based methods due to environmental variations affecting signal strength. Common in Wi-Fi and BLE positioning.",
+    "slug": "received-signal-strength-indicator-rssi"
+  },
+  {
+    "term": "Receiver",
+    "category": "Hardware Components",
+    "short": "A device or component that receives radio signals from transmitters or tags. In RTLS, receivers may be fixed (anchors, access points) or mobile (smartphones, portable devices). Receiver sensitivity and quality affect system range and reliability.",
+    "slug": "receiver"
+  },
+  {
+    "term": "Receiver Sensitivity",
+    "category": "Technical Parameters",
+    "short": "The minimum signal strength a receiver can detect and process, measured in dBm. Higher sensitivity (more negative dBm) enables longer range and better obstacle penetration. Combined with transmission power determines maximum system range.",
+    "slug": "receiver-sensitivity"
+  },
+  {
+    "term": "Refresh Rate",
+    "category": "Technical Parameters",
+    "short": "How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates range from once per second to 10+ times per second depending on application requirements and technology. Real-time applications like collision avoidance need high refresh rates while asset monitoring may need only occasional updates.",
+    "slug": "refresh-rate"
+  },
+  {
+    "term": "Reporting Module",
+    "category": "Software & Data Management",
+    "short": "The software component generating reports from RTLS data. Provides scheduled reports, ad-hoc reports, and customizable reporting capabilities. Reports may cover utilization, compliance, cycle times, incidents, or other metrics. Often includes export to PDF, Excel, or other formats.",
+    "slug": "reporting-module"
+  },
+  {
+    "term": "Resolution",
+    "category": "Technical Parameters",
+    "short": "The smallest change in position that the RTLS can detect and report. Different from accuracy (how close to truth) and precision (repeatability). Systems may have fine resolution (report small position changes) but lower accuracy. Resolution requirements depend on application - precision assembly needs fine resolution while warehouse tracking may not.",
+    "slug": "resolution"
+  },
+  {
+    "term": "Response Time",
+    "category": "Technical Parameters",
+    "short": "The time elapsed between an event occurring and the system responding with appropriate action. Critical for safety and control applications. Includes detection time, processing time, and action execution time. Edge computing and distributed architectures reduce response time for critical applications.",
+    "slug": "response-time"
+  },
+  {
+    "term": "REST API",
+    "category": "Software & Data Management",
+    "short": "Representational State Transfer Application Programming Interface - a software architectural style for web-based APIs using HTTP requests. Common in modern RTLS platforms for integration with other systems. Provides standard methods (GET, POST, PUT, DELETE) for accessing and manipulating RTLS data.",
+    "slug": "rest-api"
+  },
+  {
+    "term": "Restricted Area",
+    "category": "Geofencing & Zones",
+    "short": "A facility zone where access is controlled and limited to authorized personnel only. RTLS monitors restricted area access, logging entries and exits, alerting on unauthorized access attempts, and providing compliance documentation. Examples include clean rooms, secure storage, and hazardous material areas.",
+    "slug": "restricted-area"
+  },
+  {
+    "term": "RFID (Radio-Frequency Identification)",
+    "category": "Localization Technologies",
+    "short": "A technology using electromagnetic fields to automatically identify and track tags attached to objects. Includes both passive RFID (powered by reader signals) and active RFID (battery-powered). Fundamental technology underlying many RTLS implementations. Ranges from simple identification to real-time location tracking.",
+    "slug": "rfid-radio-frequency-identification"
+  },
+  {
+    "term": "Room-Level Accuracy",
+    "category": "Technical Parameters",
+    "short": "Positioning accuracy where RTLS determines which room or enclosed space a tag occupies, typically 2-5 meters resolution. Intermediate level between zone-level and meter-level accuracy. Commonly achieved with BLE beacons or Wi-Fi fingerprinting.",
+    "slug": "room-level-accuracy"
+  },
+  {
+    "term": "Route Optimization",
+    "category": "Performance Metrics & KPIs",
+    "short": "The process of improving paths or sequences for moving assets, materials, or personnel through facilities. RTLS provides data showing actual routes enabling identification of inefficient paths, congestion points, and opportunities for improvement. Applications include warehouse picking optimization, AGV routing, and workflow redesign.",
+    "slug": "route-optimization"
+  },
+  {
+    "term": "RTK (Real-Time Kinematic)",
+    "category": "Localization Technologies",
+    "short": "A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outdoor accuracy (1-5 cm). Used in industrial applications requiring precision outdoor positioning including autonomous vehicle guidance, port crane operations, and construction machine control. Requires unobstructed sky view and base station within 20-30 km. Represents the outdoor equivalent of UWB for precision positioning.",
+    "slug": "rtk-real-time-kinematic"
+  },
+  {
+    "term": "RTLS Antenna",
+    "category": "Hardware Components",
+    "short": "The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Directional antennas focus signals in specific directions while omnidirectional antennas radiate equally in all directions. Proper antenna selection and placement critical for coverage and accuracy.",
+    "slug": "rtls-antenna"
+  },
+  {
+    "term": "RTLS Manager",
+    "category": "Software & Data Management",
+    "short": "The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status for all anchors, tags, and servers, allows system initialization, rescan and resync, and offers full control over settings and system parameters. Enables remote firmware upgrades and device reconfiguration online. Designed for simple, accessible, and user-friendly real-time location system management.",
+    "slug": "rtls-manager"
+  },
+  {
+    "term": "RTLS Monitor",
+    "category": "Software & Data Management",
+    "short": "A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. Displays CPU usage, RAM usage, network traffic, disk partition status, RTLS Studio uptime, and identifies performance bottlenecks. Helps administrators ensure optimal system performance and identify issues before they impact operations.",
+    "slug": "rtls-monitor"
+  },
+  {
+    "term": "RTLS Planner",
+    "category": "Software & Data Management",
+    "short": "Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation. Enables instant Dilution of Precision (DOP) simulation, supports 2D and 3D planning with CAD file import (DXF, PDF), calculates coverage and expected precision, and helps minimize project costs by preventing unplanned anchor deployment updates. Available exclusively to Sewio partners. Includes collaboration features for sharing designs with Sewio consultants.",
+    "slug": "rtls-planner"
+  },
+  {
+    "term": "RTLS Platform",
+    "category": "Software & Data Management",
+    "short": "Sewio's complete real-time location system encompassing both hardware (UWB/BLE tags and anchors) and software (RTLS Studio) forming an integrated solution for industrial indoor tracking. Based on ultra-wideband TDoA technology providing 30cm positioning accuracy. Includes location engine, data management, visualization tools, analytics capabilities, and fully documented Open API for third-party integration. Scalable platform supporting multiple use cases from asset tracking to worker safety.",
+    "slug": "rtls-platform"
+  },
+  {
+    "term": "RTLS Player",
+    "category": "Software & Data Management",
+    "short": "A cloud-based evaluation and optimization tool enabling replay of historical RTLS data to assess system performance and fine-tune settings remotely. Allows users to upload system captures, play back tracking data, test configuration changes, and export optimized settings for implementation in live systems. Helps validate anchor restrictions and positioning configurations before deploying to production environments. Available on Sewio Portal.",
+    "slug": "rtls-player"
+  },
+  {
+    "term": "RTLS Studio",
+    "category": "Software & Data Management",
+    "short": "Sewio's all-in-one software package for installation, deployment, maintenance, and control of the RTLS platform. Includes RTLS Manager (configuration), Sensmap (visualization), RTLS Monitor (performance monitoring), Open API documentation, and integration with myRTLS Insights and Sage Analytics. Provides unified interface for managing entire RTLS system remotely via web browser. Supports deployment via Docker, native Ubuntu, or VirtualBox. Latest version available through myRTLS Care subscription.",
+    "slug": "rtls-studio"
+  },
+  {
+    "term": "Safe Zone",
+    "category": "Geofencing & Zones",
+    "short": "A designated area where personnel are protected from hazards or where safety procedures are relaxed. RTLS monitors safe zone occupancy, alerts when personnel leave safe zones during emergencies, and verifies safety protocols. Opposite of hazardous zones.",
+    "slug": "safe-zone"
+  },
+  {
+    "term": "Satellite Constellation",
+    "category": "Localization Technologies",
+    "short": "A group of satellites working together as a system to provide positioning coverage. The four major global constellations are GPS (USA, 31 operational satellites), GLONASS (Russia, 24 satellites), Galileo (EU, 30 satellites), and BeiDou (China, 35 satellites). Modern industrial GNSS receivers track multiple constellations simultaneously, improving satellite availability, accuracy, and reliability compared to single-constellation systems.",
+    "slug": "satellite-constellation"
+  },
+  {
+    "term": "Safety Zone Enforcement",
+    "category": "Safety & Security",
+    "short": "The use of RTLS to ensure compliance with safety zones including restricted access to hazardous areas, maximum occupancy limits, required qualifications for entry, and exposure time limits. Provides automated enforcement through alerts, access control integration, and compliance documentation.",
+    "slug": "safety-zone-enforcement"
+  },
+  {
+    "term": "Sage Analytics",
+    "category": "Software & Data Management",
+    "short": "Sewio's starter analytics tool designed for pilots and proof-of-concept projects that demonstrates insights available from RTLS data. Presents and analyzes tracking results through trajectory maps, heat maps, spaghetti diagrams, and zone analytics. Not intended for full production analytics but showcases what can be achieved with location data to support decision-making about process optimization and efficiency improvements. Integrated within RTLS Studio.",
+    "slug": "sage-analytics"
+  },
+  {
+    "term": "Scalability",
+    "category": "Technical Parameters",
+    "short": "The ability of RTLS systems to grow and handle increasing loads without performance degradation. Includes scaling number of tracked tags, coverage area, data volume, and concurrent users. Scalable architectures use distributed processing, cloud resources, and efficient data management. Critical consideration for large or growing deployments.",
+    "slug": "scalability"
+  },
+  {
+    "term": "Sensmap",
+    "category": "Software & Data Management",
+    "short": "Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, alerting and notifications, real-time asset tracking, trajectory recording, anchor deployment visualization, and map-based system management. Allows adding buildings and floor plans, auto-deploying anchors, and provides immediate valuable insights. Also available in 3D version (Sensmap 3D) using WebGL for three-dimensional position visualization. Core component of RTLS Studio.",
+    "slug": "sensmap"
+  },
+  {
+    "term": "Sensor Node",
+    "category": "Hardware Components",
+    "short": "A device combining positioning technology with environmental sensors for tracking both location and conditions. Monitors parameters like temperature, humidity, vibration, light, or air quality. Enables condition monitoring and environmental compliance in addition to location tracking.",
+    "slug": "sensor-node"
+  },
+  {
+    "term": "Shop Floor",
+    "category": "Industry-Specific Terms",
+    "short": "Synonym for production floor - the manufacturing area where products are made. RTLS shop floor applications include tracking material flow, monitoring cycle times, and ensuring safety compliance. Data feeds MES and ERP systems.",
+    "slug": "shop-floor"
+  },
+  {
+    "term": "Signal Attenuation",
+    "category": "Technical Parameters",
+    "short": "The reduction in signal strength as radio waves propagate through space and obstacles in industrial environments. Critical factor in RTLS design affecting range, accuracy, and reliability. Caused by distance (signal weakens with range), material absorption (concrete, metal, liquids), and reflections from surfaces. Different materials attenuate signals differently: human bodies reduce 2.4 GHz signals by 3-5 dB, concrete walls by 10-20 dB, metal barriers by 20-40+ dB.",
+    "slug": "signal-attenuation"
+  },
+  {
+    "term": "Signal Interference",
+    "category": "Technical Parameters",
+    "short": "Disruption of RTLS signals by other radio sources, electrical equipment, or environmental factors. Common industrial interference sources include Wi-Fi, Bluetooth, motors, welders, and metal structures. Can degrade positioning accuracy and reliability, and can cause tracking failures. Proper frequency selection and interference mitigation techniques address this challenge.",
+    "slug": "signal-interference"
+  },
+  {
+    "term": "Site Survey",
+    "category": "Installation & Configuration",
+    "short": "The systematic physical examination of a facility before RTLS deployment to assess RF propagation, identify interference sources, and validate coverage plans. Measures signal strength, documents obstacles, and tests anchor placements. Essential for successful deployment in complex industrial environments.",
+    "slug": "site-survey"
+  },
+  {
+    "term": "Smart Factory",
+    "category": "Industry-Specific Terms",
+    "short": "A manufacturing facility using advanced technologies including RTLS, IoT, automation, and data analytics to optimize operations. RTLS provides real-time location intelligence enabling smart factory capabilities like autonomous material handling, adaptive production scheduling, and comprehensive operational visibility.",
+    "slug": "smart-factory"
+  },
+  {
+    "term": "Smart Warehouse",
+    "category": "Industry-Specific Terms",
+    "short": "A warehouse facility leveraging RTLS, automation, and data analytics for optimal operations. RTLS enables capabilities including automated inventory management, optimized picking routes, autonomous vehicle navigation, and real-time visibility. Improves efficiency, accuracy, and throughput.",
+    "slug": "smart-warehouse"
+  },
+  {
+    "term": "Space Utilization",
+    "category": "Performance Metrics & KPIs",
+    "short": "Analysis of how effectively facility space is being used based on RTLS tracking data. Identifies underutilized areas, congestion points, and opportunities for layout optimization. Supports capacity planning, facility expansion decisions, and cost allocation. Particularly valuable in expensive facilities where maximizing space efficiency is critical.",
+    "slug": "space-utilization"
+  },
+  {
+    "term": "Star Topology",
+    "category": "System Architecture",
+    "short": "A network configuration where all devices connect to a central hub or controller. Common in infrastructure-mode RTLS where tags communicate with centralized access points/anchors. Provides centralized management and deterministic communication but creates single point of failure at hub.",
+    "slug": "star-topology"
+  },
+  {
+    "term": "Supply Chain Visibility",
+    "category": "Industrial Applications",
+    "short": "The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibility within facilities complementing transportation tracking systems. Enables end-to-end visibility from supplier through production to customer. Improves planning, reduces delays, and enhances customer service.",
+    "slug": "supply-chain-visibility"
+  },
+  {
+    "term": "Synchronization",
+    "category": "Installation & Configuration",
+    "short": "The process of ensuring RTLS system components operate with coordinated timing. Critical for time-based positioning methods like TDOA and TWR. Anchors must be precisely synchronized, typically using GPS, network time protocols, or wired synchronization. Poor synchronization degrades positioning accuracy.",
+    "slug": "synchronization"
+  },
+  {
+    "term": "System Backup",
+    "category": "Software & Data Management",
+    "short": "Procedures and technologies for protecting RTLS data and configurations. Includes backing up system settings, historical data, and user configurations. Essential for disaster recovery, system migration, and recovering from failures. Backup strategies balance data completeness against storage costs.",
+    "slug": "system-backup"
+  },
+  {
+    "term": "System Capacity",
+    "category": "Performance Metrics & KPIs",
+    "short": "The maximum operational load an RTLS can handle including concurrent tags, updates per second, and data storage. Must account for peak scenarios. Exceeding capacity causes increased latency, missed updates, and potential instability.",
+    "slug": "system-capacity"
+  },
+  {
+    "term": "System Integration",
+    "category": "Installation & Configuration",
+    "short": "The process of connecting RTLS with other enterprise systems including ERP, WMS, MES, and BMS. Enables data exchange, process automation, and comprehensive operational visibility. Integration methods include APIs, middleware, and direct database connections. Critical for realizing full RTLS value.",
+    "slug": "system-integration"
+  },
+  {
+    "term": "Tag",
+    "category": "Hardware Components",
+    "short": "The fundamental RTLS component attached to assets or worn by personnel to enable tracking. Contains wireless transmitter, unique identifier, and often sensors or additional features. Available in various form factors (badges, labels, enclosures) for different applications. See also Active Tag, Passive Tag.",
+    "slug": "tag"
+  },
+  {
+    "term": "Tag Capacity",
+    "category": "Performance Metrics & KPIs",
+    "short": "The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined by processing power, network bandwidth, and wireless spectrum. Must account for peak scenarios like shift changes or maximum facility occupancy.",
+    "slug": "tag-capacity"
+  },
+  {
+    "term": "Tag Identifier",
+    "category": "Hardware Components",
+    "short": "A unique digital code assigned to each tag enabling individual identification and tracking. Typically numeric or alphanumeric string like MAC address or UUID. Must be unique within deployment to prevent conflicts.",
+    "slug": "tag-identifier"
+  },
+  {
+    "term": "Telemetry",
+    "category": "Software & Data Management",
+    "short": "The automated collection and transmission of data from remote sensors or tracked assets. In RTLS, telemetry includes not just position but also sensor readings, status information, and diagnostics. Enables remote monitoring and condition-based management.",
+    "slug": "telemetry"
+  },
+  {
+    "term": "Theft Prevention",
+    "category": "Safety & Security",
+    "short": "The use of RTLS to detect and prevent unauthorized removal of assets from facilities. Features include perimeter monitoring, unauthorized movement alerts, and integration with security systems. Significant ROI from preventing loss of valuable assets. Provides both deterrent effect and rapid detection.",
+    "slug": "theft-prevention"
+  },
+  {
+    "term": "Third-Party Integration",
+    "category": "Software & Data Management",
+    "short": "Connecting RTLS with software or systems from other vendors. Requires well-documented APIs, standard protocols, and often custom integration work. Enables best-of-breed solutions combining RTLS with specialized applications. Important for avoiding vendor lock-in.",
+    "slug": "third-party-integration"
+  },
+  {
+    "term": "Throughput",
+    "category": "Performance Metrics & KPIs",
+    "short": "The rate at which items, materials, or processes move through a facility or operation. RTLS measures actual throughput providing objective data for capacity planning and performance management. Identifies constraints limiting throughput and validates improvement initiatives.",
+    "slug": "throughput"
+  },
+  {
+    "term": "Time Difference of Arrival (TDoA)",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location. Also called multilateration. Requires precise time synchronization between receivers. Commonly used in UWB systems providing high accuracy. Doesn't require tags to be synchronized.",
+    "slug": "time-difference-of-arrival-tdoa"
+  },
+  {
+    "term": "Time of Arrival (ToA)",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization between tags and receivers. Combined with measurements to multiple receivers enables position calculation through trilateration. Used in some UWB systems.",
+    "slug": "time-of-arrival-toa"
+  },
+  {
+    "term": "Time Synchronization",
+    "category": "Installation & Configuration",
+    "short": "The process of coordinating system clocks to a common time reference. Essential for time-based positioning methods. Methods include GPS time synchronization, network time protocols (NTP, PTP), and wired synchronization signals. Synchronization accuracy directly affects positioning accuracy.",
+    "slug": "time-synchronization"
+  },
+  {
+    "term": "Time-of-Flight (ToF)",
+    "category": "Positioning Methods & Techniques",
+    "short": "A distance measurement technique calculating signal travel time between transmitter and receiver, then converting to distance. Provides highly accurate ranging (centimeter-level) and forms the basis for trilateration positioning. Used primarily in UWB systems requiring precise time synchronization.",
+    "slug": "time-of-flight-tof"
+  },
+  {
+    "term": "Tool Tracking",
+    "category": "Industrial Applications",
+    "short": "Specialized RTLS application for tracking tools and equipment in manufacturing, maintenance, and construction environments. Reduces time searching for tools, prevents loss, optimizes tool inventory, and ensures proper tool availability. Particularly valuable for expensive or frequently-needed tools.",
+    "slug": "tool-tracking"
+  },
+  {
+    "term": "Tracking Software",
+    "category": "Software & Data Management",
+    "short": "The application layer of RTLS systems providing user interfaces, data management, analytics, and reporting. Includes real-time monitoring dashboards, historical analysis tools, configuration interfaces, and integration capabilities. Differentiates RTLS products beyond just hardware capabilities.",
+    "slug": "tracking-software"
+  },
+  {
+    "term": "Traffic Pattern",
+    "category": "Data & Analytics",
+    "short": "Characteristic movement flows of assets or personnel through facilities revealed through RTLS data analysis. Identifies congestion zones, frequently used routes, and inefficiencies. Visualized through heat maps and flow diagrams for layout optimization.",
+    "slug": "traffic-pattern"
+  },
+  {
+    "term": "Transmission Power",
+    "category": "Technical Parameters",
+    "short": "The RF power level used by tags and anchors when transmitting, measured in milliwatts or dBm. Higher power increases range but consumes more battery. Regulatory limits restrict maximum allowed power. Systems balance power to achieve required range while maximizing battery life.",
+    "slug": "transmission-power"
+  },
+  {
+    "term": "Transmitter",
+    "category": "Hardware Components",
+    "short": "A device or component that sends radio signals. In RTLS, transmitters may be in active tags (broadcasting position beacons) or in infrastructure (interrogating passive tags or providing reference signals). Transmitter power affects range and battery life.",
+    "slug": "transmitter"
+  },
+  {
+    "term": "Transponder",
+    "category": "Hardware Components",
+    "short": "A device that receives a signal and automatically transmits a response signal. In RTLS, typically refers to tags that respond to reader interrogation signals. Common in active RFID and some UWB implementations.",
+    "slug": "transponder"
+  },
+  {
+    "term": "Travel Distance",
+    "category": "Performance Metrics & KPIs",
+    "short": "The total distance traveled by assets or personnel measured by RTLS. Useful for equipment utilization analysis, worker efficiency assessment, route optimization, and wear-based maintenance scheduling. Accumulated over time provides accurate usage metrics.",
+    "slug": "travel-distance"
+  },
+  {
+    "term": "Triangulation",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particularly those using angle of arrival measurements. Requires fewer reference points than trilateration for 2D positioning. Used in systems employing Angle of Arrival (AoA) measurements.",
+    "slug": "triangulation"
+  },
+  {
+    "term": "Trilateration",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique determining location by measuring distances to three or more anchors with known positions. Position calculated as intersection of distance circles (2D) or spheres (3D). Most common RTLS method using time-of-flight or signal strength measurements.",
+    "slug": "trilateration"
+  },
+  {
+    "term": "Turnaround Time",
+    "category": "Performance Metrics & KPIs",
+    "short": "The time required to complete a process from start to finish, often used in logistics for vehicle or shipment processing times. RTLS automatically measures turnaround times providing objective data for analysis and improvement. Critical metric for dock operations and transportation efficiency.",
+    "slug": "turnaround-time"
+  },
+  {
+    "term": "Two-Way Ranging (TWR)",
+    "category": "Positioning Methods & Techniques",
+    "short": "A positioning technique where tags and anchors exchange messages to measure round-trip signal propagation time, determining distance. Doesn't require precise time synchronization between tags and anchors, simplifying deployment. Used in some UWB systems providing accurate ranging.",
+    "slug": "two-way-ranging-twr"
+  },
+  {
+    "term": "UDP Stream",
+    "category": "Software & Data Management",
+    "short": "User Datagram Protocol data streaming - a method for transmitting RTLS data over networks. UDP provides low-latency, connectionless transmission suitable for real-time position updates. Trades reliability for speed - acceptable for position data where occasional lost packets don't critically impact operations.",
+    "slug": "udp-stream"
+  },
+  {
+    "term": "Ultrasonic Positioning",
+    "category": "Localization Technologies",
+    "short": "A positioning technology using ultrasonic sound waves for location determination. Offers high accuracy (centimeter-level) but limited range and requires line-of-sight. Used in some specialized applications but less common than RF-based technologies. Immune to RF interference.",
+    "slug": "ultrasonic-positioning"
+  },
+  {
+    "term": "Update Rate",
+    "category": "Performance Metrics & KPIs",
+    "short": "The frequency at which RTLS reports new positions, measured in Hertz or updates per second. Common rates range from 0.1 Hz for slow-moving assets to 10+ Hz for dynamic applications. Higher rates provide smoother tracking but consume more battery power and system resources.",
+    "slug": "update-rate"
+  },
+  {
+    "term": "Utilization Rate",
+    "category": "Performance Metrics & KPIs",
+    "short": "The percentage of time assets or resources are actively in use versus available time. Key metric for equipment, space, and personnel efficiency. RTLS provides accurate utilization measurements enabling data-driven decisions about resource allocation and capacity needs.",
+    "slug": "utilization-rate"
+  },
+  {
+    "term": "UWB (Ultra-Wideband)",
+    "category": "Localization Technologies",
+    "short": "A radio technology using extremely short pulses across wide frequency spectrum (typically 3.1-10.6 GHz). Provides the highest positioning accuracy (10-30 cm) among mainstream RTLS technologies. Resistant to multipath interference and penetrates obstacles well. Higher cost than BLE but essential for precision applications.",
+    "slug": "uwb-ultra-wideband"
+  },
+  {
+    "term": "Vehicle Tag",
+    "category": "Hardware Components",
+    "short": "An RTLS tag designed for mounting on industrial vehicles like forklifts, tuggers, and AGVs. Typically ruggedized for vibration and impacts, often integrated with vehicle systems. Enables vehicle tracking, utilization monitoring, operator assignment, and safety applications like collision avoidance.",
+    "slug": "vehicle-tag"
+  },
+  {
+    "term": "Vehicle Tracking",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to monitor locations and movements of industrial vehicles within facilities. Applications include fleet utilization optimization, traffic management, safety monitoring, and maintenance scheduling. Often integrates with vehicle telematics and fleet management systems.",
+    "slug": "vehicle-tracking"
+  },
+  {
+    "term": "Virtual Boundary",
+    "category": "Geofencing & Zones",
+    "short": "See Geofence - a software-defined boundary triggering actions when crossed. Virtual boundaries enable flexible zone management without physical barriers. Can be easily created, modified, or removed as operational needs change.",
+    "slug": "virtual-boundary"
+  },
+  {
+    "term": "Warehouse Management",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to optimize warehouse operations including receiving, putaway, picking, packing, and shipping. Provides real-time inventory visibility, automated inventory updates, optimized task routing, and performance monitoring. Typically integrates with WMS for comprehensive warehouse control.",
+    "slug": "warehouse-management"
+  },
+  {
+    "term": "Wearable Tag",
+    "category": "Hardware Components",
+    "short": "An RTLS tag designed to be worn by personnel, typically as badges, wristbands, or hard hat attachments. Used for worker safety, access control, time tracking, and productivity monitoring. Should be comfortable, durable, and suitable for industrial environments. Often includes features like panic buttons.",
+    "slug": "wearable-tag"
+  },
+  {
+    "term": "WebSocket",
+    "category": "Software & Data Management",
+    "short": "A communication protocol providing full-duplex communication channels over TCP connections. Used in modern RTLS platforms for real-time data streaming to web browsers and applications. Enables live dashboard updates without polling. More efficient than HTTP for continuous real-time data.",
+    "slug": "websocket"
+  },
+  {
+    "term": "Wi-Fi Positioning",
+    "category": "Localization Technologies",
+    "short": "A positioning technology using existing Wi-Fi infrastructure for location determination. Typically uses RSSI fingerprinting or trilateration based on access point signals. Lower accuracy (3-10 meters) than UWB but leverages existing infrastructure reducing cost. Suitable for applications not requiring precision.",
+    "slug": "wi-fi-positioning"
+  },
+  {
+    "term": "Wireless Protocol",
+    "category": "Technical Parameters",
+    "short": "Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol choice affects range, power consumption, data rate, and positioning accuracy.",
+    "slug": "wireless-protocol"
+  },
+  {
+    "term": "WMS Integration",
+    "category": "Software & Data Management",
+    "short": "Integration between RTLS and Warehouse Management Systems. Combines real-time location data with warehouse operations including inventory management, task assignment, and order fulfillment. Enables automated inventory updates, optimized picking routes, and real-time operational visibility.",
+    "slug": "wms-integration"
+  },
+  {
+    "term": "Worker Safety",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to protect personnel from workplace hazards. Applications include hazardous zone monitoring, collision avoidance, man-down detection, lone worker protection, emergency response, and PPE compliance. Often the primary justification for RTLS investment due to life-safety benefits.",
+    "slug": "worker-safety"
+  },
+  {
+    "term": "Workflow Management",
+    "category": "Industrial Applications",
+    "short": "The coordination and optimization of work processes using RTLS data. Tracks work items through process stages, identifies bottlenecks, ensures correct routing, and measures performance. Enables process standardization and continuous improvement.",
+    "slug": "workflow-management"
+  },
+  {
+    "term": "Work-in-Progress (WIP) Tracking",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to monitor materials and products currently being processed through production. Provides real-time visibility to production status, identifies bottlenecks, and enables accurate production scheduling. Essential for lean manufacturing and just-in-time production.",
+    "slug": "work-in-progress-wip-tracking"
+  },
+  {
+    "term": "Yard Management",
+    "category": "Industrial Applications",
+    "short": "The use of RTLS to track and manage trailers, containers, and vehicles in outdoor facility yards. Enables automated check-in, optimized parking assignments, quick trailer location, and dwell time monitoring. Particularly valuable for facilities with large trailer yards. Often uses GPS or LoRa for outdoor coverage.",
+    "slug": "yard-management"
+  },
+  {
+    "term": "Zigbee",
+    "category": "Localization Technologies",
+    "short": "A low-power wireless mesh networking protocol based on IEEE 802.15.4. Used in some RTLS implementations and sensor networks. Offers good range, mesh networking capabilities, and low power consumption. Common in industrial IoT applications and can be integrated with RTLS platforms.",
+    "slug": "zigbee"
+  },
+  {
+    "term": "Zone Detection",
+    "category": "Geofencing & Zones",
+    "short": "The capability to determine which defined zone or area a tracked tag currently occupies. Simpler than precise positioning, often using Cell of Origin or proximity detection methods. Sufficient for many applications needing room-level or area-level location awareness. Lower cost than precision positioning systems.",
+    "slug": "zone-detection"
+  },
+  {
+    "term": "Zone Entry",
+    "category": "Geofencing & Zones",
+    "short": "An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiates automated actions based on configured rules. Common use cases include access control, process verification, and safety monitoring.",
+    "slug": "zone-entry"
+  },
+  {
+    "term": "Zone Exit",
+    "category": "Geofencing & Zones",
+    "short": "An event generated when a tracked tag leaves a defined geofence zone. Triggers alerts, logs events, or initiates automated actions. Use cases include security (unauthorized asset removal), process control (verifying completion), and safety (tracking exposure time).",
+    "slug": "zone-exit"
+  },
+  {
+    "term": "Zone-Level Accuracy",
+    "category": "Technical Parameters",
+    "short": "Positioning accuracy where RTLS determines which defined zone a tag occupies, typically 5-50 meters resolution. Sufficient for applications needing general location awareness like department identification or area access control. Often achieved using Cell of Origin or RFID readers at doorways.",
+    "slug": "zone-level-accuracy"
+  }
+]

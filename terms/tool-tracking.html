@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tool Tracking – Industrial RTLS Glossary</title>
+<meta name="description" content="Specialized RTLS application for tracking tools and equipment in manufacturing, maintenance, and construction environments. Reduces time searching for tool">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#D97706;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Industrial Applications</span>
+  <span>›</span>
+  <span>Tool Tracking</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Industrial Applications</div>
+    <h1 class="term-title">Tool Tracking</h1>
+  </header>
+  <p class="def-short">Specialized RTLS application for tracking tools and equipment in manufacturing, maintenance, and construction environments. Reduces time searching for tools, prevents loss, optimizes tool inventory, and ensures proper tool availability. Particularly valuable for expensive or frequently-needed tools.</p><p class="def-long">Tool tracking using industrial RTLS monitors the location, usage, and availability of tools, fixtures, jigs, and equipment throughout manufacturing, maintenance, and construction operations. Tool management represents a significant operational challenge: tools lost or misplaced, time wasted searching, hoarding by workers, theft or unauthorized removal, inadequate inventory causing delays, and excess inventory investment. RTLS-based tool tracking provides real-time visibility of every tagged tool's location and status.</p><p class="def-long">Implementation involves: attaching RTLS tags to individual tools (adhesive mounting, bolt-on attachment, protective cases), defining tool check-out zones (tool cribs, storage areas, work cells), configuring tracking zones, establishing business rules (authorized users, check-out/return requirements, usage time limits), and integrating with tool management or MES systems. Industrial sectors with critical tool tracking needs include: aerospace and automotive manufacturing (specialized, expensive tools requiring strict control), maintenance operations (ensuring technicians have needed tools, preventing FOD), construction (tracking tools across large sites), and job shops (managing diverse tool inventories).</p><p class="def-long">Common tool types tracked include: hand tools (wrenches, screwdrivers, measurement devices), power tools (drills, grinders), calibrated instruments (micrometers, torque wrenches requiring calibration tracking), fixtures and jigs (production tooling), and mobile equipment (tool carts, rolling cabinets). Quantified benefits include: 40-70% search time reductions (technicians spending 15-30% of time searching without tracking, reduced to 5-10% with RTLS), 60-90% reduction in lost tools, 25-50% reduction in tool inventory investment (eliminating duplicate purchases), 15-30% utilization improvements, and improved compliance with tool control requirements.</p>
+  <nav class="term-nav">
+    <a href="time-of-flight-tof.html" class="nav-prev">← Time-of-Flight (ToF)</a>
+    <a href="tracking-software.html" class="nav-next">Tracking Software →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lean Manufacturing – Industrial RTLS Glossary</title>
+<meta name="description" content="A production methodology focused on minimizing waste while maximizing productivity. RTLS supports lean manufacturing by providing visibility to identify an">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#D97706;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Industrial Applications</span>
+  <span>›</span>
+  <span>Lean Manufacturing</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Industrial Applications</div>
+    <h1 class="term-title">Lean Manufacturing</h1>
+  </header>
+  <p class="def-short">A production methodology focused on minimizing waste while maximizing productivity. RTLS supports lean manufacturing by providing visibility to identify and eliminate waste including motion waste, waiting waste, and inventory waste. Enables continuous improvement through data-driven analysis of material flow, cycle times, and process efficiency.</p><p class="def-long">Production methodology emphasizing waste elimination and continuous improvement, enhanced by RTLS visibility and analytics. Lean principles include: value stream mapping (identifying value-adding vs. non-value-adding activities), waste elimination (reducing muda: overproduction, waiting, transportation, over-processing, inventory, motion, defects), continuous flow (smooth material movement without interruption), pull production (demand-triggered vs. forecast-driven), and kaizen (continuous incremental improvement). RTLS supports lean manufacturing through: (1) Waste visibility - quantifying non-value-adding time (travel, waiting, searching) through movement and dwell time analysis. (2) Flow analysis - visualizing material flow patterns revealing bottlenecks and interruptions. (3) Cycle time measurement - automatically capturing actual cycle times vs. manual stopwatch studies. (4) Standard work validation - confirming actual operations match standard procedures. (5) Kaizen support - providing objective data driving improvement projects. Lean wastes addressed by RTLS: transportation waste (excessive material movement revealed by travel distance analysis, typically 30-50% reduction possible through layout optimization), waiting waste (dwell time analysis identifying queue times, often 40-60% of cycle time eliminated through balancing), inventory waste (real-time visibility enabling 25-40% inventory reduction), motion waste (worker movement patterns revealing inefficient workflows). Lean implementation typically proceeds in waves - RTLS data identifies opportunities (top 5-10 highest-impact improvements), lean tools drive implementation (kaizen events, 5S, standard work), and RTLS confirms results (measuring before/after performance). Organizations combining lean methodology with RTLS typically achieve: 20-35% cycle time reduction, 30-50% inventory reduction, 15-25% productivity improvement, and 25-40% floor space reduction.</p>
+  <nav class="term-nav">
+    <a href="latency.html" class="nav-prev">← Latency</a>
+    <a href="lidar-light-detection-and-ranging.html" class="nav-next">LiDAR (Light Detection and Ranging) →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

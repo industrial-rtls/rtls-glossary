@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telemetry – Industrial RTLS Glossary</title>
+<meta name="description" content="The automated collection and transmission of data from remote sensors or tracked assets. In RTLS, telemetry includes not just position but also sensor read">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#0D9488;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Software &amp; Data Management</span>
+  <span>›</span>
+  <span>Telemetry</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Software &amp; Data Management</div>
+    <h1 class="term-title">Telemetry</h1>
+  </header>
+  <p class="def-short">The automated collection and transmission of data from remote sensors or tracked assets. In RTLS, telemetry includes not just position but also sensor readings, status information, and diagnostics. Enables remote monitoring and condition-based management.</p><p class="def-long">Telemetry in industrial RTLS refers to the collection and transmission of measurement data from tags beyond basic position information, including sensor readings, status information, and diagnostic data. While fundamental RTLS tracks location, telemetry-enabled systems provide rich contextual information about tracked assets, environment, and system health. Industrial applications leverage telemetry for comprehensive asset intelligence: cold chain monitoring combining location with temperature data ensures pharmaceuticals or food products remain within acceptable temperature ranges throughout storage and transport, impact detection using accelerometer telemetry identifies when and where products experienced rough handling or drops, equipment monitoring tracks vibration signatures for predictive maintenance (abnormal vibration patterns indicating bearing wear or imbalance), and battery management proactively schedules tag maintenance before failures occur. Telemetry transmission challenges include bandwidth and power constraints - each additional data point consumes communication bandwidth and battery energy. Alert generation based on combined location-telemetry conditions enables sophisticated monitoring: cold chain products entering warm zones trigger immediate alerts, assets experiencing impacts in restricted areas generate incident reports, equipment vibration anomalies initiate maintenance work orders, and tag battery depletion prompts replacement scheduling. Visualization of telemetry data includes: real-time dashboards displaying current sensor readings, time-series charts showing sensor value evolution, overlay on floor plans (heat maps across facility), and correlation views (position traces colored by sensor values). Telemetry standardization through protocols like MQTT or OPC UA enables integration with broader IoT and industrial automation systems, positioning RTLS as location-aware sensor networks within smart factory or Industry 4.0 architectures.</p>
+  <nav class="term-nav">
+    <a href="tag-identifier.html" class="nav-prev">← Tag Identifier</a>
+    <a href="theft-prevention.html" class="nav-next">Theft Prevention →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

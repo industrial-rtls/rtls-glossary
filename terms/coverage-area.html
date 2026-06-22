@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coverage Area – Industrial RTLS Glossary</title>
+<meta name="description" content="The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#6B7280;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Technical Parameters</span>
+  <span>›</span>
+  <span>Coverage Area</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Technical Parameters</div>
+    <h1 class="term-title">Coverage Area</h1>
+  </header>
+  <p class="def-short">The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement density, transmission power, facility layout, and required accuracy. Industrial facilities prioritize coverage in critical operational areas while accepting lower accuracy in peripheral spaces. Coverage planning involves site surveys, 3D modeling, and identifying shadow zones.</p><p class="def-long">Geographic extent where RTLS system provides reliable positioning. Coverage area depends on technology, infrastructure density, and environment. UWB anchors typically cover 30-50 meter radius in industrial environments (less with metal obstacles, more in open areas), BLE gateways 20-40 meters, Wi-Fi access points 30-100 meters, and active RFID readers 50-100 meters. Total facility coverage requires overlapping coverage from multiple devices. Coverage quality varies within coverage area - strongest near infrastructure devices, degrading toward edges. Coverage planning tools use facility CAD drawings plus RF propagation models to predict coverage and plan infrastructure deployment.</p><p class="def-long">Key considerations include: required coverage height (tracking ceiling-mounted assets requires different planning than floor-level tracking), vertical coverage (multi-story facilities), outdoor areas (yards, loading docks), and redundancy (areas covered by multiple devices for reliability). Coverage verification during commissioning identifies gaps requiring additional infrastructure. Many industrial facilities accept some coverage gaps in less critical areas (bathrooms, break rooms, exterior perimeter) to control costs, focusing infrastructure investment on production and high-traffic zones. Coverage planning for multi-technology deployments must account for technology boundaries: BLE typically covers indoor areas with lower accuracy requirements, UWB covers precision zones, and GNSS covers outdoor areas. Transition zones between technologies (building entrances, loading docks) require careful design to ensure continuous tracking as assets move between coverage areas.</p>
+  <nav class="term-nav">
+    <a href="connected-worker.html" class="nav-prev">← Connected Worker</a>
+    <a href="coverage-gap.html" class="nav-next">Coverage Gap →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

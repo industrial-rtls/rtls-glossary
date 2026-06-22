@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrial RTLS Glossary – 252 Terms Defined</title>
+<meta name="description" content="The most comprehensive Industrial RTLS glossary. 252 terms covering UWB, BLE, GNSS, positioning methods, hardware, and industrial applications. Free reference for engineers and managers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0A0F1E;
+    --surface:   #111827;
+    --surface2:  #1A2336;
+    --border:    #1E3A5F;
+    --text:      #F0F4FF;
+    --muted:     #8B9CB8;
+    --accent:    #2563EB;
+    --accent-hi: #3B82F6;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    background: rgba(10,15,30,0.95);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .logo span { color: var(--accent-hi); }
+
+  .header-cta {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .header-cta:hover { background: var(--accent-hi); }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 5rem 2rem 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-hi);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent-hi);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+  }
+
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  /* ── PDF Banner ── */
+  .pdf-banner {
+    margin: 0 2rem 3rem;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .pdf-banner-text {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  .pdf-banner-text strong {
+    color: var(--text);
+  }
+
+  .pdf-form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .pdf-form input {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    padding: 0.45rem 0.85rem;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    width: 220px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .pdf-form input:focus { border-color: var(--accent); }
+  .pdf-form input::placeholder { color: var(--muted); }
+
+  .pdf-form button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.45rem 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+
+  .pdf-form button:hover { background: var(--accent-hi); }
+
+  /* ── Controls ── */
+  .controls {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .search-wrap {
+    flex: 1;
+    min-width: 240px;
+    position: relative;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 0.6rem 0.75rem 0.6rem 2.25rem;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .search-input:focus { border-color: var(--accent); }
+  .search-input::placeholder { color: var(--muted); }
+
+  .filter-select {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 0.6rem 0.75rem;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    cursor: pointer;
+    min-width: 200px;
+  }
+
+  .results-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ── Alphabet nav ── */
+  .alpha-nav {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  .alpha-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .alpha-link.active {
+    color: var(--accent-hi);
+    background: var(--surface);
+  }
+
+  .alpha-link.active:hover {
+    background: var(--border);
+    color: var(--text);
+  }
+
+  .alpha-link.inactive {
+    color: var(--border);
+    cursor: default;
+  }
+
+  /* ── Main content ── */
+  .glossary-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+  }
+
+  .letter-group { margin-bottom: 2.5rem; }
+
+  .letter-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .term-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .term-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: flex;
+    text-decoration: none;
+    overflow: hidden;
+    transition: border-color 0.15s, transform 0.1s;
+  }
+
+  .term-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .term-cat-bar {
+    width: 3px;
+    flex-shrink: 0;
+  }
+
+  .term-card-body {
+    padding: 0.875rem 1rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .term-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .term-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .term-preview {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ── No results ── */
+  .no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--muted);
+    display: none;
+  }
+
+  .no-results h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .hero { padding: 3rem 1.25rem 2rem; }
+    .controls, .alpha-nav, .glossary-body { padding: 0 1.25rem; }
+    .controls { flex-direction: column; }
+    .filter-select { width: 100%; min-width: unset; }
+    .pdf-banner { flex-direction: column; align-items: flex-start; }
+    .pdf-form { width: 100%; }
+    .pdf-form input { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="#pdf-download" class="header-cta">Download PDF</a>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="hero-eyebrow">Industrial RTLS Reference</p>
+    <h1>Every term you need to navigate <em>industrial RTLS</em></h1>
+    <p class="hero-sub">252 terms covering UWB, BLE, GNSS, positioning methods, hardware components, and industrial applications. Structured, precise, free.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">252</span><span class="stat-label">Terms defined</span></div>
+      <div class="stat"><span class="stat-num">14</span><span class="stat-label">Categories</span></div>
+      <div class="stat"><span class="stat-num">112</span><span class="stat-label">Abbreviations</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Technologies</span></div>
+    </div>
+  </section>
+
+  <div class="pdf-banner" id="pdf-download">
+    <div class="pdf-banner-text">
+      <strong>Get the complete reference.</strong> Download the full glossary with extended definitions as a PDF.
+    </div>
+    <form class="pdf-form" onsubmit="handleDownload(event)">
+      <input type="email" placeholder="Your work email" required id="email-input">
+      <button type="submit">Download PDF →</button>
+    </form>
+  </div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" class="search-input" placeholder="Search terms…" id="search" oninput="filterTerms()">
+    </div>
+    <select class="filter-select" id="cat-filter" onchange="filterTerms()">
+      <option value="">All categories</option><option value="Data &amp; Analytics">Data &amp; Analytics (12)</option><option value="Geofencing &amp; Zones">Geofencing &amp; Zones (12)</option><option value="Hardware Components">Hardware Components (24)</option><option value="Industrial Applications">Industrial Applications (22)</option><option value="Industry-Specific Terms">Industry-Specific Terms (13)</option><option value="Installation &amp; Configuration">Installation &amp; Configuration (13)</option><option value="Localization Technologies">Localization Technologies (20)</option><option value="Performance Metrics &amp; KPIs">Performance Metrics &amp; KPIs (15)</option><option value="Positioning Methods &amp; Techniques">Positioning Methods &amp; Techniques (18)</option><option value="Safety &amp; Security">Safety &amp; Security (13)</option><option value="Software &amp; Data Management">Software &amp; Data Management (42)</option><option value="Standards &amp; Protocols">Standards &amp; Protocols (7)</option><option value="System Architecture">System Architecture (12)</option><option value="Technical Parameters">Technical Parameters (29)</option>
+    </select>
+    <span class="results-count" id="results-count">252 terms</span>
+  </div>
+
+  <nav class="alpha-nav" id="alpha-nav">
+    <a href="#A" class="alpha-link active">A</a><a href="#B" class="alpha-link active">B</a><a href="#C" class="alpha-link active">C</a><a href="#D" class="alpha-link active">D</a><a href="#E" class="alpha-link active">E</a><a href="#F" class="alpha-link active">F</a><a href="#G" class="alpha-link active">G</a><a href="#H" class="alpha-link active">H</a><a href="#I" class="alpha-link active">I</a><a href="#J" class="alpha-link active">J</a><span class="alpha-link inactive">K</span><a href="#L" class="alpha-link active">L</a><a href="#M" class="alpha-link active">M</a><a href="#N" class="alpha-link active">N</a><a href="#O" class="alpha-link active">O</a><a href="#P" class="alpha-link active">P</a><span class="alpha-link inactive">Q</span><a href="#R" class="alpha-link active">R</a><a href="#S" class="alpha-link active">S</a><a href="#T" class="alpha-link active">T</a><a href="#U" class="alpha-link active">U</a><a href="#V" class="alpha-link active">V</a><a href="#W" class="alpha-link active">W</a><span class="alpha-link inactive">X</span><a href="#Y" class="alpha-link active">Y</a><a href="#Z" class="alpha-link active">Z</a>
+  </nav>
+
+  <div class="glossary-body" id="glossary-body">
+    <div class="letter-group" id="#"><h2 class="letter-heading">#</h2><div class="term-grid">
+        <a href="terms/5g-positioning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">5G Positioning</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A localization technology leveraging 5G cellular networks to determine asset or personnel positions. Offers hi…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="A"><h2 class="letter-heading">A</h2><div class="term-grid">
+        <a href="terms/access-control.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Access Control</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">A security mechanism regulating who or what can enter specific facility areas. RTLS-integrated systems automat…</p>
+          </div>
+        </a>
+        <a href="terms/access-point.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Access Point</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A hardware device serving as a communication hub in wireless RTLS networks. Receives signals from tags and tra…</p>
+          </div>
+        </a>
+        <a href="terms/accuracy.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Accuracy</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The degree of closeness between measured and actual physical positions, typically expressed as distance (e.g.,…</p>
+          </div>
+        </a>
+        <a href="terms/active-rfid.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Active RFID</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">Radio frequency identification technology where battery-powered tags actively transmit signals at regular inte…</p>
+          </div>
+        </a>
+        <a href="terms/active-tag.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Active Tag</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A battery-powered tracking device that actively broadcasts signals containing its unique identifier and option…</p>
+          </div>
+        </a>
+        <a href="terms/ad-hoc-mode.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Ad-Hoc Mode</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">A network configuration where RTLS devices communicate directly peer-to-peer without centralized infrastructur…</p>
+          </div>
+        </a>
+        <a href="terms/agv-automated-guided-vehicle-navigation.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">AGV (Automated Guided Vehicle) Navigation</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to guide and track autonomous vehicles within industrial facilities. Combines real-time positi…</p>
+          </div>
+        </a>
+        <a href="terms/alert-system.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Alert System</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Software that monitors RTLS data in real-time and generates notifications when predefined conditions occur. Co…</p>
+          </div>
+        </a>
+        <a href="terms/analytics-dashboard.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Analytics Dashboard</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">A visual interface aggregating and displaying RTLS data to support decision-making and operational monitoring.…</p>
+          </div>
+        </a>
+        <a href="terms/anchor.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Anchor</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A fixed-position reference device with known coordinates that receives signals from mobile tags to determine p…</p>
+          </div>
+        </a>
+        <a href="terms/anchor-density.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Anchor Density</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The number of anchors deployed per unit area, typically per 100 square meters. Higher density improves accurac…</p>
+          </div>
+        </a>
+        <a href="terms/anchor-placement.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Anchor Placement</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The strategic positioning of anchors/access points to achieve optimal tracking performance, coverage, and accu…</p>
+          </div>
+        </a>
+        <a href="terms/angle-of-arrival-aoa.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Angle of Arrival (AoA)</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique determining tag location by measuring the angle at which signals arrive at receiving a…</p>
+          </div>
+        </a>
+        <a href="terms/angle-of-departure-aod.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Angle of Departure (AoD)</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique where fixed infrastructure transmits signals from antenna arrays with known geometry, …</p>
+          </div>
+        </a>
+        <a href="terms/anomaly-detection.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Anomaly Detection</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">Automated identification of unusual patterns or behaviors in RTLS data deviating from expected norms. Detects …</p>
+          </div>
+        </a>
+        <a href="terms/api-application-programming-interface.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">API (Application Programming Interface)</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Protocols and tools enabling different software applications to communicate and exchange data with RTLS system…</p>
+          </div>
+        </a>
+        <a href="terms/artificial-intelligence-ai-in-rtls.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Artificial Intelligence (AI) in RTLS</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">The application of artificial intelligence techniques to RTLS data for positioning improvement, operational an…</p>
+          </div>
+        </a>
+        <a href="terms/asset-tag.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Asset Tag</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A physical tracking device attached to assets enabling identification and location tracking. Comes in various …</p>
+          </div>
+        </a>
+        <a href="terms/asset-tracking.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Asset Tracking</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves a…</p>
+          </div>
+        </a>
+        <a href="terms/asset-utilization.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Asset Utilization</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">A metric measuring how effectively assets are used relative to availability, calculated through RTLS tracking …</p>
+          </div>
+        </a></div></div><div class="letter-group" id="B"><h2 class="letter-heading">B</h2><div class="term-grid">
+        <a href="terms/base-station.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Base Station</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A fixed infrastructure component communicating with mobile tags and relaying information to the central system…</p>
+          </div>
+        </a>
+        <a href="terms/battery-life.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Battery Life</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The operational duration of battery-powered tags before replacement or recharging is required. Typical lifespa…</p>
+          </div>
+        </a>
+        <a href="terms/beacon.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Beacon</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A small wireless transmitter broadcasting signals at regular intervals, typically using BLE technology. Serves…</p>
+          </div>
+        </a>
+        <a href="terms/bi-connector.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">BI Connector</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Software enabling RTLS data integration with Business Intelligence platforms and analytics tools. Facilitates …</p>
+          </div>
+        </a>
+        <a href="terms/bi-directional-integration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Bi-directional Integration</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">System integration where data flows in both directions between RTLS and connected applications. Enables extern…</p>
+          </div>
+        </a>
+        <a href="terms/big-data.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Big Data</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">The massive volumes of data generated by RTLS deployments requiring specialized storage, processing, and analy…</p>
+          </div>
+        </a>
+        <a href="terms/ble-bluetooth-low-energy.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">BLE (Bluetooth Low Energy)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positio…</p>
+          </div>
+        </a>
+        <a href="terms/ble-gateway.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">BLE Gateway</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">The primary fixed infrastructure device in BLE-based RTLS, equivalent to the anchor in UWB systems. Receives B…</p>
+          </div>
+        </a>
+        <a href="terms/bluetooth-5-x.html" class="term-card">
+          <span class="term-cat-bar" style="background:#B45309"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Bluetooth 5.x</h3>
+            <span class="term-cat">Standards &amp; Protocols</span>
+            <p class="term-preview">The latest Bluetooth generation offering significant improvements for industrial RTLS. Provides doubled range …</p>
+          </div>
+        </a>
+        <a href="terms/business-intelligence.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Business Intelligence</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">Strategic use of RTLS data combined with enterprise information to gain actionable insights for business decis…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="C"><h2 class="letter-heading">C</h2><div class="term-grid">
+        <a href="terms/calibration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Calibration</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">Configuring and fine-tuning RTLS to ensure accurate position measurements matching real-world coordinates. Inv…</p>
+          </div>
+        </a>
+        <a href="terms/capacity.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Capacity</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The maximum number of tags, assets, or transactions an RTLS can reliably track simultaneously without performa…</p>
+          </div>
+        </a>
+        <a href="terms/cell-of-origin-coo.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Cell of Origin (CoO)</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A basic positioning method determining location based on which anchor/access point is communicating with a tag…</p>
+          </div>
+        </a>
+        <a href="terms/centimeter-level-accuracy.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Centimeter-Level Accuracy</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The highest precision positioning category with measurements within ±5-30 cm of true location. Achieved primar…</p>
+          </div>
+        </a>
+        <a href="terms/centralized-system.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Centralized System</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">An architecture where all positioning calculations and data processing occur on a central server. Anchors act …</p>
+          </div>
+        </a>
+        <a href="terms/cloud-based-rtls.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Cloud-Based RTLS</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">An architecture where processing, storage, and hosting occur on remote cloud servers accessed via internet. Of…</p>
+          </div>
+        </a>
+        <a href="terms/collision-avoidance.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Collision Avoidance</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigge…</p>
+          </div>
+        </a>
+        <a href="terms/commissioning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Commissioning</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The systematic process of configuring, testing, and validating RTLS installation before operational handover. …</p>
+          </div>
+        </a>
+        <a href="terms/compliance-monitoring.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Compliance Monitoring</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">Automated tracking and verification of adherence to safety regulations, operational procedures, and quality st…</p>
+          </div>
+        </a>
+        <a href="terms/computer-vision-tracking.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Computer Vision Tracking</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel. …</p>
+          </div>
+        </a>
+        <a href="terms/condition-monitoring.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Condition Monitoring</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">Continuous observation and analysis of asset health parameters using sensors integrated with RTLS tags. Extend…</p>
+          </div>
+        </a>
+        <a href="terms/configuration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Configuration</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The process of defining and customizing RTLS parameters, settings, and behaviors to match operational requirem…</p>
+          </div>
+        </a>
+        <a href="terms/connected-worker.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Connected Worker</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communicat…</p>
+          </div>
+        </a>
+        <a href="terms/coverage-area.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Coverage Area</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influe…</p>
+          </div>
+        </a>
+        <a href="terms/coverage-gap.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Coverage Gap</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">An area where RTLS cannot reliably track tags due to insufficient anchor coverage or signal blocking. Creates …</p>
+          </div>
+        </a>
+        <a href="terms/coverage-planning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Coverage Planning</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while …</p>
+          </div>
+        </a>
+        <a href="terms/css-chirp-spread-spectrum.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">CSS (Chirp Spread Spectrum)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A wireless modulation technique where signals are transmitted using frequency sweeps (chirps) across wide band…</p>
+          </div>
+        </a>
+        <a href="terms/cycle-time.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Cycle Time</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The total time required for a process or operation to complete from start to finish, measured using RTLS track…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="D"><h2 class="letter-heading">D</h2><div class="term-grid">
+        <a href="terms/data-mining.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Data Mining</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">Discovering patterns, correlations, and insights from large volumes of historical RTLS data using statistical …</p>
+          </div>
+        </a>
+        <a href="terms/data-visualization.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Data Visualization</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Graphical representation of RTLS data making complex tracking information easily understandable. Common visual…</p>
+          </div>
+        </a>
+        <a href="terms/dead-reckoning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Dead Reckoning</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique estimating current location by calculating movement from a known starting position usi…</p>
+          </div>
+        </a>
+        <a href="terms/deployment.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Deployment</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The comprehensive process of planning, installing, configuring, and operationalizing RTLS in an industrial fac…</p>
+          </div>
+        </a>
+        <a href="terms/dgps-differential-gps.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">DGPS (Differential GPS)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">An enhancement to standard GPS using a fixed reference station at a known position to calculate and broadcast …</p>
+          </div>
+        </a>
+        <a href="terms/digital-twin.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Digital Twin</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">A virtual representation of physical facilities or processes integrating real-time RTLS data to mirror actual …</p>
+          </div>
+        </a>
+        <a href="terms/dilution-of-precision-dop.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Dilution of Precision (DOP)</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">A measure of geometric quality in positioning systems indicating how anchor placement affects position accurac…</p>
+          </div>
+        </a>
+        <a href="terms/direction-finding.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Direction Finding</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A set of techniques determining the bearing or angle between a transmitter and receiver using multi-element an…</p>
+          </div>
+        </a>
+        <a href="terms/distributed-system.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Distributed System</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">An architecture where positioning calculations occur across multiple distributed nodes rather than a central s…</p>
+          </div>
+        </a>
+        <a href="terms/dock-management.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Dock Management</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to optimize loading dock operations by tracking vehicles, shipments, personnel, and equipment.…</p>
+          </div>
+        </a>
+        <a href="terms/dwell-time.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Dwell Time</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">The duration an asset, material, or person remains in a defined location or zone, automatically tracked by RTL…</p>
+          </div>
+        </a>
+        <a href="terms/dwell-time-analysis.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Dwell Time Analysis</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. A…</p>
+          </div>
+        </a>
+        <a href="terms/dynamic-geofencing.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Dynamic Geofencing</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">Geofencing capability where virtual boundaries are created, modified, or removed programmatically in real-time…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="E"><h2 class="letter-heading">E</h2><div class="term-grid">
+        <a href="terms/edge-computing.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Edge Computing</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">A distributed computing paradigm where data processing occurs on devices at the network edge near data sources…</p>
+          </div>
+        </a>
+        <a href="terms/emergency-response.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Emergency Response</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">The use of RTLS to enhance safety and effectiveness during emergencies such as fires, spills, or security thre…</p>
+          </div>
+        </a>
+        <a href="terms/environmental-sensor.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Environmental Sensor</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">Sensors integrated with RTLS tags measuring conditions beyond location. Common types include temperature, humi…</p>
+          </div>
+        </a>
+        <a href="terms/equipment-monitoring.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Equipment Monitoring</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">Continuous tracking and analysis of equipment location, usage, condition, and performance using RTLS combined …</p>
+          </div>
+        </a>
+        <a href="terms/erp-integration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">ERP Integration</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange…</p>
+          </div>
+        </a>
+        <a href="terms/evacuation-management.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Evacuation Management</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time loca…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="F"><h2 class="letter-heading">F</h2><div class="term-grid">
+        <a href="terms/facility-layout.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Facility Layout</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The physical arrangement of equipment, workstations, and infrastructure within a building. Layout significantl…</p>
+          </div>
+        </a>
+        <a href="terms/factory-defaults.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Factory Defaults</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Original configuration settings programmed into RTLS devices at manufacture, restorable to return devices to k…</p>
+          </div>
+        </a>
+        <a href="terms/factory-restore.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Factory Restore</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The process of returning RTLS devices or systems to original factory default state, erasing all custom configu…</p>
+          </div>
+        </a>
+        <a href="terms/fingerprinting.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Fingerprinting</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique creating a database mapping signal characteristics to specific locations, then matchin…</p>
+          </div>
+        </a>
+        <a href="terms/fira-consortium.html" class="term-card">
+          <span class="term-cat-bar" style="background:#B45309"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">FiRa Consortium</h3>
+            <span class="term-cat">Standards &amp; Protocols</span>
+            <p class="term-preview">A global industry consortium established in 2019 to promote and support UWB technology development for secure …</p>
+          </div>
+        </a>
+        <a href="terms/fixed-infrastructure.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Fixed Infrastructure</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">The stationary network components of RTLS including anchors, access points, gateways, servers, and network equ…</p>
+          </div>
+        </a>
+        <a href="terms/fms-integration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">FMS Integration</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Integration of RTLS with Fleet Management Systems for comprehensive tracking of industrial vehicles including …</p>
+          </div>
+        </a>
+        <a href="terms/fog-computing.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Fog Computing</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">A distributed computing architecture extending cloud capabilities to the network edge while maintaining connec…</p>
+          </div>
+        </a>
+        <a href="terms/forklift-tracking.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Forklift Tracking</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves o…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="G"><h2 class="letter-heading">G</h2><div class="term-grid">
+        <a href="terms/gateway.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Gateway</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A network device bridging between RTLS infrastructure components and central systems. Collects data from multi…</p>
+          </div>
+        </a>
+        <a href="terms/geofence.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Geofence</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">A virtual boundary or zone defined in RTLS software representing a physical facility area. Enables automatic a…</p>
+          </div>
+        </a>
+        <a href="terms/geofencing.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Geofencing</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel en…</p>
+          </div>
+        </a>
+        <a href="terms/gnss-global-navigation-satellite-system.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">GNSS (Global Navigation Satellite System)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">The generic term for satellite-based positioning systems providing global coverage for outdoor tracking. Encom…</p>
+          </div>
+        </a>
+        <a href="terms/gnss-antenna.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">GNSS Antenna</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">The receiving element in GNSS-enabled devices that captures satellite signals for positioning. Requires unobst…</p>
+          </div>
+        </a>
+        <a href="terms/gps-global-positioning-system.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">GPS (Global Positioning System)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">The United States' satellite-based navigation system providing global positioning, navigation, and timing serv…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="H"><h2 class="letter-heading">H</h2><div class="term-grid">
+        <a href="terms/hazardous-zone.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Hazardous Zone</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">A designated facility area where dangerous conditions exist requiring special safety protocols and monitoring.…</p>
+          </div>
+        </a>
+        <a href="terms/heatmap.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Heatmap</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">A data visualization displaying RTLS tracking density or dwell time using color intensity overlaid on facility…</p>
+          </div>
+        </a>
+        <a href="terms/historical-data-analysis.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Historical Data Analysis</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">Systematic examination of past RTLS tracking data to identify trends, patterns, and improvement opportunities.…</p>
+          </div>
+        </a>
+        <a href="terms/historical-playback.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Historical Playback</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. …</p>
+          </div>
+        </a>
+        <a href="terms/hybrid-architecture.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Hybrid Architecture</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">An RTLS system design combining multiple positioning technologies, computing approaches, or architectural patt…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="I"><h2 class="letter-heading">I</h2><div class="term-grid">
+        <a href="terms/ibeacon-eddystone.html" class="term-card">
+          <span class="term-cat-bar" style="background:#B45309"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">iBeacon / Eddystone</h3>
+            <span class="term-cat">Standards &amp; Protocols</span>
+            <p class="term-preview">Standardized BLE beacon advertisement protocols defining how beacons broadcast their identity and data. iBeaco…</p>
+          </div>
+        </a>
+        <a href="terms/ieee-802-15-4.html" class="term-card">
+          <span class="term-cat-bar" style="background:#B45309"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">IEEE 802.15.4</h3>
+            <span class="term-cat">Standards &amp; Protocols</span>
+            <p class="term-preview">A technical standard defining the physical layer and media access control for low-rate wireless personal area …</p>
+          </div>
+        </a>
+        <a href="terms/indoor-navigation.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Indoor Navigation</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">The use of RTLS technology to provide real-time routing and guidance for personnel moving within buildings or …</p>
+          </div>
+        </a>
+        <a href="terms/indoor-positioning-system-ips.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Indoor Positioning System (IPS)</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">A general term for any technology enabling location determination within buildings where GPS is unavailable. E…</p>
+          </div>
+        </a>
+        <a href="terms/indoor-outdoor-handover.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Indoor-Outdoor Handover</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">The process of seamlessly transitioning a tracked asset or person between indoor positioning (UWB or BLE) and …</p>
+          </div>
+        </a>
+        <a href="terms/industrial-iot-iiot.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Industrial IoT (IIoT)</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">The use of Internet of Things technologies in industrial settings to connect equipment, sensors, and systems f…</p>
+          </div>
+        </a>
+        <a href="terms/industry-4-0.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Industry 4.0</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">The fourth industrial revolution characterized by automation, data exchange, cyber-physical systems, and smart…</p>
+          </div>
+        </a>
+        <a href="terms/infrastructure-mode.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Infrastructure Mode</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">A network configuration where RTLS devices communicate through centralized access points or base stations rath…</p>
+          </div>
+        </a>
+        <a href="terms/integration-layer.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Integration Layer</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The software component or middleware facilitating communication and data exchange between RTLS and other enter…</p>
+          </div>
+        </a>
+        <a href="terms/intrusion-detection.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Intrusion Detection</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">The use of RTLS to identify unauthorized access or movement within facilities. Detects when unregistered tags …</p>
+          </div>
+        </a>
+        <a href="terms/inventory-management.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Inventory Management</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to track and manage inventory locations, movements, and levels in real-time. Enables automated…</p>
+          </div>
+        </a>
+        <a href="terms/ip-rating.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">IP Rating</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">Ingress Protection rating indicating device resistance to dust and water, expressed as two digits (e.g., IP65,…</p>
+          </div>
+        </a>
+        <a href="terms/ir-infrared-positioning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">IR (Infrared) Positioning</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A positioning technology using infrared light signals for location determination. Tags or beacons emit IR sign…</p>
+          </div>
+        </a>
+        <a href="terms/iso-iec-24730.html" class="term-card">
+          <span class="term-cat-bar" style="background:#B45309"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">ISO/IEC 24730</h3>
+            <span class="term-cat">Standards &amp; Protocols</span>
+            <p class="term-preview">An international standard for real-time locating systems defining air interface protocols, system architecture…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="J"><h2 class="letter-heading">J</h2><div class="term-grid">
+        <a href="terms/just-in-time-jit-manufacturing.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Just-in-Time (JIT) Manufacturing</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="L"><h2 class="letter-heading">L</h2><div class="term-grid">
+        <a href="terms/latency.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Latency</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The time delay between an event occurring (tag moving, entering zone) and the system detecting and responding …</p>
+          </div>
+        </a>
+        <a href="terms/lean-manufacturing.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Lean Manufacturing</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">A production methodology focused on minimizing waste while maximizing productivity. RTLS supports lean manufac…</p>
+          </div>
+        </a>
+        <a href="terms/lidar-light-detection-and-ranging.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">LiDAR (Light Detection and Ranging)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A remote sensing technology using laser light to measure distances and create detailed 3D maps. In RTLS contex…</p>
+          </div>
+        </a>
+        <a href="terms/line-of-sight-los.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Line of Sight (LoS)</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">A direct, unobstructed path between transmitter and receiver allowing signals to travel without reflection or …</p>
+          </div>
+        </a>
+        <a href="terms/location-badge.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Location Badge</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A wearable RTLS tag designed for personnel tracking, typically worn on lanyards, belts, or hard hats. Contains…</p>
+          </div>
+        </a>
+        <a href="terms/location-data.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Location Data</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The position information and associated metadata generated by RTLS including coordinates (x, y, z), timestamps…</p>
+          </div>
+        </a>
+        <a href="terms/location-engine.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Location Engine</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The software component performing position calculations based on raw measurements from anchors and tags. Imple…</p>
+          </div>
+        </a>
+        <a href="terms/location-history.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Location History</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The historical record of where assets or personnel have been over time. Enables track playback, pattern analys…</p>
+          </div>
+        </a>
+        <a href="terms/location-intelligence.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Location Intelligence</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The insights and actionable information derived from RTLS location data through analysis and visualization. Tr…</p>
+          </div>
+        </a>
+        <a href="terms/logistics-4-0.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Logistics 4.0</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">The application of Industry 4.0 principles to logistics and supply chain operations. RTLS is a key enabling te…</p>
+          </div>
+        </a>
+        <a href="terms/lone-worker-protection.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Lone Worker Protection</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">The use of RTLS to enhance safety for personnel working alone or in isolated locations. Features include man-d…</p>
+          </div>
+        </a>
+        <a href="terms/lorawan.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">LoRaWAN</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A low-power wide-area network protocol designed for wireless battery-operated devices. Uses CSS modulation pro…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="M"><h2 class="letter-heading">M</h2><div class="term-grid">
+        <a href="terms/machine-learning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Machine Learning</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">Artificial intelligence techniques enabling systems to learn from data and improve performance without explici…</p>
+          </div>
+        </a>
+        <a href="terms/magnetic-positioning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Magnetic Positioning</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A positioning technology using variations in Earth's magnetic field or artificially generated magnetic fields …</p>
+          </div>
+        </a>
+        <a href="terms/man-down-detection.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Man-Down Detection</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">A safety feature automatically detecting when a worker falls or becomes motionless and generating emergency al…</p>
+          </div>
+        </a>
+        <a href="terms/material-flow.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Material Flow</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The movement of materials through production or logistics processes. RTLS provides visibility to actual materi…</p>
+          </div>
+        </a>
+        <a href="terms/material-handling.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Material Handling</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The movement, storage, and control of materials throughout manufacturing and warehousing. RTLS optimizes mater…</p>
+          </div>
+        </a>
+        <a href="terms/mesh-network.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Mesh Network</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">A network topology where devices connect to multiple neighbors, each device able to relay data for others. Cre…</p>
+          </div>
+        </a>
+        <a href="terms/mesh-networking.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Mesh Networking</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A network topology where devices connect to multiple neighbors and relay data for each other, creating self-he…</p>
+          </div>
+        </a>
+        <a href="terms/meter-level-accuracy.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Meter-Level Accuracy</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">Positioning accuracy determining positions within 1-3 meters of true location. Sufficient for many industrial …</p>
+          </div>
+        </a>
+        <a href="terms/middleware.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Middleware</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformatio…</p>
+          </div>
+        </a>
+        <a href="terms/mobile-infrastructure.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Mobile Infrastructure</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">RTLS infrastructure components that are not permanently fixed, including portable anchors, mobile gateways, an…</p>
+          </div>
+        </a>
+        <a href="terms/movement-pattern.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Movement Pattern</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The characteristic ways assets or personnel move through facilities over time. RTLS analysis identifies typica…</p>
+          </div>
+        </a>
+        <a href="terms/mqtt-protocol.html" class="term-card">
+          <span class="term-cat-bar" style="background:#B45309"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">MQTT Protocol</h3>
+            <span class="term-cat">Standards &amp; Protocols</span>
+            <p class="term-preview">A lightweight messaging protocol designed for IoT applications with low bandwidth and unreliable networks. Oft…</p>
+          </div>
+        </a>
+        <a href="terms/multi-technology-rtls.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Multi-Technology RTLS</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">An RTLS deployment combining two or more positioning technologies within a unified platform to optimize accura…</p>
+          </div>
+        </a>
+        <a href="terms/multilateration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Multilateration</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique determining location by measuring time differences of signal arrival at multiple recei…</p>
+          </div>
+        </a>
+        <a href="terms/multipath-propagation.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Multipath Propagation</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The phenomenon where radio signals reach receivers via multiple paths due to reflections, diffractions, and sc…</p>
+          </div>
+        </a>
+        <a href="terms/mustering.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Mustering</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">The process of accounting for all personnel during emergencies by gathering them at designated assembly points…</p>
+          </div>
+        </a>
+        <a href="terms/myrtls-insights.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">myRTLS Insights</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Sewio's analytics application that transforms raw RTLS location data into clear, actionable insights through s…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="N"><h2 class="letter-heading">N</h2><div class="term-grid">
+        <a href="terms/network-bandwidth.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Network Bandwidth</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The data transmission capacity available for RTLS communication, measured in bits per second or packets per se…</p>
+          </div>
+        </a>
+        <a href="terms/network-topology.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Network Topology</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">The arrangement and configuration of RTLS network components including tags, anchors, gateways, and servers. C…</p>
+          </div>
+        </a>
+        <a href="terms/non-line-of-sight-nlos.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Non-Line of Sight (NLoS)</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">Conditions where direct path between transmitter and receiver is blocked by obstacles like walls, equipment, o…</p>
+          </div>
+        </a>
+        <a href="terms/notification-engine.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Notification Engine</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The software component managing alert generation, delivery, and escalation in RTLS systems. Evaluates conditio…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="O"><h2 class="letter-heading">O</h2><div class="term-grid">
+        <a href="terms/occupancy-analytics.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Occupancy Analytics</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">Analysis of how many people or assets occupy specific areas over time. Reveals space utilization patterns, pea…</p>
+          </div>
+        </a>
+        <a href="terms/omlox-standard.html" class="term-card">
+          <span class="term-cat-bar" style="background:#B45309"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">OMLOX Standard</h3>
+            <span class="term-cat">Standards &amp; Protocols</span>
+            <p class="term-preview">An open standard for industrial locating services enabling interoperability between different RTLS technologie…</p>
+          </div>
+        </a>
+        <a href="terms/on-premise-rtls.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">On-Premise RTLS</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">An RTLS architecture where all hardware and software components are hosted within the customer's own facilitie…</p>
+          </div>
+        </a>
+        <a href="terms/open-api.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Open API</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">An application programming interface publicly documented and available for third-party developers to integrate…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="P"><h2 class="letter-heading">P</h2><div class="term-grid">
+        <a href="terms/passive-rfid.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Passive RFID</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">Radio frequency identification technology where tags have no power source and only respond when energized by r…</p>
+          </div>
+        </a>
+        <a href="terms/passive-tag.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Passive Tag</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">An RFID tag without its own power source, activated by electromagnetic energy from readers. Very inexpensive, …</p>
+          </div>
+        </a>
+        <a href="terms/pattern-recognition.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Pattern Recognition</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">The use of algorithms and machine learning to identify meaningful patterns in RTLS data. Applications include …</p>
+          </div>
+        </a>
+        <a href="terms/penetration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Penetration</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The ability of radio signals to pass through obstacles like walls, floors, and materials. Varies significantly…</p>
+          </div>
+        </a>
+        <a href="terms/perimeter-control.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Perimeter Control</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">The use of RTLS to monitor and control movement across facility boundaries. Detects when assets or personnel c…</p>
+          </div>
+        </a>
+        <a href="terms/personnel-tracking.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Personnel Tracking</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The real-time monitoring of worker locations within facilities for safety, efficiency, and compliance purposes…</p>
+          </div>
+        </a>
+        <a href="terms/phase-difference-measurement.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Phase Difference Measurement</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique measuring differences in RF signal phase at multiple antennas to determine angle of ar…</p>
+          </div>
+        </a>
+        <a href="terms/positioning-accuracy.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Positioning Accuracy</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The degree of correctness in position measurements, encompassing both systematic and random errors. Should spe…</p>
+          </div>
+        </a>
+        <a href="terms/positioning-algorithm.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Positioning Algorithm</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The mathematical method used to calculate tag locations from raw signal measurements. Common algorithms includ…</p>
+          </div>
+        </a>
+        <a href="terms/positioning-engine.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Positioning Engine</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Software that calculates tag positions from raw signal measurements. Implements positioning algorithms, applie…</p>
+          </div>
+        </a>
+        <a href="terms/ppe-personal-protective-equipment-compliance.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">PPE (Personal Protective Equipment) Compliance</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">The use of RTLS to verify workers wear required safety equipment in designated areas. Tags on PPE (hard hats, …</p>
+          </div>
+        </a>
+        <a href="terms/precision.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Precision</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The repeatability or consistency of position measurements - how close repeated measurements are to each other.…</p>
+          </div>
+        </a>
+        <a href="terms/predictive-analytics.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Predictive Analytics</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">The use of statistical techniques and machine learning to forecast future events, behaviors, or conditions bas…</p>
+          </div>
+        </a>
+        <a href="terms/predictive-maintenance.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Predictive Maintenance</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">A maintenance strategy using condition monitoring and predictive analytics to service equipment just before fa…</p>
+          </div>
+        </a>
+        <a href="terms/preventive-maintenance.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Preventive Maintenance</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">Maintenance strategy where equipment is serviced on fixed schedules to prevent failures. RTLS supports prevent…</p>
+          </div>
+        </a>
+        <a href="terms/process-optimization.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Process Optimization</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The systematic improvement of operational processes using insights from RTLS data analysis. Identifies and eli…</p>
+          </div>
+        </a>
+        <a href="terms/production-floor.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Production Floor</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">The manufacturing area where actual production activities occur, including assembly lines and work cells. Also…</p>
+          </div>
+        </a>
+        <a href="terms/production-monitoring.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Production Monitoring</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to track work-in-progress, materials, and equipment through production processes. Provides rea…</p>
+          </div>
+        </a>
+        <a href="terms/productivity-metrics.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Productivity Metrics</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">Key performance indicators derived from RTLS data measuring operational efficiency. Examples include cycle tim…</p>
+          </div>
+        </a>
+        <a href="terms/proximity-alert.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Proximity Alert</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">An alert generated when two or more tracked objects come within a defined distance of each other. Used for col…</p>
+          </div>
+        </a>
+        <a href="terms/proximity-detection.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Proximity Detection</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">The capability to detect when tracked objects are near each other or near specific locations. Enables applicat…</p>
+          </div>
+        </a>
+        <a href="terms/proximity-warning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Proximity Warning</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">A subset of proximity alert specifically focused on safety applications. Warns operators or workers when dange…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="R"><h2 class="letter-heading">R</h2><div class="term-grid">
+        <a href="terms/range.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Range</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The maximum distance over which RTLS components can reliably communicate. Varies significantly by technology: …</p>
+          </div>
+        </a>
+        <a href="terms/reader.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Reader</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending …</p>
+          </div>
+        </a>
+        <a href="terms/real-time.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Real-Time</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The capability to process and respond to events within milliseconds to seconds of occurrence. In RTLS, means p…</p>
+          </div>
+        </a>
+        <a href="terms/real-time-analytics.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Real-Time Analytics</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">The processing and analysis of RTLS data as it is generated, enabling immediate insights and responses. Suppor…</p>
+          </div>
+        </a>
+        <a href="terms/real-time-monitoring.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Real-Time Monitoring</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The continuous observation of current RTLS data showing asset and personnel positions, status, and activities …</p>
+          </div>
+        </a>
+        <a href="terms/received-signal-strength-indicator-rssi.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Received Signal Strength Indicator (RSSI)</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estima…</p>
+          </div>
+        </a>
+        <a href="terms/receiver.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Receiver</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A device or component that receives radio signals from transmitters or tags. In RTLS, receivers may be fixed (…</p>
+          </div>
+        </a>
+        <a href="terms/receiver-sensitivity.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Receiver Sensitivity</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The minimum signal strength a receiver can detect and process, measured in dBm. Higher sensitivity (more negat…</p>
+          </div>
+        </a>
+        <a href="terms/refresh-rate.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Refresh Rate</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates…</p>
+          </div>
+        </a>
+        <a href="terms/reporting-module.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Reporting Module</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The software component generating reports from RTLS data. Provides scheduled reports, ad-hoc reports, and cust…</p>
+          </div>
+        </a>
+        <a href="terms/resolution.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Resolution</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The smallest change in position that the RTLS can detect and report. Different from accuracy (how close to tru…</p>
+          </div>
+        </a>
+        <a href="terms/response-time.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Response Time</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The time elapsed between an event occurring and the system responding with appropriate action. Critical for sa…</p>
+          </div>
+        </a>
+        <a href="terms/rest-api.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">REST API</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Representational State Transfer Application Programming Interface - a software architectural style for web-bas…</p>
+          </div>
+        </a>
+        <a href="terms/restricted-area.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Restricted Area</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">A facility zone where access is controlled and limited to authorized personnel only. RTLS monitors restricted …</p>
+          </div>
+        </a>
+        <a href="terms/rfid-radio-frequency-identification.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RFID (Radio-Frequency Identification)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A technology using electromagnetic fields to automatically identify and track tags attached to objects. Includ…</p>
+          </div>
+        </a>
+        <a href="terms/room-level-accuracy.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Room-Level Accuracy</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">Positioning accuracy where RTLS determines which room or enclosed space a tag occupies, typically 2-5 meters r…</p>
+          </div>
+        </a>
+        <a href="terms/route-optimization.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Route Optimization</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The process of improving paths or sequences for moving assets, materials, or personnel through facilities. RTL…</p>
+          </div>
+        </a>
+        <a href="terms/rtk-real-time-kinematic.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RTK (Real-Time Kinematic)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a …</p>
+          </div>
+        </a>
+        <a href="terms/rtls-antenna.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RTLS Antenna</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation…</p>
+          </div>
+        </a>
+        <a href="terms/rtls-manager.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RTLS Manager</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sew…</p>
+          </div>
+        </a>
+        <a href="terms/rtls-monitor.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RTLS Monitor</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health…</p>
+          </div>
+        </a>
+        <a href="terms/rtls-planner.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RTLS Planner</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system config…</p>
+          </div>
+        </a>
+        <a href="terms/rtls-platform.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RTLS Platform</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Sewio's complete real-time location system encompassing both hardware (UWB/BLE tags and anchors) and software …</p>
+          </div>
+        </a>
+        <a href="terms/rtls-player.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RTLS Player</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">A cloud-based evaluation and optimization tool enabling replay of historical RTLS data to assess system perfor…</p>
+          </div>
+        </a>
+        <a href="terms/rtls-studio.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">RTLS Studio</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Sewio's all-in-one software package for installation, deployment, maintenance, and control of the RTLS platfor…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="S"><h2 class="letter-heading">S</h2><div class="term-grid">
+        <a href="terms/safe-zone.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Safe Zone</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">A designated area where personnel are protected from hazards or where safety procedures are relaxed. RTLS moni…</p>
+          </div>
+        </a>
+        <a href="terms/safety-zone-enforcement.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Safety Zone Enforcement</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">The use of RTLS to ensure compliance with safety zones including restricted access to hazardous areas, maximum…</p>
+          </div>
+        </a>
+        <a href="terms/sage-analytics.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Sage Analytics</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Sewio's starter analytics tool designed for pilots and proof-of-concept projects that demonstrates insights av…</p>
+          </div>
+        </a>
+        <a href="terms/satellite-constellation.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Satellite Constellation</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A group of satellites working together as a system to provide positioning coverage. The four major global cons…</p>
+          </div>
+        </a>
+        <a href="terms/scalability.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Scalability</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The ability of RTLS systems to grow and handle increasing loads without performance degradation. Includes scal…</p>
+          </div>
+        </a>
+        <a href="terms/sensmap.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Sensmap</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Feat…</p>
+          </div>
+        </a>
+        <a href="terms/sensor-node.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Sensor Node</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A device combining positioning technology with environmental sensors for tracking both location and conditions…</p>
+          </div>
+        </a>
+        <a href="terms/shop-floor.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Shop Floor</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">Synonym for production floor - the manufacturing area where products are made. RTLS shop floor applications in…</p>
+          </div>
+        </a>
+        <a href="terms/signal-attenuation.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Signal Attenuation</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The reduction in signal strength as radio waves propagate through space and obstacles in industrial environmen…</p>
+          </div>
+        </a>
+        <a href="terms/signal-interference.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Signal Interference</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">Disruption of RTLS signals by other radio sources, electrical equipment, or environmental factors. Common indu…</p>
+          </div>
+        </a>
+        <a href="terms/site-survey.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Site Survey</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The systematic physical examination of a facility before RTLS deployment to assess RF propagation, identify in…</p>
+          </div>
+        </a>
+        <a href="terms/smart-factory.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Smart Factory</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">A manufacturing facility using advanced technologies including RTLS, IoT, automation, and data analytics to op…</p>
+          </div>
+        </a>
+        <a href="terms/smart-warehouse.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0369A1"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Smart Warehouse</h3>
+            <span class="term-cat">Industry-Specific Terms</span>
+            <p class="term-preview">A warehouse facility leveraging RTLS, automation, and data analytics for optimal operations. RTLS enables capa…</p>
+          </div>
+        </a>
+        <a href="terms/space-utilization.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Space Utilization</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">Analysis of how effectively facility space is being used based on RTLS tracking data. Identifies underutilized…</p>
+          </div>
+        </a>
+        <a href="terms/star-topology.html" class="term-card">
+          <span class="term-cat-bar" style="background:#1D4ED8"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Star Topology</h3>
+            <span class="term-cat">System Architecture</span>
+            <p class="term-preview">A network configuration where all devices connect to a central hub or controller. Common in infrastructure-mod…</p>
+          </div>
+        </a>
+        <a href="terms/supply-chain-visibility.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Supply Chain Visibility</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibil…</p>
+          </div>
+        </a>
+        <a href="terms/synchronization.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Synchronization</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The process of ensuring RTLS system components operate with coordinated timing. Critical for time-based positi…</p>
+          </div>
+        </a>
+        <a href="terms/system-backup.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">System Backup</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Procedures and technologies for protecting RTLS data and configurations. Includes backing up system settings, …</p>
+          </div>
+        </a>
+        <a href="terms/system-capacity.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">System Capacity</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The maximum operational load an RTLS can handle including concurrent tags, updates per second, and data storag…</p>
+          </div>
+        </a>
+        <a href="terms/system-integration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">System Integration</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The process of connecting RTLS with other enterprise systems including ERP, WMS, MES, and BMS. Enables data ex…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="T"><h2 class="letter-heading">T</h2><div class="term-grid">
+        <a href="terms/tag.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Tag</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">The fundamental RTLS component attached to assets or worn by personnel to enable tracking. Contains wireless t…</p>
+          </div>
+        </a>
+        <a href="terms/tag-capacity.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Tag Capacity</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined…</p>
+          </div>
+        </a>
+        <a href="terms/tag-identifier.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Tag Identifier</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A unique digital code assigned to each tag enabling individual identification and tracking. Typically numeric …</p>
+          </div>
+        </a>
+        <a href="terms/telemetry.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Telemetry</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The automated collection and transmission of data from remote sensors or tracked assets. In RTLS, telemetry in…</p>
+          </div>
+        </a>
+        <a href="terms/theft-prevention.html" class="term-card">
+          <span class="term-cat-bar" style="background:#DC2626"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Theft Prevention</h3>
+            <span class="term-cat">Safety &amp; Security</span>
+            <p class="term-preview">The use of RTLS to detect and prevent unauthorized removal of assets from facilities. Features include perimet…</p>
+          </div>
+        </a>
+        <a href="terms/third-party-integration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Third-Party Integration</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Connecting RTLS with software or systems from other vendors. Requires well-documented APIs, standard protocols…</p>
+          </div>
+        </a>
+        <a href="terms/throughput.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Throughput</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The rate at which items, materials, or processes move through a facility or operation. RTLS measures actual th…</p>
+          </div>
+        </a>
+        <a href="terms/time-difference-of-arrival-tdoa.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Time Difference of Arrival (TDoA)</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag l…</p>
+          </div>
+        </a>
+        <a href="terms/time-of-arrival-toa.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Time of Arrival (ToA)</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance.…</p>
+          </div>
+        </a>
+        <a href="terms/time-synchronization.html" class="term-card">
+          <span class="term-cat-bar" style="background:#9333EA"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Time Synchronization</h3>
+            <span class="term-cat">Installation &amp; Configuration</span>
+            <p class="term-preview">The process of coordinating system clocks to a common time reference. Essential for time-based positioning met…</p>
+          </div>
+        </a>
+        <a href="terms/time-of-flight-tof.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Time-of-Flight (ToF)</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A distance measurement technique calculating signal travel time between transmitter and receiver, then convert…</p>
+          </div>
+        </a>
+        <a href="terms/tool-tracking.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Tool Tracking</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">Specialized RTLS application for tracking tools and equipment in manufacturing, maintenance, and construction …</p>
+          </div>
+        </a>
+        <a href="terms/tracking-software.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Tracking Software</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">The application layer of RTLS systems providing user interfaces, data management, analytics, and reporting. In…</p>
+          </div>
+        </a>
+        <a href="terms/traffic-pattern.html" class="term-card">
+          <span class="term-cat-bar" style="background:#4F46E5"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Traffic Pattern</h3>
+            <span class="term-cat">Data &amp; Analytics</span>
+            <p class="term-preview">Characteristic movement flows of assets or personnel through facilities revealed through RTLS data analysis. I…</p>
+          </div>
+        </a>
+        <a href="terms/transmission-power.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Transmission Power</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">The RF power level used by tags and anchors when transmitting, measured in milliwatts or dBm. Higher power inc…</p>
+          </div>
+        </a>
+        <a href="terms/transmitter.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Transmitter</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A device or component that sends radio signals. In RTLS, transmitters may be in active tags (broadcasting posi…</p>
+          </div>
+        </a>
+        <a href="terms/transponder.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Transponder</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">A device that receives a signal and automatically transmits a response signal. In RTLS, typically refers to ta…</p>
+          </div>
+        </a>
+        <a href="terms/travel-distance.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Travel Distance</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The total distance traveled by assets or personnel measured by RTLS. Useful for equipment utilization analysis…</p>
+          </div>
+        </a>
+        <a href="terms/triangulation.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Triangulation</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique determining location by measuring angles from multiple reference points to the target.…</p>
+          </div>
+        </a>
+        <a href="terms/trilateration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Trilateration</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique determining location by measuring distances to three or more anchors with known positi…</p>
+          </div>
+        </a>
+        <a href="terms/turnaround-time.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Turnaround Time</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The time required to complete a process from start to finish, often used in logistics for vehicle or shipment …</p>
+          </div>
+        </a>
+        <a href="terms/two-way-ranging-twr.html" class="term-card">
+          <span class="term-cat-bar" style="background:#7C3AED"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Two-Way Ranging (TWR)</h3>
+            <span class="term-cat">Positioning Methods &amp; Techniques</span>
+            <p class="term-preview">A positioning technique where tags and anchors exchange messages to measure round-trip signal propagation time…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="U"><h2 class="letter-heading">U</h2><div class="term-grid">
+        <a href="terms/udp-stream.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">UDP Stream</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">User Datagram Protocol data streaming - a method for transmitting RTLS data over networks. UDP provides low-la…</p>
+          </div>
+        </a>
+        <a href="terms/ultrasonic-positioning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Ultrasonic Positioning</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A positioning technology using ultrasonic sound waves for location determination. Offers high accuracy (centim…</p>
+          </div>
+        </a>
+        <a href="terms/update-rate.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Update Rate</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The frequency at which RTLS reports new positions, measured in Hertz or updates per second. Common rates range…</p>
+          </div>
+        </a>
+        <a href="terms/utilization-rate.html" class="term-card">
+          <span class="term-cat-bar" style="background:#059669"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Utilization Rate</h3>
+            <span class="term-cat">Performance Metrics &amp; KPIs</span>
+            <p class="term-preview">The percentage of time assets or resources are actively in use versus available time. Key metric for equipment…</p>
+          </div>
+        </a>
+        <a href="terms/uwb-ultra-wideband.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">UWB (Ultra-Wideband)</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A radio technology using extremely short pulses across wide frequency spectrum (typically 3.1-10.6 GHz). Provi…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="V"><h2 class="letter-heading">V</h2><div class="term-grid">
+        <a href="terms/vehicle-tag.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Vehicle Tag</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">An RTLS tag designed for mounting on industrial vehicles like forklifts, tuggers, and AGVs. Typically ruggediz…</p>
+          </div>
+        </a>
+        <a href="terms/vehicle-tracking.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Vehicle Tracking</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to monitor locations and movements of industrial vehicles within facilities. Applications incl…</p>
+          </div>
+        </a>
+        <a href="terms/virtual-boundary.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Virtual Boundary</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">See Geofence - a software-defined boundary triggering actions when crossed. Virtual boundaries enable flexible…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="W"><h2 class="letter-heading">W</h2><div class="term-grid">
+        <a href="terms/warehouse-management.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Warehouse Management</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to optimize warehouse operations including receiving, putaway, picking, packing, and shipping.…</p>
+          </div>
+        </a>
+        <a href="terms/wearable-tag.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0891B2"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Wearable Tag</h3>
+            <span class="term-cat">Hardware Components</span>
+            <p class="term-preview">An RTLS tag designed to be worn by personnel, typically as badges, wristbands, or hard hat attachments. Used f…</p>
+          </div>
+        </a>
+        <a href="terms/websocket.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">WebSocket</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">A communication protocol providing full-duplex communication channels over TCP connections. Used in modern RTL…</p>
+          </div>
+        </a>
+        <a href="terms/wi-fi-positioning.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Wi-Fi Positioning</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A positioning technology using existing Wi-Fi infrastructure for location determination. Typically uses RSSI f…</p>
+          </div>
+        </a>
+        <a href="terms/wireless-protocol.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Wireless Protocol</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15…</p>
+          </div>
+        </a>
+        <a href="terms/wms-integration.html" class="term-card">
+          <span class="term-cat-bar" style="background:#0D9488"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">WMS Integration</h3>
+            <span class="term-cat">Software &amp; Data Management</span>
+            <p class="term-preview">Integration between RTLS and Warehouse Management Systems. Combines real-time location data with warehouse ope…</p>
+          </div>
+        </a>
+        <a href="terms/work-in-progress-wip-tracking.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Work-in-Progress (WIP) Tracking</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to monitor materials and products currently being processed through production. Provides real-…</p>
+          </div>
+        </a>
+        <a href="terms/worker-safety.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Worker Safety</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to protect personnel from workplace hazards. Applications include hazardous zone monitoring, c…</p>
+          </div>
+        </a>
+        <a href="terms/workflow-management.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Workflow Management</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The coordination and optimization of work processes using RTLS data. Tracks work items through process stages,…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="Y"><h2 class="letter-heading">Y</h2><div class="term-grid">
+        <a href="terms/yard-management.html" class="term-card">
+          <span class="term-cat-bar" style="background:#D97706"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Yard Management</h3>
+            <span class="term-cat">Industrial Applications</span>
+            <p class="term-preview">The use of RTLS to track and manage trailers, containers, and vehicles in outdoor facility yards. Enables auto…</p>
+          </div>
+        </a></div></div><div class="letter-group" id="Z"><h2 class="letter-heading">Z</h2><div class="term-grid">
+        <a href="terms/zigbee.html" class="term-card">
+          <span class="term-cat-bar" style="background:#2563EB"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Zigbee</h3>
+            <span class="term-cat">Localization Technologies</span>
+            <p class="term-preview">A low-power wireless mesh networking protocol based on IEEE 802.15.4. Used in some RTLS implementations and se…</p>
+          </div>
+        </a>
+        <a href="terms/zone-detection.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Zone Detection</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">The capability to determine which defined zone or area a tracked tag currently occupies. Simpler than precise …</p>
+          </div>
+        </a>
+        <a href="terms/zone-entry.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Zone Entry</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiat…</p>
+          </div>
+        </a>
+        <a href="terms/zone-exit.html" class="term-card">
+          <span class="term-cat-bar" style="background:#BE185D"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Zone Exit</h3>
+            <span class="term-cat">Geofencing &amp; Zones</span>
+            <p class="term-preview">An event generated when a tracked tag leaves a defined geofence zone. Triggers alerts, logs events, or initiat…</p>
+          </div>
+        </a>
+        <a href="terms/zone-level-accuracy.html" class="term-card">
+          <span class="term-cat-bar" style="background:#6B7280"></span>
+          <div class="term-card-body">
+            <h3 class="term-name">Zone-Level Accuracy</h3>
+            <span class="term-cat">Technical Parameters</span>
+            <p class="term-preview">Positioning accuracy where RTLS determines which defined zone a tag occupies, typically 5-50 meters resolution…</p>
+          </div>
+        </a></div></div>
+  </div>
+
+  <div class="no-results" id="no-results">
+    <h3>No terms found</h3>
+    <p>Try a different search or clear the category filter.</p>
+  </div>
+</main>
+
+<footer>
+  Industrial RTLS Glossary · 252 terms · UWB · BLE · GNSS
+</footer>
+
+<script>
+  // Search + filter
+  function filterTerms() {
+    const q = document.getElementById('search').value.toLowerCase().trim();
+    const cat = document.getElementById('cat-filter').value;
+    const cards = document.querySelectorAll('.term-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const name = card.querySelector('.term-name').textContent.toLowerCase();
+      const cardCat = card.querySelector('.term-cat').textContent;
+      const preview = card.querySelector('.term-preview').textContent.toLowerCase();
+      const matchQ = !q || name.includes(q) || preview.includes(q);
+      const matchCat = !cat || cardCat === cat;
+      const show = matchQ && matchCat;
+      card.closest('.term-card') && (card.style.display = show ? '' : 'none');
+      if (show) visible++;
+    });
+
+    // Hide/show letter groups
+    document.querySelectorAll('.letter-group').forEach(group => {
+      const anyVisible = [...group.querySelectorAll('.term-card')].some(c => c.style.display !== 'none');
+      group.style.display = anyVisible ? '' : 'none';
+    });
+
+    document.getElementById('results-count').textContent = visible + ' term' + (visible !== 1 ? 's' : '');
+    document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+    document.getElementById('glossary-body').style.display = visible === 0 ? 'none' : '';
+  }
+
+  // PDF download gate
+  function handleDownload(e) {
+    e.preventDefault();
+    const email = document.getElementById('email-input').value;
+    if (!email) return;
+    // Store email (in production: send to backend/Tally/Mailchimp)
+    localStorage.setItem('rtls_email', email);
+    // Trigger download
+    const link = document.createElement('a');
+    link.href = 'Industrial-RTLS-Glossary_v3.docx';
+    link.download = 'Industrial-RTLS-Glossary.docx';
+    link.click();
+    // Show confirmation
+    const btn = e.target.querySelector('button');
+    btn.textContent = '✓ Downloading…';
+    btn.style.background = '#059669';
+    setTimeout(() => { btn.textContent = 'Download PDF →'; btn.style.background = ''; }, 3000);
+  }
+</script>
+
+</body>
+</html>

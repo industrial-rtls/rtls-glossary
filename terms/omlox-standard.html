@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMLOX Standard – Industrial RTLS Glossary</title>
+<meta name="description" content="An open standard for industrial locating services enabling interoperability between different RTLS technologies and applications. Developed by consortium o">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#B45309;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Standards &amp; Protocols</span>
+  <span>›</span>
+  <span>OMLOX Standard</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Standards &amp; Protocols</div>
+    <h1 class="term-title">OMLOX Standard</h1>
+  </header>
+  <p class="def-short">An open standard for industrial locating services enabling interoperability between different RTLS technologies and applications. Developed by consortium of technology companies and users. Defines standard APIs, data formats, and protocols ensuring multi-vendor compatibility. Aims to avoid vendor lock-in and enable best-of-breed solutions.</p><p class="def-long">Open standard for real-time location systems enabling interoperability between different vendors' RTLS products and IoT devices. Omlox architecture defines: (1) Omlox hub - central component providing common API for applications to access location data from any omlox-compliant positioning system. (2) Positioning technologies - UWB, BLE, UHF-RFID, 5G, or others providing actual positioning, abstracting technology differences. (3) Tags and anchors - devices certified for omlox compliance. (4) Applications - business logic consuming location data through standardized hub API. Omlox compliance levels: (1) Hub compliant - software implementing standard hub API. (2) Positioning technology compliant - systems providing location data in standard format. (3) Tag compliant - tags transmitting in standard formats detectable by compliant infrastructure. (4) Application compliant - software consuming location data via standard hub API.</p><p class="def-long">Benefits of omlox adoption: (1) Vendor flexibility - organizations not locked to single vendor, can mix technologies by zone. (2) Future-proofing - standard interface protects application investment as positioning technologies evolve. (3) Lower integration cost - applications integrate once to hub vs. custom integration per vendor. (4) Market efficiency - promotes competition and innovation through interoperability. Challenges limiting omlox adoption: (1) Limited vendor support - as of 2024, adoption primarily among founding members and partners, many RTLS vendors not yet compliant. (2) Performance optimization - standardization may prevent vendor-specific optimizations. (3) Feature limitations - standard defines common denominator, advanced vendor-specific features may not be accessible. (4) Maturity - relatively new standard (publicly launched 2021), ecosystem still developing.</p>
+  <nav class="term-nav">
+    <a href="occupancy-analytics.html" class="nav-prev">← Occupancy Analytics</a>
+    <a href="on-premise-rtls.html" class="nav-next">On-Premise RTLS →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>

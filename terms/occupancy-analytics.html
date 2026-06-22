@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Occupancy Analytics – Industrial RTLS Glossary</title>
+<meta name="description" content="Analysis of how many people or assets occupy specific areas over time. Reveals space utilization patterns, peak occupancy times, underutilized areas, and c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
+    --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
+    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#4F46E5;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb a:hover{color:var(--accent-hi)}
+  .breadcrumb span{margin:0 .4rem}
+  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
+  .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+  .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
+  .nav-next{margin-left:auto}
+  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
+  .back-link:hover{color:var(--accent-hi)}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<div class="breadcrumb">
+  <a href="../index.html">Glossary</a>
+  <span>›</span>
+  <span>Data &amp; Analytics</span>
+  <span>›</span>
+  <span>Occupancy Analytics</span>
+</div>
+<article class="term-page">
+  <header class="term-header">
+    <div class="term-cat-tag">Data &amp; Analytics</div>
+    <h1 class="term-title">Occupancy Analytics</h1>
+  </header>
+  <p class="def-short">Analysis of how many people or assets occupy specific areas over time. Reveals space utilization patterns, peak occupancy times, underutilized areas, and compliance with capacity limits. Supports facility planning, safety management (maximum occupancy enforcement), and process optimization.</p><p class="def-long">Analysis of space utilization patterns using RTLS data to understand how facilities, zones, and equipment are used over time. Industrial occupancy analytics applications: (1) Space optimization - identifying underutilized areas for repurposing or consolidation, typically finding 15-30% of facility space underutilized. (2) Capacity planning - understanding current utilization to forecast future space needs, preventing over-building. (3) Safety compliance - monitoring occupancy limits in hazardous zones or confined spaces. (4) Energy management - adjusting HVAC and lighting based on actual occupancy rather than schedules. (5) Process balancing - identifying workstation utilization imbalances for capacity reallocation.</p><p class="def-long">Typical findings: conference rooms utilized 30-45% of scheduled time (over-booking indicates insufficient capacity, under-booking suggests excess), production work cells 55-75% utilized (accounting for breaks and changeovers), storage areas 40-70% occupied (space for growth while avoiding waste), and break rooms showing distinct usage patterns by shift. Occupancy analytics data sources beyond RTLS: badge swipes (entry/exit times), environmental sensors (CO2, motion detecting presence), desk sensors (detecting seated workers), and system logs (equipment usage indicating operator presence). Business benefits: 20-40% facility cost reduction through space optimization (consolidating operations, deferring expansions), 10-25% energy savings (demand-based HVAC/lighting), 15-30% productivity improvement (optimal workspace allocation matching usage patterns), and improved workplace satisfaction (adequate space for needs). Successful occupancy analytics requires: complete coverage (detection throughout analyzed spaces), accurate counting (distinguishing individuals, avoiding double-counting), sufficient history (minimum 4-8 weeks for patterns, accounting for seasonality), and actionable presentation (insights driving specific decisions, not just interesting data).</p>
+  <nav class="term-nav">
+    <a href="notification-engine.html" class="nav-prev">← Notification Engine</a>
+    <a href="omlox-standard.html" class="nav-next">OMLOX Standard →</a>
+  </nav>
+</article>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
+</footer>
+</body>
+</html>
