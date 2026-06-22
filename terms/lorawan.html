@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>LoRaWAN – Industrial RTLS Glossary</title>
-<meta name="description" content="A low-power wide-area network protocol designed for wireless battery-operated devices. Uses CSS modulation providing long range (kilometers outdoors) with ">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Long Range Wide Area Network protocol for low-power wireless communication, occasionally used for wide-area asset tracking applications. LoRaWAN characteri">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#2563EB;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Localization Technologies</span>
-  <span>›</span>
-  <span>LoRaWAN</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A low-power wide-area network protocol designed for wireless battery-operated devices. Uses CSS modulation providing long range (kilometers outdoors) with low power consumption. In RTLS, LoRaWAN enables tracking across large outdoor areas like ports, campuses, or mining sites. Lower accuracy (10-50 meters) but excellent for applications prioritizing coverage and battery life.">A low-power wide-area network protocol designed for wireless battery-operated devices. Uses CSS modulation providing long range (kilometers outdoors) with low power consumption. In RTLS, LoRaWAN enables tracking across large outdoor areas like ports, campuses, or mining sites. Lower accuracy (10-50 meters) but excellent for applications prioritizing coverage and battery life.</a> › LoRaWAN
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Technologies</div>
+    <div class="term-cat-tag">A low-power wide-area network protocol designed for wireless battery-operated devices. Uses CSS modulation providing long range (kilometers outdoors) with low power consumption. In RTLS, LoRaWAN enables tracking across large outdoor areas like ports, campuses, or mining sites. Lower accuracy (10-50 meters) but excellent for applications prioritizing coverage and battery life.</div>
     <h1 class="term-title">LoRaWAN</h1>
   </header>
-  <p class="def-short">A low-power wide-area network protocol designed for wireless battery-operated devices. Uses CSS modulation providing long range (kilometers outdoors) with low power consumption. In RTLS, LoRaWAN enables tracking across large outdoor areas like ports, campuses, or mining sites. Lower accuracy (10-50 meters) but excellent for applications prioritizing coverage and battery life.</p><p class="def-long">Long Range Wide Area Network protocol for low-power wireless communication, occasionally used for wide-area asset tracking applications. LoRaWAN characteristics: extreme range (2-15 km line-of-sight, 1-5 km in urban/industrial environments), very low power (10-50mW transmission enabling 5-10 year battery life), low data rates (0.3-50 kbps sufficient for position and sensor data), and low cost (devices $10-30, gateways $300-1000). Positioning methods include: (1) RSSI-based - estimating position from signal strength at multiple gateways (100-500 meter accuracy typical). (2) TDoA - calculating position from signal arrival time differences at multiple gateways (20-200 meter accuracy with synchronized gateways). (3) Gateway association - knowing which gateway received signal (zone-level only, 1-5 km zones). (4) GPS-assisted - LoRaWAN transmitting GPS coordinates from device with integrated GPS receiver. LoRaWAN advantages for specific applications: ultra-long battery life (5-10 years with hourly updates), wide area coverage (entire facility or campus with few gateways), low infrastructure cost (gateways $300-1000 vs. $500-2000 for UWB anchors), outdoor capability (good range and penetration). Limitations make LoRaWAN unsuitable for most industrial RTLS: poor accuracy (100-500 meters typical vs. 10-50 cm for UWB), slow update rates (every 5-60 minutes typical due to duty cycle limits and battery conservation, vs. 1-10 Hz for industrial RTLS), capacity constraints (gateway handling 100s-1000s devices but with very low update rates), and indoor penetration challenges (metal buildings severely attenuate signals). LoRaWAN market growing 30-40% annually driven by IoT adoption, but industrial RTLS remains small portion of LoRaWAN deployments compared to agricultural sensors, utility metering, and smart city applications.</p>
-  <nav class="term-nav">
-    <a href="lone-worker-protection.html" class="nav-prev">← Lone Worker Protection</a>
-    <a href="machine-learning.html" class="nav-next">Machine Learning →</a>
-  </nav>
+  <p class="def-short">Long <a href="../terms/range.html" class="term-link">Range</a> Wide Area Network protocol for low-power wireless communication, occasionally used for wide-area <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> applications. LoRaWAN characteristics: extreme range (2-15 km line-of-sight, 1-5 km in urban/industrial environments), very low power (10-50mW transmission enabling 5-10 year <a href="../terms/battery-life.html" class="term-link">battery life</a>), low data rates (0.3-50 kbps sufficient for position and sensor data), and low cost (devices $10-30, gateways $300-1000). Positioning methods include: (1) RSSI-based - estimating position from signal strength at multiple gateways (100-500 meter <a href="../terms/accuracy.html" class="term-link">accuracy</a> typical). (2) TDoA - calculating position from signal arrival time differences at multiple gateways (20-200 meter accuracy with synchronized gateways). (3) <a href="../terms/gateway.html" class="term-link">Gateway</a> association - knowing which gateway received signal (zone-level only, 1-5 km zones). (4) GPS-assisted - LoRaWAN transmitting GPS coordinates from device with integrated GPS <a href="../terms/receiver.html" class="term-link">receiver</a>. LoRaWAN advantages for specific applications: ultra-long battery life (5-10 years with hourly updates), wide area coverage (entire facility or campus with few gateways), low infrastructure cost (gateways $300-1000 vs. $500-2000 for UWB anchors), outdoor capability (good range and <a href="../terms/penetration.html" class="term-link">penetration</a>). Limitations make LoRaWAN unsuitable for most industrial RTLS: poor accuracy (100-500 meters typical vs. 10-50 cm for UWB), slow update rates (every 5-60 minutes typical due to duty cycle limits and battery conservation, vs. 1-10 Hz for industrial RTLS), <a href="../terms/capacity.html" class="term-link">capacity</a> constraints (gateway handling 100s-1000s devices but with very low update rates), and indoor penetration challenges (metal buildings severely attenuate signals). LoRaWAN market growing 30-40% annually driven by IoT adoption, but industrial RTLS remains small portion of LoRaWAN deployments compared to agricultural sensors, utility metering, and smart city applications.</p>
+  
+  <nav class="term-nav"><a href="lone-worker-protection.html" class="nav-prev">← Lone Worker Protection</a><a href="machine-learning.html" class="nav-next">Machine Learning →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

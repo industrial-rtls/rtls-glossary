@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Edge Computing – Industrial RTLS Glossary</title>
-<meta name="description" content="A distributed computing paradigm where data processing occurs on devices at the network edge near data sources. In RTLS, edge computing processes tracking ">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Computing architecture where data processing occurs at or near data source (field devices, local servers) rather than centralized data centers or cloud. In">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#1D4ED8;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>System Architecture</span>
-  <span>›</span>
-  <span>Edge Computing</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A distributed computing paradigm where data processing occurs on devices at the network edge near data sources. In RTLS, edge computing processes tracking data locally providing ultra-low latency, reduced bandwidth requirements, improved reliability, and enhanced privacy. Particularly valuable for time-critical applications like collision avoidance and real-time AGV navigation requiring sub-second response.">A distributed computing paradigm where data processing occurs on devices at the network edge near data sources. In RTLS, edge computing processes tracking data locally providing ultra-low latency, reduced bandwidth requirements, improved reliability, and enhanced privacy. Particularly valuable for time-critical applications like collision avoidance and real-time AGV navigation requiring sub-second response.</a> › Edge Computing
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">System Architecture</div>
+    <div class="term-cat-tag">A distributed computing paradigm where data processing occurs on devices at the network edge near data sources. In RTLS, edge computing processes tracking data locally providing ultra-low latency, reduced bandwidth requirements, improved reliability, and enhanced privacy. Particularly valuable for time-critical applications like collision avoidance and real-time AGV navigation requiring sub-second response.</div>
     <h1 class="term-title">Edge Computing</h1>
   </header>
-  <p class="def-short">A distributed computing paradigm where data processing occurs on devices at the network edge near data sources. In RTLS, edge computing processes tracking data locally providing ultra-low latency, reduced bandwidth requirements, improved reliability, and enhanced privacy. Particularly valuable for time-critical applications like collision avoidance and real-time AGV navigation requiring sub-second response.</p><p class="def-long">Computing architecture where data processing occurs at or near data source (field devices, local servers) rather than centralized data centers or cloud. In industrial RTLS context, edge computing distributes intelligence: anchors or local gateways perform position calculations, filters, and time-critical analytics locally rather than sending raw data to central servers. Edge computing benefits for RTLS include: reduced latency (local processing eliminates network round-trips, achieving 10-100ms vs. 100-1000ms for centralized), continued operation during network outages (critical for safety functions), reduced network bandwidth requirements (transmitting computed results vs. raw measurements saves 100-1000x data volume), and improved scalability (processing distributed across devices rather than bottlenecked at central servers). RTLS edge computing typical architecture: local edge servers (industrial PCs with 16-32 GB RAM, multi-core CPUs) located in facility IT closets handle position calculation for 200-1000 tags, perform geofence monitoring and local alerting, and forward aggregated data to central systems for facility-wide analytics and historical storage. Safety-critical functions (collision avoidance, emergency response) always run at edge to ensure sub-second response independent of network connectivity. Edge computing essential for multi-site deployments where central coordination unnecessary and local autonomy preferred.</p>
-  <nav class="term-nav">
-    <a href="dynamic-geofencing.html" class="nav-prev">← Dynamic Geofencing</a>
-    <a href="emergency-response.html" class="nav-next">Emergency Response →</a>
-  </nav>
+  <p class="def-short">Computing architecture where data processing occurs at or near data source (field devices, local servers) rather than centralized data centers or cloud. In industrial RTLS context, edge computing distributes intelligence: anchors or local gateways perform position calculations, filters, and time-critical analytics locally rather than sending raw data to central servers. Edge computing benefits for RTLS include: reduced <a href="../terms/latency.html" class="term-link">latency</a> (local processing eliminates network round-trips, achieving 10-100ms vs. 100-1000ms for centralized), continued operation during network outages (critical for safety functions), reduced <a href="../terms/network-bandwidth.html" class="term-link">network bandwidth</a> requirements (transmitting computed results vs. raw measurements saves 100-1000x data volume), and improved <a href="../terms/scalability.html" class="term-link">scalability</a> (processing distributed across devices rather than bottlenecked at central servers). RTLS edge computing typical architecture: local edge servers (industrial PCs with 16-32 GB RAM, multi-core CPUs) located in facility IT closets handle position calculation for 200-1000 tags, perform <a href="../terms/geofence.html" class="term-link">geofence</a> monitoring and local alerting, and forward aggregated data to central systems for facility-wide analytics and historical storage. Safety-critical functions (<a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>, <a href="../terms/emergency-response.html" class="term-link">emergency response</a>) always run at edge to ensure sub-second response independent of network connectivity. Edge computing essential for multi-site deployments where central coordination unnecessary and local autonomy preferred.</p>
+  
+  <nav class="term-nav"><a href="dynamic-geofencing.html" class="nav-prev">← Dynamic Geofencing</a><a href="emergency-response.html" class="nav-next">Emergency Response →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

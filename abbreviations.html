@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Abbreviations – Industrial RTLS Glossary</title>
+<meta name="description" content="112 abbreviations used in industrial RTLS – UWB, BLE, GNSS, positioning systems, and industrial IoT. Each abbreviation links to the full glossary definition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {--bg:#0A0F1E;--surface:#111827;--surface2:#1A2336;--border:#1E3A5F;--text:#F0F4FF;--muted:#8B9CB8;--accent:#2563EB;--accent-hi:#3B82F6}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  .logo span{color:var(--accent-hi)}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
+  .page{max-width:900px;margin:0 auto;padding:3rem 2rem 5rem}
+  .page-title{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem}
+  .page-sub{color:var(--muted);font-size:.9rem;margin-bottom:2rem}
+  .abbr-search{background:var(--surface);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:.6rem 1rem;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;width:100%;max-width:320px;margin-bottom:1.5rem}
+  .abbr-search:focus{border-color:var(--accent)}
+  .abbr-search::placeholder{color:var(--muted)}
+  table{width:100%;border-collapse:collapse}
+  thead th{font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:.6rem 1rem;border-bottom:1px solid var(--border);text-align:left}
+  tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+  tbody tr:hover{background:var(--surface)}
+  td{padding:.65rem 1rem;font-size:.9rem;vertical-align:top}
+  .abbr-col{font-family:'JetBrains Mono',monospace;font-size:.85rem;width:90px;color:var(--text)}
+  .meaning-col{color:#C8D5EA;width:45%}
+  .related-col{width:45%}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">RTLS <span>Glossary</span></a>
+  <a href="index.html#pdf-download" class="header-cta">Download PDF</a>
+</header>
+<main class="page">
+  <h1 class="page-title">Abbreviations</h1>
+  <p class="page-sub">112 abbreviations used in industrial RTLS. Each links to the full glossary definition.</p>
+  <input type="search" class="abbr-search" placeholder="Filter abbreviations…" id="abbr-search" oninput="filterAbbr()">
+  <table id="abbr-table">
+    <thead>
+      <tr>
+        <th>Abbreviation</th>
+        <th>Meaning</th>
+        <th>Related term</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="abbr-col"><strong>AGV</strong></td>
+        <td class="meaning-col">Automated Guided Vehicle</td>
+        <td class="related-col"><a href="terms/agv-automated-guided-vehicle-navigation.html" class="term-link">AGV (Automated Guided Vehicle) Navigation</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>AI</strong></td>
+        <td class="meaning-col">Artificial Intelligence</td>
+        <td class="related-col"><a href="terms/artificial-intelligence-ai-in-rtls.html" class="term-link">Artificial Intelligence (AI) in RTLS</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>AMR</strong></td>
+        <td class="meaning-col">Autonomous Mobile Robot</td>
+        <td class="related-col"><a href="terms/smart-factory.html" class="term-link">Smart Factory</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>API</strong></td>
+        <td class="meaning-col">Application Programming Interface</td>
+        <td class="related-col"><a href="terms/api-application-programming-interface.html" class="term-link">API (Application Programming Interface)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>AoA</strong></td>
+        <td class="meaning-col">Angle of Arrival</td>
+        <td class="related-col"><a href="terms/angle-of-arrival-aoa.html" class="term-link">Angle of Arrival (AoA)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>AoD</strong></td>
+        <td class="meaning-col">Angle of Departure</td>
+        <td class="related-col"><a href="terms/angle-of-departure-aod.html" class="term-link">Angle of Departure (AoD)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>BI</strong></td>
+        <td class="meaning-col">Business Intelligence</td>
+        <td class="related-col"><a href="terms/bi-connector.html" class="term-link">BI Connector</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>BLE</strong></td>
+        <td class="meaning-col">Bluetooth Low Energy</td>
+        <td class="related-col"><a href="terms/ble-bluetooth-low-energy.html" class="term-link">BLE (Bluetooth Low Energy)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>BMS</strong></td>
+        <td class="meaning-col">Building Management System</td>
+        <td class="related-col"><a href="terms/system-integration.html" class="term-link">System Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>CAD</strong></td>
+        <td class="meaning-col">Computer-Aided Design</td>
+        <td class="related-col"><a href="terms/facility-layout.html" class="term-link">Facility Layout</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>CMMS</strong></td>
+        <td class="meaning-col">Computerized Maintenance Management System</td>
+        <td class="related-col"><a href="terms/predictive-maintenance.html" class="term-link">Predictive Maintenance</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>CPS</strong></td>
+        <td class="meaning-col">Cyber-Physical System</td>
+        <td class="related-col"><a href="terms/smart-factory.html" class="term-link">Smart Factory</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>CSS</strong></td>
+        <td class="meaning-col">Chirp Spread Spectrum</td>
+        <td class="related-col"><a href="terms/css-chirp-spread-spectrum.html" class="term-link">CSS (Chirp Spread Spectrum)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>CoO</strong></td>
+        <td class="meaning-col">Cell of Origin</td>
+        <td class="related-col"><a href="terms/cell-of-origin-coo.html" class="term-link">Cell of Origin (CoO)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>DGPS</strong></td>
+        <td class="meaning-col">Differential GPS</td>
+        <td class="related-col"><a href="terms/dgps-differential-gps.html" class="term-link">DGPS (Differential GPS)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>DOP</strong></td>
+        <td class="meaning-col">Dilution of Precision</td>
+        <td class="related-col"><a href="terms/dilution-of-precision-dop.html" class="term-link">Dilution of Precision (DOP)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>EAM</strong></td>
+        <td class="meaning-col">Enterprise Asset Management</td>
+        <td class="related-col"><a href="terms/third-party-integration.html" class="term-link">Third-Party Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>EIRP</strong></td>
+        <td class="meaning-col">Equivalent Isotropic Radiated Power</td>
+        <td class="related-col"><a href="terms/transmission-power.html" class="term-link">Transmission Power</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>ERP</strong></td>
+        <td class="meaning-col">Enterprise Resource Planning</td>
+        <td class="related-col"><a href="terms/system-integration.html" class="term-link">System Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>ESB</strong></td>
+        <td class="meaning-col">Enterprise Service Bus</td>
+        <td class="related-col"><a href="terms/integration-layer.html" class="term-link">Integration Layer</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>ETSI</strong></td>
+        <td class="meaning-col">European Telecommunications Standards Institute</td>
+        <td class="related-col"><a href="terms/uwb-ultra-wideband.html" class="term-link">UWB (Ultra-Wideband)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>FCC</strong></td>
+        <td class="meaning-col">Federal Communications Commission</td>
+        <td class="related-col"><a href="terms/uwb-ultra-wideband.html" class="term-link">UWB (Ultra-Wideband)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>FDMA</strong></td>
+        <td class="meaning-col">Frequency Division Multiple Access</td>
+        <td class="related-col"><a href="terms/tag-capacity.html" class="term-link">Tag Capacity</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>FMS</strong></td>
+        <td class="meaning-col">Fleet Management System</td>
+        <td class="related-col"><a href="terms/fms-integration.html" class="term-link">FMS Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>FiRa</strong></td>
+        <td class="meaning-col">Fine Ranging</td>
+        <td class="related-col"><a href="terms/fira-consortium.html" class="term-link">FiRa Consortium</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>GDOP</strong></td>
+        <td class="meaning-col">Geometric Dilution of Precision</td>
+        <td class="related-col"><a href="terms/dilution-of-precision-dop.html" class="term-link">Dilution of Precision (DOP)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>GDPR</strong></td>
+        <td class="meaning-col">General Data Protection Regulation</td>
+        <td class="related-col"><a href="terms/personnel-tracking.html" class="term-link">Personnel Tracking</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>GLONASS</strong></td>
+        <td class="meaning-col">Global Orbiting Navigation Satellite System</td>
+        <td class="related-col"><a href="terms/gnss-global-navigation-satellite-system.html" class="term-link">GNSS (Global Navigation Satellite System)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>GNSS</strong></td>
+        <td class="meaning-col">Global Navigation Satellite System</td>
+        <td class="related-col"><a href="terms/gnss-global-navigation-satellite-system.html" class="term-link">GNSS (Global Navigation Satellite System)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>GPIO</strong></td>
+        <td class="meaning-col">General Purpose Input/Output</td>
+        <td class="related-col"><a href="terms/vehicle-tag.html" class="term-link">Vehicle Tag</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>GPS</strong></td>
+        <td class="meaning-col">Global Positioning System</td>
+        <td class="related-col"><a href="terms/gps-global-positioning-system.html" class="term-link">GPS (Global Positioning System)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>HDOP</strong></td>
+        <td class="meaning-col">Horizontal Dilution of Precision</td>
+        <td class="related-col"><a href="terms/dilution-of-precision-dop.html" class="term-link">Dilution of Precision (DOP)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>HSE</strong></td>
+        <td class="meaning-col">Health and Safety Executive</td>
+        <td class="related-col"><a href="terms/lone-worker-protection.html" class="term-link">Lone Worker Protection</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>HTTP</strong></td>
+        <td class="meaning-col">Hypertext Transfer Protocol</td>
+        <td class="related-col"><a href="terms/rest-api.html" class="term-link">REST API</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>HVAC</strong></td>
+        <td class="meaning-col">Heating, Ventilation, and Air Conditioning</td>
+        <td class="related-col"><a href="terms/occupancy-analytics.html" class="term-link">Occupancy Analytics</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>IEEE</strong></td>
+        <td class="meaning-col">Institute of Electrical and Electronics Engineers</td>
+        <td class="related-col"><a href="terms/synchronization.html" class="term-link">Synchronization</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>IIoT</strong></td>
+        <td class="meaning-col">Industrial Internet of Things</td>
+        <td class="related-col"><a href="terms/industrial-iot-iiot.html" class="term-link">Industrial IoT (IIoT)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>IP</strong></td>
+        <td class="meaning-col">Internet Protocol / Ingress Protection</td>
+        <td class="related-col"><a href="terms/ip-rating.html" class="term-link">IP Rating</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>IPS</strong></td>
+        <td class="meaning-col">Indoor Positioning System</td>
+        <td class="related-col"><a href="terms/indoor-positioning-system-ips.html" class="term-link">Indoor Positioning System (IPS)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>IR</strong></td>
+        <td class="meaning-col">Infrared</td>
+        <td class="related-col"><a href="terms/ir-infrared-positioning.html" class="term-link">IR (Infrared) Positioning</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>ISM</strong></td>
+        <td class="meaning-col">Industrial, Scientific and Medical</td>
+        <td class="related-col"><a href="terms/lorawan.html" class="term-link">LoRaWAN</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>ISO</strong></td>
+        <td class="meaning-col">International Organization for Standardization</td>
+        <td class="related-col"><a href="terms/iso-iec-24730.html" class="term-link">ISO/IEC 24730</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>IoT</strong></td>
+        <td class="meaning-col">Internet of Things</td>
+        <td class="related-col"><a href="terms/system-integration.html" class="term-link">System Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>JIT</strong></td>
+        <td class="meaning-col">Just-in-Time</td>
+        <td class="related-col"><a href="terms/just-in-time-jit-manufacturing.html" class="term-link">Just-in-Time (JIT) Manufacturing</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>JSON</strong></td>
+        <td class="meaning-col">JavaScript Object Notation</td>
+        <td class="related-col"><a href="terms/api-application-programming-interface.html" class="term-link">API (Application Programming Interface)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>KPI</strong></td>
+        <td class="meaning-col">Key Performance Indicator</td>
+        <td class="related-col"><a href="terms/analytics-dashboard.html" class="term-link">Analytics Dashboard</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>LED</strong></td>
+        <td class="meaning-col">Light-Emitting Diode</td>
+        <td class="related-col"><a href="terms/notification-engine.html" class="term-link">Notification Engine</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>LiDAR</strong></td>
+        <td class="meaning-col">Light Detection and Ranging</td>
+        <td class="related-col"><a href="terms/lidar-light-detection-and-ranging.html" class="term-link">LiDAR (Light Detection and Ranging)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>LoRa</strong></td>
+        <td class="meaning-col">Long Range</td>
+        <td class="related-col"><a href="terms/css-chirp-spread-spectrum.html" class="term-link">CSS (Chirp Spread Spectrum)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>LoRaWAN</strong></td>
+        <td class="meaning-col">Long Range Wide Area Network</td>
+        <td class="related-col"><a href="terms/lorawan.html" class="term-link">LoRaWAN</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>LoS</strong></td>
+        <td class="meaning-col">Line of Sight</td>
+        <td class="related-col"><a href="terms/line-of-sight-los.html" class="term-link">Line of Sight (LoS)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>MAC</strong></td>
+        <td class="meaning-col">Medium Access Control</td>
+        <td class="related-col"><a href="terms/wireless-protocol.html" class="term-link">Wireless Protocol</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>MAE</strong></td>
+        <td class="meaning-col">Mean Absolute Error</td>
+        <td class="related-col"><a href="terms/predictive-analytics.html" class="term-link">Predictive Analytics</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>MES</strong></td>
+        <td class="meaning-col">Manufacturing Execution System</td>
+        <td class="related-col"><a href="terms/system-integration.html" class="term-link">System Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>ML</strong></td>
+        <td class="meaning-col">Machine Learning</td>
+        <td class="related-col"><a href="terms/predictive-analytics.html" class="term-link">Predictive Analytics</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>MQTT</strong></td>
+        <td class="meaning-col">Message Queuing Telemetry Transport</td>
+        <td class="related-col"><a href="terms/api-application-programming-interface.html" class="term-link">API (Application Programming Interface)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>NDA</strong></td>
+        <td class="meaning-col">Non-Disclosure Agreement</td>
+        <td class="related-col"><a href="terms/open-api.html" class="term-link">Open API</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>NFC</strong></td>
+        <td class="meaning-col">Near Field Communication</td>
+        <td class="related-col"><a href="terms/rfid-radio-frequency-identification.html" class="term-link">RFID (Radio-Frequency Identification)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>NFPA</strong></td>
+        <td class="meaning-col">National Fire Protection Association</td>
+        <td class="related-col"><a href="terms/mustering.html" class="term-link">Mustering</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>NLoS</strong></td>
+        <td class="meaning-col">Non-Line of Sight</td>
+        <td class="related-col"><a href="terms/non-line-of-sight-nlos.html" class="term-link">Non-Line of Sight (NLoS)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>OAuth</strong></td>
+        <td class="meaning-col">Open Authorization</td>
+        <td class="related-col"><a href="terms/api-application-programming-interface.html" class="term-link">API (Application Programming Interface)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>OEE</strong></td>
+        <td class="meaning-col">Overall Equipment Effectiveness</td>
+        <td class="related-col"><a href="terms/production-floor.html" class="term-link">Production Floor</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>OFDM</strong></td>
+        <td class="meaning-col">Orthogonal Frequency-Division Multiplexing</td>
+        <td class="related-col"><a href="terms/transmitter.html" class="term-link">Transmitter</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>OPC</strong></td>
+        <td class="meaning-col">Open Platform Communications</td>
+        <td class="related-col"><a href="terms/omlox-standard.html" class="term-link">OMLOX Standard</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>OSHA</strong></td>
+        <td class="meaning-col">Occupational Safety and Health Administration</td>
+        <td class="related-col"><a href="terms/lone-worker-protection.html" class="term-link">Lone Worker Protection</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>PACS</strong></td>
+        <td class="meaning-col">Physical Access Control System</td>
+        <td class="related-col"><a href="terms/access-control.html" class="term-link">Access Control</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>PDF</strong></td>
+        <td class="meaning-col">Portable Document Format</td>
+        <td class="related-col"><a href="terms/reporting-module.html" class="term-link">Reporting Module</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>PDOP</strong></td>
+        <td class="meaning-col">Position Dilution of Precision</td>
+        <td class="related-col"><a href="terms/dilution-of-precision-dop.html" class="term-link">Dilution of Precision (DOP)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>PDoA</strong></td>
+        <td class="meaning-col">Phase Difference of Arrival</td>
+        <td class="related-col"><a href="terms/phase-difference-measurement.html" class="term-link">Phase Difference Measurement</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>PLC</strong></td>
+        <td class="meaning-col">Programmable Logic Controller</td>
+        <td class="related-col"><a href="terms/safety-zone-enforcement.html" class="term-link">Safety Zone Enforcement</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>PPE</strong></td>
+        <td class="meaning-col">Personal Protective Equipment</td>
+        <td class="related-col"><a href="terms/ppe-personal-protective-equipment-compliance.html" class="term-link">PPE (Personal Protective Equipment) Compliance</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>PTP</strong></td>
+        <td class="meaning-col">Precision Time Protocol</td>
+        <td class="related-col"><a href="terms/synchronization.html" class="term-link">Synchronization</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>PoE</strong></td>
+        <td class="meaning-col">Power over Ethernet</td>
+        <td class="related-col"><a href="terms/fixed-infrastructure.html" class="term-link">Fixed Infrastructure</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>QoS</strong></td>
+        <td class="meaning-col">Quality of Service</td>
+        <td class="related-col"><a href="terms/mqtt-protocol.html" class="term-link">MQTT Protocol</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>REST</strong></td>
+        <td class="meaning-col">Representational State Transfer</td>
+        <td class="related-col"><a href="terms/rest-api.html" class="term-link">REST API</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>RFID</strong></td>
+        <td class="meaning-col">Radio-Frequency Identification</td>
+        <td class="related-col"><a href="terms/rfid-radio-frequency-identification.html" class="term-link">RFID (Radio-Frequency Identification)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>RMSE</strong></td>
+        <td class="meaning-col">Root Mean Squared Error</td>
+        <td class="related-col"><a href="terms/predictive-analytics.html" class="term-link">Predictive Analytics</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>RPO</strong></td>
+        <td class="meaning-col">Recovery Point Objective</td>
+        <td class="related-col"><a href="terms/system-backup.html" class="term-link">System Backup</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>RSSI</strong></td>
+        <td class="meaning-col">Received Signal Strength Indicator</td>
+        <td class="related-col"><a href="terms/received-signal-strength-indicator-rssi.html" class="term-link">Received Signal Strength Indicator (RSSI)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>RTI</strong></td>
+        <td class="meaning-col">Returnable Transport Item</td>
+        <td class="related-col"><a href="terms/supply-chain-visibility.html" class="term-link">Supply Chain Visibility</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>RTK</strong></td>
+        <td class="meaning-col">Real-Time Kinematic</td>
+        <td class="related-col"><a href="terms/rtk-real-time-kinematic.html" class="term-link">RTK (Real-Time Kinematic)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>RTO</strong></td>
+        <td class="meaning-col">Recovery Time Objective</td>
+        <td class="related-col"><a href="terms/system-backup.html" class="term-link">System Backup</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>RTT</strong></td>
+        <td class="meaning-col">Round-Trip Time</td>
+        <td class="related-col"><a href="terms/wi-fi-positioning.html" class="term-link">Wi-Fi Positioning</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>SAP</strong></td>
+        <td class="meaning-col">Systems, Applications &amp; Products</td>
+        <td class="related-col"><a href="terms/third-party-integration.html" class="term-link">Third-Party Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>SCADA</strong></td>
+        <td class="meaning-col">Supervisory Control and Data Acquisition</td>
+        <td class="related-col"><a href="terms/system-integration.html" class="term-link">System Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>SDK</strong></td>
+        <td class="meaning-col">Software Development Kit</td>
+        <td class="related-col"><a href="terms/api-application-programming-interface.html" class="term-link">API (Application Programming Interface)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>SIL</strong></td>
+        <td class="meaning-col">Safety Integrity Level</td>
+        <td class="related-col"><a href="terms/safety-zone-enforcement.html" class="term-link">Safety Zone Enforcement</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>SLAM</strong></td>
+        <td class="meaning-col">Simultaneous Localization and Mapping</td>
+        <td class="related-col"><a href="terms/positioning-algorithm.html" class="term-link">Positioning Algorithm</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>SMS</strong></td>
+        <td class="meaning-col">Short Message Service</td>
+        <td class="related-col"><a href="terms/alert-system.html" class="term-link">Alert System</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>SOAP</strong></td>
+        <td class="meaning-col">Simple Object Access Protocol</td>
+        <td class="related-col"><a href="terms/integration-layer.html" class="term-link">Integration Layer</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>SQL</strong></td>
+        <td class="meaning-col">Structured Query Language</td>
+        <td class="related-col"><a href="terms/location-history.html" class="term-link">Location History</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>TCP</strong></td>
+        <td class="meaning-col">Transmission Control Protocol</td>
+        <td class="related-col"><a href="terms/udp-stream.html" class="term-link">UDP Stream</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>TDMA</strong></td>
+        <td class="meaning-col">Time Division Multiple Access</td>
+        <td class="related-col"><a href="terms/tag-capacity.html" class="term-link">Tag Capacity</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>TDOA</strong></td>
+        <td class="meaning-col">Time Difference of Arrival</td>
+        <td class="related-col"><a href="terms/multilateration.html" class="term-link">Multilateration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>TDOP</strong></td>
+        <td class="meaning-col">Time Dilution of Precision</td>
+        <td class="related-col"><a href="terms/dilution-of-precision-dop.html" class="term-link">Dilution of Precision (DOP)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>TDoA</strong></td>
+        <td class="meaning-col">Time Difference of Arrival</td>
+        <td class="related-col"><a href="terms/time-difference-of-arrival-tdoa.html" class="term-link">Time Difference of Arrival (TDoA)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>TMS</strong></td>
+        <td class="meaning-col">Transportation Management System</td>
+        <td class="related-col"><a href="terms/yard-management.html" class="term-link">Yard Management</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>TWR</strong></td>
+        <td class="meaning-col">Two-Way Ranging</td>
+        <td class="related-col"><a href="terms/two-way-ranging-twr.html" class="term-link">Two-Way Ranging (TWR)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>ToA</strong></td>
+        <td class="meaning-col">Time of Arrival</td>
+        <td class="related-col"><a href="terms/time-of-arrival-toa.html" class="term-link">Time of Arrival (ToA)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>ToF</strong></td>
+        <td class="meaning-col">Time-of-Flight</td>
+        <td class="related-col"><a href="terms/time-of-flight-tof.html" class="term-link">Time-of-Flight (ToF)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>UDP</strong></td>
+        <td class="meaning-col">User Datagram Protocol</td>
+        <td class="related-col"><a href="terms/udp-stream.html" class="term-link">UDP Stream</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>UHF</strong></td>
+        <td class="meaning-col">Ultra High Frequency</td>
+        <td class="related-col"><a href="terms/passive-rfid.html" class="term-link">Passive RFID</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>UI</strong></td>
+        <td class="meaning-col">User Interface</td>
+        <td class="related-col"><a href="terms/rtls-studio.html" class="term-link">RTLS Studio</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>URLLC</strong></td>
+        <td class="meaning-col">Ultra-Reliable Low-Latency Communication</td>
+        <td class="related-col"><a href="terms/wireless-protocol.html" class="term-link">Wireless Protocol</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>UWB</strong></td>
+        <td class="meaning-col">Ultra-Wideband</td>
+        <td class="related-col"><a href="terms/uwb-ultra-wideband.html" class="term-link">UWB (Ultra-Wideband)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>VDOP</strong></td>
+        <td class="meaning-col">Vertical Dilution of Precision</td>
+        <td class="related-col"><a href="terms/dilution-of-precision-dop.html" class="term-link">Dilution of Precision (DOP)</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>WIP</strong></td>
+        <td class="meaning-col">Work-in-Progress</td>
+        <td class="related-col"><a href="terms/work-in-progress-wip-tracking.html" class="term-link">Work-in-Progress (WIP) Tracking</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>WMS</strong></td>
+        <td class="meaning-col">Warehouse Management System</td>
+        <td class="related-col"><a href="terms/system-integration.html" class="term-link">System Integration</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>XML</strong></td>
+        <td class="meaning-col">Extensible Markup Language</td>
+        <td class="related-col"><a href="terms/integration-layer.html" class="term-link">Integration Layer</a></td>
+      </tr>
+      <tr>
+        <td class="abbr-col"><strong>YMS</strong></td>
+        <td class="meaning-col">Yard Management System</td>
+        <td class="related-col"><a href="terms/yard-management.html" class="term-link">Yard Management</a></td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+<footer>Industrial RTLS Glossary · <a href="index.html">← All terms</a></footer>
+<script>
+function filterAbbr() {
+  const q = document.getElementById('abbr-search').value.toLowerCase();
+  document.querySelectorAll('#abbr-table tbody tr').forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Computer Vision Tracking – Industrial RTLS Glossary</title>
-<meta name="description" content="Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel. Analyzes video feeds to identify and locate o">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Positioning technology using cameras and image processing algorithms to detect and track objects. In industrial settings, computer vision tracking employs ">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#2563EB;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Localization Technologies</span>
-  <span>›</span>
-  <span>Computer Vision Tracking</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel. Analyzes video feeds to identify and locate objects within camera fields of view. Advantages include no tags required, rich contextual information, and visual verification. Limitations include line-of-sight requirements, lighting dependency, processing intensity, and privacy concerns.">Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel. Analyzes video feeds to identify and locate objects within camera fields of view. Advantages include no tags required, rich contextual information, and visual verification. Limitations include line-of-sight requirements, lighting dependency, processing intensity, and privacy concerns.</a> › Computer Vision Tracking
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Technologies</div>
+    <div class="term-cat-tag">Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel. Analyzes video feeds to identify and locate objects within camera fields of view. Advantages include no tags required, rich contextual information, and visual verification. Limitations include line-of-sight requirements, lighting dependency, processing intensity, and privacy concerns.</div>
     <h1 class="term-title">Computer Vision Tracking</h1>
   </header>
-  <p class="def-short">Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel. Analyzes video feeds to identify and locate objects within camera fields of view. Advantages include no tags required, rich contextual information, and visual verification. Limitations include line-of-sight requirements, lighting dependency, processing intensity, and privacy concerns.</p><p class="def-long">Positioning technology using cameras and image processing algorithms to detect and track objects. In industrial settings, computer vision tracking employs fixed cameras (typically 4-12 cameras for 1000 m² area), video analytics software (object detection using deep learning models), and optionally visual markers on tracked items. Computer vision advantages include: no tags required on objects (reducing cost and maintenance), ability to track any visible object, capture of additional information (pose, orientation, condition), and integration with existing security camera infrastructure. Limitations include: requires clear line-of-sight (occlusions prevent tracking), sensitive to lighting conditions (poor performance in dark areas or high-contrast lighting), significant processing requirements (modern GPU servers), privacy concerns (video surveillance of workers), and typically lower update rates (5-30 Hz) than dedicated RTLS. Computer vision excels for specific applications: detecting proper PPE usage, monitoring assembly operations, tracking vehicles in yards, or counting people in zones. Most industrial facilities use computer vision as complement to rather than replacement for dedicated RTLS technologies, combining strengths of both approaches.</p>
-  <nav class="term-nav">
-    <a href="compliance-monitoring.html" class="nav-prev">← Compliance Monitoring</a>
-    <a href="condition-monitoring.html" class="nav-next">Condition Monitoring →</a>
-  </nav>
+  <p class="def-short">Positioning technology using cameras and image processing algorithms to detect and track objects. In industrial settings, computer vision tracking employs fixed cameras (typically 4-12 cameras for 1000 m² area), video analytics software (object detection using deep learning models), and optionally visual markers on tracked items. Computer vision advantages include: no tags required on objects (reducing cost and maintenance), ability to track any visible object, capture of additional information (pose, orientation, condition), and integration with existing security camera infrastructure. Limitations include: requires clear line-of-sight (occlusions prevent tracking), sensitive to lighting conditions (poor performance in dark areas or high-contrast lighting), significant processing requirements (modern GPU servers), privacy concerns (video surveillance of workers), and typically lower update rates (5-30 Hz) than dedicated RTLS. Computer vision excels for specific applications: detecting proper PPE usage, monitoring assembly operations, tracking vehicles in yards, or counting people in zones. Most industrial facilities use computer vision as complement to rather than replacement for dedicated RTLS technologies, combining strengths of both approaches.</p>
+  
+  <nav class="term-nav"><a href="compliance-monitoring.html" class="nav-prev">← Compliance Monitoring</a><a href="condition-monitoring.html" class="nav-next">Condition Monitoring →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

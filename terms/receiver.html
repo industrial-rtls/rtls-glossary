@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Receiver – Industrial RTLS Glossary</title>
-<meta name="description" content="A device or component that receives radio signals from transmitters or tags. In RTLS, receivers may be fixed (anchors, access points) or mobile (smartphone">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="In RTLS terminology, a receiver is a device that captures radio frequency signals transmitted by tags for the purpose of determining location. Receivers ar">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#0891B2;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Hardware Components</span>
-  <span>›</span>
-  <span>Receiver</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A device or component that receives radio signals from transmitters or tags. In RTLS, receivers may be fixed (anchors, access points) or mobile (smartphones, portable devices). Receiver sensitivity and quality affect system range and reliability.">A device or component that receives radio signals from transmitters or tags. In RTLS, receivers may be fixed (anchors, access points) or mobile (smartphones, portable devices). Receiver sensitivity and quality affect system range and reliability.</a> › Receiver
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware Components</div>
+    <div class="term-cat-tag">A device or component that receives radio signals from transmitters or tags. In RTLS, receivers may be fixed (anchors, access points) or mobile (smartphones, portable devices). Receiver sensitivity and quality affect system range and reliability.</div>
     <h1 class="term-title">Receiver</h1>
   </header>
-  <p class="def-short">A device or component that receives radio signals from transmitters or tags. In RTLS, receivers may be fixed (anchors, access points) or mobile (smartphones, portable devices). Receiver sensitivity and quality affect system range and reliability.</p><p class="def-long">In RTLS terminology, a receiver is a device that captures radio frequency signals transmitted by tags for the purpose of determining location. Receivers are typically synonymous with readers or anchors in industrial RTLS architectures. The receiver's fundamental role is to detect tag transmissions, capture signal characteristics (such as arrival time, signal strength, or phase information), timestamp the reception event with high precision, and forward this raw data to the positioning engine. High-performance RTLS receivers feature sensitive radio frontends capable of detecting weak signals in noisy industrial environments, precise timing circuits (often utilizing GPS-disciplined oscillators or IEEE 1588 PTP for synchronization), and sufficient processing power to handle multiple simultaneous tag transmissions. In UWB systems, receivers must process ultra-short pulses (nanosecond duration) and perform accurate time-of-arrival measurements with sub-nanosecond precision to achieve decimeter-level accuracy. Receiver sensitivity, measured in dBm, determines the minimum signal strength required for reliable detection - industrial RTLS receivers typically specify sensitivities of -85 to -95 dBm for UWB or -90 to -100 dBm for BLE. The receiver's processing capabilities must handle channel capacity requirements: in dense tag environments, a single receiver may need to process transmissions from 100+ tags per second. Industrial receivers are designed with ruggedized enclosures for harsh environments, PoE for simplified installation, diagnostic capabilities for system health monitoring, and network redundancy options for mission-critical applications. Receiver placement and orientation significantly impact system performance, requiring careful site survey and installation planning.</p>
-  <nav class="term-nav">
-    <a href="received-signal-strength-indicator-rssi.html" class="nav-prev">← Received Signal Strength Indicator (RSSI)</a>
-    <a href="receiver-sensitivity.html" class="nav-next">Receiver Sensitivity →</a>
-  </nav>
+  <p class="def-short">In RTLS terminology, a receiver is a device that captures radio frequency signals transmitted by tags for the purpose of determining location. Receivers are typically synonymous with readers or anchors in industrial RTLS architectures. The receiver's fundamental role is to detect <a href="../terms/tag.html" class="term-link">tag</a> transmissions, capture signal characteristics (such as arrival time, signal strength, or phase information), timestamp the reception event with high <a href="../terms/precision.html" class="term-link">precision</a>, and forward this raw data to the <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a>. High-performance RTLS receivers feature sensitive radio frontends capable of detecting weak signals in noisy industrial environments, precise timing circuits (often utilizing GPS-disciplined oscillators or IEEE 1588 PTP for <a href="../terms/synchronization.html" class="term-link">synchronization</a>), and sufficient processing power to handle multiple simultaneous tag transmissions. In UWB systems, receivers must process ultra-short pulses (nanosecond duration) and perform accurate time-of-arrival measurements with sub-nanosecond precision to achieve decimeter-level <a href="../terms/accuracy.html" class="term-link">accuracy</a>. <a href="../terms/receiver-sensitivity.html" class="term-link">Receiver sensitivity</a>, measured in dBm, determines the minimum signal strength required for reliable detection - industrial RTLS receivers typically specify sensitivities of -85 to -95 dBm for UWB or -90 to -100 dBm for BLE. The receiver's processing capabilities must handle channel <a href="../terms/capacity.html" class="term-link">capacity</a> requirements: in dense tag environments, a single receiver may need to process transmissions from 100+ tags per second. Industrial receivers are designed with ruggedized enclosures for harsh environments, PoE for simplified installation, diagnostic capabilities for system health monitoring, and network redundancy options for mission-critical applications. Receiver placement and orientation significantly impact system performance, requiring careful <a href="../terms/site-survey.html" class="term-link">site survey</a> and installation planning.</p>
+  
+  <nav class="term-nav"><a href="received-signal-strength-indicator-rssi.html" class="nav-prev">← Received Signal Strength Indicator (RSSI)</a><a href="receiver-sensitivity.html" class="nav-next">Receiver Sensitivity →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

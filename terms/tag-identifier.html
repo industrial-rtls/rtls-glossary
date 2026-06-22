@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Tag Identifier – Industrial RTLS Glossary</title>
-<meta name="description" content="A unique digital code assigned to each tag enabling individual identification and tracking. Typically numeric or alphanumeric string like MAC address or UU">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="A tag identifier (Tag ID) is a unique code or number assigned to each RTLS tag, enabling the system to distinguish individual tags and associate them with ">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#0891B2;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Hardware Components</span>
-  <span>›</span>
-  <span>Tag Identifier</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A unique digital code assigned to each tag enabling individual identification and tracking. Typically numeric or alphanumeric string like MAC address or UUID. Must be unique within deployment to prevent conflicts.">A unique digital code assigned to each tag enabling individual identification and tracking. Typically numeric or alphanumeric string like MAC address or UUID. Must be unique within deployment to prevent conflicts.</a> › Tag Identifier
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware Components</div>
+    <div class="term-cat-tag">A unique digital code assigned to each tag enabling individual identification and tracking. Typically numeric or alphanumeric string like MAC address or UUID. Must be unique within deployment to prevent conflicts.</div>
     <h1 class="term-title">Tag Identifier</h1>
   </header>
-  <p class="def-short">A unique digital code assigned to each tag enabling individual identification and tracking. Typically numeric or alphanumeric string like MAC address or UUID. Must be unique within deployment to prevent conflicts.</p><p class="def-long">A tag identifier (Tag ID) is a unique code or number assigned to each RTLS tag, enabling the system to distinguish individual tags and associate them with specific assets, personnel, or other tracked entities. Tag identifiers are fundamental to RTLS operation - without unique IDs, the system cannot determine which tag transmission corresponds to which tracked object. Industrial RTLS tag identifiers typically use formats including: hexadecimal strings (eg., 0xA1B2C3D4), decimal numbers (eg., 12345), or alphanumeric strings (eg., TAG-0001, FORKLIFT-23). The identifier length varies by system: 16-bit IDs support 65,536 unique tags, 32-bit IDs support over 4 billion tags, and 64-bit IDs effectively unlimited tags for any practical deployment. Tag identifiers must be globally unique within the RTLS deployment to prevent conflicts. This association enables meaningful visualization and analytics - rather than displaying anonymous tag positions, systems show specific equipment names making operational use intuitive. Tag ID assignment strategies include: sequential numbering (TAG-0001, TAG-0002, increasing as tags deployed), categorical numbering (1000-1999 for forklifts, 2000-2999 for carts, organizing by asset type), location-based numbering (building/floor encoded in ID range), and random assignment (security through obscurity, preventing ID prediction). Industrial deployments with thousands of tags require database systems efficiently managing tag registries: indexed lookups finding asset information from tag IDs in milliseconds, and handling queries like 'find all forklift tags in warehouse B' or 'list tags with battery levels below 20%'. Standardization of tag IDs across enterprise facilitates interoperability between facilities, data aggregation for enterprise-level analytics, and simplified procurement and spare parts management.</p>
-  <nav class="term-nav">
-    <a href="tag-capacity.html" class="nav-prev">← Tag Capacity</a>
-    <a href="telemetry.html" class="nav-next">Telemetry →</a>
-  </nav>
+  <p class="def-short">A <a href="../terms/tag.html" class="term-link">tag</a> identifier (Tag ID) is a unique code or number assigned to each RTLS tag, enabling the system to distinguish individual tags and associate them with specific assets, personnel, or other tracked entities. Tag identifiers are fundamental to RTLS operation - without unique IDs, the system cannot determine which tag transmission corresponds to which tracked object. Industrial RTLS tag identifiers typically use formats including: hexadecimal strings (eg., 0xA1B2C3D4), decimal numbers (eg., 12345), or alphanumeric strings (eg., TAG-0001, FORKLIFT-23). The identifier length varies by system: 16-bit IDs support 65,536 unique tags, 32-bit IDs support over 4 billion tags, and 64-bit IDs effectively unlimited tags for any practical <a href="../terms/deployment.html" class="term-link">deployment</a>. Tag identifiers must be globally unique within the RTLS deployment to prevent conflicts. This association enables meaningful visualization and analytics - rather than displaying anonymous tag positions, systems show specific equipment names making operational use intuitive. Tag ID assignment strategies include: sequential numbering (TAG-0001, TAG-0002, increasing as tags deployed), categorical numbering (1000-1999 for forklifts, 2000-2999 for carts, organizing by asset type), location-based numbering (building/floor encoded in ID <a href="../terms/range.html" class="term-link">range</a>), and random assignment (security through obscurity, preventing ID prediction). Industrial deployments with thousands of tags require database systems efficiently managing tag registries: indexed lookups finding asset information from tag IDs in milliseconds, and handling queries like 'find all forklift tags in warehouse B' or 'list tags with battery levels below 20%'. Standardization of tag IDs across enterprise facilitates interoperability between facilities, data aggregation for enterprise-level analytics, and simplified procurement and spare parts management.</p>
+  
+  <nav class="term-nav"><a href="tag-capacity.html" class="nav-prev">← Tag Capacity</a><a href="telemetry.html" class="nav-next">Telemetry →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

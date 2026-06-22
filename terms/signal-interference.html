@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Signal Interference – Industrial RTLS Glossary</title>
-<meta name="description" content="Disruption of RTLS signals by other radio sources, electrical equipment, or environmental factors. Common industrial interference sources include Wi-Fi, Bl">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Signal interference occurs when unwanted radio frequency signals disrupt or degrade RTLS communications, causing positioning errors, reduced reliability, o">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#6B7280;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Technical Parameters</span>
-  <span>›</span>
-  <span>Signal Interference</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Disruption of RTLS signals by other radio sources, electrical equipment, or environmental factors. Common industrial interference sources include Wi-Fi, Bluetooth, motors, welders, and metal structures. Can degrade positioning accuracy and reliability, and can cause tracking failures. Proper frequency selection and interference mitigation techniques address this challenge.">Disruption of RTLS signals by other radio sources, electrical equipment, or environmental factors. Common industrial interference sources include Wi-Fi, Bluetooth, motors, welders, and metal structures. Can degrade positioning accuracy and reliability, and can cause tracking failures. Proper frequency selection and interference mitigation techniques address this challenge.</a> › Signal Interference
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Parameters</div>
+    <div class="term-cat-tag">Disruption of RTLS signals by other radio sources, electrical equipment, or environmental factors. Common industrial interference sources include Wi-Fi, Bluetooth, motors, welders, and metal structures. Can degrade positioning accuracy and reliability, and can cause tracking failures. Proper frequency selection and interference mitigation techniques address this challenge.</div>
     <h1 class="term-title">Signal Interference</h1>
   </header>
-  <p class="def-short">Disruption of RTLS signals by other radio sources, electrical equipment, or environmental factors. Common industrial interference sources include Wi-Fi, Bluetooth, motors, welders, and metal structures. Can degrade positioning accuracy and reliability, and can cause tracking failures. Proper frequency selection and interference mitigation techniques address this challenge.</p><p class="def-long">Signal interference occurs when unwanted radio frequency signals disrupt or degrade RTLS communications, causing positioning errors, reduced reliability, or system failure. Industrial environments host numerous potential interference sources creating challenging RF environments. Interference types include: co-channel interference (other systems operating on the same frequency band), adjacent channel interference (signals on nearby frequencies causing receiver saturation), broadband noise (interference spread across wide frequency ranges), and pulsed interference (periodic strong signals).</p><p class="def-long">Common industrial interference sources affecting RTLS include: Wi-Fi networks (2.4 GHz overlaps with BLE RTLS, high-power access points can saturate receivers), Bluetooth devices (mice, keyboards, sensors, beacons), other RTLS or RFID systems (multiple systems in same facility), wireless automation equipment (sensors, controllers), microwave ovens and industrial heaters, welding equipment (generates broadband RF noise), motor drives and variable frequency drives (VFDs), and electrical substations or high-power equipment. UWB RTLS (3.1-10.6 GHz) suffers less interference than 2.4 GHz technologies due to less crowded spectrum and spread-spectrum characteristics distributing energy across wide bandwidth. Interference impacts manifest as: reduced detection range (receiver overwhelmed by strong interferers cannot detect weak tag signals), increased positioning errors (corrupted time measurements leading to incorrect distance calculations), packet loss (tag transmissions collided with interference), and system unavailability (severe interference preventing any positioning). Mitigation approaches include: frequency planning (selecting RTLS channels avoiding strongest interference sources), temporal coordination (scheduling transmissions avoiding known interference), increased tag transmission power (improving signal-to-interference ratio), interference-resistant modulation and coding schemes, filtering and signal processing rejecting out-of-band interference, and anchor diversity (multiple anchors less likely all affected simultaneously).</p>
-  <nav class="term-nav">
-    <a href="signal-attenuation.html" class="nav-prev">← Signal Attenuation</a>
-    <a href="site-survey.html" class="nav-next">Site Survey →</a>
-  </nav>
+  <p class="def-short">Signal interference occurs when unwanted radio frequency signals disrupt or degrade RTLS communications, causing positioning errors, reduced reliability, or system failure. Industrial environments host numerous potential interference sources creating challenging RF environments. Interference types include: co-channel interference (other systems operating on the same frequency band), adjacent channel interference (signals on nearby frequencies causing <a href="../terms/receiver.html" class="term-link">receiver</a> saturation), broadband noise (interference spread across wide frequency ranges), and pulsed interference (periodic strong signals).</p>
+  <p class="def-long">Common industrial interference sources affecting RTLS include: Wi-Fi networks (2.4 GHz overlaps with BLE RTLS, high-power access points can saturate receivers), Bluetooth devices (mice, keyboards, sensors, beacons), other RTLS or RFID systems (multiple systems in same facility), wireless automation equipment (sensors, controllers), microwave ovens and industrial heaters, welding equipment (generates broadband RF noise), motor drives and variable frequency drives (VFDs), and electrical substations or high-power equipment. UWB RTLS (3.1-10.6 GHz) suffers less interference than 2.4 GHz technologies due to less crowded spectrum and spread-spectrum characteristics distributing energy across wide bandwidth. Interference impacts manifest as: reduced detection <a href="../terms/range.html" class="term-link">range</a> (<a href="../terms/receiver.html" class="term-link">receiver</a> overwhelmed by strong interferers cannot detect weak <a href="../terms/tag.html" class="term-link">tag</a> signals), increased positioning errors (corrupted time measurements leading to incorrect distance calculations), packet loss (tag transmissions collided with interference), and system unavailability (severe interference preventing any positioning). Mitigation approaches include: frequency planning (selecting RTLS channels avoiding strongest interference sources), temporal coordination (scheduling transmissions avoiding known interference), increased tag <a href="../terms/transmission-power.html" class="term-link">transmission power</a> (improving signal-to-interference ratio), interference-resistant modulation and coding schemes, filtering and signal processing rejecting out-of-band interference, and <a href="../terms/anchor.html" class="term-link">anchor</a> diversity (multiple anchors less likely all affected simultaneously).</p>
+  <nav class="term-nav"><a href="signal-attenuation.html" class="nav-prev">← Signal Attenuation</a><a href="site-survey.html" class="nav-next">Site Survey →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

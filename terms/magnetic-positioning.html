@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Magnetic Positioning – Industrial RTLS Glossary</title>
-<meta name="description" content="A positioning technology using variations in Earth's magnetic field or artificially generated magnetic fields for location determination. Works indoors whe">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Positioning technology using Earth's magnetic field anomalies or artificially generated magnetic fields for indoor location determination. Magnetic positio">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#2563EB;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Localization Technologies</span>
-  <span>›</span>
-  <span>Magnetic Positioning</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A positioning technology using variations in Earth's magnetic field or artificially generated magnetic fields for location determination. Works indoors where GPS is unavailable and doesn't require line-of-sight. Used in some smartphone indoor positioning applications. Accuracy typically 1-5 meters. Requires initial magnetic mapping of facilities.">A positioning technology using variations in Earth's magnetic field or artificially generated magnetic fields for location determination. Works indoors where GPS is unavailable and doesn't require line-of-sight. Used in some smartphone indoor positioning applications. Accuracy typically 1-5 meters. Requires initial magnetic mapping of facilities.</a> › Magnetic Positioning
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Technologies</div>
+    <div class="term-cat-tag">A positioning technology using variations in Earth's magnetic field or artificially generated magnetic fields for location determination. Works indoors where GPS is unavailable and doesn't require line-of-sight. Used in some smartphone indoor positioning applications. Accuracy typically 1-5 meters. Requires initial magnetic mapping of facilities.</div>
     <h1 class="term-title">Magnetic Positioning</h1>
   </header>
-  <p class="def-short">A positioning technology using variations in Earth's magnetic field or artificially generated magnetic fields for location determination. Works indoors where GPS is unavailable and doesn't require line-of-sight. Used in some smartphone indoor positioning applications. Accuracy typically 1-5 meters. Requires initial magnetic mapping of facilities.</p><p class="def-long">Positioning technology using Earth's magnetic field anomalies or artificially generated magnetic fields for indoor location determination. Magnetic positioning approaches: (1) Magnetic field mapping - measuring natural magnetic field variations throughout facility (metallic structures create distinctive patterns), creating fingerprint database, then matching real-time measurements to determine position. (2) Generated fields - installing magnetic field generators at known positions, measuring field characteristics at tag location. (3) Magnetic inertial fusion - combining magnetometer data with accelerometer/gyroscope for improved dead reckoning. Magnetic positioning characteristics: accuracy 1-3 meters in favorable conditions (facilities with significant metallic infrastructure creating distinctive patterns), worse in magnetically uniform environments, update rates 1-10 Hz, no additional infrastructure required for field mapping approach (leveraging smartphone magnetometers), low power consumption (magnetometers consuming &lt;1mW).</p><p class="def-long">Advantages include: works without dedicated infrastructure (using existing magnetic anomalies), immune to RF interference, good penetration through non-metallic obstacles. Severe limitations restrict industrial adoption: accuracy insufficient for most industrial applications (1-3 meters vs. 10-50 cm required), magnetic field instability (environmental changes, moving equipment alter patterns requiring frequent remapping), sensitivity to metallic objects (nearby metal affects readings), and limited adoption (few industrial RTLS vendors offering magnetic positioning). Magnetic positioning occasionally used for: smartphone-based navigation (consumer applications leveraging phone's built-in magnetometer), dead reckoning enhancement (improving inertial positioning during RF outages), and orientation determination (complementing primary positioning technology). However, magnetic positioning rarely serves as primary technology in industrial RTLS due to accuracy limitations and environmental sensitivity. Some hybrid systems incorporate magnetometers for heading determination (compass function) while using RF technologies for position.</p>
-  <nav class="term-nav">
-    <a href="machine-learning.html" class="nav-prev">← Machine Learning</a>
-    <a href="man-down-detection.html" class="nav-next">Man-Down Detection →</a>
-  </nav>
+  <p class="def-short">Positioning technology using Earth's magnetic field anomalies or artificially generated magnetic fields for indoor location determination. Magnetic positioning approaches: (1) Magnetic field mapping - measuring natural magnetic field variations throughout facility (metallic structures create distinctive patterns), creating fingerprint database, then matching <a href="../terms/real-time.html" class="term-link">real-time</a> measurements to determine position. (2) Generated fields - installing magnetic field generators at known positions, measuring field characteristics at <a href="../terms/tag.html" class="term-link">tag</a> location. (3) Magnetic inertial fusion - combining magnetometer data with accelerometer/gyroscope for improved <a href="../terms/dead-reckoning.html" class="term-link">dead reckoning</a>. Magnetic positioning characteristics: <a href="../terms/accuracy.html" class="term-link">accuracy</a> 1-3 meters in favorable conditions (facilities with significant metallic infrastructure creating distinctive patterns), worse in magnetically uniform environments, update rates 1-10 Hz, no additional infrastructure required for field mapping approach (leveraging smartphone magnetometers), low power consumption (magnetometers consuming &amp;lt;1mW).</p>
+  <p class="def-long">Advantages include: works without dedicated infrastructure (using existing magnetic anomalies), immune to RF interference, good <a href="../terms/penetration.html" class="term-link">penetration</a> through non-metallic obstacles. Severe limitations restrict industrial adoption: <a href="../terms/accuracy.html" class="term-link">accuracy</a> insufficient for most industrial applications (1-3 meters vs. 10-50 cm required), magnetic field instability (environmental changes, moving equipment alter patterns requiring frequent remapping), sensitivity to metallic objects (nearby metal affects readings), and limited adoption (few industrial RTLS vendors offering magnetic positioning). Magnetic positioning occasionally used for: smartphone-based navigation (consumer applications leveraging phone's built-in magnetometer), <a href="../terms/dead-reckoning.html" class="term-link">dead reckoning</a> enhancement (improving inertial positioning during RF outages), and orientation determination (complementing primary positioning technology). However, magnetic positioning rarely serves as primary technology in industrial RTLS due to accuracy limitations and environmental sensitivity. Some hybrid systems incorporate magnetometers for heading determination (compass function) while using RF technologies for position.</p>
+  <nav class="term-nav"><a href="machine-learning.html" class="nav-prev">← Machine Learning</a><a href="man-down-detection.html" class="nav-next">Man-Down Detection →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

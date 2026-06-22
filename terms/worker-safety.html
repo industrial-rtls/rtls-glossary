@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Worker Safety – Industrial RTLS Glossary</title>
-<meta name="description" content="The use of RTLS to protect personnel from workplace hazards. Applications include hazardous zone monitoring, collision avoidance, man-down detection, lone ">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Worker safety in industrial environments is enhanced through RTLS by monitoring personnel locations in real-time, detecting proximity to hazards, enforcing">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#D97706;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Industrial Applications</span>
-  <span>›</span>
-  <span>Worker Safety</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The use of RTLS to protect personnel from workplace hazards. Applications include hazardous zone monitoring, collision avoidance, man-down detection, lone worker protection, emergency response, and PPE compliance. Often the primary justification for RTLS investment due to life-safety benefits.">The use of RTLS to protect personnel from workplace hazards. Applications include hazardous zone monitoring, collision avoidance, man-down detection, lone worker protection, emergency response, and PPE compliance. Often the primary justification for RTLS investment due to life-safety benefits.</a> › Worker Safety
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Applications</div>
+    <div class="term-cat-tag">The use of RTLS to protect personnel from workplace hazards. Applications include hazardous zone monitoring, collision avoidance, man-down detection, lone worker protection, emergency response, and PPE compliance. Often the primary justification for RTLS investment due to life-safety benefits.</div>
     <h1 class="term-title">Worker Safety</h1>
   </header>
-  <p class="def-short">The use of RTLS to protect personnel from workplace hazards. Applications include hazardous zone monitoring, collision avoidance, man-down detection, lone worker protection, emergency response, and PPE compliance. Often the primary justification for RTLS investment due to life-safety benefits.</p><p class="def-long">Worker safety in industrial environments is enhanced through RTLS by monitoring personnel locations in real-time, detecting proximity to hazards, enforcing restricted area access, and enabling rapid emergency response.</p><p class="def-long">Typical results: 30-60% reduction in vehicle-personnel incidents, near-miss reduction of 40-70%.</p><p class="def-long">Typical results: 50-80% reduction in unauthorized area entries, improved compliance with safety procedures. Lone worker protection - monitoring isolated workers (maintenance technicians, cleaning staff, security personnel) for inactivity or falls, automatic alerts if worker motionless beyond thresholds (typically 5-15 minutes) or manual panic button activation, and rapid emergency response with precise worker location rather than searching entire facilities.</p><p class="def-long">Technical requirements for safety RTLS differ from general tracking: higher positioning accuracy (typically 30-50 cm) ensuring reliable proximity detection without excessive false alarms or missed detections, higher update rates (10-20 Hz) providing rapid response to dangerous situations developing in seconds, very high reliability (99.9%+ uptime) since safety systems must operate continuously, low latency (under 1 second end-to-end) from hazard detection to alert or equipment control, redundancy and fail-safe design defaulting to safe states during system failures, and potentially safety certification (depending on application and jurisdiction) validating system meets safety standards (ISO 13849, IEC 61508). Wearable tag requirements for worker safety include: secure attachment preventing loss during physical work, worker alert capabilities (vibration, LED, audible) warning individuals of safety violations, manual alert buttons enabling workers to signal emergencies, durability withstanding industrial work environment (impact, moisture, temperature), and battery monitoring ensuring continuous operation (typically 1-2 years battery life or rechargeable with overnight charging). Technology selection for worker safety depends on risk level: UWB provides highest accuracy (10-30 cm) for collision avoidance in high-speed forklift zones where precise proximity detection is critical, while BLE badges offer cost-effective coverage for zone monitoring, mustering, lone worker protection, and man-down detection across the entire facility. Many industrial safety deployments use both: BLE badges for all personnel providing facility-wide safety coverage, with UWB precision in designated high-risk zones. This layered approach maximizes safety coverage while controlling infrastructure costs.</p>
-  <nav class="term-nav">
-    <a href="wms-integration.html" class="nav-prev">← WMS Integration</a>
-    <a href="workflow-management.html" class="nav-next">Workflow Management →</a>
-  </nav>
+  <p class="def-short">Worker safety in industrial environments is enhanced through RTLS by monitoring personnel locations in <a href="../terms/real-time.html" class="term-link">real-time</a>, detecting proximity to hazards, enforcing <a href="../terms/restricted-area.html" class="term-link">restricted area</a> access, and enabling rapid <a href="../terms/emergency-response.html" class="term-link">emergency response</a>.</p>
+  <p class="def-long">Typical results: 30-60% reduction in vehicle-personnel incidents, near-miss reduction of 40-70%.</p><p class="def-long">Typical results: 50-80% reduction in unauthorized area entries, improved compliance with safety procedures. <a href="../terms/lone-worker-protection.html" class="term-link">Lone worker protection</a> - monitoring isolated workers (maintenance technicians, cleaning staff, security personnel) for inactivity or falls, automatic alerts if worker motionless beyond thresholds (typically 5-15 minutes) or manual panic button activation, and rapid <a href="../terms/emergency-response.html" class="term-link">emergency response</a> with precise worker location rather than searching entire facilities.</p><p class="def-long">Technical requirements for safety RTLS differ from general tracking: higher <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (typically 30-50 cm) ensuring reliable <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a> without excessive false alarms or missed detections, higher update rates (10-20 Hz) providing rapid response to dangerous situations developing in seconds, very high reliability (99.9%+ uptime) since safety systems must operate continuously, low <a href="../terms/latency.html" class="term-link">latency</a> (under 1 second end-to-end) from hazard detection to alert or equipment control, redundancy and fail-safe design defaulting to safe states during system failures, and potentially safety certification (depending on application and jurisdiction) validating system meets safety standards (ISO 13849, IEC 61508). <a href="../terms/wearable-tag.html" class="term-link">Wearable tag</a> requirements for worker safety include: secure attachment preventing loss during physical work, worker alert capabilities (vibration, LED, audible) warning individuals of safety violations, manual alert buttons enabling workers to signal emergencies, durability withstanding industrial work environment (impact, moisture, temperature), and battery monitoring ensuring continuous operation (typically 1-2 years <a href="../terms/battery-life.html" class="term-link">battery life</a> or rechargeable with overnight charging). Technology selection for worker safety depends on risk level: UWB provides highest accuracy (10-30 cm) for collision avoidance in high-speed forklift zones where precise proximity detection is critical, while BLE badges offer cost-effective coverage for zone monitoring, mustering, lone worker protection, and man-down detection across the entire facility. Many industrial safety deployments use both: BLE badges for all personnel providing facility-wide safety coverage, with UWB precision in designated high-risk zones. This layered approach maximizes safety coverage while controlling infrastructure costs.</p>
+  <nav class="term-nav"><a href="wms-integration.html" class="nav-prev">← WMS Integration</a><a href="workflow-management.html" class="nav-next">Workflow Management →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

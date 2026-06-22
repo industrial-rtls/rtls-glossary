@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Throughput – Industrial RTLS Glossary</title>
-<meta name="description" content="The rate at which items, materials, or processes move through a facility or operation. RTLS measures actual throughput providing objective data for capacit">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Throughput in industrial RTLS context refers to the volume of assets, materials, or vehicles moving through a facility, process, or zone over time, measure">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#059669;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Performance Metrics &amp; KPIs</span>
-  <span>›</span>
-  <span>Throughput</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The rate at which items, materials, or processes move through a facility or operation. RTLS measures actual throughput providing objective data for capacity planning and performance management. Identifies constraints limiting throughput and validates improvement initiatives.">The rate at which items, materials, or processes move through a facility or operation. RTLS measures actual throughput providing objective data for capacity planning and performance management. Identifies constraints limiting throughput and validates improvement initiatives.</a> › Throughput
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Performance Metrics &amp; KPIs</div>
+    <div class="term-cat-tag">The rate at which items, materials, or processes move through a facility or operation. RTLS measures actual throughput providing objective data for capacity planning and performance management. Identifies constraints limiting throughput and validates improvement initiatives.</div>
     <h1 class="term-title">Throughput</h1>
   </header>
-  <p class="def-short">The rate at which items, materials, or processes move through a facility or operation. RTLS measures actual throughput providing objective data for capacity planning and performance management. Identifies constraints limiting throughput and validates improvement initiatives.</p><p class="def-long">Throughput in industrial RTLS context refers to the volume of assets, materials, or vehicles moving through a facility, process, or zone over time, measured by counting tagged items flowing through defined areas. RTLS enables automated, continuous throughput measurement eliminating manual counting or scanning, providing real-time visibility into operational flow rates. Manufacturing applications measure throughput through production stages: tracking work-in-progress items entering and exiting each manufacturing process, calculating actual production rates versus theoretical capacity, identifying bottlenecks where throughput is constrained, and measuring cycle time distribution (how long items spend in each stage). Warehouse operations leverage throughput metrics for: measuring receiving rates (pallets unloaded per hour at docks), put-away throughput (items moved from receiving to storage), picking rates (orders fulfilled per worker per shift), packing/shipping throughput (outbound units per hour), and dock door utilization (throughput per loading bay). Throughput targets and performance management include: establishing throughput goals based on capacity or demand, monitoring actual versus target throughput with real-time dashboards, triggering alerts when throughput falls below thresholds, and reporting throughput performance for operational reviews and continuous improvement. Throughput optimization strategies include: load balancing (distributing work across parallel resources to equalize throughput), buffer management (optimizing inventory buffers before processes to sustain throughput), capacity expansion (adding resources at bottleneck stages to increase throughput), and process improvement (reducing cycle times to increase throughput without adding resources). Quantified throughput improvements from RTLS implementations include: 15-30% throughput increases from bottleneck elimination, 10-20% improvements from better resource allocation, and 20-40% gains from reduced downtime through rapid issue detection.</p>
-  <nav class="term-nav">
-    <a href="third-party-integration.html" class="nav-prev">← Third-Party Integration</a>
-    <a href="time-difference-of-arrival-tdoa.html" class="nav-next">Time Difference of Arrival (TDoA) →</a>
-  </nav>
+  <p class="def-short">Throughput in industrial RTLS context refers to the volume of assets, materials, or vehicles moving through a facility, process, or zone over time, measured by counting tagged items flowing through defined areas. RTLS enables automated, continuous throughput measurement eliminating manual counting or scanning, providing <a href="../terms/real-time.html" class="term-link">real-time</a> visibility into operational flow rates. Manufacturing applications measure throughput through production stages: tracking work-in-progress items entering and exiting each manufacturing process, calculating actual production rates versus theoretical <a href="../terms/capacity.html" class="term-link">capacity</a>, identifying bottlenecks where throughput is constrained, and measuring <a href="../terms/cycle-time.html" class="term-link">cycle time</a> distribution (how long items spend in each stage). Warehouse operations leverage throughput metrics for: measuring receiving rates (pallets unloaded per hour at docks), put-away throughput (items moved from receiving to storage), picking rates (orders fulfilled per worker per shift), packing/shipping throughput (outbound units per hour), and dock door utilization (throughput per loading bay). Throughput targets and performance management include: establishing throughput goals based on capacity or demand, monitoring actual versus target throughput with real-time dashboards, triggering alerts when throughput falls below thresholds, and reporting throughput performance for operational reviews and continuous improvement. Throughput optimization strategies include: load balancing (distributing work across parallel resources to equalize throughput), buffer management (optimizing inventory buffers before processes to sustain throughput), capacity expansion (adding resources at bottleneck stages to increase throughput), and process improvement (reducing cycle times to increase throughput without adding resources). Quantified throughput improvements from RTLS implementations include: 15-30% throughput increases from bottleneck elimination, 10-20% improvements from better resource allocation, and 20-40% gains from reduced downtime through rapid issue detection.</p>
+  
+  <nav class="term-nav"><a href="third-party-integration.html" class="nav-prev">← Third-Party Integration</a><a href="time-difference-of-arrival-tdoa.html" class="nav-next">Time Difference of Arrival (TDoA) →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

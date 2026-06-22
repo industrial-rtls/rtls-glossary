@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Meter-Level Accuracy – Industrial RTLS Glossary</title>
-<meta name="description" content="Positioning accuracy determining positions within 1-3 meters of true location. Sufficient for many industrial applications including asset tracking, wareho">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Positioning performance achieving location errors in 1-5 meter range, typical for BLE, Wi-Fi, and lower-tier positioning systems. Meter-level accuracy suit">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#6B7280;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Technical Parameters</span>
-  <span>›</span>
-  <span>Meter-Level Accuracy</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Positioning accuracy determining positions within 1-3 meters of true location. Sufficient for many industrial applications including asset tracking, warehouse management, and personnel monitoring. Commonly achieved with BLE systems or Wi-Fi positioning.">Positioning accuracy determining positions within 1-3 meters of true location. Sufficient for many industrial applications including asset tracking, warehouse management, and personnel monitoring. Commonly achieved with BLE systems or Wi-Fi positioning.</a> › Meter-Level Accuracy
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Parameters</div>
+    <div class="term-cat-tag">Positioning accuracy determining positions within 1-3 meters of true location. Sufficient for many industrial applications including asset tracking, warehouse management, and personnel monitoring. Commonly achieved with BLE systems or Wi-Fi positioning.</div>
     <h1 class="term-title">Meter-Level Accuracy</h1>
   </header>
-  <p class="def-short">Positioning accuracy determining positions within 1-3 meters of true location. Sufficient for many industrial applications including asset tracking, warehouse management, and personnel monitoring. Commonly achieved with BLE systems or Wi-Fi positioning.</p><p class="def-long">Positioning performance achieving location errors in 1-5 meter range, typical for BLE, Wi-Fi, and lower-tier positioning systems. Meter-level accuracy suitable for applications not requiring precise positioning: zone-based tracking (confirming asset in general area rather than exact position), personnel location (finding worker within department or area), low-resolution heatmaps (identifying high-traffic zones), and asset finding (narrowing search area to manageable zone). Technologies achieving meter-level accuracy: BLE RSSI-based positioning (1-5 meters typical in industrial environments), Wi-Fi fingerprinting or RSSI (3-15 meters), active RFID (zone-level only, 5-20 meter zones), and magnetic positioning (1-3 meters).</p><p class="def-long">Meter-level accuracy advantages: lower cost (BLE tags $15-40 vs. UWB $50-150), lower infrastructure density (1 gateway per 1000-2000 m² vs. 1 UWB anchor per 400-1000 m²), existing infrastructure leverage (using existing Wi-Fi access points), and adequate for many applications (zone tracking, occupancy counting, asset locating in large facilities). Many industrial RTLS deployments use hybrid accuracy: meter-level BLE/Wi-Fi for general warehouse tracking, centimeter-level UWB for production floor where precision required, optimizing cost-performance balance across facility.</p><p class="def-long">Typical decision framework: production assembly requiring component positioning needs centimeter-level (UWB), warehouse put-away/picking needs 0.5-2 meter (BLE AoA or Wi-Fi), large outdoor yards tolerate 2-5 meter (BLE RSSI or GPS), simple zone detection accepts 5+ meter zones (active RFID). Meter-level accuracy market segment growing as BLE 5.1 AoA systems mature, offering 0.5-2 meter accuracy at price points between basic RSSI (3-8 meter) and premium UWB (10-30 cm), filling gap for applications needing better than zone-level but not requiring centimeter precision.</p>
-  <nav class="term-nav">
-    <a href="mesh-networking.html" class="nav-prev">← Mesh Networking</a>
-    <a href="middleware.html" class="nav-next">Middleware →</a>
-  </nav>
+  <p class="def-short">Positioning performance achieving location errors in 1-5 meter <a href="../terms/range.html" class="term-link">range</a>, typical for BLE, Wi-Fi, and lower-tier positioning systems. Meter-level <a href="../terms/accuracy.html" class="term-link">accuracy</a> suitable for applications not requiring precise positioning: zone-based tracking (confirming asset in general area rather than exact position), personnel location (finding worker within department or area), low-<a href="../terms/resolution.html" class="term-link">resolution</a> heatmaps (identifying high-traffic zones), and asset finding (narrowing search area to manageable zone). Technologies achieving meter-level accuracy: BLE RSSI-based positioning (1-5 meters typical in industrial environments), Wi-Fi <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> or RSSI (3-15 meters), <a href="../terms/active-rfid.html" class="term-link">active RFID</a> (zone-level only, 5-20 meter zones), and <a href="../terms/magnetic-positioning.html" class="term-link">magnetic positioning</a> (1-3 meters).</p>
+  <p class="def-long">Meter-level <a href="../terms/accuracy.html" class="term-link">accuracy</a> advantages: lower cost (BLE tags $15-40 vs. UWB $50-150), lower infrastructure density (1 <a href="../terms/gateway.html" class="term-link">gateway</a> per 1000-2000 m² vs. 1 UWB <a href="../terms/anchor.html" class="term-link">anchor</a> per 400-1000 m²), existing infrastructure leverage (using existing Wi-Fi access points), and adequate for many applications (zone tracking, occupancy counting, asset locating in large facilities). Many industrial RTLS deployments use hybrid accuracy: meter-level BLE/Wi-Fi for general warehouse tracking, centimeter-level UWB for <a href="../terms/production-floor.html" class="term-link">production floor</a> where <a href="../terms/precision.html" class="term-link">precision</a> required, optimizing cost-performance balance across facility.</p><p class="def-long">Typical decision framework: production assembly requiring component positioning needs centimeter-level (UWB), warehouse put-away/picking needs 0.5-2 meter (BLE AoA or Wi-Fi), large outdoor yards tolerate 2-5 meter (BLE RSSI or GPS), simple <a href="../terms/zone-detection.html" class="term-link">zone detection</a> accepts 5+ meter zones (<a href="../terms/active-rfid.html" class="term-link">active RFID</a>). Meter-level <a href="../terms/accuracy.html" class="term-link">accuracy</a> market segment growing as BLE 5.1 AoA systems mature, offering 0.5-2 meter accuracy at price points between basic RSSI (3-8 meter) and premium UWB (10-30 cm), filling gap for applications needing better than zone-level but not requiring centimeter <a href="../terms/precision.html" class="term-link">precision</a>.</p>
+  <nav class="term-nav"><a href="mesh-networking.html" class="nav-prev">← Mesh Networking</a><a href="middleware.html" class="nav-next">Middleware →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

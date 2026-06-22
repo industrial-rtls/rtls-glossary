@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Proximity Detection – Industrial RTLS Glossary</title>
-<meta name="description" content="The capability to detect when tracked objects are near each other or near specific locations. Enables applications including collision avoidance, interacti">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Technology and techniques for determining when objects are physically near each other, foundational capability for proximity alerts and collision avoidance">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#7C3AED;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Positioning Methods &amp; Techniques</span>
-  <span>›</span>
-  <span>Proximity Detection</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The capability to detect when tracked objects are near each other or near specific locations. Enables applications including collision avoidance, interaction tracking, contact tracing, and proximity-based access control. Detection typically based on signal strength, ranging measurements, or geofence overlap.">The capability to detect when tracked objects are near each other or near specific locations. Enables applications including collision avoidance, interaction tracking, contact tracing, and proximity-based access control. Detection typically based on signal strength, ranging measurements, or geofence overlap.</a> › Proximity Detection
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods &amp; Techniques</div>
+    <div class="term-cat-tag">The capability to detect when tracked objects are near each other or near specific locations. Enables applications including collision avoidance, interaction tracking, contact tracing, and proximity-based access control. Detection typically based on signal strength, ranging measurements, or geofence overlap.</div>
     <h1 class="term-title">Proximity Detection</h1>
   </header>
-  <p class="def-short">The capability to detect when tracked objects are near each other or near specific locations. Enables applications including collision avoidance, interaction tracking, contact tracing, and proximity-based access control. Detection typically based on signal strength, ranging measurements, or geofence overlap.</p><p class="def-long">Technology and techniques for determining when objects are physically near each other, foundational capability for proximity alerts and collision avoidance. Limitations: accuracy limited by positioning accuracy, requires absolute position calculation for all objects. (2) Direct ranging - tags measuring distances to nearby tags using peer-to-peer radio ranging without infrastructure involvement.</p><p class="def-long">Advantages: simple implementation, low computational requirements. Primarily used for coarse proximity. (4) Hybrid approaches - combining methods for optimal performance. Proximity detection performance requirements: (1) Range accuracy - detecting proximity within 10-30 cm accuracy for collision avoidance, 50-200 cm sufficient for general awareness. (2) Update rate - 5-10 Hz minimum for fast-moving vehicles. (3) Detection reliability - &gt;95% detection rate for safety applications. (4) False alarm rate - &lt;5% spurious proximity detections. (5) Latency - end-to-end delay &lt;500ms. (6) Range - detecting proximity out to 3-10 meters providing adequate warning time. Proximity detection technologies: UWB enables both accurate positioning (10-30 cm) and precise peer-to-peer ranging, making it preferred for collision avoidance; BLE supports position-based proximity (1-5 meter accuracy) and basic peer-to-peer ranging; Wi-Fi provides position-based proximity only (3-15 meter accuracy); RFID supports only coarse zone-level proximity.</p><p class="def-long">Proximity detection testing and validation: critical for safety applications requiring thorough testing: (1) Range testing - verifying detection at specified distances. (2) Reliability testing - ensuring &gt;95% detection rate. (3) False alarm testing - measuring spurious detections, tuning to achieve &lt;5% false positive rate. (4) Latency testing - confirming &lt;500ms. (5) Edge case testing - verifying behavior with obstacles, vertical separation, signal interference.</p>
-  <nav class="term-nav">
-    <a href="proximity-alert.html" class="nav-prev">← Proximity Alert</a>
-    <a href="proximity-warning.html" class="nav-next">Proximity Warning →</a>
-  </nav>
+  <p class="def-short">Technology and techniques for determining when objects are physically near each other, foundational capability for proximity alerts and <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>. Limitations: <a href="../terms/accuracy.html" class="term-link">accuracy</a> limited by <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>, requires absolute position calculation for all objects. (2) Direct ranging - tags measuring distances to nearby tags using peer-to-peer radio ranging without infrastructure involvement.</p>
+  <p class="def-long">Advantages: simple implementation, low computational requirements. Primarily used for coarse proximity. (4) Hybrid approaches - combining methods for optimal performance. Proximity detection performance requirements: (1) <a href="../terms/range.html" class="term-link">Range</a> <a href="../terms/accuracy.html" class="term-link">accuracy</a> - detecting proximity within 10-30 cm accuracy for <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>, 50-200 cm sufficient for general awareness. (2) <a href="../terms/update-rate.html" class="term-link">Update rate</a> - 5-10 Hz minimum for fast-moving vehicles. (3) Detection reliability - &amp;gt;95% detection rate for safety applications. (4) False alarm rate - &amp;lt;5% spurious proximity detections. (5) <a href="../terms/latency.html" class="term-link">Latency</a> - end-to-end delay &amp;lt;500ms. (6) Range - detecting proximity out to 3-10 meters providing adequate warning time. Proximity detection technologies: UWB enables both accurate positioning (10-30 cm) and precise peer-to-peer ranging, making it preferred for collision avoidance; BLE supports position-based proximity (1-5 meter accuracy) and basic peer-to-peer ranging; Wi-Fi provides position-based proximity only (3-15 meter accuracy); RFID supports only coarse zone-level proximity.</p><p class="def-long">Proximity detection testing and validation: critical for safety applications requiring thorough testing: (1) <a href="../terms/range.html" class="term-link">Range</a> testing - verifying detection at specified distances. (2) Reliability testing - ensuring &amp;gt;95% detection rate. (3) False alarm testing - measuring spurious detections, tuning to achieve &amp;lt;5% false positive rate. (4) <a href="../terms/latency.html" class="term-link">Latency</a> testing - confirming &amp;lt;500ms. (5) Edge case testing - verifying behavior with obstacles, vertical separation, <a href="../terms/signal-interference.html" class="term-link">signal interference</a>.</p>
+  <nav class="term-nav"><a href="proximity-alert.html" class="nav-prev">← Proximity Alert</a><a href="proximity-warning.html" class="nav-next">Proximity Warning →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

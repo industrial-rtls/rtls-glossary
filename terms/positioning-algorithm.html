@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Positioning Algorithm – Industrial RTLS Glossary</title>
-<meta name="description" content="The mathematical method used to calculate tag locations from raw signal measurements. Common algorithms include trilateration (distances), triangulation (a">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Mathematical method calculating object position from sensor measurements (signal strengths, arrival times, angles).">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#0D9488;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Software &amp; Data Management</span>
-  <span>›</span>
-  <span>Positioning Algorithm</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The mathematical method used to calculate tag locations from raw signal measurements. Common algorithms include trilateration (distances), triangulation (angles), and multilateration (time differences). Algorithm choice affects accuracy, processing requirements, and environmental suitability.">The mathematical method used to calculate tag locations from raw signal measurements. Common algorithms include trilateration (distances), triangulation (angles), and multilateration (time differences). Algorithm choice affects accuracy, processing requirements, and environmental suitability.</a> › Positioning Algorithm
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software &amp; Data Management</div>
+    <div class="term-cat-tag">The mathematical method used to calculate tag locations from raw signal measurements. Common algorithms include trilateration (distances), triangulation (angles), and multilateration (time differences). Algorithm choice affects accuracy, processing requirements, and environmental suitability.</div>
     <h1 class="term-title">Positioning Algorithm</h1>
   </header>
-  <p class="def-short">The mathematical method used to calculate tag locations from raw signal measurements. Common algorithms include trilateration (distances), triangulation (angles), and multilateration (time differences). Algorithm choice affects accuracy, processing requirements, and environmental suitability.</p><p class="def-long">Mathematical method calculating object position from sensor measurements (signal strengths, arrival times, angles).</p><p class="def-long">Main algorithm categories: (1) Trilateration/Multilateration - calculating position from distance measurements to multiple reference points. Requires minimum 3 anchors (2D), 4 anchors (3D). (2) Triangulation/Angulation - calculating position from angle measurements.</p><p class="def-long">Math: trigonometry determining position where bearing lines intersect. Requires minimum 2 receivers with direction-finding capability. (3) Fingerprinting - matching current measurements to database of location-specific signatures. Requires extensive site survey. (4) Proximity - determining location based on nearest detected infrastructure device. Provides zone-level positioning only. (5) Hybrid - combining multiple methods for improved performance. Algorithm implementation considerations: (1) Least-squares optimization - positioning scenarios typically over-determined (more measurements than needed), using least-squares finds best-fit position minimizing sum of squared errors. (2) Weighted least-squares - giving more weight to high-quality measurements, less weight to uncertain measurements. (3) Outlier rejection - identifying and excluding anomalous measurements (multipath, interference).</p><p class="def-long">Typical approach: reject measurements differing &gt;3 standard deviations. (4) Kalman filtering - incorporating movement model with measurements, smoothing position estimates over time. Reduces position jitter and improves accuracy. (5) Particle filtering - representing position probability distribution with particles, updating as new measurements arrive. Algorithm performance depends on: (1) Measurement quality - accurate, low-noise measurements enable accurate positioning. (2) Geometry - good spatial distribution of infrastructure relative to tag position (low GDOP) critical. (3) Redundancy - over-determining position with extra measurements improves robustness. (4) Computational resources - more sophisticated algorithms require more processing power, limiting update rates or tag capacity.</p>
-  <nav class="term-nav">
-    <a href="positioning-accuracy.html" class="nav-prev">← Positioning Accuracy</a>
-    <a href="positioning-engine.html" class="nav-next">Positioning Engine →</a>
-  </nav>
+  <p class="def-short">Mathematical method calculating object position from sensor measurements (signal strengths, arrival times, angles).</p>
+  <p class="def-long">Main algorithm categories: (1) <a href="../terms/trilateration.html" class="term-link">Trilateration</a>/<a href="../terms/multilateration.html" class="term-link">Multilateration</a> - calculating position from distance measurements to multiple reference points. Requires minimum 3 anchors (2D), 4 anchors (3D). (2) <a href="../terms/triangulation.html" class="term-link">Triangulation</a>/Angulation - calculating position from angle measurements.</p><p class="def-long">Math: trigonometry determining position where bearing lines intersect. Requires minimum 2 receivers with direction-finding capability. (3) <a href="../terms/fingerprinting.html" class="term-link">Fingerprinting</a> - matching current measurements to database of location-specific signatures. Requires extensive <a href="../terms/site-survey.html" class="term-link">site survey</a>. (4) Proximity - determining location based on nearest detected infrastructure device. Provides zone-level positioning only. (5) Hybrid - combining multiple methods for improved performance. Algorithm implementation considerations: (1) Least-squares optimization - positioning scenarios typically over-determined (more measurements than needed), using least-squares finds best-fit position minimizing sum of squared errors. (2) Weighted least-squares - giving more weight to high-quality measurements, less weight to uncertain measurements. (3) Outlier rejection - identifying and excluding anomalous measurements (multipath, interference).</p><p class="def-long">Typical approach: reject measurements differing &amp;gt;3 standard deviations. (4) Kalman filtering - incorporating movement model with measurements, smoothing position estimates over time. Reduces position jitter and improves <a href="../terms/accuracy.html" class="term-link">accuracy</a>. (5) Particle filtering - representing position probability distribution with particles, updating as new measurements arrive. Algorithm performance depends on: (1) Measurement quality - accurate, low-noise measurements enable accurate positioning. (2) Geometry - good spatial distribution of infrastructure relative to <a href="../terms/tag.html" class="term-link">tag</a> position (low GDOP) critical. (3) Redundancy - over-determining position with extra measurements improves robustness. (4) Computational resources - more sophisticated algorithms require more processing power, limiting update rates or <a href="../terms/tag-capacity.html" class="term-link">tag capacity</a>.</p>
+  <nav class="term-nav"><a href="positioning-accuracy.html" class="nav-prev">← Positioning Accuracy</a><a href="positioning-engine.html" class="nav-next">Positioning Engine →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

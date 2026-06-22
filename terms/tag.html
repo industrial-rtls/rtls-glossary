@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Tag – Industrial RTLS Glossary</title>
-<meta name="description" content="The fundamental RTLS component attached to assets or worn by personnel to enable tracking. Contains wireless transmitter, unique identifier, and often sens">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="An RTLS tag is a portable wireless device attached to assets, vehicles, or worn by personnel that transmits signals enabling real-time location tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#0891B2;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Hardware Components</span>
-  <span>›</span>
-  <span>Tag</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The fundamental RTLS component attached to assets or worn by personnel to enable tracking. Contains wireless transmitter, unique identifier, and often sensors or additional features. Available in various form factors (badges, labels, enclosures) for different applications. See also Active Tag, Passive Tag.">The fundamental RTLS component attached to assets or worn by personnel to enable tracking. Contains wireless transmitter, unique identifier, and often sensors or additional features. Available in various form factors (badges, labels, enclosures) for different applications. See also Active Tag, Passive Tag.</a> › Tag
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware Components</div>
+    <div class="term-cat-tag">The fundamental RTLS component attached to assets or worn by personnel to enable tracking. Contains wireless transmitter, unique identifier, and often sensors or additional features. Available in various form factors (badges, labels, enclosures) for different applications. See also Active Tag, Passive Tag.</div>
     <h1 class="term-title">Tag</h1>
   </header>
-  <p class="def-short">The fundamental RTLS component attached to assets or worn by personnel to enable tracking. Contains wireless transmitter, unique identifier, and often sensors or additional features. Available in various form factors (badges, labels, enclosures) for different applications. See also Active Tag, Passive Tag.</p><p class="def-long">An RTLS tag is a portable wireless device attached to assets, vehicles, or worn by personnel that transmits signals enabling real-time location tracking.</p><p class="def-long">Key tag characteristics include: physical dimensions (ranging from compact 30x30x10mm designs for small tools to ruggedized 100x60x30mm units for harsh environments), transmission technology (UWB, BLE, Wi-Fi, or active RFID), battery life (from months to years depending on update rate and features), update rate (position transmission frequency from 0.1 Hz for slow asset tracking to 20+ Hz for dynamic applications), environmental protection (IP ratings from IP54 for light industrial use to IP67/IP68 for submersion or washdown environments), mounting options (adhesive backing, bolt holes, clips, lanyards, or integration into protective cases), and additional features (buttons for user input, LEDs for status indication, buzzers for alerts, sensors for temperature/acceleration/humidity). UWB tags for high-accuracy positioning typically transmit ultra-short pulses (nanosecond duration) at frequencies between 3.1-10.6 GHz, achieving positioning accuracy of 10-30 cm. BLE tags transmit at 2.4 GHz achieving room-level accuracy (3-10 meters) with lower cost but reduced precision. Battery life depends on: transmission frequency (1 Hz update rate enables multi-year operation, 10 Hz reduces life to months), transmission power, sensor usage if equipped, and battery capacity (typical 500-1500 mAh for industrial tags). Some industrial applications use rechargeable tags charged in docking stations or via USB. Quality industrial tags are tested to relevant standards: drop testing (1-2 meter drops onto concrete), vibration testing (MIL-STD-810), temperature cycling (-20°C to +70°C or wider), and ingress protection (IP ratings verified by testing).</p>
-  <nav class="term-nav">
-    <a href="system-integration.html" class="nav-prev">← System Integration</a>
-    <a href="tag-capacity.html" class="nav-next">Tag Capacity →</a>
-  </nav>
+  <p class="def-short">An RTLS tag is a portable wireless device attached to assets, vehicles, or worn by personnel that transmits signals enabling <a href="../terms/real-time.html" class="term-link">real-time</a> location tracking.</p>
+  <p class="def-long">Key tag characteristics include: physical dimensions (ranging from compact 30x30x10mm designs for small tools to ruggedized 100x60x30mm units for harsh environments), transmission technology (UWB, BLE, Wi-Fi, or <a href="../terms/active-rfid.html" class="term-link">active RFID</a>), <a href="../terms/battery-life.html" class="term-link">battery life</a> (from months to years depending on <a href="../terms/update-rate.html" class="term-link">update rate</a> and features), update rate (position transmission frequency from 0.1 Hz for slow <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> to 20+ Hz for dynamic applications), environmental protection (IP ratings from IP54 for light industrial use to IP67/IP68 for submersion or washdown environments), mounting options (adhesive backing, bolt holes, clips, lanyards, or integration into protective cases), and additional features (buttons for user input, LEDs for status indication, buzzers for alerts, sensors for temperature/acceleration/humidity). UWB tags for high-<a href="../terms/accuracy.html" class="term-link">accuracy</a> positioning typically transmit ultra-short pulses (nanosecond duration) at frequencies between 3.1-10.6 GHz, achieving <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> of 10-30 cm. BLE tags transmit at 2.4 GHz achieving <a href="../terms/room-level-accuracy.html" class="term-link">room-level accuracy</a> (3-10 meters) with lower cost but reduced <a href="../terms/precision.html" class="term-link">precision</a>. Battery life depends on: transmission frequency (1 Hz update rate enables multi-year operation, 10 Hz reduces life to months), <a href="../terms/transmission-power.html" class="term-link">transmission power</a>, sensor usage if equipped, and battery <a href="../terms/capacity.html" class="term-link">capacity</a> (typical 500-1500 mAh for industrial tags). Some industrial applications use rechargeable tags charged in docking stations or via USB. Quality industrial tags are tested to relevant standards: drop testing (1-2 meter drops onto concrete), vibration testing (MIL-STD-810), temperature cycling (-20°C to +70°C or wider), and ingress protection (IP ratings verified by testing).</p>
+  <nav class="term-nav"><a href="system-integration.html" class="nav-prev">← System Integration</a><a href="tag-capacity.html" class="nav-next">Tag Capacity →</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>

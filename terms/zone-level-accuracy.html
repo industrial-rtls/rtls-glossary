@@ -2,42 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Zone-Level Accuracy – Industrial RTLS Glossary</title>
-<meta name="description" content="Positioning accuracy where RTLS determines which defined zone a tag occupies, typically 5-50 meters resolution. Sufficient for applications needing general">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Zone-level accuracy in RTLS refers to positioning precision sufficient to determine which room, area, or functional zone within a facility an asset or pers">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+
   :root {
     --bg:#0A0F1E; --surface:#111827; --surface2:#1A2336;
     --border:#1E3A5F; --text:#F0F4FF; --muted:#8B9CB8;
-    --accent:#2563EB; --accent-hi:#3B82F6; --cat:#6B7280;
+    --accent:#2563EB; --accent-hi:#3B82F6;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;min-height:100vh}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.95);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+  a{color:var(--accent-hi);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
-  .breadcrumb{max-width:760px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
-  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
+  .header-cta:hover{background:var(--accent-hi)}
+  .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+  .term-link:hover{color:#fff}
+  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .breadcrumb span{margin:0 .4rem}
-  .term-page{max-width:760px;margin:0 auto;padding:2rem 2rem 5rem}
+  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
   .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--cat);margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:var(--cat)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1.05rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid var(--cat);border-radius:0 4px 4px 0;line-height:1.65}
-  .def-long{font-size:.95rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.75}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
   .nav-prev:hover,.nav-next:hover{color:var(--accent-hi)}
   .nav-next{margin-left:auto}
-  .back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--muted);text-decoration:none;margin-bottom:1rem}
-  .back-link:hover{color:var(--accent-hi)}
-  footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-  @media(max-width:600px){.term-page,.breadcrumb{padding-left:1.25rem;padding-right:1.25rem}}
 </style>
 </head>
 <body>
@@ -46,25 +49,17 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <div class="breadcrumb">
-  <a href="../index.html">Glossary</a>
-  <span>›</span>
-  <span>Technical Parameters</span>
-  <span>›</span>
-  <span>Zone-Level Accuracy</span>
+  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Positioning accuracy where RTLS determines which defined zone a tag occupies, typically 5-50 meters resolution. Sufficient for applications needing general location awareness like department identification or area access control. Often achieved using Cell of Origin or RFID readers at doorways.">Positioning accuracy where RTLS determines which defined zone a tag occupies, typically 5-50 meters resolution. Sufficient for applications needing general location awareness like department identification or area access control. Often achieved using Cell of Origin or RFID readers at doorways.</a> › Zone-Level Accuracy
 </div>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Parameters</div>
+    <div class="term-cat-tag">Positioning accuracy where RTLS determines which defined zone a tag occupies, typically 5-50 meters resolution. Sufficient for applications needing general location awareness like department identification or area access control. Often achieved using Cell of Origin or RFID readers at doorways.</div>
     <h1 class="term-title">Zone-Level Accuracy</h1>
   </header>
-  <p class="def-short">Positioning accuracy where RTLS determines which defined zone a tag occupies, typically 5-50 meters resolution. Sufficient for applications needing general location awareness like department identification or area access control. Often achieved using Cell of Origin or RFID readers at doorways.</p><p class="def-long">Zone-level accuracy in RTLS refers to positioning precision sufficient to determine which room, area, or functional zone within a facility an asset or person occupies, typically corresponding to 3-10 meter positioning accuracy. This contrasts with sub-meter accuracy (10-50 cm for UWB systems) or room-level accuracy (similar concept, sometimes used interchangeably with zone-level). Zone-level accuracy represents adequate precision for applications where knowing general location suffices without requiring exact coordinates. Zone-level accuracy technologies include: Wi-Fi positioning using RSSI fingerprinting or access point proximity (typically 3-10 meter accuracy), Bluetooth Low Energy (BLE) beacons using RSSI trilateration or proximity (3-10 meter accuracy), Active RFID zone detection identifying which reader zone tags occupy (zone-level by definition), and GPS in outdoor areas (3-10 meter accuracy sufficient for yard zone identification).</p><p class="def-long">Comparing zone-level to high-precision accuracy: Zone-level (3-10m) applications - Which department is tool in? Which aisle is pallet in? Sub-meter (&lt;1m) applications - Exact tool position for retrieval. Zone definition strategies for zone-level systems require larger zones accounting for positioning uncertainty: minimum zone dimension 3-5× positioning accuracy (10-15+ meters for 3-5m accuracy systems), avoiding small adjacent zones (positioning errors cause frequent misidentification), and using functional areas as zones (departments, aisles, work cells) matching operational granularity. Cost comparison between accuracy levels: Zone-level (Wi-Fi/BLE) infrastructure may be $10k-50k for typical facility using existing Wi-Fi or inexpensive BLE beacons, tags $10-30 each for BLE/Wi-Fi vs. $50-150 for UWB. Sub-meter (UWB) infrastructure typically $50k-200k+ for UWB anchor network, tags $50-150 each, higher total cost but delivering superior accuracy and capabilities.</p>
-  <nav class="term-nav">
-    <a href="zone-exit.html" class="nav-prev">← Zone Exit</a>
-    
-  </nav>
+  <p class="def-short">Zone-level <a href="../terms/accuracy.html" class="term-link">accuracy</a> in RTLS refers to positioning <a href="../terms/precision.html" class="term-link">precision</a> sufficient to determine which room, area, or functional zone within a facility an asset or person occupies, typically corresponding to 3-10 meter <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>. This contrasts with sub-meter accuracy (10-50 cm for UWB systems) or <a href="../terms/room-level-accuracy.html" class="term-link">room-level accuracy</a> (similar concept, sometimes used interchangeably with zone-level). Zone-level accuracy represents adequate precision for applications where knowing general location suffices without requiring exact coordinates. Zone-level accuracy technologies include: <a href="../terms/wi-fi-positioning.html" class="term-link">Wi-Fi positioning</a> using RSSI <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> or <a href="../terms/access-point.html" class="term-link">access point</a> proximity (typically 3-10 meter accuracy), Bluetooth Low Energy (BLE) beacons using RSSI <a href="../terms/trilateration.html" class="term-link">trilateration</a> or proximity (3-10 meter accuracy), <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> <a href="../terms/zone-detection.html" class="term-link">zone detection</a> identifying which <a href="../terms/reader.html" class="term-link">reader</a> zone tags occupy (zone-level by definition), and GPS in outdoor areas (3-10 meter accuracy sufficient for yard zone identification).</p>
+  <p class="def-long">Comparing zone-level to high-<a href="../terms/precision.html" class="term-link">precision</a> <a href="../terms/accuracy.html" class="term-link">accuracy</a>: Zone-level (3-10m) applications - Which department is tool in? Which aisle is pallet in? Sub-meter (&amp;lt;1m) applications - Exact tool position for retrieval. Zone definition strategies for zone-level systems require larger zones accounting for positioning uncertainty: minimum zone dimension 3-5× <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (10-15+ meters for 3-5m accuracy systems), avoiding small adjacent zones (positioning errors cause frequent misidentification), and using functional areas as zones (departments, aisles, work cells) matching operational granularity. Cost comparison between accuracy levels: Zone-level (Wi-Fi/BLE) infrastructure may be $10k-50k for typical facility using existing Wi-Fi or inexpensive BLE beacons, tags $10-30 each for BLE/Wi-Fi vs. $50-150 for UWB. Sub-meter (UWB) infrastructure typically $50k-200k+ for UWB <a href="../terms/anchor.html" class="term-link">anchor</a> network, tags $50-150 each, higher total cost but delivering superior accuracy and capabilities.</p>
+  <nav class="term-nav"><a href="zone-exit.html" class="nav-prev">← Zone Exit</a></nav>
 </article>
-<footer>
-  Industrial RTLS Glossary · <a href="../index.html" style="color:inherit;text-decoration:none">← All terms</a>
-</footer>
+<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
 </body>
 </html>
