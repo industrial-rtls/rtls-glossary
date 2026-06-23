@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Pattern Recognition
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Pattern Recognition
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Pattern Recognition</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">The use of algorithms and machine learning to identify meaningful patterns in RTLS data. Applications include recognizing normal versus abnormal movement patterns, classifying activities, predicting future behaviors, and detecting emerging trends. Enables automated insights from massive datasets that would be impossible to analyze manually.</p>
   <p class="def-long">Application of algorithms to identify recurring patterns, similarities, or anomalies in RTLS location and movement data. Pattern recognition techniques in RTLS: (1) Trajectory clustering - grouping similar movement paths using algorithms (k-means, DBSCAN, hierarchical clustering) to identify common routes and variants. (2) Sequence pattern mining - discovering frequent zone visit sequences (eg., 80% of materials follow sequence A→B→C→D, 15% follow A→B→D skipping C). (3) Time-series pattern matching - comparing current movement patterns to historical templates. (4) Statistical pattern modeling - building probability models of normal behaviors, flagging deviations exceeding statistical thresholds. (5) <a href="../terms/machine-learning.html" class="term-link">Machine learning</a> classification - training models to categorize movements (productive transport, non-value-added travel, material searching).</p><p class="def-long">Typical finding: actual workflows include 3-8 variants versus single documented process. (2) Best practice identification - comparing patterns across shifts or workers to identify high-performing approaches for standardization. (3) Bottleneck detection - recognizing patterns indicating congestion or delays. (4) <a href="../terms/anomaly-detection.html" class="term-link">Anomaly detection</a> - identifying abnormal movements suggesting errors or problems (typically 5-15% of movements significantly anomalous). (5) <a href="../terms/predictive-analytics.html" class="term-link">Predictive analytics</a> - recognizing patterns that precede specific outcomes like quality issues, equipment failures, or schedule delays. (6) Activity recognition - inferring what people or equipment are doing from movement patterns (picking, putaway, maintenance, transport, idle). Analyzing movements of 500 assets over 3 months generates millions of position records, far beyond human analysis <a href="../terms/capacity.html" class="term-link">capacity</a>. Studies show pattern recognition identifying 10-20 significant operational issues per facility (inefficient routes, process inconsistencies, bottlenecks, safety concerns), with top issues delivering 15-35% improvements in targeted metrics.</p>

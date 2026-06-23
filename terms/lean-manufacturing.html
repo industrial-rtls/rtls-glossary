@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">Lean Manufacturing</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">A production methodology focused on minimizing waste while maximizing productivity. RTLS supports lean manufacturing by providing visibility to identify and eliminate waste including motion waste, waiting waste, and inventory waste. Enables continuous improvement through data-driven analysis of material flow, cycle times, and process efficiency.</p>
   <p class="def-long">Production methodology emphasizing waste elimination and continuous improvement, enhanced by RTLS visibility and analytics. Lean principles include: value stream mapping (identifying value-adding vs. non-value-adding activities), waste elimination (reducing muda: overproduction, waiting, transportation, over-processing, inventory, motion, defects), continuous flow (smooth material movement without interruption), pull production (demand-triggered vs. forecast-driven), and kaizen (continuous incremental improvement). RTLS supports lean manufacturing through: (1) Waste visibility - quantifying non-value-adding time (travel, waiting, searching) through movement and <a href="../terms/dwell-time-analysis.html" class="term-link">dwell time analysis</a>. (2) Flow analysis - visualizing <a href="../terms/material-flow.html" class="term-link">material flow</a> patterns revealing bottlenecks and interruptions. (3) <a href="../terms/cycle-time.html" class="term-link">Cycle time</a> measurement - automatically capturing actual cycle times vs. manual stopwatch studies. (4) Standard work validation - confirming actual operations match standard procedures. (5) Kaizen support - providing objective data driving improvement projects. Lean wastes addressed by RTLS: transportation waste (excessive material movement revealed by <a href="../terms/travel-distance.html" class="term-link">travel distance</a> analysis, typically 30-50% reduction possible through layout optimization), waiting waste (dwell time analysis identifying queue times, often 40-60% of cycle time eliminated through balancing), inventory waste (<a href="../terms/real-time.html" class="term-link">real-time</a> visibility enabling 25-40% inventory reduction), motion waste (worker movement patterns revealing inefficient workflows). Lean implementation typically proceeds in waves - RTLS data identifies opportunities (top 5-10 highest-impact improvements), lean tools drive implementation (kaizen events, 5S, standard work), and RTLS confirms results (measuring before/after performance). Organizations combining lean methodology with RTLS typically achieve: 20-35% cycle time reduction, 30-50% inventory reduction, 15-25% productivity improvement, and 25-40% floor space reduction.</p>

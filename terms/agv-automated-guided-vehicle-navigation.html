@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">AGV (Automated Guided Vehicle) Navigation</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">The use of RTLS to guide and track autonomous vehicles within industrial facilities. Combines real-time position data with control systems for precise routing, collision avoidance, and fleet coordination. Enables dynamic navigation without physical guides while maintaining centimeter-level accuracy. Provides continuous position updates typically 1-10 times per second.</p>
   <p class="def-long">Use of RTLS technology to support autonomous vehicle navigation in industrial facilities. Modern AGV systems combine multiple technologies: primary navigation typically uses laser/LiDAR scanners (±2 cm <a href="../terms/accuracy.html" class="term-link">accuracy</a>) or magnetic tape/guide wires, while RTLS provides secondary positioning for traffic management, <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>, and fleet coordination. RTLS enables central system visibility of all AGV positions simultaneously (10-50 vehicles typical per facility), coordinates traffic at intersections, manages charging station queuing, and provides backup positioning if primary navigation fails. UWB-based systems are preferred for AGV support due to 10-30 cm accuracy and 10 Hz update rates. Critical integration requirement is sub-200ms total system <a href="../terms/latency.html" class="term-link">latency</a> to enable <a href="../terms/real-time.html" class="term-link">real-time</a> collision avoidance decisions.</p>

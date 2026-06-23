@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp; Zones<span>›</span>Zone Detection
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing & Zones<span>›</span>Zone Detection
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Geofencing & Zones</div>
     <h1 class="term-title">Zone Detection</h1>
+  <div class="term-cat-tag">Geofencing & Zones</div>
   </header>
   <p class="def-short">The capability to determine which defined zone or area a tracked tag currently occupies. Simpler than precise positioning, often using Cell of Origin or proximity detection methods. Sufficient for many applications needing room-level or area-level location awareness. Lower cost than precision positioning systems.</p>
   <p class="def-long">Zone detection in industrial RTLS identifies when tracked assets or personnel enter, exit, or remain within defined geographical zones, triggering alerts, analytics, or automated workflows. Zone detection transforms continuous position data into actionable events, enabling spatial business logic and exception-based management rather than requiring constant monitoring of all positions. Zone detection <a href="../terms/accuracy.html" class="term-link">accuracy</a> depends on <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>: high-<a href="../terms/precision.html" class="term-link">precision</a> positioning (UWB 10-30 cm) enables small zones (1-2 meters) with reliable detection, room-level positioning (Wi-Fi/BLE 3-10 meters) only supports larger zones (10+ meters) with significant uncertainty near boundaries, and positioning uncertainty requires zone sizes 3-5× larger than positioning accuracy for reliable detection. <a href="../terms/configuration.html" class="term-link">Configuration</a> best practices for zone detection include: zone sizing appropriate for positioning accuracy (minimum zone dimension 3-5× positioning accuracy), boundary placement considering positioning uncertainty (buffers around physical boundaries preventing premature triggers), hysteresis implementation using different trigger thresholds for entry vs. exit preventing rapid toggling near boundaries, temporal filtering requiring sustained presence before triggering avoiding transient false alarms, and clear zone definitions aligning with operational reality and avoiding ambiguity about zone purposes. ROI from zone detection includes: automated process tracking eliminating manual scanning reducing labor and errors (15-30% productivity improvement), exception management detecting problems rapidly enabling faster response (20-40% reduction in issue <a href="../terms/resolution.html" class="term-link">resolution</a> time), compliance documentation automatically logging zone events for regulatory or quality requirements, and operational insights revealing optimization opportunities through zone analytics (10-25% efficiency improvements from data-driven optimization).</p>

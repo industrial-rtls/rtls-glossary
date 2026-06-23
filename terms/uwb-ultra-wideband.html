@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">UWB (Ultra-Wideband)</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">A radio technology using extremely short pulses across wide frequency spectrum (typically 3.1-10.6 GHz). Provides the highest positioning accuracy (10-30 cm) among mainstream RTLS technologies. Resistant to multipath interference and penetrates obstacles well. Higher cost than BLE but essential for precision applications.</p>
   <p class="def-long">Ultra-Wideband (UWB) is a radio frequency technology using extremely short pulses (nanosecond duration) spread across a very wide frequency spectrum (typically 500 MHz to several GHz bandwidth) that has become the dominant technology for high-<a href="../terms/accuracy.html" class="term-link">accuracy</a> industrial RTLS. UWB regulatory definitions and spectrum allocations vary by region: FCC (North America) allocates 3.1-10.6 GHz for UWB with maximum EIRP of -41.3 dBm/MHz average power density, ETSI (Europe) provides 6.0-8.5 GHz primary band and 3.1-4.8 GHz secondary band with regional variations, and other regions have similar allocations with variations. UWB positioning achieves exceptional accuracy (typically 10-30 cm in industrial environments, under 10 cm in optimal conditions) through: nanosecond-duration pulses providing fine time <a href="../terms/resolution.html" class="term-link">resolution</a> enabling precise time-of-arrival measurement, wide bandwidth enabling multipath resolution (distinguishing direct path from reflections separated by nanoseconds), low power spectral density allowing operation alongside other RF systems without mutual interference, and sophisticated signal processing techniques (leading edge detection, channel impulse response analysis) extracting accurate timing from received signals.</p><p class="def-long">Comparing UWB to alternative RTLS technologies: vs. <a href="../terms/wi-fi-positioning.html" class="term-link">Wi-Fi positioning</a> (RSSI-based): UWB provides 10-50× better <a href="../terms/accuracy.html" class="term-link">accuracy</a> (30 cm vs. 3-10 meters) but higher infrastructure and <a href="../terms/tag.html" class="term-link">tag</a> costs, vs.</p><p class="def-long">Bluetooth Low Energy (BLE): UWB offers 5-30× better <a href="../terms/accuracy.html" class="term-link">accuracy</a> but higher cost and power consumption, vs.</p><p class="def-long"><a href="../terms/active-rfid.html" class="term-link">Active RFID</a>: UWB provides superior <a href="../terms/accuracy.html" class="term-link">accuracy</a> and update rates with better <a href="../terms/scalability.html" class="term-link">scalability</a>, and vs. Ultrasonic: UWB offers much longer <a href="../terms/range.html" class="term-link">range</a> (10× or more) and better obstacle handling though comparable accuracy in optimal conditions.</p>

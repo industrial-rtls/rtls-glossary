@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Proximity Detection
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Proximity Detection
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Proximity Detection</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">The capability to detect when tracked objects are near each other or near specific locations. Enables applications including collision avoidance, interaction tracking, contact tracing, and proximity-based access control. Detection typically based on signal strength, ranging measurements, or geofence overlap.</p>
   <p class="def-long">Technology and techniques for determining when objects are physically near each other, foundational capability for proximity alerts and <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>. Limitations: <a href="../terms/accuracy.html" class="term-link">accuracy</a> limited by <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>, requires absolute position calculation for all objects. (2) Direct ranging - tags measuring distances to nearby tags using peer-to-peer radio ranging without infrastructure involvement.</p><p class="def-long">Advantages: simple implementation, low computational requirements. Primarily used for coarse proximity. (4) Hybrid approaches - combining methods for optimal performance. Proximity detection performance requirements: (1) <a href="../terms/range.html" class="term-link">Range</a> <a href="../terms/accuracy.html" class="term-link">accuracy</a> - detecting proximity within 10-30 cm accuracy for <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>, 50-200 cm sufficient for general awareness. (2) <a href="../terms/update-rate.html" class="term-link">Update rate</a> - 5-10 Hz minimum for fast-moving vehicles. (3) Detection reliability - &amp;gt;95% detection rate for safety applications. (4) False alarm rate - &amp;lt;5% spurious proximity detections. (5) <a href="../terms/latency.html" class="term-link">Latency</a> - end-to-end delay &amp;lt;500ms. (6) Range - detecting proximity out to 3-10 meters providing adequate warning time. Proximity detection technologies: UWB enables both accurate positioning (10-30 cm) and precise peer-to-peer ranging, making it preferred for collision avoidance; BLE supports position-based proximity (1-5 meter accuracy) and basic peer-to-peer ranging; Wi-Fi provides position-based proximity only (3-15 meter accuracy); RFID supports only coarse zone-level proximity.</p><p class="def-long">Proximity detection testing and validation: critical for safety applications requiring thorough testing: (1) <a href="../terms/range.html" class="term-link">Range</a> testing - verifying detection at specified distances. (2) Reliability testing - ensuring &amp;gt;95% detection rate. (3) False alarm testing - measuring spurious detections, tuning to achieve &amp;lt;5% false positive rate. (4) <a href="../terms/latency.html" class="term-link">Latency</a> testing - confirming &amp;lt;500ms. (5) Edge case testing - verifying behavior with obstacles, vertical separation, <a href="../terms/signal-interference.html" class="term-link">signal interference</a>.</p>

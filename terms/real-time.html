@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Real-Time</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The capability to process and respond to events within milliseconds to seconds of occurrence. In RTLS, means position updates and alerts occur fast enough for immediate operational use without perceptible lag. Critical for time-sensitive applications like collision avoidance and safety alerts.</p>
   <p class="def-long">Real-time in RTLS context refers to the system's ability to provide <a href="../terms/location-data.html" class="term-link">location data</a> with minimal <a href="../terms/latency.html" class="term-link">latency</a> between a <a href="../terms/tag.html" class="term-link">tag</a>'s actual position change and the reported position update. True real-time performance is characterized by deterministic, predictable response times rather than merely fast updates. In industrial RTLS, real-time typically means update rates of 1-20 Hz (1-20 position updates per second) with end-to-end latencies under 1 second from tag transmission to application visualization. However, real-time requirements vary significantly by application: anti-collision systems for automated guided vehicles (AGVs) may require 10-20 Hz updates with &amp;lt;100ms latency, while <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> might only need 0.1-1 Hz updates. The real-time processing chain includes tag transmission time, signal propagation, <a href="../terms/reader.html" class="term-link">reader</a> processing, network transmission, <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> calculation, and application rendering. Each stage contributes to total system latency. UWB systems can achieve update rates of 10-40 Hz with latencies of 100-300ms, while Wi-Fi-based systems typically operate at 1-5 Hz with higher latencies. It's critical to distinguish between <a href="../terms/update-rate.html" class="term-link">update rate</a> (how often position is calculated) and latency (delay in the data pipeline). Industrial applications requiring safety features or <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a> demand not just fast updates but guaranteed maximum latency bounds. Some systems implement edge processing to reduce latency by performing position calculations locally rather than in centralized servers. Real-time performance degrades with increased tag density, network congestion, and computational load, requiring careful <a href="../terms/system-capacity.html" class="term-link">system capacity</a> planning.</p>

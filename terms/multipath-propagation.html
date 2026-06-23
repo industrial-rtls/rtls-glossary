@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Multipath Propagation</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The phenomenon where radio signals reach receivers via multiple paths due to reflections, diffractions, and scattering. Common in industrial environments with metal structures causing signal reflections. Degrades positioning accuracy by creating signal distortion and ambiguity. Advanced RTLS technologies and algorithms mitigate multipath effects.</p>
   <p class="def-long">Phenomenon where radio signals reach <a href="../terms/receiver.html" class="term-link">receiver</a> via multiple paths due to reflections, diffractions, and scattering, causing positioning errors and signal degradation. Multipath effects on RTLS: (1) Ranging errors - reflected signals travel longer distances, causing overestimated ranges (if system cannot distinguish direct path from reflections). (2) Signal distortion - multiple signal copies interfere constructively or destructively, creating fading. (3) Reduced <a href="../terms/accuracy.html" class="term-link">accuracy</a> - position calculations based on corrupted measurements produce inaccurate results. (4) Detection loss - severe multipath causing signal quality degradation preventing detection. Multipath mitigation techniques: (1) UWB signals - very short pulses (nanosecond duration) enabling receivers to distinguish direct path from delayed reflections (multipath arrives 1-10 nanoseconds later, resolvable by UWB). (2) Signal processing - algorithms detecting and rejecting non-line-of-sight signals based on characteristics (signal strength profiles, pulse shapes). (3) Antenna design - directional antennas focusing on desired signal paths, reducing reception of reflections from unwanted directions. (4) Diversity techniques - multiple receiving antennas at different positions, selecting or combining signals to minimize multipath effects. (5) Kalman filtering - tracking expected <a href="../terms/tag.html" class="term-link">tag</a> trajectories, rejecting sudden position jumps caused by multipath. (6) <a href="../terms/anchor-placement.html" class="term-link">Anchor placement</a> - positioning infrastructure to maximize line-of-sight, minimize reflective paths. Multipath severity varies by environment: open warehouses with minimal metal (moderate multipath, 20-30% accuracy degradation), metal-rich manufacturing (severe multipath, 50-100% degradation without mitigation), and clear line-of-sight areas (minimal multipath impact). RTLS system specifications should state multipath performance: accuracy in multipath environments (not just ideal conditions), NLoS detection capabilities, and mitigation techniques employed.</p>

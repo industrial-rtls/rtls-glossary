@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">Work-in-Progress (WIP) Tracking</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">The use of RTLS to monitor materials and products currently being processed through production. Provides real-time visibility to production status, identifies bottlenecks, and enables accurate production scheduling. Essential for lean manufacturing and just-in-time production.</p>
   <p class="def-long">Work-in-Progress (WIP) tracking monitors semi-finished products, assemblies, and materials as they flow through manufacturing processes, providing <a href="../terms/real-time.html" class="term-link">real-time</a> visibility of production status, inventory levels, and process performance. RTLS-based WIP tracking provides capabilities manual systems cannot match: Real-time location and status - knowing precisely where every WIP item is located at any moment without scanning, identifying which production step each item is in, and determining how long items have been in current state.</p><p class="def-long">Benefits from RTLS-based WIP tracking include: 30-50% reduction in WIP inventory levels through improved visibility enabling leaner production, 20-40% improvement in inventory <a href="../terms/accuracy.html" class="term-link">accuracy</a> from continuous tracking vs. periodic cycle counts, 15-30% <a href="../terms/cycle-time.html" class="term-link">cycle time</a> reductions from bottleneck identification and elimination, 10-25% <a href="../terms/throughput.html" class="term-link">throughput</a> improvements from optimized production flow and reduced delays, and enhanced customer responsiveness with accurate production status for delivery commitments.</p><p class="def-long">Technical implementation of WIP tracking includes: tagging strategies (attaching RTLS tags to product carriers, pallets, or containers vs. direct product attachment), zone definition creating virtual process areas matching production layout and workflow, <a href="../terms/tag.html" class="term-link">tag</a>-product association maintaining database linking tag IDs to product serial numbers, lots, or orders, and <a href="../terms/capacity.html" class="term-link">capacity</a> planning ensuring RTLS supports maximum concurrent WIP volume with headroom for growth. ROI for WIP tracking stems primarily from: inventory reduction (WIP inventory decreasing 30-50% reducing carrying costs and freeing capital), <a href="../terms/cycle-time.html" class="term-link">cycle time</a> improvement (faster production improving responsiveness and capacity), inventory <a href="../terms/accuracy.html" class="term-link">accuracy</a> (eliminating stock discrepancies and lost WIP reducing write-offs), and productivity (reduced search time, automated tracking eliminating manual data entry).</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Standards &amp; Protocols<span>›</span>FiRa Consortium
+  <a href="../index.html">Glossary</a><span>›</span>Standards & Protocols<span>›</span>FiRa Consortium
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Standards</div>
     <h1 class="term-title">FiRa Consortium</h1>
+  <div class="term-cat-tag">Standards</div>
   </header>
   <p class="def-short">A global industry consortium established in 2019 to promote and support UWB technology development for secure fine ranging and positioning. Establishes standardized UWB protocols ensuring multi-vendor interoperability, defines certification programs, and promotes best practices. Members include major technology companies whose participation drives UWB adoption and reduces costs.</p>
   <p class="def-long">Industry consortium developing UWB ecosystem and standards for interoperability. Fine Ranging (FiRa) Consortium established in 2019, includes 100+ members: smartphone manufacturers (Apple, Samsung, Xiaomi), chip vendors (NXP, Qorvo), automotive companies, and other stakeholders. FiRa's primary focus is defining UWB interoperability specifications enabling devices from different manufacturers to work together, particularly in consumer applications (smartphone <a href="../terms/access-control.html" class="term-link">access control</a>, device finding, automotive digital keys). FiRa specifications include: PHY and MAC layer profiles (based on IEEE 802.15.4z standard), ranging and positioning protocols, security and privacy frameworks, and application-level APIs. For industrial RTLS, FiRa relevance is emerging: FiRa-certified UWB chips could enable commodity UWB components (reducing costs), smartphone integration (workers' personal phones becoming location tags), and multi-vendor <a href="../terms/system-integration.html" class="term-link">system integration</a>. However, industrial RTLS requirements often exceed FiRa specifications: higher update rates, longer ranges, integration with proprietary positioning engines, and ruggedized form factors. FiRa specifications currently focus on peer-to-peer ranging (two devices measuring distance) rather than infrastructure-based positioning (multiple anchors tracking multiple tags). Industrial RTLS vendors increasingly offer FiRa-compatible modes alongside proprietary modes - FiRa mode for interoperability, proprietary modes for performance. As FiRa ecosystem matures, expect increasing adoption in industrial applications, particularly for smartphone-based tracking and multi-vendor deployments.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Received Signal Strength Indicator (RSSI)
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Received Signal Strength Indicator (RSSI)
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Received Signal Strength Indicator (RSSI)</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably with distance. Less accurate than time-based methods due to environmental variations affecting signal strength. Common in Wi-Fi and BLE positioning.</p>
   <p class="def-long">RSSI is a measurement of the power level in a received radio signal, expressed in decibels relative to one milliwatt (dBm). In RTLS applications, RSSI can be used as a proximity indicator or for basic positioning, though it's less accurate than time-based methods. RSSI values typically <a href="../terms/range.html" class="term-link">range</a> from -30 dBm (very strong, close proximity) to -100 dBm (weak, distant or heavily obstructed). The fundamental principle behind RSSI-based positioning is that signal strength decreases predictably with distance according to the path loss model, theoretically allowing distance estimation. However, industrial environments severely complicate RSSI measurements due to <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a> (signals reflecting off metal surfaces, machinery, inventory), interference from other radio sources, and signal absorption by materials. These factors cause RSSI values to fluctuate significantly even when tags remain stationary, limiting <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> to room-level (3-10 meters) at best. Wi-Fi and Bluetooth Low Energy (BLE) systems commonly use RSSI for positioning, applying techniques like <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> (mapping RSSI patterns throughout a facility) or <a href="../terms/trilateration.html" class="term-link">trilateration</a> (using RSSI from multiple access points). RSSI-based systems offer lower infrastructure costs since they leverage existing Wi-Fi networks, but accuracy limitations restrict applications to asset <a href="../terms/zone-detection.html" class="term-link">zone detection</a> or presence sensing rather than precise tracking. Industrial RTLS implementations using RSSI often combine it with other data sources or apply Kalman filtering and <a href="../terms/machine-learning.html" class="term-link">machine learning</a> to improve accuracy. RSSI measurements are also valuable as diagnostic data in UWB or other systems, helping identify interference sources, verify <a href="../terms/reader.html" class="term-link">reader</a> coverage, and troubleshoot connectivity issues.</p>

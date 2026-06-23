@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industry Terms</div>
     <h1 class="term-title">Condition Monitoring</h1>
+  <div class="term-cat-tag">Industry Terms</div>
   </header>
   <p class="def-short">Continuous observation and analysis of asset health parameters using sensors integrated with RTLS tags. Extends location tracking by incorporating environmental sensors (temperature, humidity, vibration, shock). Enables predictive maintenance by detecting bearing wear, overheating, impacts, and unsuitable storage conditions. Transforms maintenance from reactive or time-based to predictive.</p>
   <p class="def-long">Use of RTLS-integrated sensors to track environmental conditions or asset health. Beyond position tracking, modern RTLS tags integrate sensors monitoring: temperature (critical for cold chain, heat stress), humidity (moisture-sensitive materials), vibration/shock (detecting impacts during transport), tilt/orientation (ensuring proper handling of sensitive equipment), light exposure (verifying storage conditions), or door-open sensors (monitoring container security). In industrial applications, condition monitoring enables: automated alerts when temperature-sensitive materials leave acceptable ranges, documentation of proper handling for regulatory compliance, <a href="../terms/predictive-maintenance.html" class="term-link">predictive maintenance</a> by monitoring equipment vibration patterns, quality assurance by tracking environmental exposure throughout production, and <a href="../terms/inventory-management.html" class="term-link">inventory management</a> by confirming proper storage conditions. Sensor data typically transmitted with position updates at reduced frequency (every 1-10 minutes vs. 1-second position updates) to conserve battery. Sensor integration increases <a href="../terms/tag.html" class="term-link">tag</a> cost 20-50% and reduces <a href="../terms/battery-life.html" class="term-link">battery life</a> 20-40%. Most valuable for high-value or sensitive materials where condition violations have significant cost impacts.</p>

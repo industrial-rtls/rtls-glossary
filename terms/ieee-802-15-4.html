@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Standards &amp; Protocols<span>›</span>IEEE 802.15.4
+  <a href="../index.html">Glossary</a><span>›</span>Standards & Protocols<span>›</span>IEEE 802.15.4
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Standards</div>
     <h1 class="term-title">IEEE 802.15.4</h1>
+  <div class="term-cat-tag">Standards</div>
   </header>
   <p class="def-short">A technical standard defining the physical layer and media access control for low-rate wireless personal area networks. Provides the foundation for several industrial wireless protocols including Zigbee and some UWB implementations. Specifies operation in various frequency bands including 2.4 GHz. Important for RTLS as many positioning technologies build upon this standard.</p>
   <p class="def-long">Wireless communication standard defining physical and MAC layers for low-rate wireless personal area networks, serving as foundation for several RTLS-relevant technologies. IEEE 802.15.4 operates in license-free ISM bands: 2.4 GHz (worldwide, 16 channels, 250 kbps), 868 MHz (Europe, 1 channel, 20-100 kbps), or 915 MHz (Americas, 10 channels, 40-250 kbps).</p><p class="def-long">Key characteristics include: low power consumption (enabling multi-year <a href="../terms/battery-life.html" class="term-link">battery life</a>), low data rates (sufficient for control and sensor data but not multimedia), short <a href="../terms/range.html" class="term-link">range</a> (10-100 meters depending on power and frequency), and simple protocol stack. IEEE 802.15.4 serves as basis for: <a href="../terms/zigbee.html" class="term-link">Zigbee</a> (<a href="../terms/mesh-networking.html" class="term-link">mesh networking</a> protocol for home automation and industrial control), Thread (IPv6 mesh for smart home), 6LoWPAN (IPv6 over low-power networks), and critically for RTLS - UWB positioning. IEEE 802.15.4z amendment (ratified 2020) specifically addresses high-<a href="../terms/accuracy.html" class="term-link">accuracy</a> positioning, defining: enhanced impulse radio UWB (IR-UWB) for ranging, security enhancements preventing relay attacks, and standardized ranging protocols. 802.15.4z enables interoperable UWB positioning between vendors, though many industrial RTLS vendors use proprietary extensions for performance. Industrial RTLS implementations based on 802.15.4 benefit from: mature standard with broad chipset availability, low power enabling compact battery-operated tags, and proven reliability in industrial environments. Understanding 802.15.4 foundation helps evaluating RTLS technologies and assessing vendor claims about standards compliance and interoperability.</p>

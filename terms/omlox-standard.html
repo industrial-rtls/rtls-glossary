@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Standards &amp; Protocols<span>›</span>OMLOX Standard
+  <a href="../index.html">Glossary</a><span>›</span>Standards & Protocols<span>›</span>OMLOX Standard
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Standards</div>
     <h1 class="term-title">OMLOX Standard</h1>
+  <div class="term-cat-tag">Standards</div>
   </header>
   <p class="def-short">An open standard for industrial locating services enabling interoperability between different RTLS technologies and applications. Developed by consortium of technology companies and users. Defines standard APIs, data formats, and protocols ensuring multi-vendor compatibility. Aims to avoid vendor lock-in and enable best-of-breed solutions.</p>
   <p class="def-long">Open standard for <a href="../terms/real-time.html" class="term-link">real-time</a> location systems enabling interoperability between different vendors' RTLS products and IoT devices. Omlox architecture defines: (1) Omlox hub - central component providing common API for applications to access <a href="../terms/location-data.html" class="term-link">location data</a> from any omlox-compliant positioning system. (2) Positioning technologies - UWB, BLE, UHF-RFID, 5G, or others providing actual positioning, abstracting technology differences. (3) Tags and anchors - devices certified for omlox compliance. (4) Applications - business logic consuming location data through standardized hub API. Omlox compliance levels: (1) Hub compliant - software implementing standard hub API. (2) Positioning technology compliant - systems providing location data in standard format. (3) <a href="../terms/tag.html" class="term-link">Tag</a> compliant - tags transmitting in standard formats detectable by compliant infrastructure. (4) Application compliant - software consuming location data via standard hub API.</p><p class="def-long">Benefits of omlox adoption: (1) Vendor flexibility - organizations not locked to single vendor, can mix technologies by zone. (2) Future-proofing - standard interface protects application investment as positioning technologies evolve. (3) Lower integration cost - applications integrate once to hub vs. custom integration per vendor. (4) Market efficiency - promotes competition and innovation through interoperability. Challenges limiting omlox adoption: (1) Limited vendor support - as of 2024, adoption primarily among founding members and partners, many RTLS vendors not yet compliant. (2) Performance optimization - standardization may prevent vendor-specific optimizations. (3) Feature limitations - standard defines common denominator, advanced vendor-specific features may not be accessible. (4) Maturity - relatively new standard (publicly launched 2021), ecosystem still developing.</p>

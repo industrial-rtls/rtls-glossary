@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Penetration</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The ability of radio signals to pass through obstacles like walls, floors, and materials. Varies significantly by frequency and material: lower frequencies penetrate better but provide less positioning accuracy, concrete and metal severely attenuate signals. Understanding penetration characteristics is critical for RTLS design and anchor placement.</p>
   <p class="def-long">Ability of radio signals to pass through obstacles, critical factor affecting RTLS coverage and <a href="../terms/accuracy.html" class="term-link">accuracy</a>. Material penetration characteristics for RTLS frequencies: (1) Drywall/wood - minimal attenuation (2-3 dB loss), signals easily penetrate multiple walls. (2) Concrete - moderate attenuation (8-15 dB per 15cm wall), multiple walls significantly reduce signal. (3) Brick - similar to concrete (6-12 dB), common in older industrial buildings. (4) Metal - severe attenuation (20-50+ dB), effectively blocks signals, causes reflections. (5) Glass - minimal attenuation for regular glass (2-5 dB), significant for metallized/tinted glass (10-20+ dB). (6) Water - high attenuation (significant absorption), includes human bodies (~70% water, causing 6-10 dB loss). Frequency penetration relationship: lower frequencies penetrate better (433 MHz better than 2.4 GHz better than 6 GHz better than UWB ~6-8 GHz). However, lower frequencies also mean larger antennas and reduced <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>, so frequency selection involves tradeoffs. <a href="../terms/coverage-planning.html" class="term-link">Coverage planning</a> tools simulate penetration: inputting facility construction materials and equipment layouts, propagation models predict signal strength and coverage, though actual measurements often show 20-40% worse performance than models (due to undocumented obstacles, irregular geometries). Understanding penetration characteristics of different RTLS technologies helps technology selection: UWB moderate penetration (good through drywall, challenging through concrete/metal), BLE/Wi-Fi similar penetration to UWB (2.4 GHz frequency), lower-frequency RFID better penetration (433/868/915 MHz), and optical systems (IR, laser) zero penetration (requiring strict line-of-sight).</p><p class="def-long">Penetration specifications rarely provided by vendors: manufacturers typically cite <a href="../terms/range.html" class="term-link">range</a> in open environments, not real-world penetration performance.</p>

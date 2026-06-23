@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">LoRaWAN</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">A low-power wide-area network protocol designed for wireless battery-operated devices. Uses CSS modulation providing long range (kilometers outdoors) with low power consumption. In RTLS, LoRaWAN enables tracking across large outdoor areas like ports, campuses, or mining sites. Lower accuracy (10-50 meters) but excellent for applications prioritizing coverage and battery life.</p>
   <p class="def-long">Long <a href="../terms/range.html" class="term-link">Range</a> Wide Area Network protocol for low-power wireless communication, occasionally used for wide-area <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> applications. LoRaWAN characteristics: extreme range (2-15 km line-of-sight, 1-5 km in urban/industrial environments), very low power (10-50mW transmission enabling 5-10 year <a href="../terms/battery-life.html" class="term-link">battery life</a>), low data rates (0.3-50 kbps sufficient for position and sensor data), and low cost (devices $10-30, gateways $300-1000). Positioning methods include: (1) RSSI-based - estimating position from signal strength at multiple gateways (100-500 meter <a href="../terms/accuracy.html" class="term-link">accuracy</a> typical). (2) TDoA - calculating position from signal arrival time differences at multiple gateways (20-200 meter accuracy with synchronized gateways). (3) <a href="../terms/gateway.html" class="term-link">Gateway</a> association - knowing which gateway received signal (zone-level only, 1-5 km zones). (4) GPS-assisted - LoRaWAN transmitting GPS coordinates from device with integrated GPS <a href="../terms/receiver.html" class="term-link">receiver</a>. LoRaWAN advantages for specific applications: ultra-long battery life (5-10 years with hourly updates), wide area coverage (entire facility or campus with few gateways), low infrastructure cost (gateways $300-1000 vs. $500-2000 for UWB anchors), outdoor capability (good range and <a href="../terms/penetration.html" class="term-link">penetration</a>). Limitations make LoRaWAN unsuitable for most industrial RTLS: poor accuracy (100-500 meters typical vs. 10-50 cm for UWB), slow update rates (every 5-60 minutes typical due to duty cycle limits and battery conservation, vs. 1-10 Hz for industrial RTLS), <a href="../terms/capacity.html" class="term-link">capacity</a> constraints (gateway handling 100s-1000s devices but with very low update rates), and indoor penetration challenges (metal buildings severely attenuate signals). LoRaWAN market growing 30-40% annually driven by IoT adoption, but industrial RTLS remains small portion of LoRaWAN deployments compared to agricultural sensors, utility metering, and smart city applications.</p>

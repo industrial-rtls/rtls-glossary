@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Open API
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Open API
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Open API</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">An application programming interface publicly documented and available for third-party developers to integrate with. Open APIs enable ecosystem development around RTLS platforms allowing custom applications, integrations, and extensions. Contrasts with proprietary or closed APIs. Important for flexibility and avoiding vendor lock-in.</p>
   <p class="def-long">Application Programming Interface with publicly documented specifications, enabling third-party developers to integrate with RTLS system without proprietary or restricted access. Open API characteristics: (1) Public documentation - complete API specifications available to any developer including endpoints, parameters, data formats, and authentication methods. (2) Standards-based - uses common protocols and formats (REST, JSON, XML, MQTT) rather than proprietary mechanisms. (3) Accessible - developers can obtain API credentials and begin integration without special partnership or licensing. (4) Stable - API versions maintained with backward compatibility, avoiding breaking changes. Open API benefits for RTLS ecosystems: (1) Easier integration - developers integrate RTLS with enterprise systems (ERP, MES, WMS) without vendor professional services. (2) Innovation - third parties build specialized applications leveraging RTLS data. (3) Customization - customers develop custom solutions addressing unique requirements. (4) Ecosystem growth - open APIs enable partner ecosystem providing complementary solutions. (5) Vendor independence - customers not locked into vendor's application suite. For industrial buyers, open API is critical evaluation criterion: (1) Assess API completeness - does API expose all needed functionality? (2) Review documentation quality - is it detailed enough for successful integration? (3) Test integration feasibility - prototype during evaluation. (4) Understand limitations - rate limits, feature availability, commercial terms. (5) Evaluate vendor commitment - is API actively maintained? Open APIs increasingly expected in industrial RTLS as <a href="../terms/industry-4-0.html" class="term-link">Industry 4.0</a> and IIoT adoption accelerates. Integration with diverse systems becomes critical, making closed systems less viable.</p>

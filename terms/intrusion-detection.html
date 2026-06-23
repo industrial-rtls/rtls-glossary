@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Intrusion Detection
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Intrusion Detection
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Intrusion Detection</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">The use of RTLS to identify unauthorized access or movement within facilities. Detects when unregistered tags enter facilities, when assets or personnel enter restricted areas without authorization, or when movement patterns suggest security breaches. Generates immediate alerts enabling rapid security response. Often integrated with access control and video surveillance systems.</p>
   <p class="def-long">RTLS application identifying unauthorized entry into restricted areas, triggering alerts and responses. Intrusion detection extends basic <a href="../terms/access-control.html" class="term-link">access control</a> by actively monitoring for violations and suspicious patterns. Detection mechanisms include: (1) <a href="../terms/geofence.html" class="term-link">Geofence</a> violations - tags entering zones without authorization based on <a href="../terms/tag.html" class="term-link">tag</a> assignments or time-based rules. (2) Tailgating detection - multiple entries through access points in short sequence suggesting unauthorized following. (3) Pattern anomalies - movement patterns deviating from normal (unexpected routes, unusual timing). (4) Missing authorization - tags detected in areas requiring specific credentials or escorts not present. (5) Unusual dwell - extended presence in areas typically brief visits. Intrusion detection responses include: immediate alerts (SMS, email, on-screen notifications to security personnel), visual/audible alarms (at violation location or security stations), access denial (automated doors remaining locked), video integration (triggering camera recording at intrusion location), and security dispatch (automatically notifying and guiding security to location). Detection <a href="../terms/accuracy.html" class="term-link">accuracy</a> critical - false positives (spurious alarms) cause alert fatigue and desensitization, false negatives (missed intrusions) create security gaps.</p><p class="def-long">Typical targets: false positive rate under 2% (1-2 false alarms per 100 true access events), detection <a href="../terms/latency.html" class="term-link">latency</a> under 2 seconds (from actual intrusion to alert generation). Intrusion detection effectiveness depends on: complete coverage (no gaps in monitored areas), reliable infrastructure (redundancy preventing single points of failure), accurate <a href="../terms/tag.html" class="term-link">tag</a> assignment (maintaining current authorization data), and proper tuning (<a href="../terms/geofence.html" class="term-link">geofence</a> boundaries accounting for <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>). Integration with physical security systems (<a href="../terms/access-control.html" class="term-link">access control</a>, video surveillance, security management platforms) provides comprehensive security solution combining multiple detection and response mechanisms.</p>

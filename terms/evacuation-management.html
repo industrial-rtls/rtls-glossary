@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Evacuation Management
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Evacuation Management
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Evacuation Management</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountability, identification of missing individuals, and evacuation progress tracking. Features include pre-defined muster point zones, evacuation route guidance, zone-by-zone clearance, and emergency contact notification. Provides incident commanders with comprehensive situational awareness.</p>
   <p class="def-long">RTLS application ensuring safe and complete facility evacuation during emergencies by tracking personnel movement to designated assembly points. Evacuation management systems provide: (1) Pre-evacuation status - current location of all personnel at moment emergency declared, baseline for tracking evacuation progress. (2) <a href="../terms/real-time.html" class="term-link">Real-time</a> evacuation monitoring - watching personnel movement toward exits and <a href="../terms/mustering.html" class="term-link">mustering</a> points, identifying individuals moving wrong direction or not evacuating. (3) Mustering verification - automatically checking personnel arrival at assembly points against complete roster, generating missing persons list. (4) Search guidance - directing rescue personnel to last known locations of missing individuals. (5) Re-entry management - controlling facility re-entry after all-clear, ensuring only authorized personnel return. System displays: facility map showing all personnel positions color-coded by status (evacuating, mustered, unaccounted), mustering point status (percentage complete), and timer showing evacuation duration.</p><p class="def-long">Key performance metrics: time to 90% mustered (typically target 3-5 minutes for office areas, 5-10 minutes for large industrial facilities), percentage accounted (must reach 100% before rescue operations cease), and false positive rate (people system thinks missing but actually safe, should be under 2%). Evacuation management requires reliable RTLS infrastructure (battery backup, redundancy), dedicated emergency interfaces accessible from outside facility, and integration with emergency notification systems. Regular evacuation drills validate system performance and familiarize personnel with procedures.</p>

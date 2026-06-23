@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">BLE Gateway</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">The primary fixed infrastructure device in BLE-based RTLS, equivalent to the anchor in UWB systems. Receives BLE advertisement packets from mobile tags, measures signal characteristics (RSSI or direction via AoA/AoD), timestamps detections, and forwards data to the positioning engine. Deployed at known fixed positions throughout the facility to provide coverage. Typically powered via PoE and connected via Ethernet.</p>
   <p class="def-long">BLE gateways (also called BLE readers, BLE scanners, or BLE access points depending on vendor terminology) are the fixed infrastructure backbone of BLE RTLS deployments. Standard BLE gateways receive advertisement packets from all <a href="../terms/tag.html" class="term-link">BLE tags</a> within range, record RSSI and timestamp for each reception, and forward data to the central <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a>. Advanced BLE 5.1+ gateways with multi-element antenna arrays additionally support Angle of Arrival (AoA) direction finding, enabling sub-meter accuracy. Key specifications: coverage radius 20-50 meters in industrial environments, simultaneous tag capacity 200-1000 tags, update rate 1-10 Hz, power consumption 3-10W (PoE Class 1-2), environmental rating IP40-IP65. <a href="../terms/anchor-placement.html" class="term-link">Gateway placement</a> follows similar principles to UWB <a href="../terms/anchor.html" class="term-link">anchor</a> placement but at lower density: typically 1 gateway per 500-1500 m&amp;#178; for RSSI-based systems, 1 per 300-800 m&amp;#178; for AoA systems requiring better geometry.</p><p class="def-long">Cost comparison with UWB anchors: standard BLE RSSI gateways $50-200 per unit, BLE AoA gateways with antenna arrays $150-500 per unit, versus UWB anchors $500-1500 per unit. Lower per-unit cost enables broader facility coverage at lower total infrastructure investment, making BLE gateways the practical choice for large warehouses and storage areas where meter-level accuracy suffices. BLE gateways require no time synchronization between units (unlike UWB anchors for TDoA positioning), simplifying installation and commissioning significantly. Most BLE gateways support concurrent operation as both RTLS receivers and standard IoT gateways, reducing infrastructure overhead in facilities with multiple IoT use cases.</p>

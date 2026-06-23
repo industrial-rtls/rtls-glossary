@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Architecture</div>
     <h1 class="term-title">Indoor-Outdoor Handover</h1>
+  <div class="term-cat-tag">Architecture</div>
   </header>
   <p class="def-short">The process of seamlessly transitioning a tracked asset or person between indoor positioning (UWB or BLE) and outdoor positioning (GNSS) systems as they move through building entrances. Critical for facilities with significant indoor-outdoor workflows such as manufacturing with outdoor yards, distribution centers with loading docks, and logistics campuses. Requires a unified software platform and coordinated transition logic to avoid position gaps or jumps.</p>
   <p class="def-long">Indoor-outdoor handover is one of the most technically challenging aspects of multi-technology RTLS deployments. The transition zone at building boundaries presents specific difficulties: GNSS signal is blocked inside buildings, indoor positioning infrastructure typically does not extend into outdoor areas, and the region near building entrances may have degraded performance from both systems simultaneously. Handover strategies include: (1) Overlap zone approach - deploying both indoor infrastructure and outdoor-capable tags near building entrances, using signal quality metrics to determine which system provides better position estimate. (2) Geofence-triggered switching - defining transition zones at boundaries where system automatically switches primary positioning source. (3) Dead reckoning bridge - using inertial sensors to maintain position estimate during brief transition periods. (4) Confidence weighting - combining position estimates from both systems weighted by respective confidence scores, blending smoothly through transition zone.</p><p class="def-long">Performance targets for indoor-outdoor handover: transition latency under 5 seconds, position discontinuity under 2 meters during transition, and detection reliability above 98% (correctly identifying entry vs. exit direction). Coordinate system alignment is a prerequisite: indoor RTLS uses local Cartesian coordinates while GNSS uses WGS84 geographic coordinates, requiring precise georeferencing of the indoor coordinate system. Hardware requirements: tags must support both indoor (UWB or BLE) and outdoor (GNSS) technologies simultaneously for seamless tracking through transitions, increasing tag cost and power consumption. Facilities with high-frequency indoor-outdoor transitions (forklifts moving between warehouse and yard dozens of times per shift) particularly benefit from optimized handover to maintain continuous operational visibility.</p>

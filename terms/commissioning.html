@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>Commissioning
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>Commissioning
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">Commissioning</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">The systematic process of configuring, testing, and validating RTLS installation before operational handover. Involves infrastructure verification, system configuration, calibration, functional testing, performance validation, and user acceptance testing. Includes stress testing, integration testing, documentation delivery, and training. Proper commissioning identifies issues, validates performance, and establishes baseline metrics.</p>
   <p class="def-long">Process of bringing RTLS system from installed hardware to operational production use. Industrial RTLS commissioning involves multiple phases: (1) Infrastructure verification - confirming all anchors/access points installed correctly with power and network connectivity, measuring actual coverage and identifying gaps. (2) <a href="../terms/time-synchronization.html" class="term-link">Time synchronization</a> - for TDoA systems, ensuring all anchors achieve required synchronization <a href="../terms/accuracy.html" class="term-link">accuracy</a> (typically sub-nanosecond). (3) Position accuracy testing - placing tags at known survey points throughout <a href="../terms/coverage-area.html" class="term-link">coverage area</a> and validating accuracy meets specifications (typically 90th percentile error thresholds). (4) <a href="../terms/capacity.html" class="term-link">Capacity</a> testing - confirming system handles expected <a href="../terms/tag.html" class="term-link">tag</a> counts at required update rates without degradation. (5) Integration testing - verifying data flows to/from external systems (MES, WMS, etc.). (6) Application <a href="../terms/configuration.html" class="term-link">configuration</a> - defining geofences, alert rules, tag assignments, and user access. (7) User acceptance testing - having end users validate system meets operational requirements. Commissioning timeline: 1-2 weeks for small systems (under 50 tags, single building), 4-8 weeks for medium systems, 3-6 months for enterprise-scale deployments. Proper commissioning documentation includes coverage maps, accuracy test results, system configuration, and operational procedures.</p>

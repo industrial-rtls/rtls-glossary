@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Phase Difference Measurement
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Phase Difference Measurement
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Phase Difference Measurement</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A positioning technique measuring differences in RF signal phase at multiple antennas to determine angle of arrival. Used in some BLE AoA systems for accurate positioning. Phase measurements provide precise angle information but require careful antenna array design and calibration. Can achieve sub-meter accuracy.</p>
   <p class="def-long">Positioning technique measuring phase shift of received signals to calculate distance or angle. Radio waves are periodic (alternating positive and negative values), phase describes position within cycle (0-360 degrees or 0-2Ï€ radians). Phase difference advantages: (1) High <a href="../terms/precision.html" class="term-link">precision</a> - phase measurements achieve better <a href="../terms/resolution.html" class="term-link">resolution</a> than time measurements at same sampling rate (measuring phase to 1 degree gives 1/360 wavelength resolution, for 2.4 GHz BLE signal with 12.5 cm wavelength that's 0.35mm theoretical precision). (2) Lower sampling requirements - phase can be measured at lower rates than pulse timing. Challenges: (1) Ambiguity resolution - phase repeats every wavelength requiring additional information to resolve (multiple frequencies, coarse time measurement plus fine phase measurement, or continuous tracking from known start). (2) Multipath sensitivity - reflections create phase shifts confusing measurements. (3) <a href="../terms/synchronization.html" class="term-link">Synchronization</a> - PDoA requires phase-synchronized receivers (more complex than unsynchronized TDoA variants). Antenna array typically 4-8 elements in 2D pattern, measuring phase differences enabling 2-5 degree angle <a href="../terms/accuracy.html" class="term-link">accuracy</a>, translating to 0.5-2 meter position accuracy at 10-20 meter <a href="../terms/range.html" class="term-link">range</a>. (2) Carrier phase measurements - some UWB systems supplement pulse timing with carrier phase measurements achieving enhanced accuracy. (3) Phase-based <a href="../terms/wi-fi-positioning.html" class="term-link">Wi-Fi positioning</a> - research systems using Wi-Fi carrier phase for improved ranging accuracy vs. RSSI-only approaches. Phase measurement implementation requires: (1) Stable oscillators - phase measurements sensitive to frequency drift (need accurate reference clocks). (2) <a href="../terms/calibration.html" class="term-link">Calibration</a> - measuring and compensating for hardware-induced phase delays. (3) Signal processing - algorithms detecting and unwrapping phase, rejecting multipath, resolving ambiguities.</p>

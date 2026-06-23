@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Access Control
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Access Control
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Access Control</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">A security mechanism regulating who or what can enter specific facility areas. RTLS-integrated systems automatically grant or deny access based on credentials and real-time location. Enables features like anti-passback, time-based restrictions, and complete audit trails. Enhances both security and safety compliance.</p>
   <p class="def-long">System functionality that restricts personnel or equipment access to designated zones based on <a href="../terms/real-time.html" class="term-link">real-time</a> <a href="../terms/location-data.html" class="term-link">location data</a>. In industrial RTLS, access control triggers automated responses when unauthorized tags attempt to enter restricted areas - including visual/audible alarms, physical barrier activation (automated doors, gates), or administrative notifications. Systems typically define multiple access privilege levels with configurable time-based rules. Advanced implementations integrate with existing physical access control systems (PACS) and can enforce complex policies such as required PPE verification, escort requirements, or maximum occupancy limits. <a href="../terms/response-time.html" class="term-link">Response time</a> is critical - industrial systems typically detect unauthorized access within 0.5-2 seconds with virtual geofences.</p>

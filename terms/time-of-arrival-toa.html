@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Time of Arrival (ToA)
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Time of Arrival (ToA)
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Time of Arrival (ToA)</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization between tags and receivers. Combined with measurements to multiple receivers enables position calculation through trilateration. Used in some UWB systems.</p>
   <p class="def-long">Time of Arrival (ToA) is a positioning technique that determines distance between a <a href="../terms/tag.html" class="term-link">tag</a> and <a href="../terms/anchor.html" class="term-link">anchor</a> by measuring the absolute time required for a signal to propagate between them. The fundamental physics: electromagnetic signals propagate at the speed of light (approximately 30 cm per nanosecond), so measuring propagation time directly yields distance. A signal taking 100 nanoseconds traveled approximately 30 meters. ToA ranging requires: precise knowledge of transmission time, precise measurement of reception time, and calculation of time difference (time of arrival minus time of transmission equals propagation time). The critical challenge is <a href="../terms/synchronization.html" class="term-link">synchronization</a> - accurate ToA requires tag and anchor share a common time reference with nanosecond <a href="../terms/precision.html" class="term-link">precision</a>. If clocks are misaligned, calculated distance includes clock offset error. One nanosecond clock difference creates 30 cm distance error. In 2D, three distance measurements theoretically suffice, though four or more improve <a href="../terms/accuracy.html" class="term-link">accuracy</a>. In 3D, four distances minimum required. ToA advantages include: conceptual simplicity (direct distance measurement), geometric straightforwardness (circular intersections in 2D, spherical in 3D, simpler than hyperbolic geometry in TDoA), and independence between anchors (each anchor independently measures distance without requiring inter-anchor coordination). Accuracy achievable with ToA in industrial environments is comparable to TDoA (10-30 cm under good conditions) since both measure signal propagation time with equivalent precision. System designers consider: ToA's simpler geometry but synchronization complexity, TDoA's synchronization in infrastructure but more complex position calculation, TWR's independence from synchronization but lower <a href="../terms/tag-capacity.html" class="term-link">tag capacity</a>, and accuracy-capacity-cost tradeoffs. Many industrial RTLS systems favor TDoA for high tag capacity and simplified tags.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Cell of Origin (CoO)
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Cell of Origin (CoO)
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Cell of Origin (CoO)</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A basic positioning method determining location based on which anchor/access point is communicating with a tag. Provides zone-level or room-level accuracy (5-50 meters) by assuming the tag is within the cell's coverage area. Simplest and least expensive technique requiring no signal strength or timing calculations. Sufficient for applications needing general location awareness like department or zone identification.</p>
   <p class="def-long">Positioning technique that determines location based on which cellular <a href="../terms/base-station.html" class="term-link">base station</a> or network cell a device connects to. In industrial RTLS context, CoO provides only coarse zone-level positioning (50-300 meter <a href="../terms/accuracy.html" class="term-link">accuracy</a> outdoors, room or building level indoors). CoO is the least accurate positioning method but requires no additional infrastructure beyond cellular networks and has minimal power requirements. Some industrial applications use CoO for coarse outdoor positioning (<a href="../terms/yard-management.html" class="term-link">yard management</a>, outdoor equipment tracking) or as backup positioning when more accurate systems are unavailable. CoO accuracy depends on cell size - dense urban areas with small cells (50-200m) provide better accuracy than rural areas with large cells (several km). For indoor industrial use, CoO positioning through Wi-Fi access points (essentially Wi-Fi Cell of Origin) can provide <a href="../terms/room-level-accuracy.html" class="term-link">room-level accuracy</a> (5-15 meters) but is largely superseded by more sophisticated Wi-Fi <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> or ranging techniques.</p>

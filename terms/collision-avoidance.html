@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Collision Avoidance
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Collision Avoidance
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Collision Avoidance</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors positions and velocities, predicts collision scenarios, and triggers alerts or interventions. Includes visual/audible warnings, automatic speed reduction, emergency braking, and access control. Advanced systems incorporate 3D tracking and virtual safety bubbles around pedestrians.</p>
   <p class="def-long">Safety system feature that detects potential collisions between moving objects and triggers preventive actions. In industrial RTLS, collision avoidance systems monitor positions of vehicles (forklifts, AGVs), pedestrians, and stationary obstacles, predicting intersection of movement paths and issuing warnings or automatic interventions. System typically defines multiple warning zones: advance warning zone (3-5 meters, alerting operator), critical warning zone (1-2 meters, reducing vehicle speed automatically), and emergency zone (under 1 meter, immediate stop). Effective collision avoidance requires: high update rates (5-10 Hz minimum to track fast-moving vehicles), low <a href="../terms/latency.html" class="term-link">latency</a> (under 200ms from position detection to action), high <a href="../terms/accuracy.html" class="term-link">accuracy</a> (30-50 cm to avoid false alarms), and reliable communication paths for vehicle control commands.</p><p class="def-long">Implementation approaches include: visual/audible warnings to operators, automatic forklift speed reduction in congestion zones, AGV path replanning, and in extreme cases emergency braking. Collision avoidance systems in industrial environments have reduced forklift accidents by 60-80% in facilities with proper implementation and operator training. Technology selection for collision avoidance: UWB preferred for highest-risk zones requiring 10-30 cm accuracy and 10 Hz update rates (production floors, narrow aisles), BLE AoA viable for lower-speed environments requiring 0.5-2 m accuracy (warehouses, yard areas). Personnel wearing BLE badges provide proximity detection even in areas without full UWB infrastructure, enabling cost-effective protection across entire facility footprint.</p>

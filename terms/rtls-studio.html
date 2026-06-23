@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>RTLS Studio
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>RTLS Studio
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">RTLS Studio</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Sewio's all-in-one software package for installation, deployment, maintenance, and control of the RTLS platform. Includes RTLS Manager (configuration), Sensmap (visualization), RTLS Monitor (performance monitoring), Open API documentation, and integration with myRTLS Insights and Sage Analytics. Provides unified interface for managing entire RTLS system remotely via web browser. Supports deployment via Docker, native Ubuntu, or VirtualBox. Latest version available through myRTLS Care subscription.</p>
   <p class="def-long">RTLS Studio is Sewio Networks' advanced development and customization environment for building tailored RTLS applications, dashboards, and integrations specific to customer requirements. While Sewio provides standard applications (Monitor, Manager, Planner), many industrial customers need specialized interfaces, custom workflows, or unique business logic that generic tools cannot address. RTLS Studio provides the framework, tools, and APIs for developing these custom solutions without requiring deep knowledge of positioning algorithms or low-level hardware interfaces. The development environment includes: comprehensive REST APIs for accessing <a href="../terms/real-time.html" class="term-link">real-time</a> and historical position data, <a href="../terms/websocket.html" class="term-link">WebSocket</a> interfaces for streaming position updates, software development kits (SDKs) for common programming languages (JavaScript, Python, .NET, Java), digital floor plan management APIs, <a href="../terms/geofence.html" class="term-link">geofence</a> and zone management interfaces, and <a href="../terms/tag.html" class="term-link">tag</a>/asset <a href="../terms/configuration.html" class="term-link">configuration</a> APIs. Pre-built UI components and libraries accelerate custom development: map viewers with position overlays, asset status widgets, alert management components, reporting templates, and <a href="../terms/data-visualization.html" class="term-link">data visualization</a> libraries. The development environment supports rapid prototyping and iterative development, allowing proof-of-concept implementations to validate approaches before full-scale development. Customization examples include: modifying alert logic to implement company-specific escalation procedures, creating specialized reports matching existing business reporting formats, building integration bridges connecting RTLS with legacy systems lacking standard APIs, and developing industry-specific applications (automotive, aerospace, pharmaceutical) addressing unique requirements. RTLS Studio enables system integrators and industrial software developers to leverage Sewio's positioning infrastructure while creating differentiated solutions addressing specific customer needs. This extensibility makes Sewio's <a href="../terms/rtls-platform.html" class="term-link">RTLS Platform</a> suitable for diverse industrial applications beyond standard tracking scenarios.</p>

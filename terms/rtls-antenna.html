@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">RTLS Antenna</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Directional antennas focus signals in specific directions while omnidirectional antennas radiate equally in all directions. Proper antenna selection and placement critical for coverage and accuracy.</p>
   <p class="def-long">An RTLS antenna is the physical component that radiates or receives radio frequency signals, serving as the interface between the electronic circuitry of tags, anchors, or readers and the wireless propagation medium. Antenna design critically impacts RTLS system performance including <a href="../terms/range.html" class="term-link">range</a>, <a href="../terms/accuracy.html" class="term-link">accuracy</a>, and reliability. Industrial RTLS antennas must operate effectively in challenging environments with metal structures, machinery, and interference.</p><p class="def-long">Key antenna specifications include: operating frequency <a href="../terms/range.html" class="term-link">range</a> (must match the RTLS technology - UWB antennas typically cover 3.1-10.6 GHz, while BLE operates at 2.4 GHz), gain measured in dBi (higher gain increases range but narrows beam width), radiation pattern (omnidirectional for 360-degree coverage or directional for focused coverage), polarization (linear or circular - circular reduces orientation sensitivity), and physical durability for industrial environments. <a href="../terms/tag.html" class="term-link">Tag</a> antennas are typically compact omnidirectional designs to maintain performance regardless of tag orientation, though orientation sensitivity can still cause 3-10 dB signal strength variations affecting reliability. <a href="../terms/anchor.html" class="term-link">Anchor</a> or <a href="../terms/reader.html" class="term-link">reader</a> antennas may use directional designs to focus coverage in specific areas or omnidirectional designs for general coverage. Industrial installations must consider: antenna mounting positions (height, angle, orientation), mounting materials (avoiding metal backings that degrade performance), environmental protection (IP-rated enclosures for harsh conditions), and cable connections (minimizing cable length to reduce signal loss, with 1-2 dB loss per meter typical at UWB frequencies). Antenna selection and positioning significantly impact system performance, making it a critical consideration during RTLS site surveys and installation planning. Poor antenna placement can create dead zones, excessive multipath, or reduced range requiring additional infrastructure.</p>

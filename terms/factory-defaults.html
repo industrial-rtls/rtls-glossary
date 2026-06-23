@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Factory Defaults
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Factory Defaults
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Factory Defaults</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Original configuration settings programmed into RTLS devices at manufacture, restorable to return devices to known baseline state. Typically includes standard communication parameters, default network credentials, basic operational modes, and baseline calibration values. Used for establishing starting points, troubleshooting, reconfiguring for different applications, and recovering from configuration errors.</p>
   <p class="def-long">Original manufacturer <a href="../terms/configuration.html" class="term-link">configuration</a> settings for RTLS devices, serving as known-good baseline for troubleshooting or fresh configuration. Factory default parameters typically include: network settings (DHCP enabled, default IP addresses), operating parameters (standard <a href="../terms/transmission-power.html" class="term-link">transmission power</a>, default update rates, standard channels), and security settings (default passwords, open authentication). Restoring factory defaults used when: device misbehaving and root cause unclear (eliminates configuration errors), repurposing device for different installation (clearing previous site-specific settings), or preparing device for return/resale (removing proprietary configuration). Factory default restore procedures vary by device: hardware button sequences (hold button during power-on), software commands via configuration interface, or automated restore during firmware updates. Important considerations: (1) Factory defaults may leave devices insecure - default passwords must be changed immediately after restore. (2) Restoring defaults erases all configuration - backup current configuration before restore if return to current state may be needed. (3) Factory defaults may use outdated firmware - update firmware after restore. (4) Some devices store <a href="../terms/calibration.html" class="term-link">calibration</a> data (antenna delays, timing offsets) separate from user configuration - <a href="../terms/factory-restore.html" class="term-link">factory restore</a> should preserve calibration to avoid <a href="../terms/accuracy.html" class="term-link">accuracy</a> degradation. Documentation should clearly specify factory default values for all configurable parameters and restore procedures for troubleshooting reference.</p>

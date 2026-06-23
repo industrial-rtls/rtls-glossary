@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Business Intelligence
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Business Intelligence
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Business Intelligence</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">Strategic use of RTLS data combined with enterprise information to gain actionable insights for business decisions. Transforms raw tracking data into meaningful metrics for strategic planning and performance management. Applications include operational efficiency analysis, financial insights, capacity forecasting, and predictive analytics. Combines RTLS with ERP, MES, and WMS data.</p>
   <p class="def-long">Application of analytical tools and techniques to RTLS data for strategic decision-making. In industrial RTLS context, BI capabilities include: historical trend analysis of <a href="../terms/throughput.html" class="term-link">throughput</a> and cycle times, comparative analysis across shifts, lines, or facilities, correlation of location patterns with quality metrics or downtime events, <a href="../terms/capacity.html" class="term-link">capacity</a> utilization analysis for equipment and spaces, <a href="../terms/predictive-analytics.html" class="term-link">predictive analytics</a> for bottleneck formation or resource requirements, and what-if scenario modeling for <a href="../terms/facility-layout.html" class="term-link">facility layout</a> changes. BI tools process weeks to months of historical RTLS data (versus <a href="../terms/real-time.html" class="term-link">real-time</a> operational dashboards) to identify long-term patterns and optimization opportunities.</p><p class="def-long">Typical insights include: identifying underutilized assets for redeployment (reducing capital expenditure 15-25%), optimizing workforce allocation based on actual movement patterns (improving productivity 10-20%), redesigning facility layouts to minimize travel distances (reducing cycle times 5-15%), and predicting maintenance needs based on equipment utilization patterns. Effective BI requires clean data with proper context (linking <a href="../terms/location-data.html" class="term-link">location data</a> to process steps, work orders, materials, etc.).</p>

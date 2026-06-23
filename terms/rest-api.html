@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>REST API
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>REST API
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">REST API</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Representational State Transfer Application Programming Interface - a software architectural style for web-based APIs using HTTP requests. Common in modern RTLS platforms for integration with other systems. Provides standard methods (GET, POST, PUT, DELETE) for accessing and manipulating RTLS data.</p>
   <p class="def-long">REST API (Representational State Transfer Application Programming Interface) in industrial RTLS provides a standardized, HTTP-based interface for external applications to interact with the location system, enabling integration with enterprise software like MES, WMS, ERP, or custom applications. REST APIs use standard HTTP methods (GET, POST, PUT, DELETE) to enable operations such as: retrieving current asset positions and status, querying historical <a href="../terms/location-data.html" class="term-link">location data</a> and analytics, managing <a href="../terms/tag.html" class="term-link">tag</a> and asset configurations, defining geofences and zones, subscribing to events or alerts, and administering system settings. Industrial RTLS REST APIs typically implement JSON data format for requests and responses, providing human-readable and easily parseable data structures.</p><p class="def-long">Key API capabilities for industrial applications include: <a href="../terms/real-time.html" class="term-link">real-time</a> position queries (returning current location of specified assets), bulk data retrieval (positions for all assets of a type), filtered queries (assets in specific zones or matching conditions), webhook subscriptions (push notifications when events occur), and <a href="../terms/tag.html" class="term-link">tag</a> management endpoints (provisioning new tags, updating configurations). REST APIs enable industrial RTLS to function as a <a href="../terms/location-intelligence.html" class="term-link">location intelligence</a> layer across the <a href="../terms/smart-factory.html" class="term-link">smart factory</a>, feeding position data to multiple consuming applications simultaneously. Authentication and authorization mechanisms (API keys, OAuth tokens, role-based <a href="../terms/access-control.html" class="term-link">access control</a>) ensure secure access to sensitive <a href="../terms/location-data.html" class="term-link">location data</a>. API performance specifications critical for industrial use include: <a href="../terms/response-time.html" class="term-link">response time</a> (&amp;lt;100ms for single position queries, &amp;lt;1 second for filtered queries), <a href="../terms/throughput.html" class="term-link">throughput</a> (requests handled per second), and rate limiting to prevent system overload. Sewio's <a href="../terms/rtls-platform.html" class="term-link">RTLS Platform</a> includes REST API capabilities enabling seamless integration with industrial software ecosystems.</p>

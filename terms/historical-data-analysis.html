@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Historical Data Analysis
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Historical Data Analysis
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Historical Data Analysis</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">Systematic examination of past RTLS tracking data to identify trends, patterns, and improvement opportunities. Serves purposes including performance trending, root cause analysis, process optimization, benchmarking, and compliance documentation. Common analyses include cycle time analysis, utilization analysis, flow analysis, and correlation analysis. Requires long-term data retention and analytical tools.</p>
   <p class="def-long">Process of examining past location and operational data to identify trends, patterns, and optimization opportunities. Industrial RTLS historical analysis examines datasets spanning weeks to months (vs. <a href="../terms/real-time.html" class="term-link">real-time</a> analysis of current data).</p><p class="def-long">Typical analysis questions: (1) How have cycle times evolved over past 3 months? (2) What percentage of time do assets spend in each zone? (3) How do movement patterns differ between shifts or days of week? (4) What routes do materials typically follow through facility? (5) Where are primary bottlenecks and how have they changed? Analysis techniques include: statistical analysis (computing means, trends, distributions over time), comparative analysis (comparing time periods, shifts, product types), correlation analysis (relating location patterns to operational metrics like <a href="../terms/throughput.html" class="term-link">throughput</a> or quality), and pattern mining (discovering common sequences or workflows). Historical analysis data volumes: facility with 1000 tags at 1 Hz generates 86 million position records daily, requiring data warehousing and analytics infrastructure. Analysis tools <a href="../terms/range.html" class="term-link">range</a> from: SQL queries against historical databases, <a href="../terms/business-intelligence.html" class="term-link">business intelligence</a> platforms (Tableau, Power BI), custom analytics scripts (Python, R), to specialized RTLS analytics modules.</p><p class="def-long">Typical analysis outputs: trend charts showing KPI evolution, comparative reports showing shift or period differences, heatmaps showing spatial patterns, and recommendations for operational improvements. Historical analysis typically performed weekly or monthly by operations analysts, complementing daily operational dashboards used by production supervisors. Organizations performing systematic historical analysis typically identify 5-10 significant improvement opportunities quarterly, with top opportunities delivering 10-30% improvements in targeted metrics.</p>

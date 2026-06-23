@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Scalability</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The ability of RTLS systems to grow and handle increasing loads without performance degradation. Includes scaling number of tracked tags, coverage area, data volume, and concurrent users. Scalable architectures use distributed processing, cloud resources, and efficient data management. Critical consideration for large or growing deployments.</p>
   <p class="def-long">Scalability in industrial RTLS refers to the system's ability to grow and adapt to changing requirements without fundamental redesign or performance degradation. As industrial facilities expand operations, add tracking applications, or extend deployments to additional areas, RTLS infrastructure must accommodate growth efficiently. Scalability manifests across multiple dimensions: <a href="../terms/tag-capacity.html" class="term-link">tag capacity</a> (supporting increasing numbers of simultaneously tracked assets from hundreds to thousands), geographical coverage (extending from pilot areas to entire facilities or multiple sites), positioning update rates (maintaining performance as demand increases), data storage and processing (handling growing volumes of historical <a href="../terms/location-data.html" class="term-link">location data</a>), and user capacity (supporting more concurrent application users and API consumers). Industrial RTLS scalability requirements vary significantly: a pilot tracking 50 assets in a single department differs fundamentally from enterprise <a href="../terms/deployment.html" class="term-link">deployment</a> tracking 5,000 assets across multiple facilities. System architecture determines scalability potential - distributed architectures with multiple positioning servers, load balancing, and horizontal scaling capabilities outperform monolithic designs with inherent capacity limits. Industrial deployments often implement phased scaling: starting with pilot deployments (50-200 tags) to validate technology and ROI, expanding to facility-wide coverage (500-2,000 tags), and ultimately achieving enterprise deployment (5,000+ tags across multiple sites). Testing scalability before full deployment is critical - proof-of-concept projects should include stress testing at expected maximum capacity to verify performance. Vendor specifications should clearly state <a href="../terms/system-capacity.html" class="term-link">system capacity</a> limits: maximum tags per <a href="../terms/anchor.html" class="term-link">anchor</a>, maximum anchors per positioning server, maximum concurrent positions calculated per second, and maximum historical data retention with acceptable query performance.</p>

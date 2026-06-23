@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>Site Survey
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>Site Survey
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">Site Survey</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">The systematic physical examination of a facility before RTLS deployment to assess RF propagation, identify interference sources, and validate coverage plans. Measures signal strength, documents obstacles, and tests anchor placements. Essential for successful deployment in complex industrial environments.</p>
   <p class="def-long">A site survey is the systematic process of assessing facility characteristics, measuring RF propagation, and gathering information necessary to design effective RTLS deployments. Site surveys are critical planning activities conducted before infrastructure installation, ensuring systems meet performance requirements while optimizing costs. The industrial RTLS site survey process involves multiple phases: facility walkthrough documenting physical layout, identifying obstacles and potential problem areas, noting ceiling heights and mounting locations, photographing the environment, and interviewing stakeholders about requirements and constraints. Coverage analysis determines <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> requirements: identifying required tracking areas, specifying <a href="../terms/accuracy.html" class="term-link">accuracy</a> requirements for different zones (sub-meter for critical areas, room-level for general tracking), calculating minimum anchor quantities and positions for adequate coverage, and identifying dead zones or challenging areas requiring special attention. The deliverable from a comprehensive site survey includes: detailed facility floor plans with measurements, proposed anchor placement design with quantities and positions, coverage maps showing expected positioning availability and accuracy, network infrastructure requirements (switches, cabling, mounting hardware), bill of materials with equipment quantities and costs, installation plan with timelines and resource requirements, and risk assessment identifying potential challenges or limitations. Testing methodology varies by RTLS technology: UWB requires time-of-arrival measurements and anchor <a href="../terms/synchronization.html" class="term-link">synchronization</a> testing, Wi-Fi systems need RSSI mapping throughout the facility, and BLE requires signal strength measurements from multiple heights and locations. Facilities lacking accurate floor plans may require surveying and documentation before RTLS design can proceed. Post-installation verification surveys compare actual performance to predictions, validate accuracy requirements are met, and identify any adjustments needed to optimize performance.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">Transmitter</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">A device or component that sends radio signals. In RTLS, transmitters may be in active tags (broadcasting position beacons) or in infrastructure (interrogating passive tags or providing reference signals). Transmitter power affects range and battery life.</p>
   <p class="def-long">A transmitter in RTLS context is the component within a <a href="../terms/tag.html" class="term-link">tag</a> that generates and radiates radio frequency signals enabling location tracking. Industrial RTLS transmitter characteristics vary by technology: UWB transmitters generate ultra-short pulses (nanosecond duration) at frequencies spanning 3.1-10.6 GHz, requiring specialized pulse-shaping circuitry and wideband antennas. BLE transmitters produce narrowband signals at 2.4 GHz following Bluetooth specifications with frequency hopping across 40 channels. Wi-Fi transmitters operate at 2.4 GHz or 5 GHz using OFDM modulation. <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> transmitters vary widely from low frequency (125-134 kHz) to ultra-high frequency (860-960 MHz) depending on application requirements.</p><p class="def-long">Key transmitter specifications include: operating frequency (must match <a href="../terms/receiver.html" class="term-link">receiver</a> capabilities and regulatory allocations), <a href="../terms/transmission-power.html" class="term-link">transmission power</a> (typically -10 to +10 dBm for UWB, configurable for <a href="../terms/range.html" class="term-link">range</a> vs. <a href="../terms/battery-life.html" class="term-link">battery life</a> tradeoffs), modulation format (how information is encoded on the carrier), duty cycle (percentage of time transmitting vs. idle, critical for battery life), and spurious emissions (unwanted signals at other frequencies, must meet regulatory limits). Power amplifiers in transmitters convert DC power to RF power with varying efficiency: Class E amplifiers common in UWB offer high efficiency (50-70%) critical for battery operation, while other amplifier classes trade efficiency for linearity or other characteristics. Transmitter duty cycle dramatically affects battery life: a <a href="../terms/tag.html" class="term-link">tag</a> transmitting 1 millisecond pulses at 1 Hz spends 0.1% time transmitting (duty cycle = 0.001), while 10 Hz updates increase duty cycle to 1%. Although seemingly small, these differences significantly impact battery life since transmitters often consume 10-100× more power during transmission than during idle periods.</p>

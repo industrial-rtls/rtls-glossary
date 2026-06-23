@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">Just-in-Time (JIT) Manufacturing</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibility of material locations and movements. Ensures materials are available precisely when required while avoiding excess inventory. Supports lean manufacturing principles by reducing waste and improving flow.</p>
   <p class="def-long">Production strategy minimizing inventory by receiving materials only as needed for immediate use, enabled and enhanced by RTLS visibility. JIT principles include: minimal work-in-progress inventory (only current job quantities), frequent small deliveries (vs. large batches), demand-pull production (manufacturing triggered by actual orders), and tight supplier coordination (reliable delivery timing). RTLS enables JIT manufacturing through: (1) Material tracking - knowing exact location and status of every component and assembly, enabling precise scheduling. (2) Arrival notification - automatically detecting material arrivals and alerting production of availability. (3) Process timing - measuring actual cycle times enabling accurate production scheduling. (4) Kanban automation - physical material movement triggering automatic reorder signals. (5) Exception management - immediately identifying material shortages or delays affecting production. Integration with MES and ERP systems enables: automated work order release (when materials confirmed present), supplier notification (triggering next delivery based on consumption), and schedule adjustments (revising production plans based on actual material availability). JIT benefits amplified by RTLS: inventory reduction (20-40% additional reduction beyond traditional JIT through better visibility), production flexibility (faster response to schedule changes), quality improvement (reducing work-in-progress aging), and floor space savings (less staging area required). JIT challenges addressed by RTLS: vulnerability to disruptions (RTLS providing early warning of material shortages), complex coordination (automated systems replacing manual communication), and schedule adherence (actual vs. planned performance visibility). Automotive and electronics manufacturing most aggressive JIT adopters, with RTLS increasingly standard in JIT implementations.</p>

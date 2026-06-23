@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">CSS (Chirp Spread Spectrum)</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">A wireless modulation technique where signals are transmitted using frequency sweeps (chirps) across wide bandwidth. Most notably used in LoRa technology for industrial IoT and some RTLS deployments. Offers exceptional range (kilometers outdoors, hundreds of meters indoors), low power consumption, and good obstacle penetration. Lower positioning accuracy (10-50 meters) but excellent for applications prioritizing range and battery life.</p>
   <p class="def-long">Wireless modulation technique used in some positioning systems, notably in proprietary implementations. CSS transmits signals whose frequency increases or decreases linearly over time (chirps), providing robustness against interference and multipath effects. <a href="../terms/lorawan.html" class="term-link">LoRaWAN</a> uses CSS for long-<a href="../terms/range.html" class="term-link">range</a> IoT communications, and some RTLS vendors have developed CSS-based systems. CSS advantages for RTLS include: excellent resistance to narrow-band interference, good performance in challenging RF environments with significant multipath, relatively low power consumption enabling multi-year <a href="../terms/battery-life.html" class="term-link">battery life</a>, and long range (100-500 meters depending on <a href="../terms/configuration.html" class="term-link">configuration</a>). However, CSS RTLS implementations are less mature and standardized compared to UWB or BLE, typically offer lower <a href="../terms/accuracy.html" class="term-link">accuracy</a> (0.5-3 meters) and update rates (0.1-1 Hz) than UWB, and have limited ecosystem of compatible devices from multiple vendors. CSS is viable option for applications prioritizing range and battery life over accuracy and <a href="../terms/update-rate.html" class="term-link">update rate</a>, such as outdoor yard tracking or large warehouse zone tracking where <a href="../terms/meter-level-accuracy.html" class="term-link">meter-level accuracy</a> suffices.</p>

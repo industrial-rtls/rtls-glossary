@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Mesh Networking
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Mesh Networking
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Mesh Networking</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A network topology where devices connect to multiple neighbors and relay data for each other, creating self-healing networks. Enables extended coverage without additional infrastructure and automatic route optimization. Common in Zigbee and some BLE implementations.</p>
   <p class="def-long">See <a href="../terms/mesh-network.html" class="term-link">Mesh Network</a> entry for complete definition. Mesh Networking and Mesh Network are synonymous terms referring to peer-to-peer <a href="../terms/network-topology.html" class="term-link">network topology</a> where nodes forward data for each other, creating redundant paths and extended <a href="../terms/range.html" class="term-link">range</a> without centralized infrastructure dependency. In industrial RTLS context, mesh networking occasionally used for infrastructure communications backhaul or coverage extension, though <a href="../terms/star-topology.html" class="term-link">star topology</a> with fixed anchors remains dominant architecture due to better performance, simpler management, and more accurate positioning.</p><p class="def-long">Key characteristics relevant to RTLS: self-healing capability (automatic rerouting if node fails), extended <a href="../terms/range.html" class="term-link">range</a> through multi-hop routing (messages passing through intermediate nodes), distributed intelligence (no single point of failure), but also increased complexity (topology discovery and <a href="../terms/route-optimization.html" class="term-link">route optimization</a>), variable <a href="../terms/latency.html" class="term-link">latency</a> (multi-hop delays), and <a href="../terms/capacity.html" class="term-link">capacity</a> limitations (each hop consuming bandwidth). Mesh networking more common in industrial sensor networks and building automation than RTLS positioning systems.</p>

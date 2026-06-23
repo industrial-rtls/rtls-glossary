@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Receiver Sensitivity</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The minimum signal strength a receiver can detect and process, measured in dBm. Higher sensitivity (more negative dBm) enables longer range and better obstacle penetration. Combined with transmission power determines maximum system range.</p>
   <p class="def-long"><a href="../terms/receiver.html" class="term-link">Receiver</a> sensitivity defines the minimum signal power level at which an RTLS receiver can reliably detect and decode transmissions from tags. Expressed in dBm (decibels relative to one milliwatt), receiver sensitivity is a critical specification that determines the maximum operating <a href="../terms/range.html" class="term-link">range</a> and reliability of the system in challenging environments. A more negative dBm value indicates higher sensitivity: a receiver with -95 dBm sensitivity is more sensitive than one with -85 dBm, meaning it can detect weaker signals from greater distances or through obstacles. Industrial UWB RTLS receivers typically offer sensitivities ranging from -85 to -95 dBm, while BLE receivers may achieve -95 to -100 dBm. Receiver sensitivity directly impacts link budget calculations, which determine maximum operational range by accounting for <a href="../terms/transmission-power.html" class="term-link">transmission power</a>, antenna gains, cable losses, and expected path loss. In industrial environments with metal structures, machinery, and moving obstacles, adequate receiver sensitivity ensures reliable operation even when signals are attenuated. However, higher sensitivity doesn't always improve performance - overly sensitive receivers may pick up more interference, multipath signals, or unwanted reflections, potentially degrading <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>. Environmental factors affecting received signal strength include distance, obstacles, interference, and <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a>. System designers must specify receiver sensitivity requirements based on facility size, expected obstacles, <a href="../terms/tag.html" class="term-link">tag</a> transmission power, required <a href="../terms/coverage-area.html" class="term-link">coverage area</a>, and desired reliability level (typically 95-99% detection probability). Testing receiver sensitivity in actual <a href="../terms/deployment.html" class="term-link">deployment</a> conditions during site surveys is essential, as theoretical sensitivity specifications may not reflect real-world performance in electrically noisy industrial environments.</p>

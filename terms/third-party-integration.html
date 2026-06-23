@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Third-Party Integration
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Third-Party Integration
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Third-Party Integration</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Connecting RTLS with software or systems from other vendors. Requires well-documented APIs, standard protocols, and often custom integration work. Enables best-of-breed solutions combining RTLS with specialized applications. Important for avoiding vendor lock-in.</p>
   <p class="def-long">Third-party integration in industrial RTLS refers to connecting the location system with external software applications, platforms, or systems developed by vendors other than the RTLS provider. This integration capability is essential for industrial deployments where RTLS must work within existing technology ecosystems rather than operating in isolation. The diversity of third-party systems requiring RTLS integration includes: Enterprise Resource Planning (ERP) systems (SAP, Oracle, Microsoft Dynamics) for asset and <a href="../terms/inventory-management.html" class="term-link">inventory management</a>, <a href="../terms/warehouse-management.html" class="term-link">Warehouse Management</a> Systems (WMS) from providers like Manhattan Associates, Blue Yonder, HighJump, Computerized Maintenance Management Systems (CMMS) such as IBM Maximo, SAP PM, Infor EAM, Manufacturing Execution Systems (MES) including Siemens Opcenter, Rockwell FactoryTalk, <a href="../terms/business-intelligence.html" class="term-link">Business Intelligence</a> platforms (Tableau, Power BI, Qlik) for analytics, Building Management Systems for facility automation, and Safety systems and incident management platforms. Integration development lifecycle includes: requirements analysis (determining what data and events need exchange), API documentation review and technical design, development in sandbox/test environments, security implementation (authentication, encryption, <a href="../terms/access-control.html" class="term-link">access control</a>), testing with realistic data volumes and scenarios, production <a href="../terms/deployment.html" class="term-link">deployment</a> and monitoring, and ongoing maintenance as systems evolve. Integration challenges specific to industrial environments include: legacy system limitations (older systems lacking modern APIs requiring creative integration approaches), network security constraints (firewalls, segmented networks complicating communication), data mapping complexity (translating between RTLS data models and third-party schemas), performance requirements (high-frequency position updates must not overwhelm external systems), and error handling (gracefully managing temporary connectivity failures or system outages). System integrators often specialize in specific integrations bringing experience and accelerators.</p>

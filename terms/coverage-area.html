@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Coverage Area</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement density, transmission power, facility layout, and required accuracy. Industrial facilities prioritize coverage in critical operational areas while accepting lower accuracy in peripheral spaces. Coverage planning involves site surveys, 3D modeling, and identifying shadow zones.</p>
   <p class="def-long">Geographic extent where RTLS system provides reliable positioning. Coverage area depends on technology, infrastructure density, and environment. UWB anchors typically cover 30-50 meter radius in industrial environments (less with metal obstacles, more in open areas), BLE gateways 20-40 meters, Wi-Fi access points 30-100 meters, and <a href="../terms/active-rfid.html" class="term-link">active RFID</a> readers 50-100 meters. Total facility coverage requires overlapping coverage from multiple devices. Coverage quality varies within coverage area - strongest near infrastructure devices, degrading toward edges. <a href="../terms/coverage-planning.html" class="term-link">Coverage planning</a> tools use facility CAD drawings plus RF propagation models to predict coverage and plan infrastructure <a href="../terms/deployment.html" class="term-link">deployment</a>.</p><p class="def-long">Key considerations include: required coverage height (tracking ceiling-mounted assets requires different planning than floor-level tracking), vertical coverage (multi-story facilities), outdoor areas (yards, loading docks), and redundancy (areas covered by multiple devices for reliability). Coverage verification during <a href="../terms/commissioning.html" class="term-link">commissioning</a> identifies gaps requiring additional infrastructure. Many industrial facilities accept some coverage gaps in less critical areas (bathrooms, break rooms, exterior perimeter) to control costs, focusing infrastructure investment on production and high-traffic zones. Coverage planning for multi-technology deployments must account for technology boundaries: BLE typically covers indoor areas with lower accuracy requirements, UWB covers precision zones, and GNSS covers outdoor areas. Transition zones between technologies (building entrances, loading docks) require careful design to ensure continuous tracking as assets move between coverage areas.</p>

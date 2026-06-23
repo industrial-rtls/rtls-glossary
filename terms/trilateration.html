@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Trilateration
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Trilateration
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Trilateration</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A positioning technique determining location by measuring distances to three or more anchors with known positions. Position calculated as intersection of distance circles (2D) or spheres (3D). Most common RTLS method using time-of-flight or signal strength measurements.</p>
   <p class="def-long">Trilateration is a fundamental positioning technique that determines location by measuring distances from the target to multiple reference points with known positions, calculating the intersection point of distance circles (in 2D) or spheres (in 3D). In 2D positioning, each distance measurement defines a circle centered on the <a href="../terms/anchor.html" class="term-link">anchor</a> with radius equal to measured distance - three distance measurements (three circles) theoretically intersect at a single point identifying the <a href="../terms/tag.html" class="term-link">tag</a> location. In 3D, each distance defines a sphere, requiring four distance measurements (four spheres) for unique position solution. The mathematical solution involves nonlinear equations (circles/spheres intersection) solved through: closed-form analytical solutions (direct calculation for simple cases), iterative numerical methods (Newton-Raphson, gradient descent) converging on best-fit position, or least-squares optimization minimizing error across all distance measurements when more than minimum anchors available. <a href="../terms/triangulation.html" class="term-link">Triangulation</a> uses angle measurements rather than distances, requiring antenna arrays but potentially fewer reference points. Industrial RTLS systems using trilateration achieve: 10-30 cm <a href="../terms/accuracy.html" class="term-link">accuracy</a> with UWB ranging in good conditions with proper anchor geometry and density, 1-3 meter accuracy with Wi-Fi or BLE ranging due to less precise ranging techniques, and performance degrading in challenging RF environments without mitigation algorithms.</p><p class="def-long">Implementation requirements include: <a href="../terms/anchor.html" class="term-link">anchor</a> installation with careful positioning achieving good geometry (typically 3-6 meters height, positioned to provide coverage and favorable angles to tracked area), <a href="../terms/site-survey.html" class="term-link">site survey</a> verifying adequate coverage and ranging performance before full <a href="../terms/deployment.html" class="term-link">deployment</a>, <a href="../terms/calibration.html" class="term-link">calibration</a> determining precise anchor positions either through surveying or self-calibration, and <a href="../terms/configuration.html" class="term-link">configuration</a> optimizing ranging parameters and positioning algorithms for the specific environment.</p>

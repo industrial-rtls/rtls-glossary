@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Positioning Engine
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Positioning Engine
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Positioning Engine</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Software that calculates tag positions from raw signal measurements. Implements positioning algorithms, applies filtering, handles outliers, and may include prediction. Can run centrally or distributed across edge devices. Performance impacts system capacity and latency.</p>
   <p class="def-long">Software component that receives measurements from RTLS infrastructure (signal strengths, arrival times, angles) and executes positioning algorithms calculating <a href="../terms/tag.html" class="term-link">tag</a> coordinates. Positioning engine processing: (1) Data collection - gathering measurements from multiple anchors for each tag update (typically 3-10 <a href="../terms/anchor.html" class="term-link">anchor</a> measurements per position calculation). (2) Data validation - checking measurement quality, rejecting outliers, identifying NLoS conditions. (3) Algorithm execution - applying <a href="../terms/trilateration.html" class="term-link">trilateration</a>, angulation, <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a>, or hybrid algorithms. (4) Filtering - smoothing positions using Kalman filters, reducing jitter and noise. (5) Quality assessment - calculating confidence metrics (position <a href="../terms/accuracy.html" class="term-link">accuracy</a> estimates, GDOP, number of contributing anchors). (6) Zone mapping - determining which defined geofences contain calculated position.</p><p class="def-long">Positioning engine performance characteristics: (1) <a href="../terms/throughput.html" class="term-link">Throughput</a> - position calculations per second (typical: 100-5000 positions/second). (2) <a href="../terms/latency.html" class="term-link">Latency</a> - processing time from receiving measurements to outputting position (typical: 10-100ms for <a href="../terms/real-time.html" class="term-link">real-time</a> engines). (3) <a href="../terms/accuracy.html" class="term-link">Accuracy</a> - position error relative to ground truth (engine sophistication can improve accuracy 20-40% over baseline algorithms). (4) <a href="../terms/update-rate.html" class="term-link">Update rate</a> - how frequently engine calculates new position for each <a href="../terms/tag.html" class="term-link">tag</a> (1-10 Hz typical). (5) <a href="../terms/capacity.html" class="term-link">Capacity</a> - maximum tags engine can handle simultaneously (typical: 500-5000 tags per engine). Positioning engine implementation platforms: (1) Server-based - industrial PCs or rack servers running positioning software (8-32 GB RAM, multi-core CPUs typical for 1000-5000 tag systems). (2) Embedded - engines running on <a href="../terms/anchor.html" class="term-link">anchor</a> processors or <a href="../terms/gateway.html" class="term-link">gateway</a> devices (limited to simpler algorithms, 100-500 tags typical). (3) FPGA/ASIC - hardware-accelerated positioning for maximum performance (rare due to cost and inflexibility). ML-enhanced engines can achieve 20-40% accuracy improvement in complex industrial environments.</p>

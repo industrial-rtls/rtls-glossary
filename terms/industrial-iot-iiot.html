@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industry Terms</div>
     <h1 class="term-title">Industrial IoT (IIoT)</h1>
+  <div class="term-cat-tag">Industry Terms</div>
   </header>
   <p class="def-short">The use of Internet of Things technologies in industrial settings to connect equipment, sensors, and systems for data collection and analysis. RTLS is a key component of IIoT ecosystems, providing location context for other sensor data. Integration enables comprehensive operational visibility combining location with temperature, vibration, production status, and other parameters.</p>
   <p class="def-long">Application of Internet of Things technologies in industrial contexts, connecting machines, sensors, and systems for data collection, analysis, and automation. IIoT encompasses: sensors monitoring equipment conditions (temperature, vibration, pressure), actuators controlling processes, communication networks transmitting data, analytics platforms processing information, and control systems executing automated responses. RTLS is key IIoT component providing location context for industrial operations. IIoT architecture layers include: (1) Edge layer - sensors, RTLS tags, equipment controllers collecting data. (2) Platform layer - data aggregation, storage, and processing. (3) Analytics layer - <a href="../terms/machine-learning.html" class="term-link">machine learning</a>, optimization algorithms generating insights. (4) Application layer - user interfaces, business logic, enterprise <a href="../terms/system-integration.html" class="term-link">system integration</a>. Industrial IIoT use cases enabled by RTLS include: <a href="../terms/predictive-maintenance.html" class="term-link">predictive maintenance</a> (combining equipment location and usage with <a href="../terms/condition-monitoring.html" class="term-link">condition monitoring</a>), supply chain optimization (tracking materials through production with process data), quality management (correlating product location with environmental conditions and process parameters), energy management (monitoring equipment location and utilization for energy optimization), and safety enhancement (combining personnel location with environmental hazards). IIoT <a href="../terms/deployment.html" class="term-link">deployment</a> challenges include: cybersecurity (protecting industrial networks from attacks), standards fragmentation (lack of universal interoperability), legacy integration (connecting old equipment lacking connectivity), and skills gap (shortage of personnel with both IT and operational technology expertise). IIoT market growing 15-20% annually, driven by digital transformation initiatives, with manufacturing being largest sector. RTLS-enabled IIoT applications typically deliver ROI through: 10-20% productivity improvements, 15-30% maintenance cost reduction, 20-40% quality improvement, and 30-60% safety incident reduction.</p>

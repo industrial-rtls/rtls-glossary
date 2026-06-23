@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>RTLS Player
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>RTLS Player
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">RTLS Player</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">A cloud-based evaluation and optimization tool enabling replay of historical RTLS data to assess system performance and fine-tune settings remotely. Allows users to upload system captures, play back tracking data, test configuration changes, and export optimized settings for implementation in live systems. Helps validate anchor restrictions and positioning configurations before deploying to production environments. Available on Sewio Portal.</p>
   <p class="def-long">RTLS Player is Sewio Networks' specialized software tool for replay and analysis of historical tracking data, enabling users to visualize past events, analyze incidents, optimize processes, and validate system performance. This post-event analysis capability is valuable for: incident investigation (replaying movements leading to safety events or collisions), <a href="../terms/process-optimization.html" class="term-link">process optimization</a> (analyzing workflow patterns to identify inefficiencies), training and demonstration (showing actual operational examples), and system validation (verifying RTLS <a href="../terms/accuracy.html" class="term-link">accuracy</a> and performance against ground truth). The application loads historical positioning data from specified time periods and plays back asset and personnel movements on digital floor plans, essentially creating a time-machine view of facility operations.</p><p class="def-long">Key features include: adjustable playback speed (from slow-motion for detailed analysis to time-lapse for pattern identification), timeline scrubbing to jump to specific moments, synchronized multi-<a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> to observe interactions and proximities, filter options to focus on specific assets or zones, and annotation capabilities to mark interesting events or observations. Analysis tools within RTLS Player help extract insights from historical data: measuring distances traveled, calculating time spent in zones or processes, identifying bottlenecks from repeated congestion patterns, analyzing near-miss events for safety improvement, and comparing actual vs. expected process flows. This evidence-based investigation approach replaces reliance on memory or witness accounts with objective data. For RTLS system validation, the replay function allows comparing recorded positions against known ground truth (actual measured positions at specific times), calculating <a href="../terms/accuracy.html" class="term-link">accuracy</a> metrics, and identifying systematic errors or problematic areas requiring <a href="../terms/calibration.html" class="term-link">calibration</a> or infrastructure adjustment.</p>

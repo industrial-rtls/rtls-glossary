@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Room-Level Accuracy</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">Positioning accuracy where RTLS determines which room or enclosed space a tag occupies, typically 2-5 meters resolution. Intermediate level between zone-level and meter-level accuracy. Commonly achieved with BLE beacons or Wi-Fi fingerprinting.</p>
   <p class="def-long">Room-level <a href="../terms/accuracy.html" class="term-link">accuracy</a> in RTLS refers to positioning <a href="../terms/precision.html" class="term-link">precision</a> sufficient to determine which room, zone, or general area within a facility an asset or person occupies, typically corresponding to 3-10 meter accuracy. Room-level accuracy systems typically use less expensive technologies like Wi-Fi <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a>, Bluetooth Low Energy (BLE) beacons, or low-density <a href="../terms/active-rfid.html" class="term-link">active RFID</a>, with infrastructure costs significantly lower than high-precision RTLS solutions. These systems leverage existing Wi-Fi infrastructure or deploy <a href="../terms/beacon.html" class="term-link">beacon</a> networks at 10-20 meter spacing rather than dense <a href="../terms/anchor.html" class="term-link">anchor</a> networks required for sub-meter accuracy. The primary advantage is cost: <a href="../terms/tag.html" class="term-link">tag</a> prices of $10-$30 versus $50-$150 for high-precision tags, and minimal infrastructure investment when using existing Wi-Fi networks. However, limitations include inability to precisely locate assets within large rooms or zones, difficulty distinguishing between adjacent zones due to positioning uncertainty, and unreliable performance near zone boundaries where position ambiguity is highest. Industrial applications suited to room-level accuracy include: asset <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (confirming presence in facility without exact location), compliance checking (verifying assets are in authorized areas), search time reduction (narrowing search to specific rooms or zones), and basic workflow tracking (confirming assets moved through expected zones).</p><p class="def-long">Applications requiring more <a href="../terms/precision.html" class="term-link">precision</a> - such as <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>, tight process control, or detailed workflow analytics - need sub-meter <a href="../terms/accuracy.html" class="term-link">accuracy</a> systems. Hybrid approaches sometimes combine room-level tracking for most assets with high-precision tracking for critical items, optimizing cost while maintaining necessary accuracy for high-value use cases.</p>

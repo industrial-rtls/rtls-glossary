@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp; Zones<span>›</span>Virtual Boundary
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing & Zones<span>›</span>Virtual Boundary
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Geofencing & Zones</div>
     <h1 class="term-title">Virtual Boundary</h1>
+  <div class="term-cat-tag">Geofencing & Zones</div>
   </header>
   <p class="def-short">See Geofence - a software-defined boundary triggering actions when crossed. Virtual boundaries enable flexible zone management without physical barriers. Can be easily created, modified, or removed as operational needs change.</p>
   <p class="def-long">A virtual boundary, also called a <a href="../terms/geofence.html" class="term-link">geofence</a> or virtual fence, is a digitally defined perimeter or area in industrial RTLS that triggers alerts or actions when tracked assets or personnel enter, exit, or remain within the defined space. Virtual boundaries enable software-based spatial control without physical infrastructure like walls, gates, or sensors, providing flexible, reconfigurable management of space and access. Creating virtual boundaries in RTLS software involves: defining boundary geometry by drawing polygons on digital floor plans (rectangles, irregular shapes, or complex multi-part boundaries), specifying boundary type (entry detection, exit detection, <a href="../terms/dwell-time.html" class="term-link">dwell time</a>, or occupancy-based), configuring trigger rules (which tags or <a href="../terms/tag.html" class="term-link">tag</a> types trigger boundary events), setting alert or action parameters (notifications, integrations, automated responses), and enabling/disabling boundaries based on schedules or conditions (boundaries active only during specific shifts or operational modes). Zone boundaries define functional areas (production zones, storage areas, quality control) enabling zone-based analytics and workflow enforcement. <a href="../terms/positioning-accuracy.html" class="term-link">Positioning accuracy</a> impacts virtual boundary reliability: 30 cm positioning accuracy enables confident boundary detection with 1-2 meter boundaries, 3 meter accuracy (room-level) only reliable for large boundaries (10+ meters) to avoid false triggers, and boundary buffers should be 2-3× positioning accuracy to maintain high detection reliability with low false alarm rates. Analytics from virtual boundary data include: boundary crossing frequency (traffic volume through areas), dwell time distributions (how long assets typically remain in zones), occupancy patterns (number of assets in zones over time), violation rates (unauthorized boundary crossings per time period), and comparative analysis (boundary metrics across zones, shifts, or facilities).</p>

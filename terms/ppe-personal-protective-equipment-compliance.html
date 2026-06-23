@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>PPE (Personal Protective Equipment) Compliance
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>PPE (Personal Protective Equipment) Compliance
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">PPE (Personal Protective Equipment) Compliance</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">The use of RTLS to verify workers wear required safety equipment in designated areas. Tags on PPE (hard hats, vests, safety glasses) detected in conjunction with personnel badges confirm compliance. Automated alerts when workers enter hazardous areas without required PPE. Supports safety culture and regulatory compliance.</p>
   <p class="def-long">Monitoring and enforcement of required safety equipment usage in industrial facilities using RTLS and RFID technologies. RTLS PPE compliance implementation: (1) RFID-tagged PPE - embedding <a href="../terms/passive-rfid.html" class="term-link">passive RFID</a> tags in safety equipment (hard hats, vests, gloves). (2) Worker badges - personnel wearing RTLS location badges. (3) Zone readers - RFID readers at entrances to hazardous zones detecting PPE tags and worker badges simultaneously. (4) Compliance verification - system confirming required PPE present when worker enters area, alerting if missing. (5) Automated logging - recording PPE usage for compliance documentation. Worker badge plus PPE tags combination enables granular control.</p><p class="def-long">Implementation considerations: (1) <a href="../terms/tag.html" class="term-link">Tag</a> placement - PPE tags positioned for reliable detection without interfering with equipment function. (2) Read reliability - ensuring detection rates &amp;gt;95%. (3) Battery-free tags preferred - <a href="../terms/passive-rfid.html" class="term-link">passive RFID</a> tags in PPE avoid battery maintenance. (4) Unique identification - distinguishing individual PPE items enables tracking equipment condition and expiration dates. (5) User experience - minimizing friction with quick detection and clear feedback.</p><p class="def-long">Benefits: (1) Improved safety - 40-60% reduction in PPE-related injuries with automated monitoring. (2) Regulatory compliance - documented evidence of PPE program enforcement crucial for OSHA audits. (3) Cultural improvement - automated monitoring reinforcing safety culture. (4) Reduced liability - demonstrating due diligence. (5) Equipment management - tracking PPE inventory, usage rates, maintenance needs.</p><p class="def-long">Costs: PPE tags $2-5 per item, readers $500-2000 per portal/zone, integration with RTLS infrastructure. ROI: avoided injuries (typical PPE-preventable injury costs $5k-50k including medical, lost time, OSHA fines), liability reduction, regulatory compliance.</p>

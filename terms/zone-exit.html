@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp; Zones<span>›</span>Zone Exit
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing & Zones<span>›</span>Zone Exit
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Geofencing & Zones</div>
     <h1 class="term-title">Zone Exit</h1>
+  <div class="term-cat-tag">Geofencing & Zones</div>
   </header>
   <p class="def-short">An event generated when a tracked tag leaves a defined geofence zone. Triggers alerts, logs events, or initiates automated actions. Use cases include security (unauthorized asset removal), process control (verifying completion), and safety (tracking exposure time).</p>
   <p class="def-long">Zone exit in industrial RTLS is a <a href="../terms/zone-detection.html" class="term-link">zone detection</a> event that triggers when a tracked asset or person transitions from inside to outside a defined geographical zone boundary.</p><p class="def-long">Technical considerations for reliable zone exit detection mirror entry detection: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> determines minimum zone size, <a href="../terms/update-rate.html" class="term-link">update rate</a> affects exit detection <a href="../terms/latency.html" class="term-link">latency</a>, boundary buffers prevent false exits from positioning uncertainty, and exit confirmation logic requires sustained absence vs. momentary detection outside boundaries preventing false triggers from positioning variability. Zone exit analytics provide process insights: exit frequency measuring how often zones are left (activity levels by area), exit timing patterns revealing when exits typically occur (shift change indicators, process cycle rhythms), average <a href="../terms/dwell-time.html" class="term-link">dwell time</a> (time from entry to exit) indicating process efficiency, exit-entry matching verifying workflow continuity (materials exiting zone A should enter downstream zone B), and exception rates tracking unexpected exits (premature departures, missing exits suggesting assets remained behind). Best practices for zone exit <a href="../terms/configuration.html" class="term-link">configuration</a> include: exit confirmation thresholds requiring multiple consecutive position updates outside boundary before confirming exit, temporal filtering requiring tags remain outside zone minimum duration (5-30 seconds) before confirming permanent exit, hysteresis using different boundary thresholds for exits vs. entries (exit boundary slightly inside entry boundary preventing rapid toggling), and alert configuration distinguishing critical exits (unauthorized removals) from routine exits (normal workflow progression). Pairing <a href="../terms/zone-entry.html" class="term-link">zone entry</a> and exit events creates comprehensive zone lifecycle tracking: entry marks beginning, multiple position updates during dwell confirm presence, exit marks conclusion, and analytics on complete cycle reveal process performance (dwell time, <a href="../terms/throughput.html" class="term-link">throughput</a>, compliance).</p>

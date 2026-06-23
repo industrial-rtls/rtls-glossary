@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Positioning Algorithm
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Positioning Algorithm
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Positioning Algorithm</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">The mathematical method used to calculate tag locations from raw signal measurements. Common algorithms include trilateration (distances), triangulation (angles), and multilateration (time differences). Algorithm choice affects accuracy, processing requirements, and environmental suitability.</p>
   <p class="def-long">Mathematical method calculating object position from sensor measurements (signal strengths, arrival times, angles).</p><p class="def-long">Main algorithm categories: (1) <a href="../terms/trilateration.html" class="term-link">Trilateration</a>/<a href="../terms/multilateration.html" class="term-link">Multilateration</a> - calculating position from distance measurements to multiple reference points. Requires minimum 3 anchors (2D), 4 anchors (3D). (2) <a href="../terms/triangulation.html" class="term-link">Triangulation</a>/Angulation - calculating position from angle measurements.</p><p class="def-long">Math: trigonometry determining position where bearing lines intersect. Requires minimum 2 receivers with direction-finding capability. (3) <a href="../terms/fingerprinting.html" class="term-link">Fingerprinting</a> - matching current measurements to database of location-specific signatures. Requires extensive <a href="../terms/site-survey.html" class="term-link">site survey</a>. (4) Proximity - determining location based on nearest detected infrastructure device. Provides zone-level positioning only. (5) Hybrid - combining multiple methods for improved performance. Algorithm implementation considerations: (1) Least-squares optimization - positioning scenarios typically over-determined (more measurements than needed), using least-squares finds best-fit position minimizing sum of squared errors. (2) Weighted least-squares - giving more weight to high-quality measurements, less weight to uncertain measurements. (3) Outlier rejection - identifying and excluding anomalous measurements (multipath, interference).</p><p class="def-long">Typical approach: reject measurements differing &amp;gt;3 standard deviations. (4) Kalman filtering - incorporating movement model with measurements, smoothing position estimates over time. Reduces position jitter and improves <a href="../terms/accuracy.html" class="term-link">accuracy</a>. (5) Particle filtering - representing position probability distribution with particles, updating as new measurements arrive. Algorithm performance depends on: (1) Measurement quality - accurate, low-noise measurements enable accurate positioning. (2) Geometry - good spatial distribution of infrastructure relative to <a href="../terms/tag.html" class="term-link">tag</a> position (low GDOP) critical. (3) Redundancy - over-determining position with extra measurements improves robustness. (4) Computational resources - more sophisticated algorithms require more processing power, limiting update rates or <a href="../terms/tag-capacity.html" class="term-link">tag capacity</a>.</p>

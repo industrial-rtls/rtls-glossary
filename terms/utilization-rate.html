@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics &amp; KPIs<span>›</span>Utilization Rate
+  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics & KPIs<span>›</span>Utilization Rate
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Metrics & KPIs</div>
     <h1 class="term-title">Utilization Rate</h1>
+  <div class="term-cat-tag">Metrics & KPIs</div>
   </header>
   <p class="def-short">The percentage of time assets or resources are actively in use versus available time. Key metric for equipment, space, and personnel efficiency. RTLS provides accurate utilization measurements enabling data-driven decisions about resource allocation and capacity needs.</p>
   <p class="def-long">Utilization rate in industrial operations measures the percentage of time that assets, equipment, or resources are actively used for productive purposes versus idle, in transit, or unavailable. Utilization rate calculation from RTLS data involves: defining operational zones (productive work areas where utilization occurs), measuring time assets spend in operational zones vs. non-operational zones (storage, transit, maintenance areas), classifying asset states (active/working, idle/waiting, in transit, maintenance/unavailable, off-duty), and calculating utilization percentage: (Active Time / Total Available Time) × 100%. Forklift utilization in industrial facilities often reveals surprising low rates (30-50% active utilization typical) indicating overcapacity or inefficient <a href="../terms/deployment.html" class="term-link">deployment</a>.</p><p class="def-long">Typical industrial utilization findings include: Forklifts 30-60% utilized (significant variation based on facility and operations), Manufacturing equipment 40-70% utilized (downtime for setup, maintenance, material waiting), Tools and fixtures 20-50% utilized (often significantly underutilized, indicating excess inventory), Production space 50-80% utilized (variability based on product mix and scheduling), and Warehouse space 60-85% utilized (seasonal patterns common). Utilization analysis nuances include: accounting for utilization quality not just quantity (poorly utilized time if equipment operating inefficiently), understanding temporal patterns (peak utilization periods requiring <a href="../terms/capacity.html" class="term-link">capacity</a> vs. off-peak underutilization), and balancing utilization optimization against flexibility (100% utilization eliminates surge capacity or flexibility for variations). Industry benchmarks provide context: Manufacturing equipment utilization 60-85% considered good performance (allowing for maintenance, changeovers, normal variability), <a href="../terms/material-handling.html" class="term-link">Material handling</a> equipment 50-70% typical (higher rates may indicate insufficient capacity for peaks), and <a href="../terms/space-utilization.html" class="term-link">Space utilization</a> 70-90% optimal (higher rates limit flexibility, lower rates indicate waste).</p>

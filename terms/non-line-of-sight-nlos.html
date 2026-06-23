@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Non-Line of Sight (NLoS)</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">Conditions where direct path between transmitter and receiver is blocked by obstacles like walls, equipment, or structures. Signals must reflect, diffract, or penetrate obstacles to reach receivers. Common in industrial environments and more challenging for positioning than LoS. Advanced algorithms and UWB technology mitigate NLoS effects.</p>
   <p class="def-long">Condition where direct path between <a href="../terms/transmitter.html" class="term-link">transmitter</a> and <a href="../terms/receiver.html" class="term-link">receiver</a> is obstructed, forcing signals to reach destination via reflections, diffractions, or <a href="../terms/penetration.html" class="term-link">penetration</a> through obstacles. NLoS degrades RTLS performance compared to line-of-sight (LoS) conditions. NLoS effects: (1) Increased path length - signals traveling via reflections cover longer distances than direct path, causing overestimated ranges in time-of-flight systems (typical error: 0.5-3 meters). (2) <a href="../terms/signal-attenuation.html" class="term-link">Signal attenuation</a> - obstacles absorb and scatter signal energy, reducing received signal strength (affecting RSSI-based positioning). (3) Increased <a href="../terms/latency.html" class="term-link">latency</a> - longer paths introduce delays. (4) Detection failure - severe NLoS causing insufficient signal strength for detection. (5) Position errors - ranging or angle errors from NLoS propagate to position calculation. Technology NLoS performance varies: (1) UWB - best NLoS performance due to wide bandwidth and short pulses enabling multipath <a href="../terms/resolution.html" class="term-link">resolution</a>, typical <a href="../terms/accuracy.html" class="term-link">accuracy</a> degradation 30-50% in NLoS vs. LoS conditions. (2) BLE/Wi-Fi - more NLoS-sensitive, narrow-band signals cannot distinguish direct from reflected paths, accuracy degrading 100-300% (2-5x worse) in NLoS. (3) IR/optical - complete failure in NLoS (cannot penetrate obstacles). NLoS conditions unavoidable in most industrial facilities - proper system design accounts for NLoS: adequate infrastructure density (compensating for occasional NLoS paths), robust positioning algorithms (handling measurement errors gracefully), and realistic accuracy expectations (specifications reflecting NLoS conditions, not ideal LoS). Site surveys identify NLoS zones: measuring coverage and accuracy throughout facility, mapping areas with degraded performance, adding infrastructure or implementing mitigation in problem zones.</p><p class="def-long">Many position quality metrics incorporate NLoS assessment: GDOP, signal quality indicators, number of anchors contributing.</p>

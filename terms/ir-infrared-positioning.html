@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">IR (Infrared) Positioning</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offers high accuracy in line-of-sight conditions and is immune to RF interference. Limitations include requiring line-of-sight, susceptibility to ambient light interference, and limited range. Used in some industrial applications but less common than RF-based technologies.</p>
   <p class="def-long">Positioning technology using infrared light signals for line-of-sight communication and ranging. IR positioning operates at wavelengths 700-1000 nm (near-infrared), invisible to humans but detectable by photodiodes or cameras. IR positioning approaches include: (1) Active IR badges - tags containing IR LEDs broadcast identification signals to fixed receivers (typical <a href="../terms/range.html" class="term-link">range</a> 5-10 meters, requiring direct line-of-sight). (2) <a href="../terms/triangulation.html" class="term-link">Triangulation</a> - multiple IR receivers detecting <a href="../terms/tag.html" class="term-link">tag</a> signals determine position through angle calculations. (3) Phase-based ranging - measuring phase shift of modulated IR signals to calculate distance. IR advantages: immune to RF interference (useful in electromagnetically noisy environments), simple hardware (LEDs and photodiodes inexpensive), inherent privacy (IR doesn't penetrate walls limiting observation to single room). IR limitations severely restrict industrial RTLS use: strict line-of-sight requirement (any obstruction blocks signal - major issue in facilities with equipment, shelving, moving objects), short range (typically 5-15 meters maximum), affected by ambient lighting (sunlight or bright artificial lights can interfere), and poor coverage efficiency (many receivers needed for comprehensive coverage). IR positioning largely superseded by RF technologies (UWB, BLE, Wi-Fi) offering better range, through-obstacle propagation, and coverage efficiency. Historical use: IR was popular in 1990s-2000s RTLS (hospital patient tracking, conference badge systems) but rarely deployed in modern industrial RTLS. Remaining niche applications: rooms requiring RF-free operation (MRI suites, sensitive electronics areas), temporary tracking (conferences, events), or very short-range <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a> (docking stations, access points requiring physical proximity). Cost advantage (IR hardware $10-30 per tag vs. $50-150 for RF tags) insufficient to offset performance limitations for industrial applications.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Standards &amp; Protocols<span>›</span>ISO/IEC 24730
+  <a href="../index.html">Glossary</a><span>›</span>Standards & Protocols<span>›</span>ISO/IEC 24730
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Standards</div>
     <h1 class="term-title">ISO/IEC 24730</h1>
+  <div class="term-cat-tag">Standards</div>
   </header>
   <p class="def-short">An international standard for real-time locating systems defining air interface protocols, system architecture, and performance testing methods. Provides standardized framework for RTLS implementations ensuring interoperability and performance consistency. Parts include requirements for 2.4 GHz, UWB, and other frequency bands. Important reference for industrial RTLS deployments.</p>
   <p class="def-long">International standard for <a href="../terms/real-time.html" class="term-link">real-time</a> locating systems defining interfaces, protocols, and test methods. ISO/IEC 24730 consists of multiple parts: Part 1 (Application Programming Interface), Part 2 (2.4 GHz Air Interface), Part 5 (Chirp Spread Spectrum Air Interface), Part 61 (Low Rate Pulse Repetition Frequency UWB Air Interface), and Part 62 (High Rate Pulse Repetition Frequency UWB Air Interface). Standard addresses: air interface specifications (defining radio communications between tags and infrastructure), API definitions (standardizing software interfaces to RTLS data), test methods (procedures for verifying performance), and conformance requirements (minimum specifications for standards compliance). ISO/IEC 24730 benefits include: vendor interoperability (theoretically enabling tags from one vendor to work with infrastructure from another), procurement clarity (specifying standards compliance in requirements), and performance comparison (standard test methods enabling objective vendor comparisons). However, standard adoption limited in industrial RTLS: many vendors use proprietary protocols for performance advantages, standard focuses primarily on 2.4 GHz technologies (less relevant for UWB), and achieving true interoperability requires more than air interface standardization (positioning algorithms, data formats, <a href="../terms/system-integration.html" class="term-link">system integration</a>). More influential standards in modern industrial RTLS: IEEE 802.15.4z (UWB PHY/MAC), FiRa specifications (UWB interoperability), and Bluetooth 5.1+ (direction finding). ISO/IEC 24730 more relevant in: government/military procurement (mandating open standards), healthcare (multi-vendor RTLS deployments), and situations requiring future-proofing (avoiding vendor lock-in). For most industrial applications, proprietary vendor solutions offer better performance than standards-compliant approaches, though this may change as standards mature and adoption increases.</p>

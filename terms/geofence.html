@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp; Zones<span>›</span>Geofence
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing & Zones<span>›</span>Geofence
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Geofencing & Zones</div>
     <h1 class="term-title">Geofence</h1>
+  <div class="term-cat-tag">Geofencing & Zones</div>
   </header>
   <p class="def-short">A virtual boundary or zone defined in RTLS software representing a physical facility area. Enables automatic alerts and actions when assets or personnel enter, exit, or dwell within defined spaces. Types include operational zones, safety zones, logical zones, and administrative zones. Fundamental to most industrial RTLS applications for translating raw position data into meaningful location context.</p>
   <p class="def-long"><a href="../terms/virtual-boundary.html" class="term-link">Virtual boundary</a> defining geographic area in RTLS system, enabling location-based rules, alerts, and analytics. Geofences are fundamental RTLS construct for translating raw position coordinates into meaningful operational context. Geofence types: (1) Perimeter geofences - defining facility boundaries or outdoor zones. (2) Room/zone geofences - defining functional areas (work cells, storage zones, offices, restricted areas). (3) Equipment geofences - defining areas around stationary equipment. (4) Process geofences - defining areas corresponding to process steps. (5) Safety geofences - defining hazardous areas requiring special precautions. Geofence properties include: unique identifier and name, geometric shape (typically polygons with 3-20 vertices, though some systems support circles or rectangles only), height constraints (floor and ceiling values for multi-level facilities), associated rules (access restrictions, <a href="../terms/dwell-time.html" class="term-link">dwell time</a> thresholds, alert configurations), and metadata (zone type, <a href="../terms/capacity.html" class="term-link">capacity</a> limits, responsible personnel). Geofence definition methods: (1) Drawing on facility maps - user draws boundaries on digital floor plans using software tools. (2) CAD import - importing zone boundaries from facility CAD drawings. (3) Automatic generation - algorithms creating geofences based on physical barriers (walls) or infrastructure coverage. Geofence density varies: warehouse might define 10-20 large zones (receiving, storage, staging, shipping), manufacturing floor 50-100 work cells and process areas. Geofences enable essential RTLS capabilities: entry/exit detection (knowing when assets/personnel enter or leave zones), dwell time calculation (duration in zones), zone-based reporting (aggregating data by area), and location-based business logic (zone-specific behaviors and rules).</p>

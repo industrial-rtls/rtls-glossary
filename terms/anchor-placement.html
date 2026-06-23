@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>Anchor Placement
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>Anchor Placement
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">Anchor Placement</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">The strategic positioning of anchors/access points to achieve optimal tracking performance, coverage, and accuracy. Considers geometric dilution of precision, line-of-sight, coverage requirements, mounting height (typically 2.5-5 meters), environmental factors, and density. Site surveys, simulation tools, and iterative testing optimize placement before final installation. Critical for successful RTLS deployment.</p>
   <p class="def-long">Process of determining optimal physical locations for RTLS infrastructure devices. Proper <a href="../terms/anchor.html" class="term-link">anchor</a> placement is critical for system performance.</p><p class="def-long">Key principles: maintain line-of-sight to <a href="../terms/coverage-area.html" class="term-link">coverage area</a> when possible, mount at consistent height (typically 3-6 meters for industrial), ensure non-colinear geometry (avoid placing all anchors along single line), maximize spatial separation while meeting coverage requirements, and avoid placement near RF interference sources. <a href="../terms/site-survey.html" class="term-link">Site survey</a> tools use predictive modeling combined with test measurements to develop optimal <a href="../terms/anchor.html" class="term-link">anchor</a> plans. Industrial facilities typically require 25-30% more anchors than theoretical calculations suggest due to obstacles like machinery, shelving, and metal structures. Documentation should include anchor coordinates (3D positions), orientation, mounting method, cable routing, and RF environment characteristics at each location.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Predictive Analytics
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Predictive Analytics
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Predictive Analytics</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">The use of statistical techniques and machine learning to forecast future events, behaviors, or conditions based on historical RTLS data. Applications include predicting equipment failures, forecasting bottlenecks, anticipating maintenance needs, and estimating completion times. Enables proactive rather than reactive management.</p>
   <p class="def-long">Analytical techniques using historical data to forecast future outcomes, enabling proactive decision-making in industrial RTLS applications. Industrial RTLS predictive applications: (1) Bottleneck prediction - forecasting when and where congestion will occur based on current asset positions and movement patterns, enabling preemptive resource allocation (typical prediction horizon 15-60 minutes). (2) Completion time estimation - predicting when work orders or processes will complete based on current progress and historical cycle times (<a href="../terms/accuracy.html" class="term-link">accuracy</a> typically ±10-20% for established processes). (3) Resource demand forecasting - anticipating equipment or personnel needs in different facility zones based on workflow patterns. (4) Failure prediction - correlating location patterns with equipment failures, predicting maintenance needs before breakdowns occur. (5) Quality forecasting - identifying location patterns associated with quality issues, flagging at-risk production before defects occur. (6) <a href="../terms/capacity.html" class="term-link">Capacity</a> planning - forecasting future space and resource requirements based on growth trends.</p><p class="def-long">Typical industrial <a href="../terms/accuracy.html" class="term-link">accuracy</a>: <a href="../terms/cycle-time.html" class="term-link">cycle time</a> predictions within ±15%, bottleneck predictions identifying 70-85% of actual bottlenecks with 15-30% false positive rate, failure predictions detecting 60-75% of failures before occurrence with 10-25% false alarm rates.</p><p class="def-long">Implementation challenges: (1) Data requirements - predictive models need substantial historical data (typically 3-6 months minimum). (2) Model maintenance - facilities change requiring model retraining. (3) Complex causality - distinguishing correlation from causation. (4) User acceptance - operators may distrust predictions initially. (5) Integration - embedding predictions into workflows. Organizations successfully leveraging RTLS predictive analytics typically achieve: 15-30% reduction in unexpected downtime, 10-25% <a href="../terms/throughput.html" class="term-link">throughput</a> improvement, 20-35% better resource utilization.</p>

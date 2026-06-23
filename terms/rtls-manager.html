@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>RTLS Manager
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>RTLS Manager
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">RTLS Manager</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status for all anchors, tags, and servers, allows system initialization, rescan and resync, and offers full control over settings and system parameters. Enables remote firmware upgrades and device reconfiguration online. Designed for simple, accessible, and user-friendly real-time location system management.</p>
   <p class="def-long">RTLS Manager is Sewio Networks' core software platform for administering, configuring, and monitoring industrial RTLS deployments. This enterprise-grade management application serves as the central control point for the entire location system, providing tools for system administrators, integrators, and facility managers to optimize RTLS performance and manage operational aspects.</p><p class="def-long">Key capabilities include: infrastructure management (configuring and monitoring anchors/readers, managing network connectivity, monitoring system health), <a href="../terms/tag.html" class="term-link">tag</a> administration (provisioning tags, assigning to assets or personnel, configuring transmission parameters, managing battery status), zone and <a href="../terms/geofence.html" class="term-link">geofence</a> definition (creating virtual boundaries on digital floor plans, configuring alert rules and access permissions), user <a href="../terms/access-control.html" class="term-link">access control</a> (role-based permissions for different organizational functions), <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> <a href="../terms/configuration.html" class="term-link">configuration</a> (selecting algorithms, tuning parameters for <a href="../terms/accuracy.html" class="term-link">accuracy</a> vs. <a href="../terms/update-rate.html" class="term-link">update rate</a> tradeoffs), and system diagnostics (troubleshooting connectivity issues, analyzing signal quality, identifying interference sources). RTLS Manager integrates with Sewio's positioning engine and provides interfaces for <a href="../terms/site-survey.html" class="term-link">site survey</a> planning, <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> optimization based on <a href="../terms/facility-layout.html" class="term-link">facility layout</a>, and RF environment analysis. Performance monitoring capabilities track key metrics including: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> and availability, anchor uptime and connectivity, tag battery levels and estimated replacement dates, <a href="../terms/system-capacity.html" class="term-link">system capacity</a> utilization (active tags vs. maximum supported), and network health. Alert management features notify administrators of system issues requiring attention: anchor offline conditions, communication failures, positioning engine errors, or capacity approaching limits. RTLS Manager is designed for 24/7 industrial operation with high availability architecture, automated backup capabilities, and disaster recovery features. The web-based interface enables remote administration and monitoring, critical for multi-site industrial enterprises.</p>

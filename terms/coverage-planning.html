@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>Coverage Planning
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>Coverage Planning
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">Coverage Planning</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analysis, technology selection, preliminary design, site survey, refined design, and validation. Industrial planning addresses challenges from metal structures, changing layouts, and harsh environments. Balances maximizing coverage, meeting accuracy requirements, and minimizing costs.</p>
   <p class="def-long">Engineering process of determining RTLS infrastructure quantities, locations, and configurations to meet performance requirements. Coverage planning workflow includes: (1) Requirements definition - <a href="../terms/accuracy.html" class="term-link">accuracy</a> targets, <a href="../terms/coverage-area.html" class="term-link">coverage area</a> extent, <a href="../terms/tag.html" class="term-link">tag</a> update rates, <a href="../terms/capacity.html" class="term-link">capacity</a> needs. (2) Facility survey - CAD drawings or <a href="../terms/site-survey.html" class="term-link">site survey</a> to map physical layout, identify RF obstacles (metal structures, machinery), measure ceiling heights, note interference sources. (3) Predictive modeling - RF propagation simulation tools predict coverage and accuracy based on planned <a href="../terms/anchor.html" class="term-link">anchor</a> locations. (4) Optimization - iteratively adjust anchor placements to maximize coverage and accuracy while minimizing infrastructure cost. (5) Validation - limited test <a href="../terms/deployment.html" class="term-link">deployment</a> or pilot area confirming predicted vs. actual performance. Experienced RTLS engineers develop anchor plans more efficiently than pure theoretical approaches - industrial facilities typically need 25-30% more anchors than ideal calculations suggest. Planning tools <a href="../terms/range.html" class="term-link">range</a> from simple spreadsheet calculations to sophisticated 3D RF modeling software. Critical outputs include: <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> drawings with mounting specifications, bill of materials with quantities, cabling requirements, and expected performance predictions by zone. Proper planning reduces deployment time, ensures performance targets met, and minimizes expensive post-installation remediation.</p>

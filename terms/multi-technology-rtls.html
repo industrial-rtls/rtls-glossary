@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Architecture</div>
     <h1 class="term-title">Multi-Technology RTLS</h1>
+  <div class="term-cat-tag">Architecture</div>
   </header>
   <p class="def-short">An RTLS deployment combining two or more positioning technologies within a unified platform to optimize accuracy, coverage, and cost across different facility zones. The most common industrial combination is UWB (precision indoor), BLE (cost-effective indoor coverage), and GNSS (outdoor), each technology serving zones where it offers the best cost-performance ratio. A single software platform aggregates all position data into one operational view.</p>
   <p class="def-long">Multi-technology RTLS addresses a fundamental challenge: no single technology optimally serves all facility zones. UWB provides 10-30 cm accuracy but at $500-1500 per anchor, making it cost-prohibitive for large warehouses where such precision is unnecessary. BLE provides 1-3 meter accuracy at $50-500 per gateway with simpler deployment, suitable for broad coverage applications. GNSS provides outdoor coverage where indoor technologies cannot reach. By deploying each technology only where its accuracy and cost characteristics are appropriate, organizations achieve: 30-50% lower total infrastructure cost compared to UWB-only coverage of equivalent area, adequate accuracy everywhere without paying for excess precision, continuous tracking across facility boundaries, and unified data in one platform. Technology zone mapping example for automotive manufacturing: UWB in assembly lines and precision work cells (10-30 cm for component tracking and collision avoidance), BLE in parts storage and logistics areas (1-3 m for inventory and personnel safety), GNSS in outdoor yard and inter-building transport (3-10 m for vehicle and trailer tracking).</p><p class="def-long">Implementation requirements: (1) Unified software platform - single location engine consuming data from all technologies, presenting unified coordinate system regardless of which technology is currently tracking. (2) Seamless handover - coordinated transitions as assets move between technology zones without position gaps. (3) Common tag hardware - ideally tags supporting multiple technologies simultaneously (BLE+UWB or BLE+GNSS) to maintain tracking through transitions. (4) Consistent data model - position records include technology source identifier enabling technology-aware analytics. (5) Unified management - single interface for infrastructure configuration, tag management, zone definition, and alert rules across all technologies. Multi-technology RTLS market growing rapidly as vendors expand portfolios, driven by customer demand for comprehensive facility coverage at optimized cost. Key vendor selection criteria: ability to support all required technologies within one platform, quality of handover implementation, and depth of unified analytics capabilities.</p>

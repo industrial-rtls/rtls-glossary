@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Compliance Monitoring
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Compliance Monitoring
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Compliance Monitoring</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">Automated tracking and verification of adherence to safety regulations, operational procedures, and quality standards using RTLS. Enables continuous monitoring of safety compliance (PPE, hazardous zone time), process compliance (material routing, dwell times), access compliance (restricted area logging), and training compliance. Provides automatic documentation for audits and real-time alerts for violations.</p>
   <p class="def-long">Use of RTLS to verify adherence to operational procedures, safety regulations, or quality requirements. Industrial compliance monitoring applications include: PPE enforcement (confirming workers wear RFID-tagged safety equipment in designated zones), zone access compliance (verifying only certified personnel enter restricted areas like hazardous material zones), <a href="../terms/dwell-time.html" class="term-link">dwell time</a> compliance (ensuring materials spend required time in process steps like curing or cooling), workflow sequence compliance (detecting deviations from standard operating procedures), and social distancing compliance (emerged during COVID-19 for maintaining safe separation). Compliance monitoring generates documented evidence for audits and investigations. System typically operates in two modes: <a href="../terms/real-time.html" class="term-link">real-time</a> alerting for immediate compliance violations requiring intervention, and historical reporting for trend analysis and process improvement. Effective compliance monitoring requires clear rule definitions, minimal false positives (below 5% to maintain credibility), and integration with training/discipline procedures. Privacy considerations are important - systems should focus on compliance outcomes rather than detailed individual surveillance, and policies should be transparent to workers.</p>

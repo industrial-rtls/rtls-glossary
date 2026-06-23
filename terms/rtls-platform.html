@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>RTLS Platform
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>RTLS Platform
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">RTLS Platform</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Sewio's complete real-time location system encompassing both hardware (UWB/BLE tags and anchors) and software (RTLS Studio) forming an integrated solution for industrial indoor tracking. Based on ultra-wideband TDoA technology providing 30cm positioning accuracy. Includes location engine, data management, visualization tools, analytics capabilities, and fully documented Open API for third-party integration. Scalable platform supporting multiple use cases from asset tracking to worker safety.</p>
   <p class="def-long">RTLS Platform refers to the complete software ecosystem that processes <a href="../terms/location-data.html" class="term-link">location data</a>, manages system operations, and provides interfaces for applications and users.</p><p class="def-long">In the context of Sewio Networks, the RTLS Platform is the comprehensive software suite encompassing all components required for industrial <a href="../terms/real-time.html" class="term-link">real-time</a> location systems: <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a>, data management, visualization, analytics, and integration interfaces. A robust industrial RTLS platform architecture includes several layers: infrastructure layer (managing anchors, tags, and network connectivity), positioning layer (processing ranging data and calculating positions using algorithms like TDoA or TWR), data management layer (storing position history, managing <a href="../terms/tag.html" class="term-link">tag</a> and asset databases), application layer (visualization, analytics, reporting, alerts), and <a href="../terms/integration-layer.html" class="term-link">integration layer</a> (APIs, webhooks, and connectors for enterprise systems).</p><p class="def-long">Key platform capabilities essential for industrial deployments include: high-<a href="../terms/capacity.html" class="term-link">capacity</a> <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> supporting thousands of simultaneous tags, multi-site management for enterprise deployments across multiple facilities, <a href="../terms/scalability.html" class="term-link">scalability</a> to grow from pilot projects to facility-wide implementations, reliability with high availability architecture and failover capabilities, and security features including encrypted communications, role-based <a href="../terms/access-control.html" class="term-link">access control</a>, and audit logging. Performance specifications include: positioning <a href="../terms/throughput.html" class="term-link">throughput</a> (position calculations per second), <a href="../terms/latency.html" class="term-link">latency</a> (end-to-end delay from <a href="../terms/tag.html" class="term-link">tag</a> transmission to application update), <a href="../terms/accuracy.html" class="term-link">accuracy</a> (statistical position error under operational conditions), and availability (uptime percentage, typically targeting 99.9% or higher). Advanced platforms incorporate <a href="../terms/machine-learning.html" class="term-link">machine learning</a> for accuracy enhancement, <a href="../terms/predictive-maintenance.html" class="term-link">predictive maintenance</a> of infrastructure components, and intelligent analytics. Sewio's RTLS Platform provides industrial-grade capabilities with proven performance in demanding manufacturing, logistics, and warehouse environments.</p>

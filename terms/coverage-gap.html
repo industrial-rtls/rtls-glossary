@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>Coverage Gap
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>Coverage Gap
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">Coverage Gap</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">An area where RTLS cannot reliably track tags due to insufficient anchor coverage or signal blocking. Creates tracking blind spots with lost or inaccurate position updates. Mitigation includes adding anchors, repositioning infrastructure, or implementing dead reckoning.</p>
   <p class="def-long">Area within intended RTLS <a href="../terms/deployment.html" class="term-link">deployment</a> where positioning is unavailable or degraded. Coverage gaps occur due to: inadequate infrastructure density, RF obstructions (metal equipment, shelving, walls), interference sources, or edge effects at <a href="../terms/coverage-area.html" class="term-link">coverage area</a> boundaries. Gaps manifest as: areas with no position reports (tags not detected at all), areas with degraded <a href="../terms/accuracy.html" class="term-link">accuracy</a> (detection but poor positioning geometry), or intermittent coverage (tags occasionally detected but unreliable). In industrial facilities, common gap locations include: behind large metal machinery, inside metal containers or cages, deep within shelving aisles, corners and dead-end areas, transitional zones between building sections, and high-bay areas if anchors mounted too low. Identifying coverage gaps requires systematic testing with tags at various positions during <a href="../terms/commissioning.html" class="term-link">commissioning</a>. Gap remediation options include: adding infrastructure devices (typical solution, adds $500-2000 per gap), relocating existing devices for better coverage, removing or relocating physical obstacles, or accepting gaps in non-critical areas. Post-deployment gap detection uses analytics identifying zones with abnormally low <a href="../terms/tag.html" class="term-link">tag</a> detection rates compared to expected traffic.</p>

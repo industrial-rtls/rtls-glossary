@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics &amp; KPIs<span>›</span>Route Optimization
+  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics & KPIs<span>›</span>Route Optimization
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Metrics & KPIs</div>
     <h1 class="term-title">Route Optimization</h1>
+  <div class="term-cat-tag">Metrics & KPIs</div>
   </header>
   <p class="def-short">The process of improving paths or sequences for moving assets, materials, or personnel through facilities. RTLS provides data showing actual routes enabling identification of inefficient paths, congestion points, and opportunities for improvement. Applications include warehouse picking optimization, AGV routing, and workflow redesign.</p>
   <p class="def-long">Route optimization in industrial RTLS involves analyzing historical and <a href="../terms/real-time.html" class="term-link">real-time</a> movement data to identify the most efficient paths for personnel, vehicles, or material transport, reducing travel time, distance, and operational costs while improving <a href="../terms/throughput.html" class="term-link">throughput</a>. Industrial facilities face complex routing challenges: material handlers traveling between warehouse locations and production lines, forklift routes through dynamic inventory layouts, maintenance personnel responding to equipment issues, and AGVs navigating production floors. RTLS systems collect comprehensive movement data including travel paths, dwell times, speeds, and traffic patterns, enabling sophisticated optimization analysis.</p><p class="def-long">Key optimization approaches include: identifying shortest paths between frequently connected locations while avoiding congestion zones, analyzing traffic patterns to separate conflicting flows (pedestrian vs. vehicle paths), detecting bottlenecks where assets consistently experience delays, and comparing actual routes against theoretical optimal routes to identify inefficiencies. Quantifiable benefits from route optimization include: 15-30% reductions in <a href="../terms/travel-distance.html" class="term-link">travel distance</a> for material handlers, 20-40% improvements in forklift utilization through better dispatching, 10-25% <a href="../terms/throughput.html" class="term-link">throughput</a> increases from eliminating bottlenecks, and reduced collision risks by separating traffic flows.</p><p class="def-long">Implementation involves: baseline data collection tracking current movement patterns over representative time periods (typically 2-4 weeks), analysis identifying optimization opportunities, simulation testing proposed changes, implementation of optimized layouts or routing rules, and continuous monitoring to verify improvements. Integration with WMS or MES systems enables automated task assignment with optimized routing. Success metrics include average <a href="../terms/travel-distance.html" class="term-link">travel distance</a> per task, <a href="../terms/cycle-time.html" class="term-link">cycle time</a> reductions, <a href="../terms/asset-utilization.html" class="term-link">asset utilization</a> improvements, and <a href="../terms/throughput.html" class="term-link">throughput</a> increases measured before and after optimization implementation.</p>

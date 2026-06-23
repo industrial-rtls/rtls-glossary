@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">Receiver</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">A device or component that receives radio signals from transmitters or tags. In RTLS, receivers may be fixed (anchors, access points) or mobile (smartphones, portable devices). Receiver sensitivity and quality affect system range and reliability.</p>
   <p class="def-long">In RTLS terminology, a receiver is a device that captures radio frequency signals transmitted by tags for the purpose of determining location. Receivers are typically synonymous with readers or anchors in industrial RTLS architectures. The receiver's fundamental role is to detect <a href="../terms/tag.html" class="term-link">tag</a> transmissions, capture signal characteristics (such as arrival time, signal strength, or phase information), timestamp the reception event with high <a href="../terms/precision.html" class="term-link">precision</a>, and forward this raw data to the <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a>. High-performance RTLS receivers feature sensitive radio frontends capable of detecting weak signals in noisy industrial environments, precise timing circuits (often utilizing GPS-disciplined oscillators or IEEE 1588 PTP for <a href="../terms/synchronization.html" class="term-link">synchronization</a>), and sufficient processing power to handle multiple simultaneous tag transmissions. In UWB systems, receivers must process ultra-short pulses (nanosecond duration) and perform accurate time-of-arrival measurements with sub-nanosecond precision to achieve decimeter-level <a href="../terms/accuracy.html" class="term-link">accuracy</a>. <a href="../terms/receiver-sensitivity.html" class="term-link">Receiver sensitivity</a>, measured in dBm, determines the minimum signal strength required for reliable detection - industrial RTLS receivers typically specify sensitivities of -85 to -95 dBm for UWB or -90 to -100 dBm for BLE. The receiver's processing capabilities must handle channel <a href="../terms/capacity.html" class="term-link">capacity</a> requirements: in dense tag environments, a single receiver may need to process transmissions from 100+ tags per second. Industrial receivers are designed with ruggedized enclosures for harsh environments, PoE for simplified installation, diagnostic capabilities for system health monitoring, and network redundancy options for mission-critical applications. Receiver placement and orientation significantly impact system performance, requiring careful <a href="../terms/site-survey.html" class="term-link">site survey</a> and installation planning.</p>

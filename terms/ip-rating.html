@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">IP Rating</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">Ingress Protection rating indicating device resistance to dust and water, expressed as two digits (e.g., IP65, IP67). First digit rates solid particle protection (0-6), second rates liquid protection (0-9). Industrial RTLS tags typically require IP65 or IP67 for harsh environments.</p>
   <p class="def-long">International Protection rating indicating degree of protection provided by equipment enclosure against solid objects and liquids. IP ratings use format IPXY where X is solid protection (0-6) and Y is liquid protection (0-9).</p><p class="def-long">Common industrial RTLS ratings: IP40 (basic indoor, protected against objects &amp;gt;1mm, no liquid protection), IP54 (protected against dust and water splashes from any direction), IP65 (dust-tight, protected against water jets - typical minimum for industrial floor), IP66 (dust-tight, protected against heavy seas or powerful water jets), IP67 (dust-tight, protected against temporary immersion up to 1m depth), IP68 (dust-tight, protected against continuous immersion - depth specified by manufacturer), and IP69K (dust-tight, protected against high-pressure high-temperature washdown - food processing, chemical plants). Industrial RTLS tags require IP54 minimum for general manufacturing, IP65-66 for harsh environments (foundries, outdoor areas, washdown areas), IP67-68 for potential immersion (chemical baths, outdoor exposure to heavy rain). RTLS infrastructure (anchors, gateways) mounted in protected locations typically IP40-54 adequate, though outdoor or exposed installations require IP65-67. Higher IP ratings increase cost 15-40% and size/weight 20-50% due to sealing requirements. Rating selection based on: environmental assessment (typical exposure conditions), reliability requirements (more critical applications justify higher ratings), maintenance considerations (failed devices in harsh environments difficult to replace), and cost constraints (avoiding over-specification). Note: IP ratings address environmental protection only, not RF performance - sealed enclosures can degrade antenna performance requiring design optimization. IP rating testing by third-party labs provides certification, though many vendors claim ratings without certification - verify testing documentation for critical applications.</p>

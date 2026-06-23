@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>RTLS Monitor
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>RTLS Monitor
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">RTLS Monitor</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. Displays CPU usage, RAM usage, network traffic, disk partition status, RTLS Studio uptime, and identifies performance bottlenecks. Helps administrators ensure optimal system performance and identify issues before they impact operations.</p>
   <p class="def-long">RTLS Monitor is Sewio Networks' <a href="../terms/real-time.html" class="term-link">real-time</a> visualization and monitoring application designed for operational personnel to observe asset and personnel locations across industrial facilities. This user-facing application transforms raw positioning data into intuitive visual representations, enabling supervisors, safety officers, and production managers to maintain situational awareness of facility operations. The interface displays live positions of tracked objects overlaid on digital floor plans, updating continuously (typically 1-5 Hz) to reflect current locations.</p><p class="def-long">Key visualization features include: multi-level floor plans with seamless navigation between building levels, asset filtering by type, zone, or status to reduce visual clutter in high-density environments, heat maps showing asset density and traffic patterns, historical trails visualizing movement paths over recent time periods, and status indicators displaying asset conditions (battery level, sensor readings, alerts). The application supports various zoom levels from facility overview to detailed room-level views, allowing users to focus on areas of interest.</p><p class="def-long">Color-coding and iconography provide quick status recognition: green for normal operation, yellow for warnings, red for alerts or violations. <a href="../terms/real-time.html" class="term-link">Real-time</a> alert display notifies operators of exceptions requiring attention: zone violations, assets missing from expected locations, prolonged dwell times indicating bottlenecks, low battery warnings, or potential collision scenarios. Performance optimization ensures smooth visualization even when tracking hundreds or thousands of assets simultaneously, using techniques like selective rendering, level-of-detail management, and efficient data streaming.</p><p class="def-long">Customizable dashboards display key performance indicators (KPIs) alongside the visual tracking display, providing operational context: current <a href="../terms/throughput.html" class="term-link">throughput</a> rates, utilization metrics, safety compliance scores, or production status.</p>

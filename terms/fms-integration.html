@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>FMS Integration
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>FMS Integration
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">FMS Integration</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Integration of RTLS with Fleet Management Systems for comprehensive tracking of industrial vehicles including forklifts, tuggers, and pallet jacks. Combines RTLS location data with vehicle telematics, operator assignment, usage analytics, and impact detection. Enables operator accountability, access control, zone-based speed limits, and route optimization. Benefits include reduced damage, improved utilization, and enhanced safety.</p>
   <p class="def-long">Integration between RTLS and Fleet Management Systems optimizing vehicle operations through location visibility and data sharing. In industrial context, FMS integration enables: (1) Automated vehicle logging - RTLS detecting forklift movements automatically records operating hours, distance traveled, and activity periods without manual logging or operator intervention. (2) Utilization optimization - FMS analyzing RTLS data identifies underutilized vehicles for redeployment or removal from fleet and overutilized vehicles indicating <a href="../terms/capacity.html" class="term-link">capacity</a> needs. (3) Maintenance management - FMS using RTLS operating hours for condition-based maintenance scheduling rather than calendar-based schedules, improving maintenance timing and reducing downtime. (4) Operator assignment - FMS tracking which operators use which vehicles, enabling operator-specific utilization analysis and training needs identification. (5) Safety monitoring - FMS receiving RTLS safety events (collisions, proximity violations, <a href="../terms/restricted-area.html" class="term-link">restricted area</a> entry) for safety program management. (6) Performance analytics - combining RTLS <a href="../terms/location-data.html" class="term-link">location data</a> with FMS operational data (load weights, battery usage, impact events) for comprehensive vehicle performance analysis. Integration typically uses REST APIs or database connections, updating FMS with vehicle positions (1-60 second intervals), activity status changes (active, idle, charging), and event notifications (proximity alerts, <a href="../terms/geofence.html" class="term-link">geofence</a> violations).</p><p class="def-long">Benefits include: 30-50% reduction in manual logging labor, 20-35% fleet size reduction through utilization optimization, 15-25% maintenance cost reduction through better scheduling, and 40-60% reduction in safety incidents through systematic monitoring and operator accountability.</p>

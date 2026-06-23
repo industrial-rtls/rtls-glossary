@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">LiDAR (Light Detection and Ranging)</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">A remote sensing technology using laser light to measure distances and create detailed 3D maps. In RTLS contexts, LiDAR can be used for precise positioning, obstacle detection, and environment mapping. Commonly used in autonomous vehicle navigation and can complement other RTLS technologies. Offers high accuracy but is expensive and requires line-of-sight.</p>
   <p class="def-long">Laser-based sensor technology measuring distances by timing laser pulse reflections, used for autonomous vehicle navigation and increasingly for industrial tracking. LiDAR operation: rotating or solid-state scanner emits laser pulses (typically 905nm or 1550nm wavelength), measures time-of-flight for each pulse reflection, and constructs 3D point cloud of surroundings. Industrial LiDAR specifications: <a href="../terms/range.html" class="term-link">range</a> 10-100 meters depending on application, <a href="../terms/accuracy.html" class="term-link">accuracy</a> ±2-5 cm, <a href="../terms/update-rate.html" class="term-link">update rate</a> 10-100 Hz, angular <a href="../terms/resolution.html" class="term-link">resolution</a> 0.1-1 degree. LiDAR applications in industrial environments: (1) AGV/AMR navigation - mobile robots using LiDAR for autonomous navigation, obstacle detection, and localization (primary application). (2) Material tracking - fixed LiDAR scanners detecting and tracking vehicles, containers, or large objects in zones. (3) Volume measurement - calculating stack volumes, bin levels, pile sizes. (4) Safety zones - creating virtual safety curtains around machinery or vehicles. (5) People counting - detecting and counting personnel in areas. LiDAR positioning approaches: robots use simultaneous localization and mapping (SLAM) correlating scans with facility map for self-localization (achieving ±2-5 cm accuracy), fixed scanners detect objects and estimate positions within scan area (10-20 cm accuracy typical). LiDAR advantages: high accuracy (comparable to UWB), no tags required (detecting any visible object), rich data (3D shapes, sizes, orientations), environmental awareness (detecting obstacles and people). Limitations: line-of-sight requirement (cannot see through obstacles), limited range (typically 30-50m in industrial environments due to clutter), significant cost ($1000-20000 per unit depending on performance), complex data processing (point clouds requiring substantial computation). Industrial LiDAR market growing 20-30% annually driven by autonomous vehicle adoption and <a href="../terms/industry-4-0.html" class="term-link">Industry 4.0</a> investments.</p>

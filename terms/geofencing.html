@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Geofencing
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Geofencing
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Geofencing</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Enables location-based automation including alerts, access control, and process verification. Geofences can be simple shapes or complex 3D volumes, static or dynamic based on operational conditions.</p>
   <p class="def-long">Functionality that triggers actions or generates alerts when tracked assets or personnel cross virtual boundaries (geofences). Geofencing is core RTLS capability enabling location-based automation and monitoring. Geofencing event types: (1) Entry events - <a href="../terms/tag.html" class="term-link">tag</a> enters defined <a href="../terms/geofence.html" class="term-link">geofence</a>, triggering entry timestamp recording and optional entry actions. (2) Exit events - tag leaves geofence, recording exit timestamp and triggering exit actions. (3) Dwell events - tag remains in geofence exceeding specified duration threshold, indicating process completion, delays, or anomalies. (4) Proximity events - tag approaches but doesn't enter geofence (warning zone). Geofencing actions include: visual/audible alerts (notifying operators or security personnel), automated logging (recording zone transitions for analytics and compliance), external <a href="../terms/system-integration.html" class="term-link">system integration</a> (triggering MES operations, updating WMS inventory, notifying ERP), physical control (door unlocking, barrier operation), and workflow triggers (initiating next process step). Geofencing applications: <a href="../terms/access-control.html" class="term-link">access control</a> (restricting unauthorized personnel from hazardous or secure areas), process tracking (confirming work items progress through required process steps in correct sequence), safety enforcement (alerting when pedestrians enter forklift traffic zones), <a href="../terms/dwell-time.html" class="term-link">dwell time</a> monitoring (identifying bottlenecks from excessive dwell times), and <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (tracking material movements between zones for automatic inventory transactions). Geofencing performance requirements: detection <a href="../terms/latency.html" class="term-link">latency</a> 0.5-2 seconds typical (time from actual boundary crossing to event detection), false positive rate under 5% (incorrect triggers undermine user confidence), and false negative rate under 2% (missed events create compliance and safety risks). Proper geofence design critical - boundaries should provide adequate buffer zones accounting for <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (typically 2-3x position error tolerance).</p>

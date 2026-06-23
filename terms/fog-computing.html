@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Architecture</div>
     <h1 class="term-title">Fog Computing</h1>
+  <div class="term-cat-tag">Architecture</div>
   </header>
   <p class="def-short">A distributed computing architecture extending cloud capabilities to the network edge while maintaining connection to central cloud resources. Gateway devices or local servers aggregate data, perform intermediate processing, make local decisions, and manage bidirectional data flow. Offers lower latency than pure cloud, reduced bandwidth requirements, and improved reliability.</p>
   <p class="def-long">Distributed computing architecture extending cloud computing to edge of network, providing local processing and storage at intermediate locations between edge devices and central cloud. In industrial RTLS context, fog computing implements processing at facility or zone level rather than purely at device edge (<a href="../terms/edge-computing.html" class="term-link">edge computing</a>) or remote data centers (cloud computing). Fog computing architecture: local fog servers (industrial PCs or small rack servers) located in facility IT rooms or distributed across large facilities, connected to both local edge devices (anchors, tags) and central/cloud infrastructure. Fog servers provide: position calculation for 500-2000 tags (higher <a href="../terms/capacity.html" class="term-link">capacity</a> than edge devices, lower than central data centers), local data storage (hours to days of data for immediate analysis), analytics and processing (<a href="../terms/real-time.html" class="term-link">real-time</a> alerts, local dashboards), and coordination (managing infrastructure device <a href="../terms/synchronization.html" class="term-link">synchronization</a>, load balancing). Fog computing benefits: lower <a href="../terms/latency.html" class="term-link">latency</a> than pure cloud (50-200ms vs. 100-500ms), continued operation if WAN fails (critical for safety functions), reduced WAN bandwidth (aggregating local data before transmitting to cloud), and <a href="../terms/scalability.html" class="term-link">scalability</a> (adding fog capacity as system grows).</p><p class="def-long">Typical industrial fog <a href="../terms/deployment.html" class="term-link">deployment</a>: 1 fog server per building or 5000-10000 m² area, fog servers connected via facility LAN/WAN to central systems for enterprise-wide coordination and historical analytics. Fog computing particularly valuable for multi-site deployments where local autonomy required but some central coordination desired.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">Preventive Maintenance</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">Maintenance strategy where equipment is serviced on fixed schedules to prevent failures. RTLS supports preventive maintenance by accurately tracking operating hours and usage patterns. More effective than calendar-based schedules when using actual usage data.</p>
   <p class="def-long">Maintenance strategy performing scheduled inspections and repairs at predetermined intervals (time or usage-based) to prevent failures, distinguished from <a href="../terms/predictive-maintenance.html" class="term-link">predictive maintenance</a> by fixed schedules versus condition-based timing. RTLS improvements to preventive maintenance: (1) Automatic usage tracking - RTLS continuously monitoring equipment operating hours and cycles, eliminating manual logging. Equipment operating 8 hours daily reaches service interval in 25 days; equipment operating 4 hours daily takes 50 days. (3) Compliance verification - RTLS tracking which equipment entered maintenance areas and when, confirming scheduled services performed. Preventive maintenance metrics enabled by RTLS: maintenance compliance rate (percentage of scheduled maintenance completed on time, target &amp;gt;95%), maintenance duration (time from due date to completion), equipment utilization (operating hours per day/week revealing schedule appropriateness), and maintenance productivity (time spent per service). Closed-loop integration ensures schedules reflect reality and compliance tracked automatically. Preventive maintenance benefits from RTLS: (1) Right-sized intervals - maintenance frequency matching actual usage, eliminating over-maintenance (typical 20-30% reduction in unnecessary services) while ensuring adequate maintenance for heavily-used equipment. (2) Improved compliance - automated tracking ensuring maintenance performed on time (typical compliance improvement from 75-85% to 90-98%). (3) Reduced logging overhead - eliminating manual hour tracking saving 10-20 minutes per equipment per week. (4) Better planning - knowing when equipment due for maintenance enables better scheduling. Preventive maintenance ROI from RTLS: typical 20-40% maintenance cost reduction through interval optimization, 15-30% reduction in unexpected failures, productivity improvement from eliminating manual tracking (10-30 hours per month for fleet of 50 forklifts).</p>

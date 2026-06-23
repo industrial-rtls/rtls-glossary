@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Theft Prevention
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Theft Prevention
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Theft Prevention</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">The use of RTLS to detect and prevent unauthorized removal of assets from facilities. Features include perimeter monitoring, unauthorized movement alerts, and integration with security systems. Significant ROI from preventing loss of valuable assets. Provides both deterrent effect and rapid detection.</p>
   <p class="def-long">Theft prevention in industrial RTLS leverages <a href="../terms/real-time.html" class="term-link">real-time</a> location tracking to detect, deter, and document unauthorized removal of valuable assets, tools, or materials from facilities. Asset theft and loss represent significant costs in industrial operations - tools disappearing from work sites, materials diverted from proper channels, and equipment removed from facilities. RTLS-based theft prevention provides multiple protection mechanisms: perimeter monitoring detecting when tagged assets approach or cross facility boundaries without authorization, <a href="../terms/restricted-area.html" class="term-link">restricted area</a> enforcement identifying unauthorized asset removal from secure zones, <a href="../terms/movement-pattern.html" class="term-link">movement pattern</a> analysis detecting anomalous behavior (assets moving during non-operational hours, unusual travel routes), tamper detection sensing <a href="../terms/tag.html" class="term-link">tag</a> removal or damage attempts, and exception alerts notifying security when high-value assets leave designated areas.</p><p class="def-long">Implementation approaches vary by security requirements and asset value: passive monitoring (logging all asset movements for post-incident investigation and deterrence through visible tracking), active alerts (<a href="../terms/real-time.html" class="term-link">real-time</a> notifications to security personnel when unauthorized movement detected), and integrated enforcement (automatic actions like locking exit gates, activating cameras, or triggering <a href="../terms/access-control.html" class="term-link">access control</a> systems). Signage and communication about tracking capabilities enhance deterrence. When theft occurs, RTLS provides forensic capabilities: reconstructing asset movement history showing when and where asset went missing, identifying who had proximity to asset (if <a href="../terms/personnel-tracking.html" class="term-link">personnel tracking</a> also implemented), and correlating with other data (access control logs, video surveillance) for investigation. Quantified benefits include: 60-90% reductions in tool loss, 40-70% decreases in material shrinkage, and 15-25% improvements in <a href="../terms/asset-utilization.html" class="term-link">asset utilization</a>.</p>

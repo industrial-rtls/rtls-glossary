@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Mustering
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Mustering
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Mustering</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">The process of accounting for all personnel during emergencies by gathering them at designated assembly points. RTLS-enabled mustering automatically detects when personnel reach muster points, identifies missing individuals, and provides accountability. Dramatically faster and more reliable than manual headcounts. Critical for emergency response and safety.</p>
   <p class="def-long">Emergency procedure gathering personnel at designated assembly points for headcount and accountability, automated and accelerated through RTLS. RTLS-enabled mustering provides: (1) Automated headcount - system immediately identifying all personnel currently in facility (within seconds of emergency declaration), comparing against expected roster. (2) Assembly point monitoring - geofences at mustering points automatically detecting arriving personnel, updating accountability status. (3) Missing persons identification - system listing individuals who haven't reached assembly points within expected timeframe (typically 5-10 minutes), showing their last known locations for rescue efforts. (4) <a href="../terms/real-time.html" class="term-link">Real-time</a> status display - dashboards showing mustering progress (percentage accounted, time since evacuation started, missing persons list). (5) <a href="../terms/historical-playback.html" class="term-link">Historical playback</a> - reconstructing personnel locations immediately before emergency for investigation. Mustering <a href="../terms/configuration.html" class="term-link">configuration</a>: defining assembly point geofences (typically 10-30 meter radius circles at designated outdoor locations), expected evacuation times (facility-dependent, typically 3-10 minutes), and alert escalation (when to notify emergency services about missing personnel). OSHA, local fire codes, and industry standards (NFPA) often mandate evacuation and accounting procedures. Mustering performance metrics: time to 90% accounted (target 5-10 minutes including evacuation and detection), false negative rate (system thinking person present when actually absent, should be &amp;lt;1%), false positive rate (system thinking person missing when actually safe, should be &amp;lt;2%), and rescue guidance <a href="../terms/accuracy.html" class="term-link">accuracy</a> (last known location accuracy enabling responder navigation). Studies show RTLS mustering reduces: accounting time 70-85% (from 15-30 minutes to 2-5 minutes), missing person identification time 85-95% (immediate vs. delayed discovery), and rescue <a href="../terms/response-time.html" class="term-link">response time</a> 60-80% (last known location guidance vs. searching entire facility).</p>

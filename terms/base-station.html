@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">Base Station</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">A fixed infrastructure component communicating with mobile tags and relaying information to the central system. Performs functions including receiving/interrogating tags, timestamping signals, forwarding data, and synchronizing with other stations. Requires reliable power and network connectivity. Hardened for harsh environments with appropriate IP ratings and temperature ranges.</p>
   <p class="def-long">Central infrastructure component that coordinates RTLS network operations, manages <a href="../terms/tag.html" class="term-link">tag</a> communications, and performs position calculations. In industrial deployments, base stations typically run on industrial PCs or rack-mounted servers (8-32GB RAM, multi-core processors) and connect to field devices via Ethernet (preferred) or Wi-Fi. Base station responsibilities include: synchronizing infrastructure timing (critical for TDoA systems requiring nanosecond <a href="../terms/precision.html" class="term-link">precision</a>), aggregating tag signals from multiple receivers, executing positioning algorithms (<a href="../terms/trilateration.html" class="term-link">trilateration</a>, <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a>), managing tag configurations and firmware updates, and serving data to application layer. Redundant base station configurations ensure high availability (dual servers with automatic failover, achieving 99.9%+ uptime). Processing <a href="../terms/capacity.html" class="term-link">capacity</a> determines maximum system scale - industrial base stations typically handle 500-5000 tags with 1-10 Hz update rates. Network <a href="../terms/latency.html" class="term-link">latency</a> between base station and field devices should remain under 20ms for optimal <a href="../terms/real-time.html" class="term-link">real-time</a> performance.</p>

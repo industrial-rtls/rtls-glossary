@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Machine Learning
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Machine Learning
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Machine Learning</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">Artificial intelligence techniques enabling systems to learn from data and improve performance without explicit programming. In RTLS, machine learning applications include anomaly detection, predictive maintenance, process optimization, and automated calibration. Analyzes patterns in massive historical datasets to identify insights humans would miss. Increasingly important for advanced RTLS analytics.</p>
   <p class="def-long">Application of artificial intelligence algorithms that learn patterns from data without explicit programming, increasingly used in RTLS for <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> improvement and analytics. Machine learning RTLS applications include: (1) Positioning enhancement - neural networks learning site-specific RF propagation characteristics to improve accuracy beyond traditional algorithms (typically 20-40% accuracy improvement over baseline <a href="../terms/trilateration.html" class="term-link">trilateration</a>). (2) <a href="../terms/fingerprinting.html" class="term-link">Fingerprinting</a> - automated learning of location-signal strength relationships eliminating manual site surveys. (3) NLoS detection - classifiers identifying non-line-of-sight conditions from signal characteristics for mitigation. (4) <a href="../terms/anomaly-detection.html" class="term-link">Anomaly detection</a> - unsupervised learning algorithms identifying unusual movement patterns or process deviations. (5) <a href="../terms/predictive-analytics.html" class="term-link">Predictive analytics</a> - forecasting bottlenecks, equipment failures, or <a href="../terms/capacity.html" class="term-link">capacity</a> needs based on historical location patterns. ML implementation considerations: training data requirements (typically 2-4 weeks baseline data, millions of position records), computational resources (model training requiring GPU acceleration for complex networks, inference on edge devices requiring optimized models), model maintenance (retraining as <a href="../terms/facility-layout.html" class="term-link">facility layout</a> or RF environment changes, typically quarterly), and explainability (understanding why model makes decisions, critical for operational acceptance). ML accuracy improvements vary by environment: complex industrial facilities with significant multipath see 30-50% accuracy gains, open warehouse environments see 10-20% gains, already-optimized UWB systems see minimal improvement. ML adoption growing: 25-35% of new RTLS deployments incorporating ML capabilities, primarily in positioning refinement and analytics rather than core positioning algorithms. Costs: ML-enhanced positioning adds $0-20k to system cost (software licensing or development), ML analytics platforms $20-100k annually depending on scale and sophistication.</p>

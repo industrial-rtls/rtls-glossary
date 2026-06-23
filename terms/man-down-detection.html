@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Man-Down Detection
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Man-Down Detection
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Man-Down Detection</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">A safety feature automatically detecting when a worker falls or becomes motionless and generating emergency alerts. Uses accelerometers and motion sensors in wearable tags to identify fall events or prolonged lack of movement. Critical for lone worker protection and hazardous environment safety. Enables rapid emergency response potentially saving lives.</p>
   <p class="def-long">Safety feature automatically detecting when worker has fallen and become incapacitated, triggering immediate emergency alerts.</p><p class="def-long">Detection algorithms monitor: (1) Sudden acceleration changes - free-fall detection followed by impact (typical fall signature: 0.5-1.5 seconds free-fall at &amp;lt;0.3g, followed by &amp;gt;3g impact). (2) Orientation changes - transition from vertical to horizontal. (3) Motion cessation - lack of movement after fall event (typical threshold: 20-30 seconds without detected motion while horizontal). (4) <a href="../terms/pattern-recognition.html" class="term-link">Pattern recognition</a> - distinguishing actual falls from intentional lying down (sitting/lying detected through gradual orientation change vs. sudden fall). Man-down systems provide: immediate alerts (typically 30-60 seconds from fall to alert generation), automatic location transmission (guiding responders to worker's exact position), escalation (alerts escalating if not acknowledged within 1-2 minutes), and optional two-way communication (voice capability enabling responder to assess situation). <a href="../terms/configuration.html" class="term-link">Configuration</a> parameters include: sensitivity adjustments (balancing false alarms vs. missed events, typical false positive rate target &amp;lt;3%), timeout duration (how long worker remains motionless before alert, typically 20-45 seconds), and activity cancellation (allowing worker to cancel alert within grace period if false alarm, typically 10-20 seconds). Detection <a href="../terms/accuracy.html" class="term-link">accuracy</a> critical: false negatives (missed actual falls) create serious safety risks, false positives (spurious alarms from normal activities) undermine user confidence. Well-tuned systems achieve &amp;gt;95% true positive rate (detecting actual falls) with &amp;lt;3% false positive rate. Man-down capability typically adds $15-35 to badge cost for IMU sensors and algorithms. Studies show man-down detection reduces time-to-treatment 60-80% (from minutes/hours to seconds/minutes), significantly improving outcomes for cardiac events, head injuries, and heat stress.</p>

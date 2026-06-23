@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Architecture</div>
     <h1 class="term-title">Star Topology</h1>
+  <div class="term-cat-tag">Architecture</div>
   </header>
   <p class="def-short">A network configuration where all devices connect to a central hub or controller. Common in infrastructure-mode RTLS where tags communicate with centralized access points/anchors. Provides centralized management and deterministic communication but creates single point of failure at hub.</p>
   <p class="def-long">Star topology is a network <a href="../terms/configuration.html" class="term-link">configuration</a> where individual nodes (tags or sensors) communicate directly with a central coordinator or hub rather than forming mesh or peer-to-peer networks. In industrial RTLS architectures, star topology is commonly employed for communication between tags and anchors/readers. Each <a href="../terms/tag.html" class="term-link">tag</a> transmits its signal directly to anchors within <a href="../terms/range.html" class="term-link">range</a>, which forward data to centralized positioning servers for calculation.</p><p class="def-long">Implementation requires anchors/readers positioned with sufficient coverage so all tags within the tracking area can directly reach multiple anchors. This drives infrastructure density requirements - star topologies need more <a href="../terms/fixed-infrastructure.html" class="term-link">fixed infrastructure</a> compared to mesh approaches where tags extend each other's <a href="../terms/range.html" class="term-link">range</a>. Industrial RTLS typically implements hub-based star topology: tags transmit positioning signals (UWB pulses, BLE advertisements), anchors within range receive transmissions and timestamp or measure characteristics, <a href="../terms/anchor.html" class="term-link">anchor</a> data is forwarded over wired infrastructure (Ethernet) to positioning servers, and servers calculate positions using <a href="../terms/trilateration.html" class="term-link">trilateration</a>, <a href="../terms/multilateration.html" class="term-link">multilateration</a>, or other algorithms. Alternative topologies include: mesh networks where tags relay each other's data (complex but extends range), tree topologies with hierarchical levels of aggregation, and hybrid approaches combining multiple topology types. The concentration of intelligence in anchors and servers rather than distributed across <a href="../terms/tag.html" class="term-link">tag</a> networks aligns with industrial requirements for centralized monitoring, security (tags cannot be compromised to attack other tags), and standardization (all tags interoperate identically with infrastructure). Network <a href="../terms/capacity.html" class="term-link">capacity</a> in star topologies scales with anchor processing capability and channel capacity - each anchor must handle all tags within its <a href="../terms/coverage-area.html" class="term-link">coverage area</a>.</p>

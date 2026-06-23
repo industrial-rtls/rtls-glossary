@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Integration Layer
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Integration Layer
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Integration Layer</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">The software component or middleware facilitating communication and data exchange between RTLS and other enterprise systems. Handles protocol translation, data transformation, message routing, and error handling. Enables RTLS integration with ERP, WMS, MES, and other business applications. Often uses standard protocols like REST APIs, message queues, or enterprise service buses.</p>
   <p class="def-long">Software component enabling RTLS to exchange data with external enterprise systems, providing translation, routing, and orchestration of information flows. Integration layer functions include: (1) Protocol translation - converting between RTLS APIs and external system interfaces (REST to SOAP, JSON to XML). (2) Data mapping - transforming RTLS data structures to match external system schemas. (3) Message routing - directing data to appropriate systems based on content or rules. (4) Aggregation/filtering - combining or reducing data before transmission. (5) Error handling - managing communication failures, retries, error logging. (6) Security - authentication, authorization, encryption of data in transit. Industrial RTLS integration patterns: (1) <a href="../terms/real-time.html" class="term-link">Real-time</a> streaming - position updates flowing continuously to external systems via <a href="../terms/websocket.html" class="term-link">WebSocket</a> or MQTT (1-10 Hz). (2) Event-driven - <a href="../terms/zone-entry.html" class="term-link">zone entry</a>/exit, alerts triggering immediate notifications via <a href="../terms/rest-api.html" class="term-link">REST API</a> or message queue. (3) Batch integration - periodic export/import of aggregated data (hourly/daily) via file transfer or database sync. (4) Request-response - external systems querying RTLS on-demand for current positions or historical data. Integration layer implementation approaches: (1) <a href="../terms/middleware.html" class="term-link">Middleware</a> platforms (MuleSoft, Dell Boomi, Informatica) providing pre-built connectors and integration flows. (2) ESB (Enterprise Service Bus) for complex multi-system orchestration. (3) Custom integration code (typically REST API clients) for simple point-to-point connections. (4) Database integration - direct database reads/writes (use cautiously to avoid performance impacts). Integration complexity and cost often exceed RTLS hardware costs - budget 30-50% of total project cost for integration work.</p>

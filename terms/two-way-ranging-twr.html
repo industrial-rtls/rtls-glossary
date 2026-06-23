@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Two-Way Ranging (TWR)
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Two-Way Ranging (TWR)
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Two-Way Ranging (TWR)</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A positioning technique where tags and anchors exchange messages to measure round-trip signal propagation time, determining distance. Doesn't require precise time synchronization between tags and anchors, simplifying deployment. Used in some UWB systems providing accurate ranging.</p>
   <p class="def-long">Two-Way Ranging (TWR) is a distance measurement technique where a <a href="../terms/tag.html" class="term-link">tag</a> and <a href="../terms/anchor.html" class="term-link">anchor</a> exchange signals in both directions, calculating distance from round-trip propagation time without requiring precise clock <a href="../terms/synchronization.html" class="term-link">synchronization</a> between them. The distance calculation is: Distance = ((TRound_Trip - TAnchor_Processing) × Speed_of_Light) / 2, where TRound_Trip is the total time from tag's initial transmission to receiving the response, and TAnchor_Processing is the known anchor delay between receiving request and transmitting response. <a href="../terms/system-capacity.html" class="term-link">System capacity</a> is limited - the multi-message ranging dialogue takes time (typically 1-5 milliseconds per ranging), limiting how many tags can <a href="../terms/range.html" class="term-link">range</a> to how many anchors per second. With 100 anchors and 1 millisecond per ranging transaction, maximum system capacity is approximately 1,000 ranges per second, supporting perhaps 250 tags at 4 Hz <a href="../terms/update-rate.html" class="term-link">update rate</a> if each tag ranges to 4 anchors. Industrial TWR implementations optimize for these constraints: Asymmetric TWR where only one participant (typically the anchor) requires <a href="../terms/precision.html" class="term-link">precision</a> timing, simplifying tag requirements. Scheduled ranging where tags range at predetermined times avoiding collisions and maximizing capacity. TWR <a href="../terms/accuracy.html" class="term-link">accuracy</a> in industrial environments achieves: 10-50 cm distance measurement under typical conditions, comparable to TDoA or other UWB time-based methods, with accuracy depending on clock stability, signal strength, multipath conditions, and NLOS effects. Comparing TWR to alternative methods: TDoA requires anchor synchronization but supports higher <a href="../terms/tag-capacity.html" class="term-link">tag capacity</a> and simpler (transmit-only) tags with longer <a href="../terms/battery-life.html" class="term-link">battery life</a>, making it preferred for large-scale industrial deployments. ToA requires tag-anchor synchronization (similar challenges to TDoA anchor sync) offering no particular advantage over either TWR or TDoA.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>Deployment
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>Deployment
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">Deployment</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">The comprehensive process of planning, installing, configuring, and operationalizing RTLS in an industrial facility. Encompasses requirements gathering, system design, procurement, installation, configuration, calibration, testing, training, and cutover. Industrial deployments face challenges including minimizing operational disruption, coordinating stakeholders, and dealing with harsh environments. Deployment approaches include phased rollouts or big-bang implementations.</p>
   <p class="def-long">Process of installing, configuring, and operationalizing RTLS infrastructure and tags.</p><p class="def-long">Industrial RTLS deployment follows typical project phases: (1) Planning - 2-6 weeks: requirements definition, <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> design, network preparation, project scheduling. (2) Installation - 1-4 weeks per building: physical anchor mounting, cabling (power and network), network <a href="../terms/configuration.html" class="term-link">configuration</a>, infrastructure validation. (3) <a href="../terms/commissioning.html" class="term-link">Commissioning</a> - 1-8 weeks: position <a href="../terms/accuracy.html" class="term-link">accuracy</a> testing, <a href="../terms/capacity.html" class="term-link">capacity</a> verification, application configuration, integration testing. (4) <a href="../terms/tag.html" class="term-link">Tag</a> rollout - 1-4 weeks: tag assignment to assets/personnel, user training, parallel operation with existing systems. (5) Production cutover - phased or immediate transition to production use. Timeline varies dramatically by scale: small deployments (single zone, 50 tags) complete in 4-8 weeks; enterprise deployments (multiple buildings, 5000+ tags) require 6-12 months. Deployment challenges include: coordinating work around production schedules (typically requiring evening/weekend installation), RF interference from existing equipment requiring troubleshooting, unexpected coverage gaps requiring additional infrastructure, and change management (users adapting to new processes). Phased deployment approach mitigates risk - starting with pilot area (100-200 m²) proves concept before facility-wide rollout.</p>

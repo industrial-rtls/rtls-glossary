@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Angle of Departure (AoD)
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Angle of Departure (AoD)
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Angle of Departure (AoD)</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A positioning technique where fixed infrastructure transmits signals from antenna arrays with known geometry, and mobile devices calculate their position by measuring the departure angle. Complementary to Angle of Arrival (AoA). Used in BLE 5.1+ systems where the antenna array is located in the infrastructure rather than the tag, enabling simpler and cheaper mobile devices while maintaining sub-meter accuracy.</p>
   <p class="def-long">Angle of Departure (AoD) is defined in the Bluetooth 5.1 specification alongside AoA as part of the <a href="../terms/direction-finding.html" class="term-link">direction finding</a> feature. In AoD, the transmitter (infrastructure anchor) switches between multiple antenna elements in a known pattern while transmitting a Constant Tone Extension (CTE) signal. The receiver (mobile tag) uses a single antenna to measure the phase differences between the switched antenna transmissions, calculating the angle at which the signal departed the transmitter array. This enables the mobile device to determine its bearing relative to each transmitting anchor and calculate its position by triangulating bearings from multiple anchors. AoD theoretical <a href="../terms/positioning-accuracy.html" class="term-link">accuracy</a> is 0.5-2 meters (90th percentile) in industrial environments, similar to AoA, with accuracy degrading in high-multipath environments typical of metal-rich manufacturing facilities.</p><p class="def-long">Key distinction between AoD and AoA: in AoD the multi-element antenna array is in the fixed infrastructure (anchor), while in AoA the array is in the receiving infrastructure. AoD advantage is simpler, smaller, and cheaper mobile tags (single antenna required) at the cost of more complex infrastructure. AoA advantage is simpler infrastructure beacons but requires array-equipped receivers. In practice, BLE RTLS vendors implement either AoA or AoD depending on their hardware architecture; both achieve similar positioning performance. Update rates for BLE AoD systems typically 1-5 Hz. Infrastructure cost $100-400 per AoD anchor (requiring multi-element antenna arrays), tag cost $15-50 per unit (simpler single-antenna design). AoD is particularly suited to deployments where large numbers of inexpensive tags are required and infrastructure cost is less critical, such as personnel tracking across large facilities.</p>

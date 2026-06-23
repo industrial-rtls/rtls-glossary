@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">Environmental Sensor</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">Sensors integrated with RTLS tags measuring conditions beyond location. Common types include temperature, humidity, vibration, pressure, and light sensors. Sensor data transmitted with position information enabling combined location and condition monitoring.</p>
   <p class="def-long">Sensors integrated with or complementing RTLS tags to monitor physical environmental conditions beyond position. Industrial environmental sensors measure: temperature (-40°C to +85°C <a href="../terms/range.html" class="term-link">range</a> typical, ±0.5°C <a href="../terms/accuracy.html" class="term-link">accuracy</a>), humidity (0-100% relative humidity, ±3% accuracy), pressure (useful for altitude determination or sealed container monitoring), light exposure (detecting door openings or improper storage), gas concentrations (for hazardous material monitoring), vibration/shock (monitoring rough handling), and sound levels (noise exposure monitoring for <a href="../terms/worker-safety.html" class="term-link">worker safety</a>). Sensor data typically transmitted with position updates at reduced frequency (every 1-10 minutes vs. 1-second position updates) to conserve battery. Data storage includes sensor readings with timestamps and corresponding positions, enabling spatial-temporal analysis.</p><p class="def-long">Applications include: cold chain monitoring (ensuring temperature-sensitive materials maintained within specifications throughout transport), process validation (confirming proper environmental exposure during curing, drying, or conditioning), compliance documentation (providing audit trail of storage conditions), <a href="../terms/worker-safety.html" class="term-link">worker safety</a> (monitoring heat stress in high-temperature areas, noise exposure), and quality control (correlating environmental conditions with defect rates). Environmental sensor integration increases <a href="../terms/tag.html" class="term-link">tag</a> cost 20-60% depending on sensor types and reduces <a href="../terms/battery-life.html" class="term-link">battery life</a> 20-40%. Most valuable for high-value materials where condition violations have significant consequences or regulatory compliance requires documentation.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Sensmap
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Sensmap
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Sensmap</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, alerting and notifications, real-time asset tracking, trajectory recording, anchor deployment visualization, and map-based system management. Allows adding buildings and floor plans, auto-deploying anchors, and provides immediate valuable insights. Also available in 3D version (Sensmap 3D) using WebGL for three-dimensional position visualization. Core component of RTLS Studio.</p>
   <p class="def-long">Sensmap is Sewio Networks' digital floor plan management system that provides the spatial foundation for RTLS visualization, zone definition, and analytics. Sensmap enables users to: import facility floor plans from various sources (CAD files, PDFs, images), calibrate digital plans to real-world coordinates ensuring positions align correctly with physical space, manage multi-level buildings with multiple floors, define zones and geofences by drawing boundaries directly on floor plans, overlay operational context (equipment locations, work cells, storage areas, traffic routes), and maintain facility documentation as layouts change. The <a href="../terms/calibration.html" class="term-link">calibration</a> process is critical - users identify known reference points on the digital floor plan and specify their real-world coordinates (typically obtained through physical measurement or surveying), allowing the system to transform RTLS coordinates (typically in meters) to correct positions on the graphical representation. This calibration ensures that when RTLS reports an asset at coordinates (x=10.5, y=23.2), it appears at the correct location on the floor plan. Multi-floor support is essential for industrial facilities with multiple levels - Sensmap manages relationships between floors, enabling seamless visualization navigation and accurate 3D positioning when vertical <a href="../terms/accuracy.html" class="term-link">accuracy</a> is available. Integration with facilities management systems and CAD tools enables automated floor plan updates as facility layouts evolve. Sensmap supports various coordinate systems and units (meters, feet) accommodating different regional preferences and existing facility documentation standards. The spatial accuracy of floor plans directly impacts operational utility - inaccurate or improperly calibrated plans cause confusion when displayed positions don't match physical locations.</p>

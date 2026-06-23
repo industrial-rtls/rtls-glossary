@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">RFID (Radio-Frequency Identification)</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">A technology using electromagnetic fields to automatically identify and track tags attached to objects. Includes both passive RFID (powered by reader signals) and active RFID (battery-powered). Fundamental technology underlying many RTLS implementations. Ranges from simple identification to real-time location tracking.</p>
   <p class="def-long">RFID is a wireless identification technology that uses radio waves to automatically identify and track objects equipped with RFID tags. While often confused with RTLS, RFID and RTLS serve different purposes: RFID primarily identifies objects passing through fixed <a href="../terms/reader.html" class="term-link">reader</a> locations (chokepoints), while RTLS provides continuous <a href="../terms/real-time.html" class="term-link">real-time</a> position tracking throughout a facility. RFID systems operate in three main frequency ranges, each with distinct characteristics: Low Frequency (LF, 125-134 kHz) with read ranges under 10 cm, used for <a href="../terms/access-control.html" class="term-link">access control</a>; High Frequency (HF, 13.56 MHz) with ranges up to 1 meter, used in NFC applications; and Ultra-High Frequency (UHF, 860-960 MHz) with ranges up to 12 meters, used in supply chain and <a href="../terms/inventory-management.html" class="term-link">inventory management</a>. RFID tags come in two types: passive tags without batteries (powered by reader's RF field, lower cost, shorter <a href="../terms/range.html" class="term-link">range</a>, typically $0.10-$2 per <a href="../terms/tag.html" class="term-link">tag</a>) and active tags with batteries (self-powered, longer range, higher cost, $10-$50+ per tag). <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> can provide zone-level positioning (identifying which reader zone a tag is near) but lacks the continuous tracking and sub-meter <a href="../terms/accuracy.html" class="term-link">accuracy</a> of dedicated RTLS technologies. RFID's advantages include lower tag costs and simpler infrastructure for chokepoint-based applications, while limitations include read reliability issues (metal and liquids interfere with RF signals), lack of continuous tracking, and limited <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>. The distinction between active RFID and RTLS has blurred over time, with some active RFID systems offering basic positioning capabilities, though dedicated RTLS technologies (UWB, UWB, Wi-Fi-based) provide superior accuracy and update rates for applications requiring continuous tracking.</p>

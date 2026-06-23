@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp; Zones<span>›</span>Safe Zone
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing & Zones<span>›</span>Safe Zone
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Geofencing & Zones</div>
     <h1 class="term-title">Safe Zone</h1>
+  <div class="term-cat-tag">Geofencing & Zones</div>
   </header>
   <p class="def-short">A designated area where personnel are protected from hazards or where safety procedures are relaxed. RTLS monitors safe zone occupancy, alerts when personnel leave safe zones during emergencies, and verifies safety protocols. Opposite of hazardous zones.</p>
   <p class="def-long">A safe zone in industrial RTLS defines a geographical area where personnel or assets are protected from hazards, typically enforced through <a href="../terms/real-time-monitoring.html" class="term-link">real-time monitoring</a> and automated alerts. Safe zones serve as protective perimeters around dangerous equipment, machinery, or processes, ensuring workers remain at safe distances from potential hazards.</p><p class="def-long">Implementation requires: defining zone boundaries with appropriate safety margins based on risk assessments and regulatory requirements, equipping workers with RTLS tags (typically integrated into safety vests, helmets, or lanyards), configuring alert responses (immediate warnings to workers via <a href="../terms/tag.html" class="term-link">tag</a>-mounted buzzers or vibration, alerts to operators or safety officers, automated equipment shutdown for critical safety applications), and setting appropriate detection <a href="../terms/latency.html" class="term-link">latency</a> requirements (typically 500ms to 2 seconds for AGV safety, faster for more critical applications). The effectiveness of safe zones depends on RTLS <a href="../terms/accuracy.html" class="term-link">accuracy</a> and reliability - positioning errors could cause workers to unknowingly enter hazardous areas or create excessive false alarms that erode system credibility. Industrial safety standards often require redundant protection mechanisms, so RTLS-based safe zones typically supplement rather than replace physical barriers, light curtains, or emergency stops. Advanced implementations include dynamic safe zones that adjust based on equipment operation status (expanding when machinery operates, contracting when idle), directional zones that trigger alerts based on approach vectors, and graduated response zones with increasing alert levels as workers move closer to hazards. Safety zone systems must achieve high reliability (99.9%+ detection rates) and minimize false positives to maintain operator trust while ensuring genuine hazards are consistently detected.</p>

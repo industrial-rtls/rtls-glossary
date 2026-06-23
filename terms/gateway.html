@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">Gateway</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">A network device bridging between RTLS infrastructure components and central systems. Collects data from multiple anchors or tags and forwards it to servers or cloud platforms. Functions include data aggregation, protocol translation, data preprocessing, and network management. Enables scalable architectures and simplifies network topology.</p>
   <p class="def-long">Network device bridging wireless RTLS tags/sensors and wired infrastructure, aggregating data from multiple tags and forwarding to central systems. In BLE/Wi-Fi RTLS deployments, gateways perform: signal reception from battery-powered tags (typically 20-50 meter radius), data aggregation (collecting signals from 50-500 tags), local processing (RSSI measurement, timestamp assignment, data filtering), and network forwarding (transmitting aggregated data to position engines via Ethernet/Wi-Fi). Gateway types: (1) Dedicated RTLS gateways - purpose-built devices optimized for RTLS performance, supporting specialized positioning features (AoA antenna arrays, precise timestamping). Cost $100-500 per gateway. (2) Standard IoT gateways - general-purpose BLE/Wi-Fi gateways supporting RTLS among other applications. Cost $50-200 per gateway. (3) Integrated gateways - RTLS functionality embedded in existing devices (access points, edge servers). Minimal incremental hardware cost. Gateway specifications include: <a href="../terms/coverage-area.html" class="term-link">coverage area</a> (20-50 meters typical for BLE, 30-100 meters for Wi-Fi), <a href="../terms/tag-capacity.html" class="term-link">tag capacity</a> (simultaneous tags), <a href="../terms/update-rate.html" class="term-link">update rate</a> (1-10 Hz), network interface (10/100/1000 Mbps Ethernet, Wi-Fi), power (PoE most common for <a href="../terms/deployment.html" class="term-link">deployment</a> simplicity), environmental rating (IP65-67 for industrial environments). Gateway placement critical: similar principles as <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> but typically lower density (1 gateway per 500-2000 m²) due to longer <a href="../terms/range.html" class="term-link">range</a> and lower <a href="../terms/accuracy.html" class="term-link">accuracy</a> requirements. Gateway deployment simpler than UWB anchor deployment - no precise positioning required (gateway locations need not be surveyed), no <a href="../terms/synchronization.html" class="term-link">synchronization</a> needed, and simplified <a href="../terms/commissioning.html" class="term-link">commissioning</a> (connect to network, configure, operational).</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Anomaly Detection
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Anomaly Detection
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Anomaly Detection</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">Automated identification of unusual patterns or behaviors in RTLS data deviating from expected norms. Detects unexpected movements, abnormal process durations, unusual travel patterns, and abnormal dwell times. Advanced systems use machine learning to establish baseline patterns and flag deviations. Helps identify equipment failures, security breaches, and safety issues before they escalate.</p>
   <p class="def-long">Analytical capability that identifies unexpected patterns or deviations in location and movement data. In industrial RTLS, anomaly detection algorithms monitor: unusual asset routes (deviating from established paths), unexpected dwell times in zones (significantly longer or shorter than baseline), missing position updates (potential <a href="../terms/tag.html" class="term-link">tag</a> failure or RF dead zones), erratic movement patterns (suggesting process issues), and timing anomalies (early/late arrivals at process steps). <a href="../terms/machine-learning.html" class="term-link">Machine learning</a> approaches build statistical models from historical data, typically requiring 2-4 weeks of baseline data for reliable detection. Rule-based systems use predefined thresholds and patterns. Effective anomaly detection reduces manual monitoring burden while identifying safety issues, process inefficiencies, or equipment problems. False positive rates should remain below 5% to maintain operator trust and avoid alert fatigue.</p>

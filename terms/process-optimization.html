@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">Process Optimization</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">The systematic improvement of operational processes using insights from RTLS data analysis. Identifies and eliminates bottlenecks, reduces cycle times, improves material flow, optimizes resource allocation, and enhances efficiency. RTLS provides objective data revealing actual versus intended processes enabling data-driven improvements.</p>
   <p class="def-long">Systematic improvement of industrial operations using RTLS data to identify and eliminate inefficiencies, reduce waste, and enhance performance. Process optimization methodology using RTLS: (1) Baseline measurement - collecting 2-4 weeks data capturing current performance (cycle times, dwell times, movement patterns, utilization rates). (2) Analysis - identifying improvement opportunities through <a href="../terms/data-mining.html" class="term-link">data mining</a>, <a href="../terms/pattern-recognition.html" class="term-link">pattern recognition</a>, bottleneck analysis.</p><p class="def-long">Typical findings: 30-50% of <a href="../terms/cycle-time.html" class="term-link">cycle time</a> in non-value activities, 2-3 specific zones accounting for 60-80% of delays, 20-40% unnecessary material movements. (3) Root cause analysis - investigating why inefficiencies exist (<a href="../terms/capacity.html" class="term-link">capacity</a> imbalances, poor layout, process variability, resource constraints). (4) Solution development - designing improvements addressing root causes. (5) Implementation - executing changes with proper change management and training. (6) Validation - measuring post-implementation performance confirming improvements achieved. (7) Sustainment - ongoing monitoring ensuring improvements maintained. Analysis showing materials spending 40% time waiting enables capacity rebalancing, reducing cycle time 25-40%. (2) <a href="../terms/throughput.html" class="term-link">Throughput</a> improvement - removing bottlenecks constraining output. Identifying constraint zones and adding capacity increases throughput 15-30% without facility expansion. (3) <a href="../terms/travel-distance.html" class="term-link">Travel distance</a> minimization - reducing material and worker movement. Layout optimization reduces travel 20-45%. (4) Work-in-progress reduction - lowering inventory in process. Flow analysis enables smaller lot sizes, reducing WIP inventory 30-50%. (5) Resource utilization - maximizing productivity of equipment and personnel. Utilization analysis identifies opportunities for consolidation, reducing asset needs 15-30%. (6) Process standardization - reducing variation in workflows. Pattern analysis enables standardization improving consistency and reducing defects 20-40%. ROI typically 3-10x RTLS investment. Payback period 6-18 months.</p>

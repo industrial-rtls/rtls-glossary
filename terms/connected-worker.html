@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industry Terms</div>
     <h1 class="term-title">Connected Worker</h1>
+  <div class="term-cat-tag">Industry Terms</div>
   </header>
   <p class="def-short">An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety through automatic hazardous zone detection, man-down alerts, and evacuation assistance. Improves efficiency by guiding workers to tasks and optimizing allocation. Ensures compliance by verifying required training and tracking restricted zone time.</p>
   <p class="def-long">Technology concept integrating personal location tracking with other digital tools (mobile devices, sensors, communication systems) to enhance <a href="../terms/worker-safety.html" class="term-link">worker safety</a>, productivity, and support. In industrial RTLS context, connected worker solutions provide: <a href="../terms/real-time.html" class="term-link">real-time</a> worker location for <a href="../terms/emergency-response.html" class="term-link">emergency response</a>, <a href="../terms/lone-worker-protection.html" class="term-link">lone worker protection</a> with automated check-ins, proximity alerts for <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a> with vehicles, zone-based <a href="../terms/access-control.html" class="term-link">access control</a>, environmental hazard warnings (gas detection, high temperature), task guidance and digital work instructions delivered based on location, and automated time tracking by work zone. Workers typically carry or wear RTLS tags integrated with smartphones or dedicated wearable devices including emergency buttons. Connected worker implementations must balance operational benefits with privacy concerns - focus on safety and aggregate <a href="../terms/productivity-metrics.html" class="term-link">productivity metrics</a> rather than detailed individual surveillance. Successful implementations require worker input during design, transparent policies on data usage, and demonstrable safety improvements. Studies show connected worker programs reduce accidents 40-60% and improve productivity 10-15% through reduced time locating tools, materials, or assistance. BLE is the dominant technology for connected worker implementations due to low badge cost ($40-100), long battery life (2-5 years), and adequate accuracy (1-3 m) for safety and productivity applications. UWB supplements BLE in high-risk zones where precise positioning is needed for collision avoidance with vehicles. GNSS-enabled badges extend connected worker capabilities to outdoor areas such as construction sites, mining operations, and large industrial campuses.</p>

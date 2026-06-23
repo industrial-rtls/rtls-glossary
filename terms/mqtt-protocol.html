@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Standards &amp; Protocols<span>›</span>MQTT Protocol
+  <a href="../index.html">Glossary</a><span>›</span>Standards & Protocols<span>›</span>MQTT Protocol
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Standards</div>
     <h1 class="term-title">MQTT Protocol</h1>
+  <div class="term-cat-tag">Standards</div>
   </header>
   <p class="def-short">A lightweight messaging protocol designed for IoT applications with low bandwidth and unreliable networks. Often used for RTLS data transmission between devices and servers. Provides publish-subscribe model enabling efficient one-to-many communication. Well-suited for industrial environments with constrained network resources.</p>
   <p class="def-long">Message Queuing <a href="../terms/telemetry.html" class="term-link">Telemetry</a> Transport, lightweight publish-subscribe messaging protocol designed for constrained devices and networks, commonly used for RTLS data distribution. MQTT characteristics: publish-subscribe model (clients publish messages to topics, subscribers receive messages from topics they're interested in), quality of service levels (QoS 0: at-most-once delivery, QoS 1: at-least-once, QoS 2: exactly-once), retained messages (last message on topic retained for new subscribers), and lightweight protocol (minimal overhead, suitable for constrained networks and devices). MQTT in RTLS deployments: (1) Position streaming - RTLS publishing position updates to topics organized by <a href="../terms/tag.html" class="term-link">tag</a> ID, zone, or asset type (eg., /rtls/positions/tag-1234, /rtls/zone/assembly-line-1).</p><p class="def-long">MQTT brokers: open-source (Mosquitto, EMQX) and commercial (AWS IoT Core, Azure IoT Hub, HiveMQ).</p><p class="def-long">Typical industrial <a href="../terms/deployment.html" class="term-link">deployment</a>: MQTT broker co-located with RTLS system or on premises network, RTLS publishing positions at 1-10 Hz to per-<a href="../terms/tag.html" class="term-link">tag</a> topics, applications subscribing to topics matching their interests. Performance considerations: broker sizing (typical broker handling 1000s of concurrent connections, 10,000s messages/second), <a href="../terms/network-bandwidth.html" class="term-link">network bandwidth</a> (1000 tags at 1 Hz with 100-byte messages = 100 KB/s = 0.8 Mbps, easily handled by most networks), and message persistence (broker storing recent messages for reliability, typical retention 1 hour to 7 days). MQTT adoption in industrial RTLS growing: 40-50% of new deployments using MQTT for application integration, driven by IoT/IIoT standardization and <a href="../terms/industry-4-0.html" class="term-link">Industry 4.0</a> initiatives. MQTT enables clean integration architecture: RTLS publishes to broker, multiple applications subscribe independently, adding new applications or removing old doesn't require RTLS system changes.</p>

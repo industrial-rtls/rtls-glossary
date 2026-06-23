@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Multilateration
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Multilateration
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Multilateration</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Arrival). Tag transmits a signal received by multiple anchors at slightly different times. Differences reveal distances enabling position calculation. Commonly used in UWB and other RF-based RTLS.</p>
   <p class="def-long">Positioning technique calculating location by measuring distances from object to multiple reference points (anchors) with known positions, then solving geometric equations to determine position. Multilateration (also called <a href="../terms/trilateration.html" class="term-link">trilateration</a> in 2D) requires: minimum 3 anchors for 2D positioning, 4 anchors for 3D positioning (though 3D systems often use &amp;gt;4 for <a href="../terms/accuracy.html" class="term-link">accuracy</a> through redundancy). Distance measurements obtained through: Time of Flight (ToF) - measuring signal travel time and converting to distance using propagation speed (UWB primary method, achieving 10-30 cm accuracy), Received Signal Strength (RSSI) - estimating distance from <a href="../terms/signal-attenuation.html" class="term-link">signal attenuation</a> (BLE/Wi-Fi, 1-15 meter accuracy), or Two-Way Ranging (TWR) - bidirectional time measurements eliminating clock <a href="../terms/synchronization.html" class="term-link">synchronization</a> requirements. Multilateration mathematics: each distance measurement defines sphere (3D) or circle (2D) centered on <a href="../terms/anchor.html" class="term-link">anchor</a> with radius equal to measured distance. <a href="../terms/tag.html" class="term-link">Tag</a> position is intersection of these spheres/circles. Example: 10 cm ranging error with GDOP of 2 produces 20 cm position error, but same error with GDOP of 8 produces 80 cm position error. Industrial multilateration considerations: (1) <a href="../terms/anchor-placement.html" class="term-link">Anchor placement</a> optimization - ensuring good geometry throughout <a href="../terms/coverage-area.html" class="term-link">coverage area</a> (avoiding collinear arrangements, maximizing spatial separation). (2) Over-determination - using &amp;gt;4 anchors (6-10 typical) providing redundancy and accuracy improvement. (3) Outlier rejection - identifying and excluding anomalous distance measurements (NLoS paths, interference). (4) Kalman filtering - combining current multilateration result with movement model and previous positions for smoothing. Multilateration accuracy varies by technology: UWB achieving 10-30 cm (90th percentile) in industrial environments with proper anchor placement, Wi-Fi/BLE RSSI achieving 3-15 meters, GPS achieving 3-10 meters outdoors.</p>

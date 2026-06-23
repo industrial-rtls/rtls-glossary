@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">Active RFID</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">Radio frequency identification technology where battery-powered tags actively transmit signals at regular intervals. Communicates over much longer distances (30-100+ meters) than passive RFID and enables real-time tracking. Commonly used for tracking high-value assets, vehicles, and personnel. Tags are more expensive but offer superior range and functionality.</p>
   <p class="def-long">RFID technology where tags contain batteries to actively broadcast signals, enabling longer read ranges (50-100 meters) compared to <a href="../terms/passive-rfid.html" class="term-link">passive RFID</a>. In industrial environments, active RFID tags transmit at programmable intervals (typically 1-60 seconds) at frequencies of 433 MHz, 868-915 MHz, or 2.4 GHz. <a href="../terms/battery-life.html" class="term-link">Battery life</a> ranges from 3-7 years depending on transmission frequency and environmental conditions. Active RFID provides only zone-level <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (knowing which <a href="../terms/reader.html" class="term-link">reader</a> detected the <a href="../terms/tag.html" class="term-link">tag</a>) rather than precise coordinates.</p><p class="def-long">Common applications include container tracking in ports, <a href="../terms/vehicle-tracking.html" class="term-link">vehicle tracking</a> in yards, and <a href="../terms/tool-tracking.html" class="term-link">tool tracking</a> in large facilities where precise positioning is unnecessary. Tags cost $15-50 per unit, significantly more than <a href="../terms/passive-rfid.html" class="term-link">passive RFID</a> but less than UWB or other <a href="../terms/precision.html" class="term-link">precision</a> positioning tags.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Occupancy Analytics
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Occupancy Analytics
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Occupancy Analytics</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">Analysis of how many people or assets occupy specific areas over time. Reveals space utilization patterns, peak occupancy times, underutilized areas, and compliance with capacity limits. Supports facility planning, safety management (maximum occupancy enforcement), and process optimization.</p>
   <p class="def-long">Analysis of <a href="../terms/space-utilization.html" class="term-link">space utilization</a> patterns using RTLS data to understand how facilities, zones, and equipment are used over time. Industrial occupancy analytics applications: (1) Space optimization - identifying underutilized areas for repurposing or consolidation, typically finding 15-30% of facility space underutilized. (2) <a href="../terms/capacity.html" class="term-link">Capacity</a> planning - understanding current utilization to forecast future space needs, preventing over-building. (3) Safety compliance - monitoring occupancy limits in hazardous zones or confined spaces. (4) Energy management - adjusting HVAC and lighting based on actual occupancy rather than schedules. (5) Process balancing - identifying workstation utilization imbalances for capacity reallocation.</p><p class="def-long">Typical findings: conference rooms utilized 30-45% of scheduled time (over-booking indicates insufficient <a href="../terms/capacity.html" class="term-link">capacity</a>, under-booking suggests excess), production work cells 55-75% utilized (accounting for breaks and changeovers), storage areas 40-70% occupied (space for growth while avoiding waste), and break rooms showing distinct usage patterns by shift. Occupancy analytics data sources beyond RTLS: badge swipes (entry/exit times), environmental sensors (CO2, motion detecting presence), desk sensors (detecting seated workers), and system logs (equipment usage indicating operator presence). Business benefits: 20-40% facility cost reduction through space optimization (consolidating operations, deferring expansions), 10-25% energy savings (demand-based HVAC/lighting), 15-30% productivity improvement (optimal workspace allocation matching usage patterns), and improved workplace satisfaction (adequate space for needs). Successful occupancy analytics requires: complete coverage (detection throughout analyzed spaces), accurate counting (distinguishing individuals, avoiding double-counting), sufficient history (minimum 4-8 weeks for patterns, accounting for seasonality), and actionable presentation (insights driving specific decisions, not just interesting data).</p>

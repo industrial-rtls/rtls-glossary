@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Architecture</div>
     <h1 class="term-title">Centralized System</h1>
+  <div class="term-cat-tag">Architecture</div>
   </header>
   <p class="def-short">An architecture where all positioning calculations and data processing occur on a central server. Anchors act as simple data collectors forwarding raw signals to the central system. Offers simplified infrastructure, consistent algorithms, centralized management, and easier updates. Drawbacks include single point of failure, network dependency, higher latency, and scalability limitations.</p>
   <p class="def-long">RTLS architecture where all position calculations, data processing, and intelligence reside in central servers. In centralized systems, field devices (anchors, gateways) act as simple relay points sending raw signal measurements to central processing engines for position calculation. Centralized architectures provide advantages: simplified field device management (minimal firmware complexity), centralized <a href="../terms/configuration.html" class="term-link">configuration</a> and updates, unified view across facility or multiple facilities, and easier integration with enterprise systems.</p><p class="def-long">Disadvantages include: dependency on network connectivity (field devices non-functional if network fails), higher <a href="../terms/network-bandwidth.html" class="term-link">network bandwidth</a> requirements (raw measurements more data-intensive than computed positions), potential <a href="../terms/latency.html" class="term-link">latency</a> from round-trip communication, and single point of failure (though mitigated by redundant servers). Most industrial RTLS use primarily centralized architectures with some edge intelligence for local alerting or emergency functions. Compare to distributed systems where intelligence resides at edge, and hybrid architectures combining both approaches. System selection depends on facility network infrastructure, required response times, and reliability requirements.</p>

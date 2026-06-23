@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>Facility Layout
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>Facility Layout
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">Facility Layout</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">The physical arrangement of equipment, workstations, and infrastructure within a building. Layout significantly impacts RTLS design including anchor placement and coverage. RTLS data helps optimize layout by revealing traffic patterns and space utilization.</p>
   <p class="def-long">Physical arrangement of production areas, storage zones, equipment, and pathways within industrial facility, often represented digitally as foundation for RTLS visualization. In RTLS context, facility layout serves as: (1) Geographic reference - base map displaying <a href="../terms/real-time.html" class="term-link">real-time</a> asset positions and movement paths. (2) Zone definition framework - boundaries for geofences, reporting areas, and process steps aligned with physical spaces. (3) Analysis tool - understanding travel distances, identifying inefficient layouts, and planning improvements. (4) Planning tool - simulating layout changes and predicting impact on <a href="../terms/material-flow.html" class="term-link">material flow</a> and travel distances. Facility layout documentation includes: building outline and dimensions, interior walls and barriers, equipment positions (stationary machinery, shelving, workstations), pathway widths (aisles, corridors), door and gate locations (entry/exit points affecting movement), elevation changes (ramps, stairs, mezzanines), and zone designations (production areas, storage, shipping, restricted zones). Layout data sources: CAD drawings from facility design (preferred, providing precise dimensions), as-built surveys (measuring actual constructed facility), or manual mapping (tracing on site).</p><p class="def-long">RTLS systems import layout files in common formats: DWG/DXF (AutoCAD), PDF with georeferencing, or image files (PNG, JPG) with scale <a href="../terms/calibration.html" class="term-link">calibration</a>. Accurate facility layout is critical for: precise position visualization, meaningful analytics (<a href="../terms/dwell-time.html" class="term-link">dwell time</a> by area, <a href="../terms/travel-distance.html" class="term-link">travel distance</a> calculations), and effective <a href="../terms/geofencing.html" class="term-link">geofencing</a>. Layout updates required when facility modified - major reconfigurations requiring complete RTLS <a href="../terms/commissioning.html" class="term-link">commissioning</a>, minor changes (equipment moves) requiring <a href="../terms/geofence.html" class="term-link">geofence</a> adjustments only.</p>

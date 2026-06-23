@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Data Mining
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Data Mining
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Data Mining</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">Discovering patterns, correlations, and insights from large volumes of historical RTLS data using statistical analysis and machine learning. Extracts valuable knowledge from massive datasets to identify process inefficiencies, equipment degradation patterns, and optimization opportunities. Applications include process discovery, predictive modeling, anomaly detection, and causal analysis. Requires both technical expertise and domain knowledge.</p>
   <p class="def-long">Application of analytical algorithms to discover patterns, correlations, and insights within RTLS-generated location datasets. In industrial contexts, data mining techniques extract actionable intelligence from millions of position records: clustering algorithms identify common movement patterns and workflow variations, association rule mining discovers correlations between location patterns and operational outcomes (quality issues, delays), sequence mining identifies typical process flows and deviations, and classification models predict outcomes based on location behavior.</p><p class="def-long">Typical industrial data mining projects require 4-12 weeks of historical data (millions to billions of records).</p><p class="def-long">Common discoveries include: unexpected bottlenecks (50-70% of delay time concentrated in 2-3 specific zones), underutilized shortcuts (alternative paths saving 15-25% travel time), anomalous patterns preceding equipment failures (enabling <a href="../terms/predictive-maintenance.html" class="term-link">predictive maintenance</a>), and correlation between workflow deviations and quality defects. Data mining requires expertise in both analytics and domain knowledge - pure statistical patterns without operational context often lead to spurious insights. Successful implementations typically identify 5-15 high-impact optimization opportunities, with implementation of top 3-5 delivering 10-25% operational improvements.</p>

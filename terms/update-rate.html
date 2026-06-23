@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics &amp; KPIs<span>›</span>Update Rate
+  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics & KPIs<span>›</span>Update Rate
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Metrics & KPIs</div>
     <h1 class="term-title">Update Rate</h1>
+  <div class="term-cat-tag">Metrics & KPIs</div>
   </header>
   <p class="def-short">The frequency at which RTLS reports new positions, measured in Hertz or updates per second. Common rates range from 0.1 Hz for slow-moving assets to 10+ Hz for dynamic applications. Higher rates provide smoother tracking but consume more battery power and system resources.</p>
   <p class="def-long">Update rate in industrial RTLS refers to the frequency at which a <a href="../terms/tag.html" class="term-link">tag</a> transmits positioning signals or the system calculates and reports new position information, typically measured in Hertz (Hz) or updates per second. Industrial RTLS update rates span a wide <a href="../terms/range.html" class="term-link">range</a> depending on application requirements: 0.1-1 Hz (one update every 1-10 seconds) for slow-moving <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> where continuous monitoring unnecessary (stored inventory, parked equipment, stationary tools), 1-5 Hz for general asset tracking providing smooth visualization and adequate responsiveness for most operational monitoring (moving pallets, mobile equipment, <a href="../terms/personnel-tracking.html" class="term-link">personnel tracking</a>), 5-10 Hz for dynamic applications requiring responsive tracking (active AGVs, forklifts in operation, <a href="../terms/material-flow.html" class="term-link">material flow</a> through production processes), and 10-40 Hz for safety-critical or high-speed applications (<a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a> systems, <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a>, fast-moving vehicles or equipment). A tag operating at 1 Hz might achieve 2-3 year <a href="../terms/battery-life.html" class="term-link">battery life</a>, while 10 Hz operation reduces life to 3-6 months. Motion-triggered update rate adjustment works through: tags incorporating accelerometers detecting motion, automatically increasing transmission rate when movement detected, reverting to low rate after period of stationary operation, and significantly extending battery life (tags stationary 80-90% of time in many industrial applications can achieve 3-5× battery life improvement). Sewio's RTLS supports flexible update rate <a href="../terms/configuration.html" class="term-link">configuration</a> from 0.1 to 40 Hz, enabling customers to optimize the tradeoff between tracking responsiveness, battery life, and <a href="../terms/system-capacity.html" class="term-link">system capacity</a> for their specific industrial applications, with typical deployments using 1-5 Hz for general tracking and 10-20 Hz for safety-critical applications requiring rapid response to position changes.</p>

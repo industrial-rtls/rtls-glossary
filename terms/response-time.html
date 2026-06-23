@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Response Time</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The time elapsed between an event occurring and the system responding with appropriate action. Critical for safety and control applications. Includes detection time, processing time, and action execution time. Edge computing and distributed architectures reduce response time for critical applications.</p>
   <p class="def-long">Response time in industrial RTLS measures the total elapsed time from when an event occurs (such as a <a href="../terms/tag.html" class="term-link">tag</a> entering a zone or a condition requiring alert) to when the system notifies operators or triggers an automated response. This end-to-end metric encompasses: tag detection or position update, data transmission to <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a>, position calculation or event detection, business logic processing (evaluating rules or conditions), alert generation, and notification delivery (screen alert, email, SMS, or API call to external system). Industrial RTLS response times vary significantly by application criticality: safety systems requiring immediate worker alert may target &amp;lt;500ms response time, anti-collision systems for AGVs typically require &amp;lt;1 second, workflow automation might tolerate 2-5 second response time, while asset status alerts could accept 10-30 second delays. Response time differs from <a href="../terms/update-rate.html" class="term-link">update rate</a> - a system updating positions at 1 Hz (every second) might have 3-5 second response time when including processing and notification delivery. Factors impacting response time include: system architecture (edge vs. cloud processing), network <a href="../terms/latency.html" class="term-link">latency</a> and reliability, positioning engine computational load and optimization, database query performance for rule evaluation, and integration architecture with alerting systems. Mission-critical industrial applications require not just fast average response time but guaranteed maximum response time even under peak load conditions. Testing response time under realistic load conditions (hundreds of active tags, multiple simultaneous events) is essential during system acceptance testing to verify performance meets operational requirements.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Factory Restore
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Factory Restore
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Factory Restore</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">The process of returning RTLS devices or systems to original factory default state, erasing all custom configurations and stored data. More comprehensive than simple reset, including clearing configurations, deleting data, resetting security credentials, and sometimes reverting firmware. Used for device decommissioning, major reconfiguration, troubleshooting severe issues, and compliance requirements.</p>
   <p class="def-long">Process of returning RTLS device to its original manufacturer <a href="../terms/configuration.html" class="term-link">configuration</a> state, erasing all user modifications and site-specific settings. Factory restore differs from simple reboot or reset: restore completely erases configuration memory and reinstalls base firmware, while reset may preserve some settings. Restore scenarios include: troubleshooting when device exhibiting problems of unknown cause (eliminates possibility of corrupt configuration), repurposing device from one facility to another (ensuring clean state), security requirement (removing potentially compromised configurations), or preparing device for return under warranty or disposal.</p><p class="def-long">Restore procedure varies by device type: hardware-based restore uses button sequences during power-up (common pattern: hold button 10+ seconds until LED pattern indicates restore mode), software-based restore accessed through <a href="../terms/configuration.html" class="term-link">configuration</a> interfaces (web UI, command-line), or factory restore automatic during firmware downgrade. Critical data that should survive restore: unique device identifiers (MAC address, serial number), hardware <a href="../terms/calibration.html" class="term-link">calibration</a> values (antenna delays, crystal trim values, power calibration), and hardware-specific parameters (device-specific timing offsets).</p><p class="def-long">After factory restore, devices require reconfiguration: network settings, site-specific operational parameters, zone assignments, and security credentials. Factory restore duration typically 30 seconds to 5 minutes depending on device complexity. Best practice: maintain <a href="../terms/configuration.html" class="term-link">configuration</a> backups of all devices enabling rapid reconfiguration after factory restore if needed.</p>

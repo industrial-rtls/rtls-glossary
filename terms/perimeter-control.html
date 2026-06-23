@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp; Zones<span>›</span>Perimeter Control
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing & Zones<span>›</span>Perimeter Control
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Geofencing & Zones</div>
     <h1 class="term-title">Perimeter Control</h1>
+  <div class="term-cat-tag">Geofencing & Zones</div>
   </header>
   <p class="def-short">The use of RTLS to monitor and control movement across facility boundaries. Detects when assets or personnel cross defined perimeters, preventing unauthorized exits, managing access, and providing security. Applications include theft prevention, visitor management, and controlled area access. Often integrated with physical security systems.</p>
   <p class="def-long">RTLS application monitoring facility boundaries and controlling access at perimeter, preventing unauthorized departures or entries. Perimeter control capabilities: (1) Boundary monitoring - geofences defining facility perimeter, detecting tags crossing boundary. (2) Entry/exit detection - knowing when assets or personnel enter or leave facility. (3) Authorization enforcement - allowing/preventing perimeter crossings based on <a href="../terms/tag.html" class="term-link">tag</a> permissions. (4) Asset protection - preventing valuable assets from leaving facility without authorization. (5) Personnel safety - ensuring personnel don't leave designated safe areas. (6) Visitor management - tracking visitor entry, presence, and departure. Portal technologies: (1) UHF RFID portals - overhead antennas at doorways reading passive tags (read reliability 85-98%). (2) UWB portals - anchors positioned at exits providing precise crossing detection (&amp;gt;95% reliability, knowing direction). (3) BLE gateways - at entries detecting tag crossings (moderate reliability 80-90%, differentiating entry versus exit challenging).</p><p class="def-long">Perimeter control challenges: (1) Detection reliability - ensuring all crossings detected with no gaps in coverage.</p><p class="def-long">Typical systems target 95-98% detection rate. (2) Direction determination - distinguishing entry from exit requiring proper portal <a href="../terms/configuration.html" class="term-link">configuration</a>. (3) Tailgating - multiple people/items crossing together, ensuring all detected individually. (4) Authorization management - maintaining current authorization data for all tags. (5) False alarms - avoiding spurious alerts from tags near but not crossing boundary requiring proper <a href="../terms/geofence.html" class="term-link">geofence</a> sizing accounting for <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>. Perimeter control ROI: shrinkage reduction preventing theft (typically saving $5-50k annually), compliance avoiding regulatory penalties, and safety preventing personnel from entering or leaving during unsafe conditions.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Triangulation
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Triangulation
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Triangulation</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particularly those using angle of arrival measurements. Requires fewer reference points than trilateration for 2D positioning. Used in systems employing Angle of Arrival (AoA) measurements.</p>
   <p class="def-long">Triangulation is a positioning technique that determines location by measuring angles from multiple reference points with known positions. The geometric principle involves: establishing multiple reference points (anchors/base stations) with known positions, measuring the angle or direction from each reference point toward the target (<a href="../terms/tag.html" class="term-link">tag</a>/asset), and calculating the target position as the intersection of bearing lines extending from reference points at measured angles. In 2D positioning, bearings from two reference points theoretically suffice (two lines intersect at one point), though three or more improve <a href="../terms/accuracy.html" class="term-link">accuracy</a> through redundancy and ambiguity <a href="../terms/resolution.html" class="term-link">resolution</a>. In 3D, three or more references are needed considering elevation angles. Industrial RTLS implementations using triangulation-related principles include: Bluetooth 5.1 Direction Finding using angle of arrival (AoA) or angle of departure (AoD) methods - antenna arrays measure the phase difference of signals arriving at multiple antennas, calculating arrival angle, with multiple anchors providing bearing triangulation. Triangulation challenges in industrial environments include: angle measurement requiring antenna arrays (increasing complexity and cost compared to omnidirectional antennas), <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a> corrupting angle measurements (reflected signals appearing from wrong directions), NLOS conditions blocking direct paths preventing accurate angle measurement, and accuracy degradation with distance (angular errors translate to larger position errors at greater ranges - 1 degree angle error causes ~1.7 meter position error at 100 meters). Triangulation is more common in outdoor positioning (GPS uses <a href="../terms/trilateration.html" class="term-link">trilateration</a> via <a href="../terms/range.html" class="term-link">range</a>, but some radar and radio direction-finding uses triangulation) and consumer applications (Bluetooth AoA for indoor positioning in retail or hospitality) than in industrial RTLS.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics &amp; KPIs<span>›</span>Space Utilization
+  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics & KPIs<span>›</span>Space Utilization
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Metrics & KPIs</div>
     <h1 class="term-title">Space Utilization</h1>
+  <div class="term-cat-tag">Metrics & KPIs</div>
   </header>
   <p class="def-short">Analysis of how effectively facility space is being used based on RTLS tracking data. Identifies underutilized areas, congestion points, and opportunities for layout optimization. Supports capacity planning, facility expansion decisions, and cost allocation. Particularly valuable in expensive facilities where maximizing space efficiency is critical.</p>
   <p class="def-long">Space utilization in industrial RTLS refers to measuring and analyzing how effectively facility space is used, identifying underutilized areas and optimization opportunities to maximize operational efficiency and reduce real estate costs. Industrial real estate represents significant capital investment and ongoing expense, making efficient space utilization a key performance objective. RTLS provides unprecedented visibility into space usage patterns through continuous tracking of assets, equipment, and personnel throughout facilities. Industrial applications of space utilization analysis include: warehouse optimization (identifying storage areas underutilized versus congested, validating whether expanded space is needed or existing space can be reorganized), manufacturing floor layout (analyzing whether work cell arrangements effectively use space, identifying areas for consolidation), parking and <a href="../terms/yard-management.html" class="term-link">yard management</a> (measuring vehicle parking area utilization, optimizing trailer storage layouts), and meeting room utilization (determining if conference space allocation matches actual usage).</p><p class="def-long">Typical findings from space utilization analysis reveal significant optimization potential: 20-40% of warehouse space may be underutilized while other areas are congested, manufacturing floor layouts often show unbalanced work cell utilization suggesting reconfiguration opportunities, and parking/yard areas frequently have poor utilization patterns with inefficient vehicle placement.</p><p class="def-long">Implementation requires: sufficient <a href="../terms/location-data.html" class="term-link">location data</a> collection period (typically 2-4 weeks minimum) capturing normal operational variations, appropriate zone definitions aligning with space planning objectives, and analytical tools processing large location datasets to generate utilization metrics. Real estate costs ranging from $5-15 per square foot annually (or significantly higher in urban locations) make even modest utilization improvements financially significant. RTLS-derived space utilization insights support data-driven real estate and facility planning decisions.</p>

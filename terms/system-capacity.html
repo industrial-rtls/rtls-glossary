@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics &amp; KPIs<span>›</span>System Capacity
+  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics & KPIs<span>›</span>System Capacity
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Metrics & KPIs</div>
     <h1 class="term-title">System Capacity</h1>
+  <div class="term-cat-tag">Metrics & KPIs</div>
   </header>
   <p class="def-short">The maximum operational load an RTLS can handle including concurrent tags, updates per second, and data storage. Must account for peak scenarios. Exceeding capacity causes increased latency, missed updates, and potential instability.</p>
   <p class="def-long">System <a href="../terms/capacity.html" class="term-link">capacity</a> in industrial RTLS defines the maximum operational load the system can handle while maintaining specified performance levels including <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>, update rates, and <a href="../terms/latency.html" class="term-link">latency</a>. <a href="../terms/tag-capacity.html" class="term-link">Tag capacity</a> is often the primary specification: industrial RTLS systems <a href="../terms/range.html" class="term-link">range</a> from small deployments (50-200 tags) through medium scale (500-2,000 tags) to enterprise scale (5,000+ tags). However, raw tag count oversimplifies capacity - system load depends on tag update rates: 1,000 tags at 1 Hz <a href="../terms/update-rate.html" class="term-link">update rate</a> generates 1,000 position calculations per second, while 100 tags at 10 Hz generates the same computational load. Capacity specifications should therefore state maximum tags at specified update rates (eg., 2,000 tags at 1 Hz or 500 tags at 10 Hz). Proper capacity planning requires: understanding application requirements (how many assets need tracking, required update rates for different applications, expected growth trajectory), analyzing system specifications (maximum capacity at different <a href="../terms/configuration.html" class="term-link">configuration</a> levels), calculating total system load (sum of all concurrent demands), and including margin for growth and peak loads (typically 20-30% headroom beyond normal operation). Testing system capacity before full <a href="../terms/deployment.html" class="term-link">deployment</a> is essential: stress testing with expected maximum tag count and update rates, monitoring performance metrics (CPU, memory, network utilization) under load, identifying bottlenecks and scaling limits, and validating that performance remains acceptable at maximum specified capacity. Industrial customers should specify capacity requirements clearly during procurement: expected tag count (current and 3-5 year projection), required update rates by application type, geographical <a href="../terms/coverage-area.html" class="term-link">coverage area</a>, number of concurrent users and applications, and historical data retention requirements.</p>

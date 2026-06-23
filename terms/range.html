@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Range</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The maximum distance over which RTLS components can reliably communicate. Varies significantly by technology: passive RFID centimeters to meters, BLE 10-50 meters, UWB 50-200 meters, active RFID 30-100+ meters, LoRa kilometers. Range requirements influence technology selection. Environmental conditions significantly affect actual achievable range.</p>
   <p class="def-long">In industrial RTLS, range refers to the maximum distance over which a positioning system can reliably detect and track assets or personnel. Range is influenced by multiple factors including <a href="../terms/transmission-power.html" class="term-link">transmission power</a>, frequency band, antenna characteristics, and environmental conditions. UWB-based systems typically achieve operational ranges of 50-200 meters in industrial environments, though this can be significantly reduced by obstacles, metal structures, and RF interference. Wi-Fi-based systems may offer ranges of 30-100 meters, while BLE systems typically operate within 10-50 meters. <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> can reach ranges exceeding 100 meters depending on frequency and power. For industrial applications, effective range must account for the 3D nature of positioning, as vertical range (between floors) often differs from horizontal range. System designers must consider that maximum theoretical range rarely equals practical operational range in cluttered industrial environments where <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a>, <a href="../terms/signal-attenuation.html" class="term-link">signal attenuation</a> through materials, and interference from machinery reduce effective coverage. When planning RTLS deployments, manufacturers typically specify both line-of-sight range and typical operational range. The range-<a href="../terms/accuracy.html" class="term-link">accuracy</a> tradeoff is critical: systems with longer range often sacrifice positioning <a href="../terms/precision.html" class="term-link">precision</a> unless <a href="../terms/anchor-density.html" class="term-link">anchor density</a> is increased proportionally.</p>

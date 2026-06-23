@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Resolution</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The smallest change in position that the RTLS can detect and report. Different from accuracy (how close to truth) and precision (repeatability). Systems may have fine resolution (report small position changes) but lower accuracy. Resolution requirements depend on application - precision assembly needs fine resolution while warehouse tracking may not.</p>
   <p class="def-long">Resolution in RTLS context refers to the system's ability to distinguish between two objects in close proximity - the minimum distance at which the system can reliably identify them as separate entities rather than a single object. While <a href="../terms/accuracy.html" class="term-link">accuracy</a> measures how close reported positions are to true positions, resolution determines whether nearby objects can be individually tracked. Industrial RTLS resolution requirements vary by application: warehouse pallet tracking might require 0.5-1 meter resolution to distinguish adjacent pallets, while <a href="../terms/tool-tracking.html" class="term-link">tool tracking</a> in tight manufacturing spaces may need 0.1-0.3 meter resolution. Resolution depends on multiple factors including positioning technology (UWB typically offers better resolution than Wi-Fi or BLE), <a href="../terms/update-rate.html" class="term-link">update rate</a> (faster updates help maintain individual tracking during close encounters), <a href="../terms/tag.html" class="term-link">tag</a> density and interference management (systems must handle signal collisions when multiple tags transmit simultaneously), and <a href="../terms/positioning-algorithm.html" class="term-link">positioning algorithm</a> sophistication (advanced algorithms can better separate closely-spaced objects). The relationship between accuracy and resolution is important but distinct: a system might have 30 cm accuracy (average position error) but 50 cm resolution (minimum separable distance). Practical resolution in industrial environments is often limited by: <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a> causing position ambiguity, tag antenna characteristics and orientation sensitivity, system update rate creating temporal gaps in tracking, and computational constraints in the <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a>.</p><p class="def-long">Applications requiring high resolution typically implement Time Division Multiple Access (TDMA) or other anti-collision protocols to ensure each <a href="../terms/tag.html" class="term-link">tag</a>'s transmission can be individually identified.</p>

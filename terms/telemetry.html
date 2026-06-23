@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Telemetry
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Telemetry
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Telemetry</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">The automated collection and transmission of data from remote sensors or tracked assets. In RTLS, telemetry includes not just position but also sensor readings, status information, and diagnostics. Enables remote monitoring and condition-based management.</p>
   <p class="def-long">Telemetry in industrial RTLS refers to the collection and transmission of measurement data from tags beyond basic position information, including sensor readings, status information, and diagnostic data. While fundamental RTLS tracks location, telemetry-enabled systems provide rich contextual information about tracked assets, environment, and system health. Industrial applications leverage telemetry for comprehensive asset intelligence: cold chain monitoring combining location with temperature data ensures pharmaceuticals or food products remain within acceptable temperature ranges throughout storage and transport, impact detection using accelerometer telemetry identifies when and where products experienced rough handling or drops, <a href="../terms/equipment-monitoring.html" class="term-link">equipment monitoring</a> tracks vibration signatures for <a href="../terms/predictive-maintenance.html" class="term-link">predictive maintenance</a> (abnormal vibration patterns indicating bearing wear or imbalance), and battery management proactively schedules <a href="../terms/tag.html" class="term-link">tag</a> maintenance before failures occur. Telemetry transmission challenges include bandwidth and power constraints - each additional data point consumes communication bandwidth and battery energy. Alert generation based on combined location-telemetry conditions enables sophisticated monitoring: cold chain products entering warm zones trigger immediate alerts, assets experiencing impacts in restricted areas generate incident reports, equipment vibration anomalies initiate maintenance work orders, and tag battery depletion prompts replacement scheduling. Visualization of telemetry data includes: <a href="../terms/real-time.html" class="term-link">real-time</a> dashboards displaying current sensor readings, time-series charts showing sensor value evolution, overlay on floor plans (heat maps across facility), and correlation views (position traces colored by sensor values). Telemetry standardization through protocols like MQTT or OPC UA enables integration with broader IoT and industrial automation systems, positioning RTLS as location-aware sensor networks within <a href="../terms/smart-factory.html" class="term-link">smart factory</a> or <a href="../terms/industry-4-0.html" class="term-link">Industry 4.0</a> architectures.</p>

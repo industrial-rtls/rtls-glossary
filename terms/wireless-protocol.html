@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Wireless Protocol</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol choice affects range, power consumption, data rate, and positioning accuracy.</p>
   <p class="def-long">Wireless protocol in RTLS context refers to the standardized communication methods and rules governing how tags, anchors, and infrastructure exchange data using radio frequency transmissions. Different wireless protocols offer distinct characteristics affecting RTLS performance, cost, and suitability for industrial applications. Industrial RTLS employs various wireless protocols: UWB (Ultra-Wideband) protocols including IEEE 802.15.4a and 802.15.4z defining UWB physical and MAC layers for <a href="../terms/precision.html" class="term-link">precision</a> ranging and positioning, providing 10-30 cm <a href="../terms/accuracy.html" class="term-link">accuracy</a>, 50-200 meter <a href="../terms/range.html" class="term-link">range</a>, and nanosecond timing <a href="../terms/resolution.html" class="term-link">resolution</a>. Bluetooth Low Energy (BLE) based on Bluetooth Core Specification with positioning extensions including Bluetooth 5.1 Direction Finding (Angle of Arrival/Departure) providing 1-5 meter accuracy using phase-based angle measurement. Wi-Fi (IEEE 802.11 family) using RSSI <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> for positioning or newer Wi-Fi RTT (IEEE 802.11mc) for ranging-based positioning achieving 1-5 meter accuracy. <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> typically using proprietary protocols at frequencies from 433 MHz to 2.4 GHz providing checkpoint detection or zone-level positioning. <a href="../terms/zigbee.html" class="term-link">Zigbee</a> (<a href="../terms/ieee-802-15-4.html" class="term-link">IEEE 802.15.4</a>) used in sensor networks and occasionally for positioning with <a href="../terms/room-level-accuracy.html" class="term-link">room-level accuracy</a>. Wireless protocol selection impacts multiple system characteristics: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (UWB protocols achieve highest accuracy, Wi-Fi/BLE provide room-level), range (low frequencies like 433 MHz RFID achieve longest range, UWB intermediate, Wi-Fi/BLE shorter), power consumption (BLE optimized for ultra-low power, UWB moderate, Wi-Fi higher), data rate (Wi-Fi highest, UWB moderate, active RFID lowest), interference resistance (UWB's spread spectrum highly resistant, Wi-Fi/BLE susceptible to interference), cost (Wi-Fi and BLE leverage commodity chipsets reducing cost, UWB currently more expensive), and ecosystem maturity (Wi-Fi and Bluetooth have massive ecosystems, UWB growing rapidly).</p>

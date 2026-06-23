@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Dilution of Precision (DOP)</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">A measure of geometric quality in positioning systems indicating how anchor placement affects position accuracy. Lower DOP values indicate better geometry and higher accuracy potential. Optimal anchor placement minimizes DOP by positioning anchors to form strong geometric patterns around tracking areas.</p>
   <p class="def-long">Geometric measure of <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> degradation due to suboptimal spatial arrangement of infrastructure devices relative to the <a href="../terms/tag.html" class="term-link">tag</a> being positioned. In RTLS systems using <a href="../terms/trilateration.html" class="term-link">trilateration</a> or <a href="../terms/multilateration.html" class="term-link">multilateration</a>, DOP quantifies how position uncertainty magnifies measurement errors. Low DOP (0.5-2) indicates optimal geometry with infrastructure devices well-distributed around tag position, resulting in minimal position error multiplication. High DOP (5-20+) occurs when infrastructure devices are clustered together or in line with tag, causing significant error amplification - a 10cm measurement error with DOP of 10 produces 1 meter position error. GDOP (Geometric DOP) combines horizontal and vertical components; HDOP (Horizontal DOP) considers only 2D positioning. In industrial RTLS, DOP varies throughout <a href="../terms/coverage-area.html" class="term-link">coverage area</a> - excellent (DOP&amp;lt;2) in central zones surrounded by infrastructure, degraded (DOP 3-8) near edges or in corners. <a href="../terms/coverage-planning.html" class="term-link">Coverage planning</a> aims to maintain DOP below 3-4 across critical areas through strategic <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a>. <a href="../terms/real-time.html" class="term-link">Real-time</a> DOP monitoring identifies zones with poor geometry requiring additional infrastructure or alerts when specific tags enter high-DOP areas where accuracy cannot be guaranteed.</p>

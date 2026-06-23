@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp; Zones<span>›</span>Dynamic Geofencing
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing & Zones<span>›</span>Dynamic Geofencing
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Geofencing & Zones</div>
     <h1 class="term-title">Dynamic Geofencing</h1>
+  <div class="term-cat-tag">Geofencing & Zones</div>
   </header>
   <p class="def-short">Geofencing capability where virtual boundaries are created, modified, or removed programmatically in real-time based on conditions. Enables time-based zones, event-triggered zones, load-dependent zones, and person-dependent zones. Benefits include eliminating manual reconfiguration and supporting complex workflow scenarios impossible with static zones. Requires bi-directional integration with business systems providing context.</p>
   <p class="def-long"><a href="../terms/geofencing.html" class="term-link">Geofencing</a> capability where zone boundaries, rules, or properties change automatically based on <a href="../terms/real-time.html" class="term-link">real-time</a> conditions or schedules. Unlike static geofences with fixed boundaries and rules, dynamic geofences adapt to operational requirements. Industrial dynamic geofencing applications include: (1) Schedule-based - restricted zones becoming accessible during specific shifts or after-hours maintenance windows. (2) Occupancy-based - zones automatically closing when <a href="../terms/capacity.html" class="term-link">capacity</a> limits reached, preventing overcrowding. (3) Condition-based - hazardous zones activating or deactivating based on environmental sensors (gas detection, temperature). (4) Process-based - work cell geofences adjusting permissions based on current job assignments (only personnel assigned to active work order can enter). (5) Mobile geofences - safety zones moving with vehicles (forklift creates exclusion zone around itself warning nearby pedestrians). (6) Contextual geofences - rules adapting based on who enters (supervisors granted access to restricted areas, general workers denied). Dynamic geofencing implementation requires: real-time <a href="../terms/condition-monitoring.html" class="term-link">condition monitoring</a> and data integration, rule engines evaluating complex logic, and low-<a href="../terms/latency.html" class="term-link">latency</a> updates (new <a href="../terms/geofence.html" class="term-link">geofence</a> status propagating to all relevant systems within 1-3 seconds). Advanced RTLS platforms support dynamic geofencing through API integration with external systems (MES, WMS, building management) providing trigger conditions.</p>

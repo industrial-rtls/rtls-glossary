@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">Mobile Infrastructure</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">RTLS infrastructure components that are not permanently fixed, including portable anchors, mobile gateways, and vehicle-mounted equipment. Enables temporary tracking deployments, coverage in changing environments, and flexibility for dynamic operations. Used in construction, mining, and other applications where permanent infrastructure is impractical.</p>
   <p class="def-long">RTLS architecture approach where positioning reference points are mobile rather than fixed, occasionally used in specific applications but rare in industrial deployments. Mobile infrastructure includes: movable anchors/gateways on vehicles or portable platforms, or positioning relative to mobile reference points with known positions. Mobile infrastructure use cases: (1) Temporary deployments - construction sites, disaster response, military operations where permanent infrastructure impractical. (2) Outdoor tracking - GPS-equipped vehicles serving as mobile reference points for relative positioning. (3) Convoy tracking - vehicles tracking positions relative to lead vehicle. (4) Mobile robot navigation - robots maintaining relative positions while group navigates facility. Mobile infrastructure challenges severely limit industrial adoption: (1) Position <a href="../terms/accuracy.html" class="term-link">accuracy</a> - mobile reference point positions must be known accurately (requiring GPS outdoors or existing RTLS indoors), error in reference position propagates to tracked objects. (2) <a href="../terms/synchronization.html" class="term-link">Synchronization</a> complexity - mobile anchors must maintain <a href="../terms/time-synchronization.html" class="term-link">time synchronization</a> while moving, challenging for TDoA systems. (3) Coverage gaps - mobile infrastructure provides coverage only near mobile platform, leaving gaps as platform moves. (4) Computational complexity - constantly updating reference positions and recalculating tracked positions requires significant processing. (5) Reliability - mobile infrastructure subject to blockage, movement interruptions, power issues. Industrial RTLS overwhelmingly uses <a href="../terms/fixed-infrastructure.html" class="term-link">fixed infrastructure</a> due to: known precise positions (surveyed <a href="../terms/anchor.html" class="term-link">anchor</a> locations), continuous coverage (anchors remain positioned optimally), deterministic performance (predictable coverage and accuracy), simplified algorithms (static geometry vs. dynamic), and easier maintenance (accessible permanent installations vs. mobile platforms). Mobile infrastructure essentially nonexistent in industrial RTLS; term included in glossary only for completeness.</p>

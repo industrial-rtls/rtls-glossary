@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp; Zones<span>›</span>Hazardous Zone
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing & Zones<span>›</span>Hazardous Zone
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Geofencing & Zones</div>
     <h1 class="term-title">Hazardous Zone</h1>
+  <div class="term-cat-tag">Geofencing & Zones</div>
   </header>
   <p class="def-short">A designated facility area where dangerous conditions exist requiring special safety protocols and monitoring. RTLS hazardous zones are defined as geofences with specialized rules protecting personnel and assets. Examples include confined spaces, high-temperature areas, chemical storage, and energized equipment zones. Monitoring provides access control, time tracking, emergency response capabilities, and compliance documentation.</p>
   <p class="def-long">Designated area within facility where specific safety risks exist, requiring special precautions and access controls enforced through RTLS. Industrial hazardous zones include: chemical storage areas (flammable, toxic, or corrosive materials), high-temperature zones (furnaces, molten metal operations), radiation areas (X-ray equipment, radioactive materials), confined spaces (tanks, vessels with limited entry/exit), high-voltage areas (electrical substations, power distribution), moving machinery zones (robotic cells, automated equipment with pinch points), and overhead crane operations (areas under crane paths). RTLS hazardous zone management provides: <a href="../terms/access-control.html" class="term-link">access control</a> (permitting only authorized, trained personnel to enter), PPE verification (confirming workers wear required protective equipment via RFID tags), <a href="../terms/dwell-time.html" class="term-link">dwell time</a> monitoring (alerting if personnel exceed safe exposure durations), <a href="../terms/real-time.html" class="term-link">real-time</a> headcount (knowing exact number of people in zone for <a href="../terms/emergency-response.html" class="term-link">emergency response</a>), and automatic alerts (notifying supervisors if untrained personnel approach or enter zones). Zone <a href="../terms/configuration.html" class="term-link">configuration</a> includes: boundary definition (precise geometric boundaries), access rules (who can enter, under what conditions), required equipment/training (safety certifications, buddy system requirements), maximum occupancy limits, and time limits (maximum safe exposure duration). RTLS hazardous zone systems typically achieve 0.5-2 second detection <a href="../terms/latency.html" class="term-link">latency</a> for unauthorized access with under 1% false alarm rate. Regulatory compliance often requires documentation of hazardous zone access - RTLS provides automated audit trails including who entered, when, duration, and whether proper authorization existed.</p>

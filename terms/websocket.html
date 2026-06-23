@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>WebSocket
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>WebSocket
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">WebSocket</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">A communication protocol providing full-duplex communication channels over TCP connections. Used in modern RTLS platforms for real-time data streaming to web browsers and applications. Enables live dashboard updates without polling. More efficient than HTTP for continuous real-time data.</p>
   <p class="def-long">WebSocket is a communication protocol providing full-duplex (bidirectional) communication channels over a single, persistent TCP connection between clients and servers, increasingly used in industrial RTLS for <a href="../terms/real-time.html" class="term-link">real-time</a> position data streaming to web applications and mobile devices. WebSocket characteristics valuable for RTLS include: persistent connection eliminating overhead of repeatedly establishing connections for each data update, bidirectional communication allowing clients to send commands or queries and receive position streams over same connection, low <a href="../terms/latency.html" class="term-link">latency</a> (typically 10-50 milliseconds) approaching UDP performance while providing TCP's reliability, and web browser compatibility enabling RTLS visualization in standard browsers without plugins or custom clients. WebSocket protocol operation involves: initial HTTP handshake upgrading connection from HTTP to WebSocket protocol, persistent connection establishment maintaining open channel for data exchange, message framing encoding data in lightweight frames for efficient transmission, and connection management (heartbeats, reconnection on failure). RTLS position streaming over WebSocket typically implements: subscription model where clients subscribe to specific data feeds (all positions, positions for specific zones or asset types, filtered by attributes), JSON or binary message formats encoding position data (<a href="../terms/tag.html" class="term-link">tag</a> IDs, coordinates, timestamps, quality metrics), and configurable update rates (clients specify desired update frequency balancing data freshness with processing <a href="../terms/capacity.html" class="term-link">capacity</a>). Performance optimization techniques include: message compression reducing bandwidth for JSON payloads, selective streaming sending updates only for moving tags vs. all tags, <a href="../terms/update-rate.html" class="term-link">update rate</a> throttling allowing clients to specify maximum update frequency preventing overload, and connection pooling efficiently managing server resources.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Architecture</div>
     <h1 class="term-title">Network Topology</h1>
+  <div class="term-cat-tag">Architecture</div>
   </header>
   <p class="def-short">The arrangement and configuration of RTLS network components including tags, anchors, gateways, and servers. Common topologies include star (devices connect to central hub), mesh (devices interconnect), and hybrid. Topology choice affects performance, reliability, scalability, and cost.</p>
   <p class="def-long">Physical or logical arrangement of network components and their interconnections, defining how RTLS infrastructure devices communicate.</p><p class="def-long">Common topologies in RTLS: (1) Star - all field devices (anchors, gateways) connect directly to central switch/<a href="../terms/base-station.html" class="term-link">base station</a>. Most common industrial RTLS topology. (2) Tree/Hierarchical - field devices connect to local switches, which connect to higher-level switches, ultimately reaching central base station.</p><p class="def-long">Advantages: scalable for large facilities, logical segmentation by area.</p><p class="def-long">Common in multi-building or large facilities. (3) Ring - devices connected in closed loop with each connected to two neighbors. Less common in RTLS, sometimes used for backbone connecting area networks. (4) Mesh - devices interconnect with multiple paths between components.</p><p class="def-long">Advantages: self-healing (automatic rerouting if link fails), extended <a href="../terms/range.html" class="term-link">range</a> (multi-hop). Rarely used in RTLS infrastructure due to complexity (see <a href="../terms/mesh-network.html" class="term-link">Mesh Network</a> entry). (5) Bus - devices connect to shared communication line. Topology selection considerations: (1) Reliability requirements - critical safety functions require redundant topology (dual stars, rings) ensuring continued operation if single link fails. (2) <a href="../terms/facility-layout.html" class="term-link">Facility layout</a> - building architecture and wiring infrastructure influence practical topologies. (3) <a href="../terms/scalability.html" class="term-link">Scalability</a> - topology must accommodate growth (adding devices without redesign). (4) Management complexity - simpler topologies (star) easier to configure, monitor, troubleshoot. (5) Cost - redundant topologies (ring, dual stars) increase wiring and switch costs.</p><p class="def-long">Typical industrial <a href="../terms/deployment.html" class="term-link">deployment</a>: <a href="../terms/star-topology.html" class="term-link">star topology</a> in each facility area (10-20 anchors connecting to local industrial Ethernet switch), tree topology overall (area switches connecting to facility backbone, reaching central servers). Clear documentation enables efficient troubleshooting and expansion planning.</p>

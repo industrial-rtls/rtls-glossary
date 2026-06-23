@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>Time Synchronization
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>Time Synchronization
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">Time Synchronization</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">The process of coordinating system clocks to a common time reference. Essential for time-based positioning methods. Methods include GPS time synchronization, network time protocols (NTP, PTP), and wired synchronization signals. Synchronization accuracy directly affects positioning accuracy.</p>
   <p class="def-long">Time <a href="../terms/synchronization.html" class="term-link">synchronization</a> in industrial RTLS refers to aligning the clocks of distributed anchors to a common time reference with high <a href="../terms/precision.html" class="term-link">precision</a>. Accurate time synchronization is absolutely critical for TDoA positioning - synchronization errors directly translate to positioning errors at approximately 30 cm per nanosecond. This is far more demanding than typical IT network time synchronization (NTP achieves millisecond <a href="../terms/accuracy.html" class="term-link">accuracy</a>, six orders of magnitude less precise than RTLS requirements). Synchronization approaches include: Wired synchronization using dedicated cables distributing reference clock signals from master clock to all anchors - achieves excellent accuracy (picosecond to sub-nanosecond) but adds cabling complexity and cost. GPS-disciplined oscillators where each <a href="../terms/anchor.html" class="term-link">anchor</a> receives GPS timing signals - provides excellent accuracy (tens of nanoseconds) but fails indoors where signals unavailable. IEEE 1588 Precision Time Protocol distributes time over standard Ethernet networks - can achieve microsecond to sub-microsecond accuracy, though this is borderline inadequate for highest-accuracy RTLS. The synchronization architecture typically designates one master clock serving as time reference, with all other anchors as slaves synchronizing to the master. The relationship between synchronization accuracy and <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> is direct: for TDoA positioning, RMS positioning error includes a component proportional to synchronization RMS error multiplied by speed of light and geometric factors. Achieving 30 cm positioning accuracy requires better than 1 nanosecond RMS synchronization under good anchor geometry. Environmental challenges impact synchronization: temperature variations (factory floors from 0-50°C) causing crystal oscillator drift, vibration from machinery accelerating aging, electromagnetic interference disrupting synchronization protocols, and physical obstacles attenuating wireless synchronization signals.</p>

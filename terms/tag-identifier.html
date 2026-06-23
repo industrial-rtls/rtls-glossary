@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">Tag Identifier</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">A unique digital code assigned to each tag enabling individual identification and tracking. Typically numeric or alphanumeric string like MAC address or UUID. Must be unique within deployment to prevent conflicts.</p>
   <p class="def-long">A <a href="../terms/tag.html" class="term-link">tag</a> identifier (Tag ID) is a unique code or number assigned to each RTLS tag, enabling the system to distinguish individual tags and associate them with specific assets, personnel, or other tracked entities. Tag identifiers are fundamental to RTLS operation - without unique IDs, the system cannot determine which tag transmission corresponds to which tracked object. Industrial RTLS tag identifiers typically use formats including: hexadecimal strings (eg., 0xA1B2C3D4), decimal numbers (eg., 12345), or alphanumeric strings (eg., TAG-0001, FORKLIFT-23). The identifier length varies by system: 16-bit IDs support 65,536 unique tags, 32-bit IDs support over 4 billion tags, and 64-bit IDs effectively unlimited tags for any practical <a href="../terms/deployment.html" class="term-link">deployment</a>. Tag identifiers must be globally unique within the RTLS deployment to prevent conflicts. This association enables meaningful visualization and analytics - rather than displaying anonymous tag positions, systems show specific equipment names making operational use intuitive. Tag ID assignment strategies include: sequential numbering (TAG-0001, TAG-0002, increasing as tags deployed), categorical numbering (1000-1999 for forklifts, 2000-2999 for carts, organizing by asset type), location-based numbering (building/floor encoded in ID <a href="../terms/range.html" class="term-link">range</a>), and random assignment (security through obscurity, preventing ID prediction). Industrial deployments with thousands of tags require database systems efficiently managing tag registries: indexed lookups finding asset information from tag IDs in milliseconds, and handling queries like 'find all forklift tags in warehouse B' or 'list tags with battery levels below 20%'. Standardization of tag IDs across enterprise facilitates interoperability between facilities, data aggregation for enterprise-level analytics, and simplified procurement and spare parts management.</p>

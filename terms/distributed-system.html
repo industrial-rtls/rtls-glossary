@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Architecture</div>
     <h1 class="term-title">Distributed System</h1>
+  <div class="term-cat-tag">Architecture</div>
   </header>
   <p class="def-short">An architecture where positioning calculations occur across multiple distributed nodes rather than a central server. Intelligent anchors or edge processors handle calculations locally, reducing latency and network requirements. Offers lower latency, resilience to failures, scalability, and reduced bandwidth. Challenges include complex management, higher infrastructure costs, and synchronization requirements.</p>
   <p class="def-long">RTLS architecture where positioning intelligence and processing occur at edge devices rather than centralized servers. In distributed systems, anchors or gateways perform position calculations locally, transmitting only computed positions (not raw measurements) to central systems. Distributed architecture advantages include: reduced <a href="../terms/network-bandwidth.html" class="term-link">network bandwidth</a> (computed positions require 100-1000x less data than raw measurements), lower <a href="../terms/latency.html" class="term-link">latency</a> (local processing eliminates round-trip communication), improved reliability (local positioning continues if network fails), and simplified central infrastructure (less processing power required).</p><p class="def-long">Disadvantages include: more complex field devices (increased cost and firmware complexity), difficult centralized optimization (algorithms distributed across devices), and challenges implementing global features (traffic management across zones, facility-wide analytics). Pure distributed systems are rare in industrial RTLS; hybrid architectures are common: local edge processing handles time-critical functions (collision warnings, <a href="../terms/geofence.html" class="term-link">geofence</a> alerts) requiring sub-100ms response, while centralized systems provide facility-wide optimization, historical analytics, and management functions. Technology selection influences architecture - UWB systems typically centralized due to complex positioning algorithms, while simpler technologies (BLE RSSI, <a href="../terms/active-rfid.html" class="term-link">active RFID</a>) more amenable to distributed approaches.</p>

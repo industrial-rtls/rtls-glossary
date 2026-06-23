@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">Asset Tracking</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to large equipment and vehicles. Serves purposes including quick location, inventory verification, movement monitoring, loss prevention, and utilization analysis. Tracking granularity varies from zone-level to centimeter-level precision.</p>
   <p class="def-long">Application of RTLS to monitor location and movement of physical items throughout a facility. In industrial contexts, asset tracking provides: <a href="../terms/real-time.html" class="term-link">real-time</a> visibility of equipment location (reducing search time by 60-80%), utilization metrics (identifying underused assets for redeployment), movement history and <a href="../terms/dwell-time-analysis.html" class="term-link">dwell time analysis</a> (optimizing workflows), and automated <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (confirming assets in correct zones).</p><p class="def-long">Typical tracked assets include forklifts (5-50 per facility), tools and equipment ($500+ value items), work-in-progress containers, returnable transport items, and high-value finished goods. ROI typically comes from: reduced asset purchases through better utilization (15-30% reduction), decreased labor time searching for items (saving 30-60 minutes per shift per worker), improved <a href="../terms/throughput.html" class="term-link">throughput</a> from <a href="../terms/process-optimization.html" class="term-link">process optimization</a>, and reduced inventory shrinkage. Successful implementations require clear asset identification, regular <a href="../terms/tag.html" class="term-link">tag</a> battery maintenance, and integration with existing inventory systems. Technology choice significantly impacts deployment strategy: UWB provides highest accuracy for production floor tracking, BLE offers lower-cost coverage for large warehouses and storage areas, and GNSS enables outdoor yard tracking. Many facilities deploy all three in combination - UWB in precision manufacturing zones, BLE in general warehousing, and GNSS in outdoor areas - with a unified software platform aggregating all location data.</p>

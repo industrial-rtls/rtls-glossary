@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">Inventory Management</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">The use of RTLS to track and manage inventory locations, movements, and levels in real-time. Enables automated receiving, dynamic bin management, real-time stock level updates, FIFO enforcement, and pick verification. Benefits include near-perfect inventory accuracy (&amp;gt;99%), reduced labor, improved order fulfillment, and enhanced traceability.</p>
   <p class="def-long">Application of RTLS providing <a href="../terms/real-time.html" class="term-link">real-time</a> visibility of material locations, quantities, and movements within facilities. Traditional inventory management uses periodic manual counts or barcode scanning at transaction points, causing data <a href="../terms/latency.html" class="term-link">latency</a> (hours to days) and inaccuracy (10-30% error rates). RTLS-enabled inventory management provides: (1) Continuous location tracking - knowing position of every tagged item continuously vs. only at scan points. (2) Automated transactions - zone-based automatic inventory transfers when materials move between areas, eliminating manual data entry. (3) Real-time status - current inventory balances by location updated sub-minute vs. batch updates. (4) Rapid location - finding specific items in seconds vs. minutes of searching. (5) Variance detection - identifying discrepancies between system records and physical reality immediately vs. at next physical count.</p><p class="def-long">Implementation approaches: (1) Container-level tracking - tags on reusable containers, totes, pallets (practical for discrete items). (2) Item-level tracking - individual tags on high-value items (more granular but higher tagging cost). (3) Zone-based tracking - room or <a href="../terms/zone-level-accuracy.html" class="term-link">zone-level accuracy</a> sufficient for many applications (lower-cost BLE or RFID vs. <a href="../terms/precision.html" class="term-link">precision</a> UWB). Inventory management benefits: 25-40% inventory reduction (improved visibility reduces safety stock needs), 60-80% reduction in locating time (seconds vs. minutes searching), 50-80% cycle count efficiency (targeted counts vs. complete facility counts), and improved accuracy (95-99% vs. 70-90% with manual methods). ROI typically 12-36 months depending on inventory value and facility size. Critical success factors: reliable tagging (all items tagged consistently), accurate zone definitions (matching operational reality), integration with ERP/WMS (automatic transaction posting), and exception handling (investigating discrepancies promptly).</p>

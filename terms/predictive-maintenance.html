@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industry Terms</div>
     <h1 class="term-title">Predictive Maintenance</h1>
+  <div class="term-cat-tag">Industry Terms</div>
   </header>
   <p class="def-short">A maintenance strategy using condition monitoring and predictive analytics to service equipment just before failure is likely. RTLS enables predictive maintenance by tracking equipment usage patterns, operating hours, and environmental conditions. Reduces unplanned downtime while avoiding unnecessary preventive maintenance.</p>
   <p class="def-long">Maintenance strategy using data analytics to predict equipment failures before they occur, enabling timely repairs preventing unplanned downtime. RTLS contribution to predictive maintenance: (1) Usage tracking - accurately measuring equipment operating hours and intensity essential for condition-based maintenance triggers. Example: forklifts traditionally maintained on calendar schedule; RTLS tracking actual operating hours enables maintenance based on usage (typical 30% reduction in unnecessary maintenance). (2) Pattern analysis - detecting <a href="../terms/movement-pattern.html" class="term-link">movement pattern</a> changes indicating mechanical problems. Predictive maintenance benefits: (1) Reduced unplanned downtime - addressing problems before failure (typically 30-50% downtime reduction). (2) Lower maintenance costs - eliminating unnecessary <a href="../terms/preventive-maintenance.html" class="term-link">preventive maintenance</a> while catching issues early (20-40% cost reduction). (3) Extended equipment life - optimal maintenance timing preserving equipment longer. (4) Improved safety - preventing catastrophic failures endangering workers. (5) Better parts inventory - predictable maintenance enables just-in-time parts procurement reducing inventory carrying costs. Predictive maintenance challenges: (1) Data requirements - models need substantial historical data including failure events (may take 1-2 years accumulating sufficient failure history). (2) Sensor integration - effective vibration or temperature monitoring requires appropriate sensors in RTLS tags (adding cost and reducing <a href="../terms/battery-life.html" class="term-link">battery life</a>). (3) Model <a href="../terms/accuracy.html" class="term-link">accuracy</a> - false positives waste maintenance resources and erode confidence, false negatives undermine value. (4) Organizational readiness - transitioning from calendar-based to condition-based maintenance requires cultural and process changes. Predictive maintenance ROI: typical returns 3-10x investment through downtime reduction, maintenance optimization, and extended equipment life. Payback period usually 12-24 months. Organizations typically implement basic tracking first, progressively adding predictive capabilities as system matures.</p>

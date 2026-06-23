@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">RTK (Real-Time Kinematic)</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outdoor accuracy (1-5 cm). Used in industrial applications requiring precision outdoor positioning including autonomous vehicle guidance, port crane operations, and construction machine control. Requires unobstructed sky view and base station within 20-30 km. Represents the outdoor equivalent of UWB for precision positioning.</p>
   <p class="def-long">RTK positioning works by measuring the carrier phase of GNSS signals rather than just the code phase used by standard GPS. Carrier phase measurements have centimeter-level resolution compared to meter-level resolution of code phase, but require resolving the integer ambiguity (the unknown number of complete wavelengths between satellite and receiver). A fixed base station at a known precise location transmits its carrier phase measurements to mobile RTK receivers, which use the difference between base and rover measurements to cancel common errors and resolve integer ambiguities. Once ambiguities are fixed (typically 5-30 seconds after initialization), RTK provides 1-5 cm horizontal accuracy and 2-10 cm vertical accuracy. Accuracy degrades with: distance from base station (baseline exceeding 20-30 km increases errors), poor satellite geometry (high HDOP), multipath (near buildings or metal structures), and signal obstruction. Network RTK (NRTK) uses a network of reference stations extending coverage and eliminating need for on-site base station, available via subscription.</p><p class="def-long">Industrial RTK applications: outdoor AGV and AMR guidance in yard and campus environments (2-5 cm accuracy enabling lane-following and precise docking), port operations (container crane positioning, ship-to-shore transfer guidance), construction site machine control (grading, excavation to design tolerances), and precision agriculture. RTK hardware costs: rover receivers $500-5000, base station receivers $1000-10000, network RTK subscriptions $500-3000/year. In industrial RTLS deployments combining UWB (indoor precision) with RTK GNSS (outdoor precision), organizations achieve consistent centimeter-level accuracy throughout their entire facility footprint - enabling precision automation both inside buildings and in outdoor yards. Time to first fix typically 5-30 seconds. RTK is increasingly used in hybrid industrial RTLS where high-value equipment (autonomous forklifts, precision cranes) requires centimeter accuracy across indoor-outdoor workflows.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Alert System
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Alert System
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Alert System</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">Software that monitors RTLS data in real-time and generates notifications when predefined conditions occur. Common alerts include geofencing violations, dwell time exceedances, proximity warnings, and safety compliance issues. Delivers notifications via mobile push, SMS, email, audible alarms, or dashboard displays. Uses intelligent filtering to avoid alert fatigue.</p>
   <p class="def-long">Component that generates notifications based on <a href="../terms/location-data.html" class="term-link">location data</a> and configured rules. Industrial RTLS alert systems support multiple trigger types: <a href="../terms/geofence.html" class="term-link">geofence</a> violations (entry/exit/<a href="../terms/dwell-time.html" class="term-link">dwell time</a>), proximity events (collision risk), asset status changes (motion detected, tamper alert, low battery), or custom business logic (<a href="../terms/cycle-time.html" class="term-link">cycle time</a> exceeded, process deviation). Alerts can be delivered through multiple channels: on-screen notifications in control software, SMS/email to designated personnel, audible alarms in facility, visual beacons/lights, or integration to SCADA/MES systems. Critical parameters include alert <a href="../terms/latency.html" class="term-link">latency</a> (0.5-3 seconds typical), escalation procedures for unacknowledged alerts, and filtering logic to prevent alarm fatigue.</p><p class="def-long">Best practice: limit alerts to actionable events with clear response procedures.</p>

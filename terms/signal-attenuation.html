@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Technical Params</div>
     <h1 class="term-title">Signal Attenuation</h1>
+  <div class="term-cat-tag">Technical Params</div>
   </header>
   <p class="def-short">The reduction in signal strength as radio waves propagate through space and obstacles in industrial environments. Critical factor in RTLS design affecting range, accuracy, and reliability. Caused by distance (signal weakens with range), material absorption (concrete, metal, liquids), and reflections from surfaces. Different materials attenuate signals differently: human bodies reduce 2.4 GHz signals by 3-5 dB, concrete walls by 10-20 dB, metal barriers by 20-40+ dB.</p>
   <p class="def-long">Signal attenuation is the reduction in radio frequency signal strength as electromagnetic waves propagate through space, pass through materials, or encounter obstacles. In industrial RTLS, understanding and managing signal attenuation is critical for achieving reliable positioning performance. Attenuation occurs through multiple mechanisms: free space path loss (signal spreading over distance following inverse square law - doubling distance reduces signal power by 6 dB), absorption by materials (concrete walls typically attenuate 10-20 dB, metal walls 20-40 dB or complete blocking), and diffraction around obstacles. The attenuation magnitude depends on frequency - higher frequencies generally experience greater attenuation through materials, making UWB signals (3-10 GHz) more affected than Wi-Fi (2.4-5 GHz) or low-frequency RFID. Quantifying attenuation helps predict system performance: free air at 10 meters distance causes approximately 40-60 dB path loss for UWB, drywall partitions add 2-5 dB, concrete walls 8-15 dB, metal studs or reinforced concrete 15-25 dB, and metal equipment or machinery 20-40 dB or complete blockage. The link budget calculation must account for all attenuation sources: <a href="../terms/transmitter.html" class="term-link">transmitter</a> power (typically 0 to +10 dBm for UWB tags) minus path loss, antenna gains (typically 2-5 dBi), cable losses (1-2 dB), and attenuation from obstacles must exceed <a href="../terms/receiver-sensitivity.html" class="term-link">receiver sensitivity</a> (typically -85 to -95 dBm) with margin for reliability (10-15 dB margin typical for 99% reliability). When signal attenuation exceeds available link budget, positioning fails - tags cannot be detected by sufficient anchors.</p>

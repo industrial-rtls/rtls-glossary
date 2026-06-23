@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Data &amp; Analytics<span>›</span>Traffic Pattern
+  <a href="../index.html">Glossary</a><span>›</span>Data & Analytics<span>›</span>Traffic Pattern
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Data & Analytics</div>
     <h1 class="term-title">Traffic Pattern</h1>
+  <div class="term-cat-tag">Data & Analytics</div>
   </header>
   <p class="def-short">Characteristic movement flows of assets or personnel through facilities revealed through RTLS data analysis. Identifies congestion zones, frequently used routes, and inefficiencies. Visualized through heat maps and flow diagrams for layout optimization.</p>
   <p class="def-long">Traffic patterns in industrial RTLS refer to the characteristic movement flows, routes, and behaviors of assets, vehicles, and personnel throughout facilities, analyzed through <a href="../terms/location-data.html" class="term-link">location data</a> to understand operational dynamics and identify optimization opportunities. Traffic pattern analysis transforms raw position tracking into actionable intelligence about how facilities actually operate versus how they're designed or assumed to operate. RTLS captures comprehensive traffic data: complete movement paths (start locations, intermediate waypoints, destinations), travel times and speeds, frequently used routes vs. rare paths, congestion points where multiple flows intersect, and temporal variations (traffic differences by shift, day, season). Industrial traffic patterns vary by operational context: Manufacturing traffic patterns include <a href="../terms/material-flow.html" class="term-link">material flow</a> from receiving through production stages to shipping, tool and fixture movements between storage and work cells, personnel traffic (operators moving between stations, supervisors conducting floor walks, maintenance technicians responding to calls), and <a href="../terms/material-handling.html" class="term-link">material handling</a> equipment routes (forklifts, tuggers, AGVs). Logistics and yard traffic includes vehicle arrivals and departures, staging and parking patterns, loading dock utilization, and driver/operator movements. Industrial applications of traffic pattern analysis include: <a href="../terms/facility-layout.html" class="term-link">Facility layout</a> optimization - identifying inefficient layouts where traffic paths are unnecessarily long, aisles poorly utilized, or workstation arrangements causing excessive travel. <a href="../terms/capacity.html" class="term-link">Capacity</a> planning - identifying facility zones approaching capacity (congestion) vs. underutilized space, informing expansion or reconfiguration decisions. Quantified benefits from traffic pattern optimization include: 15-30% <a href="../terms/travel-distance.html" class="term-link">travel distance</a> reductions through optimized routing, 20-40% <a href="../terms/throughput.html" class="term-link">throughput</a> improvements from congestion elimination, 30-50% collision/near-miss reductions from traffic separation, and 10-20% <a href="../terms/space-utilization.html" class="term-link">space utilization</a> improvements from layout optimization.</p>

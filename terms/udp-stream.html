@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>UDP Stream
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>UDP Stream
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">UDP Stream</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">User Datagram Protocol data streaming - a method for transmitting RTLS data over networks. UDP provides low-latency, connectionless transmission suitable for real-time position updates. Trades reliability for speed - acceptable for position data where occasional lost packets don't critically impact operations.</p>
   <p class="def-long">UDP Stream in industrial RTLS refers to <a href="../terms/real-time.html" class="term-link">real-time</a> position data transmission using User Datagram Protocol (UDP), a connectionless network protocol that delivers location updates to applications with minimal <a href="../terms/latency.html" class="term-link">latency</a> and overhead. Update rates for UDP streaming vary by application: 1-5 Hz for general <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> balancing data freshness with network load, 10-20 Hz for dynamic applications like AGV navigation or <a href="../terms/worker-safety.html" class="term-link">worker safety</a> requiring rapid updates, and adaptive rates where update frequency varies by <a href="../terms/tag.html" class="term-link">tag</a> motion state (faster when moving, slower when stationary). Challenges with UDP streaming include: packet loss in congested networks or with unreliable connectivity (typical industrial networks experience 0.1-2% packet loss even under normal conditions), out-of-order delivery requiring applications implement sequence numbering and reordering logic, no flow control causing potential <a href="../terms/receiver.html" class="term-link">receiver</a> overload if applications cannot process packets as fast as transmitted, and no delivery confirmation making it difficult to detect communication failures. UDP streaming performance characteristics: latency typically 5-50 milliseconds from position calculation to application receipt (depending on <a href="../terms/network-topology.html" class="term-link">network topology</a> and congestion), <a href="../terms/throughput.html" class="term-link">throughput</a> supporting thousands of position updates per second on modern network infrastructure (1 Gbps Ethernet easily handles 10,000 positions/second at 100 bytes per position), and <a href="../terms/scalability.html" class="term-link">scalability</a> where single positioning server can stream to multiple applications without per-connection overhead. Comparing UDP to alternative protocols: TCP provides reliable, ordered delivery but higher latency (10-100+ milliseconds connection overhead) and connection state management limiting scalability to many consumers. WebSockets offer bidirectional communication over persistent connections, useful for web applications but with connection overhead.</p>

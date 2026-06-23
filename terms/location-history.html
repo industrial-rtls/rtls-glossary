@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics &amp; KPIs<span>›</span>Location History
+  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics & KPIs<span>›</span>Location History
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Metrics & KPIs</div>
     <h1 class="term-title">Location History</h1>
+  <div class="term-cat-tag">Metrics & KPIs</div>
   </header>
   <p class="def-short">The historical record of where assets or personnel have been over time. Enables track playback, pattern analysis, compliance documentation, and incident investigation. Retention periods vary based on use case from days to years. Stored efficiently using time-series databases. Critical for analytics and continuous improvement.</p>
   <p class="def-long">Historical record of asset or personnel positions over time, enabling retrospective analysis and investigation. Location history data structure: time-series position records (<a href="../terms/tag.html" class="term-link">tag</a> ID, timestamp, coordinates, zone, quality metrics) stored chronologically. Location history applications: (1) Incident investigation - reconstructing events leading to accidents or quality issues. (2) <a href="../terms/historical-playback.html" class="term-link">Historical playback</a> - visualizing past movements through facility. (3) Compliance documentation - proving procedures were followed correctly. (4) Process analysis - studying workflows and identifying improvement opportunities. (5) Trend analysis - comparing patterns across time periods. (6) Audit support - providing evidence for regulatory compliance. History queries include: position at specific timestamp (where was asset X at time Y?), path during time <a href="../terms/range.html" class="term-link">range</a> (where did asset move during shift?), dwell history (time spent in each zone), and statistical analysis (average cycle times, utilization rates). Query performance critical - large datasets (billions of records) require optimization: indexing on timestamp and tag ID, partitioning by date ranges, aggregation tables storing pre-computed summaries, and caching for frequent queries. History retention policies balance requirements and costs: regulatory compliance may mandate 1-7 year retention, operational value typically 30-180 days, raw detailed data often compressed or purged while aggregated summaries retained longer. Data volume management strategies: reduced position sampling (storing every 5th or 10th position rather than all), rounding coordinate <a href="../terms/precision.html" class="term-link">precision</a> (sub-centimeter precision rarely needed in history), archiving to cheaper storage (moving old data from high-speed databases to object storage), and progressive aggregation (replacing raw positions with zone-level summaries after certain age).</p>

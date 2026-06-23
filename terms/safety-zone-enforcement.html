@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Safety &amp; Security<span>›</span>Safety Zone Enforcement
+  <a href="../index.html">Glossary</a><span>›</span>Safety & Security<span>›</span>Safety Zone Enforcement
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Safety & Security</div>
     <h1 class="term-title">Safety Zone Enforcement</h1>
+  <div class="term-cat-tag">Safety & Security</div>
   </header>
   <p class="def-short">The use of RTLS to ensure compliance with safety zones including restricted access to hazardous areas, maximum occupancy limits, required qualifications for entry, and exposure time limits. Provides automated enforcement through alerts, access control integration, and compliance documentation.</p>
   <p class="def-long">Safety zone enforcement in industrial RTLS refers to the active monitoring and automated response mechanisms that ensure compliance with defined safety boundaries, going beyond passive alerts to implement protective actions. While safe zones detect violations, enforcement actively prevents or mitigates dangerous situations through automated interventions. The technical architecture for safety zone enforcement requires: high-reliability RTLS with redundant positioning (&amp;lt;500ms detection <a href="../terms/latency.html" class="term-link">latency</a>, 99.9%+ reliability), safety-rated interfaces connecting RTLS to equipment control systems (often requiring SIL-rated or safety PLC integration), clearly defined enforcement logic (trigger conditions, response actions, reset procedures), and fail-safe design ensuring equipment defaults to safe states during system failures.</p><p class="def-long">Common enforcement applications include: AGV fleet management systems that automatically slow or stop vehicles when personnel detected in proximity (typically 2-5 meter zones), robotic work cell safety systems that pause operations when workers enter collaborative spaces, overhead crane systems that prevent movement over areas where personnel are present, and forklift speed limiting in pedestrian zones automatically reducing vehicle speed.</p><p class="def-long">Implementation challenges include: ensuring RTLS reliability meets safety requirements (often requiring certification or validation), managing false positives that disrupt operations (requiring careful zone definition and <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>), handling edge cases (<a href="../terms/tag.html" class="term-link">tag</a> failures, system outages, emergency overrides), and integrating with existing safety systems (emergency stops, light curtains, physical barriers). Regulatory considerations are critical - many jurisdictions require safety systems to meet specific standards (ISO 13849, IEC 61508, ISO 3691-4 for industrial vehicles), and RTLS-based enforcement may need certification or validation by notified bodies.</p>

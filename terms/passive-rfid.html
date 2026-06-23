@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">Passive RFID</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID but with limited range (typically centimeters to a few meters). Used for inventory management, access control, and zone detection at doorways or choke points. Not suitable for real-time tracking but excellent for item-level identification.</p>
   <p class="def-long">Radio-frequency identification technology where tags have no battery, powered by electromagnetic energy from <a href="../terms/reader.html" class="term-link">reader</a>, responding with stored identification data. Passive RFID operates at multiple frequencies: LF (125-134 KHz, 10-30 cm read <a href="../terms/range.html" class="term-link">range</a>), HF (13.56 MHz, 10-100 cm range, ISO 15693 standard), UHF (860-960 MHz, 1-12 meter range, EPC Gen2 standard). Passive RFID advantages: (1) Low <a href="../terms/tag.html" class="term-link">tag</a> cost - $0.05-$3 per tag, much cheaper than active RTLS tags ($25-150). (2) No battery maintenance - tags last indefinitely. (3) Small form factor - tags can be tiny labels, non-intrusive. (4) Mature technology - extensive vendor ecosystem, standardization, proven reliability. Passive RFID limitations for RTLS: (1) No continuous tracking - tags detected only when near reader versus active RTLS providing constant position updates. (2) No precise positioning - zone-level only, not coordinates. (3) Limited range - UHF maximum 12 meters (often 3-6 meters practical), requiring many readers for facility coverage. (4) Read reliability challenges - metal and liquids interfere with RF propagation, affecting detection rates (may miss 10-30% of tags in challenging environments). (5) Collision issues - many tags in reader field simultaneously can cause read failures though Gen2 protocols handle 100+ tags. (6) Orientation sensitivity - tag-reader orientation affects read success.</p><p class="def-long">Passive RFID infrastructure costs: fixed readers $500-3000 per location, handheld readers $1000-4000, antennas $100-500. UHF readers typically support 4 antennas covering multiple read zones. Total system cost dominated by <a href="../terms/reader.html" class="term-link">reader</a>/antenna infrastructure versus inexpensive tags.</p><p class="def-long">Passive RFID standards: EPC Gen2 (UHF), ISO 15693 (HF), ISO 14223 (LF), ensuring multi-vendor interoperability.</p>

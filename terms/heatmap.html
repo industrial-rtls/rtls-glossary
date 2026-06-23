@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Heatmap
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Heatmap
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Heatmap</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">A data visualization displaying RTLS tracking density or dwell time using color intensity overlaid on facility maps. Reveals patterns including traffic density, dwell time patterns, utilization patterns, and temporal variations. Colors range from cool (blue, green) for low activity to hot (yellow, orange, red) for high activity. Applications include identifying bottlenecks, optimizing layout, and validating process flow.</p>
   <p class="def-long">Visualization technique displaying spatial density or intensity of activity using color gradients overlaid on facility maps. In industrial RTLS, heatmaps aggregate thousands to millions of position points into understandable visual patterns. Heatmap types: (1) Traffic density - showing high-traffic areas (red/hot colors) vs. low-traffic areas (blue/cold colors), revealing primary pathways and congestion zones. (2) <a href="../terms/dwell-time.html" class="term-link">Dwell time</a> heatmaps - displaying where assets spend most time, identifying bottleneck zones (long dwell times) and pass-through zones (short dwell times). (3) Temporal heatmaps - comparing activity patterns across time periods (shift 1 vs. shift 2, weekday vs. weekend). (4) Asset-specific heatmaps - showing patterns for specific asset types (forklift traffic vs. pedestrian traffic). Heatmap generation parameters include: time window (hour, day, week, month), grid <a href="../terms/resolution.html" class="term-link">resolution</a> (typically 1-5 meter cells for meaningful patterns), aggregation method (count of visits, total dwell time, average dwell time), and color scheme (diverging scales for deviation from norm, sequential scales for intensity). Heatmap applications: <a href="../terms/facility-layout.html" class="term-link">facility layout</a> optimization (identifying underutilized areas for reconfiguration), workflow improvement (revealing inefficient travel patterns suggesting layout changes), <a href="../terms/capacity.html" class="term-link">capacity</a> planning (identifying zones approaching capacity limits), and safety analysis (locating areas with dangerous congestion or conflicts between vehicles and pedestrians). Effective heatmaps require sufficient data density - typically 24-48 hours minimum for meaningful patterns, 1-2 weeks for reliable baseline. Heatmaps excel at revealing non-obvious patterns invisible in raw data or <a href="../terms/real-time.html" class="term-link">real-time</a> displays.</p>

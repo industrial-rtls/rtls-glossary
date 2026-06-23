@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industry Terms</div>
     <h1 class="term-title">Digital Twin</h1>
+  <div class="term-cat-tag">Industry Terms</div>
   </header>
   <p class="def-short">A virtual representation of physical facilities or processes integrating real-time RTLS data to mirror actual state and behavior. Combines RTLS position data with CAD models, IoT sensors, equipment status, and business systems. Enables real-time 3D visualization, historical replay, predictive simulation, and process mining. Applications include virtual facility tours, training environments, design validation, and optimization testing.</p>
   <p class="def-long">Virtual replica of physical facility, assets, and processes that updates in <a href="../terms/real-time.html" class="term-link">real-time</a> based on RTLS and other sensor data. Industrial digital twins integrate: 3D facility models (CAD-based or photogrammetric), real-time asset positions from RTLS (updated 1-10 Hz), equipment status from IoT sensors (temperature, vibration, power consumption), process data from MES/SCADA (production counts, quality metrics), and simulation engines predicting future states. Digital twin applications include: virtual facility monitoring (remote viewing of operations), scenario simulation (testing layout changes or process modifications without disrupting production), <a href="../terms/predictive-analytics.html" class="term-link">predictive analytics</a> (forecasting bottlenecks or failures), training (operators practice on virtual facility before real operations), and remote troubleshooting (experts diagnose issues without site visits).</p><p class="def-long">Implementation challenges include: data integration from disparate sources, maintaining model <a href="../terms/accuracy.html" class="term-link">accuracy</a> as facility evolves, computational requirements for <a href="../terms/real-time.html" class="term-link">real-time</a> updates (typical twin requires 8-32 GB RAM, multi-core processing), and justifying ROI (development costs $50k-500k depending on complexity). Most valuable for complex, high-value facilities where simulation and optimization benefits justify investment - automotive assembly plants, semiconductor fabs, large distribution centers. Basic digital twins (facility map with real-time positions) achievable at lower cost; sophisticated simulation-enabled twins require significant investment.</p>

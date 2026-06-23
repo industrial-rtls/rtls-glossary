@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Software &amp; Data Management<span>›</span>Reporting Module
+  <a href="../index.html">Glossary</a><span>›</span>Software & Data Management<span>›</span>Reporting Module
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software & Data</div>
     <h1 class="term-title">Reporting Module</h1>
+  <div class="term-cat-tag">Software & Data</div>
   </header>
   <p class="def-short">The software component generating reports from RTLS data. Provides scheduled reports, ad-hoc reports, and customizable reporting capabilities. Reports may cover utilization, compliance, cycle times, incidents, or other metrics. Often includes export to PDF, Excel, or other formats.</p>
   <p class="def-long">A reporting module in industrial RTLS platforms is a software component that generates analytical reports from historical <a href="../terms/location-data.html" class="term-link">location data</a>, transforming raw position information into <a href="../terms/business-intelligence.html" class="term-link">business intelligence</a> for operational improvement. Industrial RTLS reporting modules aggregate tracking data over time periods (shifts, days, weeks, months) to calculate key performance indicators (KPIs) such as <a href="../terms/asset-utilization.html" class="term-link">asset utilization</a> rates, dwell times, travel distances, process cycle times, and workflow efficiency metrics. Unlike <a href="../terms/real-time-analytics.html" class="term-link">real-time analytics</a> that focus on immediate conditions, reporting modules perform retrospective analysis to identify trends, patterns, and optimization opportunities.</p><p class="def-long">Key reporting capabilities include: scheduled automated report generation, customizable templates for different stakeholder needs, export to formats like PDF, Excel, or CSV, drill-down capabilities from summary metrics to detailed movement data, and comparison across time periods or facility zones. Industrial applications leverage reporting modules to measure: equipment utilization (percentage of time assets are actively used vs. idle), search time reduction (time saved locating tools or materials), <a href="../terms/throughput.html" class="term-link">throughput</a> analysis (number of assets moving through production stages per shift), labor productivity (distances traveled by workers, time spent in productive zones), and compliance reporting (documenting safety zone adherence or process compliance). Advanced reporting modules incorporate <a href="../terms/data-visualization.html" class="term-link">data visualization</a> through charts, heat maps, and Sankey diagrams showing <a href="../terms/material-flow.html" class="term-link">material flow</a>. Sewio Networks' solutions include reporting capabilities for generating insights from <a href="../terms/location-data.html" class="term-link">location data</a>. Report generation performance must scale to handle millions or billions of position records, requiring optimized database queries, data aggregation strategies, and sometimes pre-calculated metrics to ensure responsive report generation times (typically under 30 seconds for standard reports).</p>

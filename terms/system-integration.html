@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Installation &amp; Configuration<span>›</span>System Integration
+  <a href="../index.html">Glossary</a><span>›</span>Installation & Configuration<span>›</span>System Integration
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Installation</div>
     <h1 class="term-title">System Integration</h1>
+  <div class="term-cat-tag">Installation</div>
   </header>
   <p class="def-short">The process of connecting RTLS with other enterprise systems including ERP, WMS, MES, and BMS. Enables data exchange, process automation, and comprehensive operational visibility. Integration methods include APIs, middleware, and direct database connections. Critical for realizing full RTLS value.</p>
   <p class="def-long">System integration in industrial RTLS refers to connecting the location system with other enterprise and operational systems, enabling data exchange, workflow automation, and comprehensive operational visibility. While standalone RTLS provides value through position tracking and analytics, integration with existing systems multiplies benefits by leveraging <a href="../terms/location-intelligence.html" class="term-link">location intelligence</a> across the organization.</p><p class="def-long">Common integration targets include: Manufacturing Execution Systems (MES) - providing <a href="../terms/real-time.html" class="term-link">real-time</a> WIP locations, production stage tracking, and actual versus planned cycle times, <a href="../terms/warehouse-management.html" class="term-link">Warehouse Management</a> Systems (WMS) - real-time inventory locations, equipment tracking, worker productivity data, Enterprise Resource Planning (ERP) - <a href="../terms/asset-utilization.html" class="term-link">asset utilization</a> data, inventory status, maintenance records updated with usage tracking, Safety systems - worker locations for emergency <a href="../terms/mustering.html" class="term-link">mustering</a>, hazard zone monitoring, proximity alerts, Building Management Systems (BMS) - occupancy-based HVAC and lighting control, Asset Management - automated asset registers, utilization tracking, maintenance scheduling, and <a href="../terms/business-intelligence.html" class="term-link">Business Intelligence</a> platforms - location-based analytics feeding enterprise dashboards and reporting. Modern industrial systems favor API-based integration providing flexibility, security, and maintainability. Integration development requires: API documentation describing available endpoints, data formats, and authentication mechanisms, Development environments and sandboxes for testing before production <a href="../terms/deployment.html" class="term-link">deployment</a>, Security considerations including authentication, authorization, and encrypted communications, Error handling ensuring graceful degradation when systems temporarily unavailable, and Performance optimization avoiding excessive API calls or database queries. Integration maintenance requires: monitoring data flows identifying failures or degradation, updating integrations as systems evolve (version upgrades, new features), and managing authentication credentials and security certificates. Comprehensive integration capabilities enable customers to leverage <a href="../terms/location-intelligence.html" class="term-link">location intelligence</a> across their enterprise.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">Computer Vision Tracking</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel. Analyzes video feeds to identify and locate objects within camera fields of view. Advantages include no tags required, rich contextual information, and visual verification. Limitations include line-of-sight requirements, lighting dependency, processing intensity, and privacy concerns.</p>
   <p class="def-long">Positioning technology using cameras and image processing algorithms to detect and track objects. In industrial settings, computer vision tracking employs fixed cameras (typically 4-12 cameras for 1000 m² area), video analytics software (object detection using deep learning models), and optionally visual markers on tracked items. Computer vision advantages include: no tags required on objects (reducing cost and maintenance), ability to track any visible object, capture of additional information (pose, orientation, condition), and integration with existing security camera infrastructure. Limitations include: requires clear line-of-sight (occlusions prevent tracking), sensitive to lighting conditions (poor performance in dark areas or high-contrast lighting), significant processing requirements (modern GPU servers), privacy concerns (video surveillance of workers), and typically lower update rates (5-30 Hz) than dedicated RTLS. Computer vision excels for specific applications: detecting proper PPE usage, monitoring assembly operations, tracking vehicles in yards, or counting people in zones. Most industrial facilities use computer vision as complement to rather than replacement for dedicated RTLS technologies, combining strengths of both approaches.</p>

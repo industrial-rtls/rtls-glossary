@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Direction Finding
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Direction Finding
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Direction Finding</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A set of techniques determining the bearing or angle between a transmitter and receiver using multi-element antenna arrays. Introduced in Bluetooth 5.1 as a standardized feature enabling sub-meter BLE positioning without UWB hardware. Encompasses both Angle of Arrival (AoA) and Angle of Departure (AoD) methods. Significantly improves BLE positioning accuracy from 3-8 meters (RSSI-based) to 0.5-2 meters.</p>
   <p class="def-long">Bluetooth direction finding, standardized in Bluetooth 5.1 (released January 2019), enables angle-based positioning by adding a Constant Tone Extension (CTE) to BLE packets. The CTE is an unmodulated carrier signal appended to standard BLE packets, allowing receiving antenna arrays to measure phase differences across elements and calculate signal direction. Two implementation modes: Angle of Arrival (AoA), where receiving infrastructure contains the antenna array; and Angle of Departure (AoD), where transmitting infrastructure contains the array and mobile receivers calculate departure angle. Both achieve 2-5 degree angular accuracy under good conditions. At 10-meter range, 3-degree angular error translates to approximately 0.5 meters positional error; at 20 meters the same error produces approximately 1 meter positional error. Antenna array design is critical: 4-8 element arrays in 2D configuration enable both azimuth and elevation angle determination for 3D positioning; linear arrays provide azimuth only.</p><p class="def-long">Industrial deployment considerations: multipath propagation from metal surfaces degrades angular accuracy (typical 30-50% reduction in metal-rich environments vs. open spaces), requiring careful antenna placement and algorithm-level multipath mitigation. Infrastructure must be upgraded to Bluetooth 5.1+ capable hardware - existing BLE 4.x deployments cannot support direction finding without hardware replacement. Direction finding positions BLE as a viable mid-accuracy technology between RSSI-based BLE (3-8 m) and UWB (10-30 cm), covering use cases requiring better than zone-level accuracy but not justifying UWB infrastructure costs. Market adoption growing rapidly: estimated 60-70% of new BLE RTLS infrastructure deployments incorporating direction finding capability as of 2024.</p>

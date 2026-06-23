@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#B45309;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Industrial Apps</div>
     <h1 class="term-title">Workflow Management</h1>
+  <div class="term-cat-tag">Industrial Apps</div>
   </header>
   <p class="def-short">The coordination and optimization of work processes using RTLS data. Tracks work items through process stages, identifies bottlenecks, ensures correct routing, and measures performance. Enables process standardization and continuous improvement.</p>
   <p class="def-long">Workflow management in industrial operations involves planning, executing, and optimizing the sequences of tasks and material flows that constitute production, logistics, and operational processes. Industrial workflows span diverse processes: Manufacturing workflows - materials flowing through sequential production steps (machining, assembly, quality inspection, finishing, packaging), requiring specific process sequences and timing. Integration between RTLS and workflow management systems includes: Manufacturing Execution Systems (MES) directing production workflows and sequences - RTLS automatically confirms step completion as materials enter/exit work cells, measures actual cycle times vs. MES standards, and detects workflow deviations triggering MES alerts or corrective actions. Enterprise Resource Planning (ERP) systems managing broader business workflows - RTLS provides <a href="../terms/shop-floor.html" class="term-link">shop floor</a> execution data feeding ERP planning and scheduling, confirms production milestones for accounting and customer communications, and supplies actual performance data for continuous improvement. Quantified benefits from RTLS-enhanced workflow management include: 15-30% <a href="../terms/cycle-time.html" class="term-link">cycle time</a> reductions from bottleneck identification and <a href="../terms/resolution.html" class="term-link">resolution</a>, 20-40% productivity improvements from automated status tracking eliminating manual data entry, 10-25% <a href="../terms/throughput.html" class="term-link">throughput</a> increases from workflow optimization based on actual flow data, 30-50% reduction in workflow errors or deviations from compliance enforcement, and improved quality from ensuring processes not skipped or performed out of sequence. The evolution toward smart manufacturing and <a href="../terms/industry-4-0.html" class="term-link">Industry 4.0</a> relies heavily on workflow automation and optimization: RTLS provides physical workflow visibility connecting digital systems (MES, ERP) with actual shop floor execution, enabling closed-loop automation where systems detect conditions and automatically respond adjusting workflows, and supporting continuous improvement through comprehensive measurement revealing optimization opportunities.</p>

@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#1D4ED8;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Localization Tech</div>
     <h1 class="term-title">DGPS (Differential GPS)</h1>
+  <div class="term-cat-tag">Localization Tech</div>
   </header>
   <p class="def-short">An enhancement to standard GPS using a fixed reference station at a known position to calculate and broadcast correction signals, improving positioning accuracy from 3-10 meters to 1-3 meters. Commonly used in outdoor industrial applications including port operations, construction sites, and large yard management where standard GPS accuracy is insufficient. Requires a ground-based reference station within 200-300 km.</p>
   <p class="def-long">Differential GPS operates by placing a reference receiver at a precisely surveyed location. Since the reference station knows its exact position, it calculates the error in GPS signals at that location and broadcasts correction data to nearby mobile receivers. Mobile receivers apply these corrections to improve their own position calculations. DGPS correction signals are broadcast via radio beacons (traditional DGPS), satellite (SBAS systems including WAAS in North America, EGNOS in Europe), or internet (NTRIP protocol using network of reference stations). Accuracy depends on distance from reference station: corrections accurate to 1-2 meters within 100 km of reference, degrading to 2-5 meters at 300 km. Update rate for corrections typically 1 Hz. DGPS-enabled industrial tags cost $30-80 more than standard GPS tags due to correction receiver hardware.</p><p class="def-long">Industrial applications benefiting from DGPS: port container tracking (1-2 meter accuracy enabling precise berth and stack location), construction equipment tracking (improved accuracy for proximity to site boundaries), large mining site vehicle management (better lane-level accuracy), and precision agriculture. For industrial RTLS, DGPS represents the intermediate outdoor accuracy tier: standard GPS (3-10 m) for general yard presence detection, DGPS (1-3 m) for lane-level and parking-spot-level tracking, and RTK GPS (1-5 cm) for precision guidance. Most industrial GNSS RTLS deployments use SBAS-corrected GPS providing 1-3 meter accuracy as standard, upgrading to dedicated DGPS or RTK only when applications require better precision.</p>

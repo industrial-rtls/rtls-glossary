@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#475569;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -69,12 +70,12 @@
   <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
 </header>
 <nav class="breadcrumb">
-  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp; Techniques<span>›</span>Fingerprinting
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods & Techniques<span>›</span>Fingerprinting
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Positioning Methods</div>
     <h1 class="term-title">Fingerprinting</h1>
+  <div class="term-cat-tag">Positioning Methods</div>
   </header>
   <p class="def-short">A positioning technique creating a database mapping signal characteristics to specific locations, then matching observed signals against this database. Involves offline training phase (surveying and building database) and online positioning phase (comparing real-time signals). Can compensate for complex RF environments where simple models don't work. Labor-intensive but works in challenging environments using lower-cost hardware.</p>
   <p class="def-long">Positioning technique creating a database of location-specific signal characteristics (fingerprints) during training phase, then matching <a href="../terms/real-time.html" class="term-link">real-time</a> measurements against database to determine position. Wi-Fi and BLE fingerprinting process: (1) <a href="../terms/site-survey.html" class="term-link">Site survey</a> - systematically measuring signal strengths from multiple access points at known reference positions throughout facility (typically 2-5 meter grid spacing), recording RSSI values and creating fingerprint database linking signal patterns to positions. (2) Positioning - mobile device measures current RSSI from visible access points, compares against fingerprint database using pattern matching algorithms (k-nearest neighbors, neural networks, probabilistic methods), and returns position of best-matching fingerprint. Fingerprinting advantages: achieves 3-8 meter <a href="../terms/accuracy.html" class="term-link">accuracy</a> using standard Wi-Fi/BLE infrastructure without precise infrastructure positioning or <a href="../terms/time-synchronization.html" class="term-link">time synchronization</a>, and adapts to site-specific RF environment (naturally accounting for obstacles and multipath). Limitations: requires labor-intensive site survey (typically 2-8 hours per 1000 m²), fingerprint database becomes outdated if environment changes (new equipment, furniture rearrangement), <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> lower than ranging-based methods, and database size grows with facility size (limiting <a href="../terms/scalability.html" class="term-link">scalability</a>). Wi-Fi fingerprinting accuracy degrades 20-40% if survey is 6+ months old in dynamic industrial environments. Modern systems use automatic fingerprint updates during operation (crowdsourced from device measurements with known positions) to maintain database currency.</p>

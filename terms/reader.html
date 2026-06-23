@@ -37,7 +37,8 @@
   .breadcrumb a:hover{color:var(--accent-hi)}
   .breadcrumb span{color:var(--border);margin:0 .3rem}
   .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
-  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-header{margin-bottom:1.75rem}
+  .term-title{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:.75rem}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;flex-wrap:wrap;color:#0369A1;margin-bottom:.75rem}
   .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
@@ -73,8 +74,8 @@
 </nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Hardware</div>
     <h1 class="term-title">Reader</h1>
+  <div class="term-cat-tag">Hardware</div>
   </header>
   <p class="def-short">A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID systems, readers also energize tags. Readers forward collected data to the RTLS processing system. Reader placement, density, and configuration determine system coverage and performance.</p>
   <p class="def-long">A reader, also called an <a href="../terms/anchor.html" class="term-link">anchor</a> or <a href="../terms/receiver.html" class="term-link">receiver</a> in RTLS terminology, is a <a href="../terms/fixed-infrastructure.html" class="term-link">fixed infrastructure</a> device that receives signals from mobile tags and forwards this data to the <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> for location calculation. In industrial RTLS deployments, readers are strategically positioned throughout the facility to provide continuous coverage of the tracking area. The number and placement of readers directly impacts system <a href="../terms/accuracy.html" class="term-link">accuracy</a>, with most systems requiring 3-4 readers with line-of-sight to a <a href="../terms/tag.html" class="term-link">tag</a> for optimal 2D positioning, and 4-5 for 3D positioning. UWB readers typically operate at 6-9 GHz frequencies and can process ranging data from hundreds of tags simultaneously. Modern industrial RTLS readers feature synchronized clocks (often with nanosecond <a href="../terms/precision.html" class="term-link">precision</a>), Power over Ethernet (PoE) capability, and ruggedized enclosures rated to IP65 or higher for harsh environments. Reader density requirements vary by technology: UWB systems may need one reader per 100-200 square meters for sub-meter accuracy, while Wi-Fi systems might require one <a href="../terms/access-point.html" class="term-link">access point</a> per 500-1000 square meters with reduced precision. Readers must be carefully positioned to minimize dead zones, accounting for obstacles, metal shelving, machinery, and building structures that can block or reflect signals. Industrial readers often include diagnostic LEDs, local processing capabilities, and network redundancy features. Installation height typically ranges from 3-6 meters depending on application requirements and ceiling height. Reader <a href="../terms/synchronization.html" class="term-link">synchronization</a> is critical for Time Difference of Arrival (TDoA) systems, requiring either wired sync connections or wireless clock synchronization protocols.</p>
