@@ -3,51 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Downloading – Industrial RTLS Glossary</title>
+<title>Download – Industrial RTLS Glossary</title>
+<meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0A0F1E;--surface:#111827;--border:#1E3A5F;--text:#F0F4FF;--muted:#8B9CB8;--accent:#2563EB;--accent-hi:#3B82F6}
+  :root{--bg:#0A0F1E;--surface:#111827;--border:#1E3A5F;--text:#F0F4FF;--muted:#8B9CB8;--accent:#2563EB;--accent-hi:#3B82F6;--green:#059669}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem}
-  header{position:fixed;top:0;left:0;right:0;border-bottom:1px solid var(--border);padding:0 2rem;background:rgba(10,15,30,0.96);display:flex;align-items:center;height:60px}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem}
+  header{position:fixed;top:0;left:0;right:0;border-bottom:1px solid var(--border);padding:0 2rem;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);display:flex;align-items:center;height:60px;z-index:100}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:3rem 2.5rem;max-width:480px;width:100%}
-  .icon{font-size:3rem;margin-bottom:1.5rem}
-  h1{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;margin-bottom:.75rem}
-  p{color:var(--muted);font-size:.95rem;margin-bottom:1.5rem;line-height:1.6}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:.7rem 1.5rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.9rem;text-decoration:none;transition:background .15s;margin-bottom:1rem}
-  .btn:hover{background:var(--accent-hi)}
-  .back{display:block;color:var(--muted);font-size:.85rem;text-decoration:none;margin-top:.5rem}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:3rem 2.5rem;max-width:500px;width:100%;text-align:center}
+  .check{width:56px;height:56px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
+  .check svg{width:28px;height:28px;color:#fff}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;margin-bottom:.75rem}
+  .subtitle{color:var(--muted);font-size:.95rem;margin-bottom:2rem;line-height:1.6}
+  .progress{width:100%;height:3px;background:var(--border);border-radius:2px;margin-bottom:2rem;overflow:hidden}
+  .progress-bar{height:100%;background:var(--accent);border-radius:2px;width:0;transition:width 2s ease}
+  .btn-download{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;padding:.8rem 1.75rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.95rem;text-decoration:none;transition:background .15s;margin-bottom:1.25rem}
+  .btn-download:hover{background:var(--accent-hi)}
+  .btn-download svg{width:18px;height:18px}
+  .meta{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);margin-bottom:2rem;letter-spacing:.05em}
+  .divider{border:none;border-top:1px solid var(--border);margin:1.5rem 0}
+  .back{color:var(--muted);font-size:.85rem;text-decoration:none}
   .back:hover{color:var(--accent-hi)}
-  .progress{width:100%;height:3px;background:var(--border);border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
-  .progress-bar{height:100%;background:var(--accent);border-radius:2px;animation:fill 2s ease forwards}
-  @keyframes fill{from{width:0}to{width:100%}}
+  .what-inside{text-align:left;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1rem 1.25rem;margin-bottom:1.5rem}
+  .what-inside h3{font-family:'Space Grotesk',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem}
+  .what-inside ul{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+  .what-inside li{font-size:.85rem;color:#C8D5EA;display:flex;align-items:center;gap:.5rem}
+  .what-inside li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent-hi);flex-shrink:0}
 </style>
 </head>
 <body>
 <header>
   <a href="index.html" class="logo">RTLS <span>Glossary</span></a>
 </header>
+
 <div class="card">
-  <div class="icon">📄</div>
-  <h1>Your download is starting…</h1>
-  <div class="progress"><div class="progress-bar"></div></div>
-  <p>The Industrial RTLS Glossary PDF (252 terms, 112 abbreviations) should download automatically. If it doesn't, click the button below.</p>
-  <a href="Industrial-RTLS-Glossary.pdf" download class="btn">Download PDF manually</a>
-  <a href="index.html" class="back">← Back to the glossary</a>
+  <div class="check">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+  </div>
+  <h1>Your download is ready</h1>
+  <p class="subtitle">The Industrial RTLS Glossary PDF is downloading automatically. If it doesn't start, use the button below.</p>
+
+  <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+
+  <div class="what-inside">
+    <h3>What's inside</h3>
+    <ul>
+      <li>252 terms with short and extended definitions</li>
+      <li>112 abbreviations with full meanings</li>
+      <li>Coverage of UWB, BLE, and GNSS technologies</li>
+      <li>Industrial applications, safety, and system architecture</li>
+    </ul>
+  </div>
+
+  <a href="Industrial-RTLS-Glossary.pdf" download="Industrial-RTLS-Glossary.pdf" class="btn-download">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Download PDF
+  </a>
+
+  <div class="meta">PDF · 2.3 MB · 252 terms · Industrial RTLS Glossary</div>
+
+  <hr class="divider">
+  <a href="index.html" class="back">← Browse the online glossary</a>
 </div>
+
 <script>
-  // Auto-trigger download after short delay
-  setTimeout(function() {
-    var a = document.createElement('a');
-    a.href = 'Industrial-RTLS-Glossary.pdf';
-    a.download = 'Industrial-RTLS-Glossary.pdf';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }, 800);
+  // Auto-trigger download
+  window.addEventListener('load', function() {
+    var bar = document.getElementById('progress-bar');
+    setTimeout(function() { bar.style.width = '100%'; }, 100);
+    setTimeout(function() {
+      var a = document.createElement('a');
+      a.href = 'Industrial-RTLS-Glossary.pdf';
+      a.download = 'Industrial-RTLS-Glossary.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }, 600);
+  });
 </script>
 </body>
 </html>
