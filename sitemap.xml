@@ -1,1525 +1,1525 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/index.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/index.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/abbreviations.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/abbreviations.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/5g-positioning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/5g-positioning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/access-control.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/access-control.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/access-point.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/access-point.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/accuracy.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/accuracy.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/active-rfid.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/active-rfid.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/active-tag.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/active-tag.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ad-hoc-mode.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ad-hoc-mode.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/agv-automated-guided-vehicle-navigation.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/agv-automated-guided-vehicle-navigation.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/alert-system.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/alert-system.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/analytics-dashboard.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/analytics-dashboard.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/anchor.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/anchor.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/anchor-density.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/anchor-density.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/anchor-placement.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/anchor-placement.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/angle-of-arrival-aoa.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/angle-of-arrival-aoa.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/angle-of-departure-aod.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/angle-of-departure-aod.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/anomaly-detection.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/anomaly-detection.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/api-application-programming-interface.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/api-application-programming-interface.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/artificial-intelligence-ai-in-rtls.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/artificial-intelligence-ai-in-rtls.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/asset-tag.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/asset-tag.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/asset-tracking.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/asset-tracking.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/asset-utilization.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/asset-utilization.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/base-station.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/base-station.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/battery-life.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/battery-life.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/beacon.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/beacon.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/bi-connector.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/bi-connector.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/bi-directional-integration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/bi-directional-integration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/big-data.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/big-data.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ble-bluetooth-low-energy.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ble-bluetooth-low-energy.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ble-gateway.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ble-gateway.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/bluetooth-5-x.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/bluetooth-5-x.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/business-intelligence.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/business-intelligence.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/calibration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/calibration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/capacity.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/capacity.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/cell-of-origin-coo.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/cell-of-origin-coo.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/centimeter-level-accuracy.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/centimeter-level-accuracy.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/centralized-system.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/centralized-system.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/cloud-based-rtls.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/cloud-based-rtls.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/collision-avoidance.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/collision-avoidance.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/commissioning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/commissioning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/compliance-monitoring.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/compliance-monitoring.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/computer-vision-tracking.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/computer-vision-tracking.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/condition-monitoring.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/condition-monitoring.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/configuration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/configuration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/connected-worker.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/connected-worker.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/coverage-area.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/coverage-area.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/coverage-gap.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/coverage-gap.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/coverage-planning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/coverage-planning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/css-chirp-spread-spectrum.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/css-chirp-spread-spectrum.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/cycle-time.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/cycle-time.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/data-mining.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/data-mining.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/data-visualization.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/data-visualization.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/dead-reckoning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/dead-reckoning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/dgps-differential-gps.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/dgps-differential-gps.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/deployment.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/deployment.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/digital-twin.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/digital-twin.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/direction-finding.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/direction-finding.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/dilution-of-precision-dop.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/dilution-of-precision-dop.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/distributed-system.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/distributed-system.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/dock-management.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/dock-management.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/dwell-time.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/dwell-time.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/dwell-time-analysis.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/dwell-time-analysis.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/dynamic-geofencing.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/dynamic-geofencing.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/edge-computing.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/edge-computing.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/emergency-response.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/emergency-response.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/environmental-sensor.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/environmental-sensor.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/equipment-monitoring.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/equipment-monitoring.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/erp-integration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/erp-integration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/evacuation-management.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/evacuation-management.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/facility-layout.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/facility-layout.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/factory-defaults.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/factory-defaults.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/factory-restore.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/factory-restore.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/fingerprinting.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/fingerprinting.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/fira-consortium.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/fira-consortium.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/fixed-infrastructure.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/fixed-infrastructure.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/fms-integration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/fms-integration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/fog-computing.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/fog-computing.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/forklift-tracking.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/forklift-tracking.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/gateway.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/gateway.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/geofence.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/geofence.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/geofencing.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/geofencing.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/gnss-global-navigation-satellite-system.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/gnss-global-navigation-satellite-system.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/gnss-antenna.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/gnss-antenna.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/gps-global-positioning-system.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/gps-global-positioning-system.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/hazardous-zone.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/hazardous-zone.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/heatmap.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/heatmap.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/historical-data-analysis.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/historical-data-analysis.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/historical-playback.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/historical-playback.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/hybrid-architecture.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/hybrid-architecture.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ibeacon-eddystone.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ibeacon-eddystone.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ieee-802-15-4.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ieee-802-15-4.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/indoor-navigation.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/indoor-navigation.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/indoor-positioning-system-ips.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/indoor-positioning-system-ips.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/indoor-outdoor-handover.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/indoor-outdoor-handover.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/industrial-iot-iiot.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/industrial-iot-iiot.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/industry-4-0.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/industry-4-0.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/infrastructure-mode.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/infrastructure-mode.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/integration-layer.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/integration-layer.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/intrusion-detection.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/intrusion-detection.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/inventory-management.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/inventory-management.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ip-rating.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ip-rating.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ir-infrared-positioning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ir-infrared-positioning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/iso-iec-24730.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/iso-iec-24730.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/just-in-time-jit-manufacturing.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/just-in-time-jit-manufacturing.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/latency.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/latency.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/lean-manufacturing.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/lean-manufacturing.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/lidar-light-detection-and-ranging.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/lidar-light-detection-and-ranging.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/line-of-sight-los.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/line-of-sight-los.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/location-badge.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/location-badge.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/location-data.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/location-data.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/location-engine.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/location-engine.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/location-history.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/location-history.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/location-intelligence.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/location-intelligence.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/logistics-4-0.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/logistics-4-0.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/lone-worker-protection.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/lone-worker-protection.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/lorawan.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/lorawan.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/machine-learning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/machine-learning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/magnetic-positioning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/magnetic-positioning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/man-down-detection.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/man-down-detection.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/material-flow.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/material-flow.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/material-handling.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/material-handling.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/mesh-network.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/mesh-network.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/mesh-networking.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/mesh-networking.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/meter-level-accuracy.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/meter-level-accuracy.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/middleware.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/middleware.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/mobile-infrastructure.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/mobile-infrastructure.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/movement-pattern.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/movement-pattern.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/mqtt-protocol.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/mqtt-protocol.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/multilateration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/multilateration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/multipath-propagation.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/multipath-propagation.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/multi-technology-rtls.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/multi-technology-rtls.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/mustering.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/mustering.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/myrtls-insights.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/myrtls-insights.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/network-bandwidth.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/network-bandwidth.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/network-topology.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/network-topology.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/non-line-of-sight-nlos.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/non-line-of-sight-nlos.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/notification-engine.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/notification-engine.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/occupancy-analytics.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/occupancy-analytics.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/omlox-standard.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/omlox-standard.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/on-premise-rtls.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/on-premise-rtls.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/open-api.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/open-api.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/passive-rfid.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/passive-rfid.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/passive-tag.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/passive-tag.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/pattern-recognition.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/pattern-recognition.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/penetration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/penetration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/perimeter-control.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/perimeter-control.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/personnel-tracking.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/personnel-tracking.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/phase-difference-measurement.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/phase-difference-measurement.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/positioning-accuracy.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/positioning-accuracy.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/positioning-algorithm.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/positioning-algorithm.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/positioning-engine.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/positioning-engine.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ppe-personal-protective-equipment-compliance.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ppe-personal-protective-equipment-compliance.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/precision.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/precision.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/predictive-analytics.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/predictive-analytics.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/predictive-maintenance.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/predictive-maintenance.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/preventive-maintenance.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/preventive-maintenance.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/process-optimization.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/process-optimization.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/production-floor.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/production-floor.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/production-monitoring.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/production-monitoring.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/productivity-metrics.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/productivity-metrics.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/proximity-alert.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/proximity-alert.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/proximity-detection.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/proximity-detection.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/proximity-warning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/proximity-warning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/range.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/range.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/reader.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/reader.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/real-time.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/real-time.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/real-time-analytics.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/real-time-analytics.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/real-time-monitoring.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/real-time-monitoring.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/received-signal-strength-indicator-rssi.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/received-signal-strength-indicator-rssi.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/receiver.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/receiver.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/receiver-sensitivity.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/receiver-sensitivity.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/refresh-rate.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/refresh-rate.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/reporting-module.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/reporting-module.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/resolution.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/resolution.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/response-time.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/response-time.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rest-api.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rest-api.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/restricted-area.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/restricted-area.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rfid-radio-frequency-identification.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rfid-radio-frequency-identification.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/room-level-accuracy.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/room-level-accuracy.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/route-optimization.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/route-optimization.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rtk-real-time-kinematic.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rtk-real-time-kinematic.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rtls-antenna.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rtls-antenna.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rtls-manager.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rtls-manager.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rtls-monitor.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rtls-monitor.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rtls-planner.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rtls-planner.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rtls-platform.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rtls-platform.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rtls-player.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rtls-player.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/rtls-studio.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/rtls-studio.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/safe-zone.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/safe-zone.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/satellite-constellation.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/satellite-constellation.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/safety-zone-enforcement.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/safety-zone-enforcement.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/sage-analytics.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/sage-analytics.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/scalability.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/scalability.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/sensmap.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/sensmap.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/sensor-node.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/sensor-node.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/shop-floor.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/shop-floor.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/signal-attenuation.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/signal-attenuation.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/signal-interference.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/signal-interference.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/site-survey.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/site-survey.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/smart-factory.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/smart-factory.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/smart-warehouse.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/smart-warehouse.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/space-utilization.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/space-utilization.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/star-topology.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/star-topology.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/supply-chain-visibility.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/supply-chain-visibility.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/synchronization.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/synchronization.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/system-backup.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/system-backup.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/system-capacity.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/system-capacity.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/system-integration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/system-integration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/tag.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/tag.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/tag-capacity.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/tag-capacity.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/tag-identifier.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/tag-identifier.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/telemetry.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/telemetry.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/theft-prevention.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/theft-prevention.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/third-party-integration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/third-party-integration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/throughput.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/throughput.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/time-difference-of-arrival-tdoa.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/time-difference-of-arrival-tdoa.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/time-of-arrival-toa.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/time-of-arrival-toa.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/time-synchronization.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/time-synchronization.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/time-of-flight-tof.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/time-of-flight-tof.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/tool-tracking.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/tool-tracking.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/tracking-software.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/tracking-software.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/traffic-pattern.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/traffic-pattern.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/transmission-power.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/transmission-power.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/transmitter.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/transmitter.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/transponder.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/transponder.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/travel-distance.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/travel-distance.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/triangulation.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/triangulation.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/trilateration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/trilateration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/turnaround-time.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/turnaround-time.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/two-way-ranging-twr.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/two-way-ranging-twr.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/udp-stream.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/udp-stream.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/ultrasonic-positioning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/ultrasonic-positioning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/update-rate.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/update-rate.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/utilization-rate.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/utilization-rate.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/uwb-ultra-wideband.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/uwb-ultra-wideband.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/vehicle-tag.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/vehicle-tag.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/vehicle-tracking.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/vehicle-tracking.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/virtual-boundary.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/virtual-boundary.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/warehouse-management.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/warehouse-management.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/wearable-tag.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/wearable-tag.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/websocket.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/websocket.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/wi-fi-positioning.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/wi-fi-positioning.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/wireless-protocol.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/wireless-protocol.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/wms-integration.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/wms-integration.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/worker-safety.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/worker-safety.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/workflow-management.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/workflow-management.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/work-in-progress-wip-tracking.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/work-in-progress-wip-tracking.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/yard-management.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/yard-management.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/zigbee.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/zigbee.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/zone-detection.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/zone-detection.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/zone-entry.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/zone-entry.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/zone-exit.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/zone-exit.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://figlarkarel.github.io/rtls-glossary/terms/zone-level-accuracy.html</loc>
+    <loc>https://industrial-rtls.github.io/rtls-glossary/terms/zone-level-accuracy.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

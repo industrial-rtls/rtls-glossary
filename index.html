@@ -115,6 +115,10 @@
     flex-wrap: wrap;
   }
 
+  .stat-link{text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:.25rem;transition:border-color .15s}
+  .stat-link:hover{border-color:var(--accent-hi)}
+  .stat-link .stat-num{color:var(--text)}
+  .stat-link .stat-label{color:var(--accent-hi)}
   .stat {
     text-align: center;
   }
@@ -136,23 +140,19 @@
   }
 
   /* ── PDF Banner ── */
-  .pdf-cta-btn{background:var(--accent);color:#fff;padding:.55rem 1.25rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:600;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s}
+  
   .pdf-cta-btn:hover{background:var(--accent-hi);text-decoration:none;color:#fff}
   .pdf-banner {
-    margin: 0 2rem 3rem;
+    margin: 0 auto 3rem;
     max-width: 860px;
-    margin-left: auto;
-    margin-right: auto;
     background: var(--surface2);
     border: 1px solid var(--border);
     border-left: 4px solid var(--accent);
     border-radius: 6px;
-    padding: 1.25rem 1.5rem;
+    padding: 1.5rem 1.75rem 0.5rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .pdf-banner-text {
@@ -164,11 +164,7 @@
     color: var(--text);
   }
 
-  .pdf-form {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
+  
 
   .pdf-form input {
     background: var(--surface);
@@ -423,8 +419,19 @@
     .controls, .alpha-nav, .glossary-body { padding: 0 1.25rem; }
     .controls { flex-direction: column; }
     .filter-select { width: 100%; min-width: unset; }
-    .pdf-banner { flex-direction: column; align-items: flex-start; }
-    .pdf-form { width: 100%; }
+    .pdf-banner {
+    margin: 0 auto 3rem;
+    max-width: 860px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.5rem 1.75rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+    
     .pdf-form input { width: 100%; }
   }
 </style>
@@ -434,7 +441,7 @@
   "@type": "WebSite",
   "name": "Industrial RTLS Glossary",
   "description": "Comprehensive glossary of 252 industrial RTLS terms covering UWB, BLE, GNSS, positioning methods, hardware components, and industrial applications.",
-  "url": "https://figlarkarel.github.io/rtls-glossary/index.html",
+  "url": "https://industrial-rtls.github.io/rtls-glossary/index.html",
   "inLanguage": "en",
   "publisher": {
     "@type": "Organization",
@@ -450,68 +457,73 @@
   "description": "252 terms covering UWB, BLE, GNSS and industrial RTLS technology",
   "numberOfItems": 252,
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"5G Positioning","url":"https://figlarkarel.github.io/rtls-glossary/terms/5g-positioning.html"},
-    {"@type":"ListItem","position":2,"name":"Access Control","url":"https://figlarkarel.github.io/rtls-glossary/terms/access-control.html"},
-    {"@type":"ListItem","position":3,"name":"Access Point","url":"https://figlarkarel.github.io/rtls-glossary/terms/access-point.html"},
-    {"@type":"ListItem","position":4,"name":"Accuracy","url":"https://figlarkarel.github.io/rtls-glossary/terms/accuracy.html"},
-    {"@type":"ListItem","position":5,"name":"Active RFID","url":"https://figlarkarel.github.io/rtls-glossary/terms/active-rfid.html"},
-    {"@type":"ListItem","position":6,"name":"Active Tag","url":"https://figlarkarel.github.io/rtls-glossary/terms/active-tag.html"},
-    {"@type":"ListItem","position":7,"name":"Ad-Hoc Mode","url":"https://figlarkarel.github.io/rtls-glossary/terms/ad-hoc-mode.html"},
-    {"@type":"ListItem","position":8,"name":"AGV (Automated Guided Vehicle) Navigation","url":"https://figlarkarel.github.io/rtls-glossary/terms/agv-automated-guided-vehicle-navigation.html"},
-    {"@type":"ListItem","position":9,"name":"Alert System","url":"https://figlarkarel.github.io/rtls-glossary/terms/alert-system.html"},
-    {"@type":"ListItem","position":10,"name":"Analytics Dashboard","url":"https://figlarkarel.github.io/rtls-glossary/terms/analytics-dashboard.html"},
-    {"@type":"ListItem","position":11,"name":"Anchor","url":"https://figlarkarel.github.io/rtls-glossary/terms/anchor.html"},
-    {"@type":"ListItem","position":12,"name":"Anchor Density","url":"https://figlarkarel.github.io/rtls-glossary/terms/anchor-density.html"},
-    {"@type":"ListItem","position":13,"name":"Anchor Placement","url":"https://figlarkarel.github.io/rtls-glossary/terms/anchor-placement.html"},
-    {"@type":"ListItem","position":14,"name":"Angle of Arrival (AoA)","url":"https://figlarkarel.github.io/rtls-glossary/terms/angle-of-arrival-aoa.html"},
-    {"@type":"ListItem","position":15,"name":"Angle of Departure (AoD)","url":"https://figlarkarel.github.io/rtls-glossary/terms/angle-of-departure-aod.html"},
-    {"@type":"ListItem","position":16,"name":"Anomaly Detection","url":"https://figlarkarel.github.io/rtls-glossary/terms/anomaly-detection.html"},
-    {"@type":"ListItem","position":17,"name":"API (Application Programming Interface)","url":"https://figlarkarel.github.io/rtls-glossary/terms/api-application-programming-interface.html"},
-    {"@type":"ListItem","position":18,"name":"Artificial Intelligence (AI) in RTLS","url":"https://figlarkarel.github.io/rtls-glossary/terms/artificial-intelligence-ai-in-rtls.html"},
-    {"@type":"ListItem","position":19,"name":"Asset Tag","url":"https://figlarkarel.github.io/rtls-glossary/terms/asset-tag.html"},
-    {"@type":"ListItem","position":20,"name":"Asset Tracking","url":"https://figlarkarel.github.io/rtls-glossary/terms/asset-tracking.html"},
-    {"@type":"ListItem","position":21,"name":"Asset Utilization","url":"https://figlarkarel.github.io/rtls-glossary/terms/asset-utilization.html"},
-    {"@type":"ListItem","position":22,"name":"Base Station","url":"https://figlarkarel.github.io/rtls-glossary/terms/base-station.html"},
-    {"@type":"ListItem","position":23,"name":"Battery Life","url":"https://figlarkarel.github.io/rtls-glossary/terms/battery-life.html"},
-    {"@type":"ListItem","position":24,"name":"Beacon","url":"https://figlarkarel.github.io/rtls-glossary/terms/beacon.html"},
-    {"@type":"ListItem","position":25,"name":"BI Connector","url":"https://figlarkarel.github.io/rtls-glossary/terms/bi-connector.html"},
-    {"@type":"ListItem","position":26,"name":"Bi-directional Integration","url":"https://figlarkarel.github.io/rtls-glossary/terms/bi-directional-integration.html"},
-    {"@type":"ListItem","position":27,"name":"Big Data","url":"https://figlarkarel.github.io/rtls-glossary/terms/big-data.html"},
-    {"@type":"ListItem","position":28,"name":"BLE (Bluetooth Low Energy)","url":"https://figlarkarel.github.io/rtls-glossary/terms/ble-bluetooth-low-energy.html"},
-    {"@type":"ListItem","position":29,"name":"BLE Gateway","url":"https://figlarkarel.github.io/rtls-glossary/terms/ble-gateway.html"},
-    {"@type":"ListItem","position":30,"name":"Bluetooth 5.x","url":"https://figlarkarel.github.io/rtls-glossary/terms/bluetooth-5-x.html"},
-    {"@type":"ListItem","position":31,"name":"Business Intelligence","url":"https://figlarkarel.github.io/rtls-glossary/terms/business-intelligence.html"},
-    {"@type":"ListItem","position":32,"name":"Calibration","url":"https://figlarkarel.github.io/rtls-glossary/terms/calibration.html"},
-    {"@type":"ListItem","position":33,"name":"Capacity","url":"https://figlarkarel.github.io/rtls-glossary/terms/capacity.html"},
-    {"@type":"ListItem","position":34,"name":"Cell of Origin (CoO)","url":"https://figlarkarel.github.io/rtls-glossary/terms/cell-of-origin-coo.html"},
-    {"@type":"ListItem","position":35,"name":"Centimeter-Level Accuracy","url":"https://figlarkarel.github.io/rtls-glossary/terms/centimeter-level-accuracy.html"},
-    {"@type":"ListItem","position":36,"name":"Centralized System","url":"https://figlarkarel.github.io/rtls-glossary/terms/centralized-system.html"},
-    {"@type":"ListItem","position":37,"name":"Cloud-Based RTLS","url":"https://figlarkarel.github.io/rtls-glossary/terms/cloud-based-rtls.html"},
-    {"@type":"ListItem","position":38,"name":"Collision Avoidance","url":"https://figlarkarel.github.io/rtls-glossary/terms/collision-avoidance.html"},
-    {"@type":"ListItem","position":39,"name":"Commissioning","url":"https://figlarkarel.github.io/rtls-glossary/terms/commissioning.html"},
-    {"@type":"ListItem","position":40,"name":"Compliance Monitoring","url":"https://figlarkarel.github.io/rtls-glossary/terms/compliance-monitoring.html"},
-    {"@type":"ListItem","position":41,"name":"Computer Vision Tracking","url":"https://figlarkarel.github.io/rtls-glossary/terms/computer-vision-tracking.html"},
-    {"@type":"ListItem","position":42,"name":"Condition Monitoring","url":"https://figlarkarel.github.io/rtls-glossary/terms/condition-monitoring.html"},
-    {"@type":"ListItem","position":43,"name":"Configuration","url":"https://figlarkarel.github.io/rtls-glossary/terms/configuration.html"},
-    {"@type":"ListItem","position":44,"name":"Connected Worker","url":"https://figlarkarel.github.io/rtls-glossary/terms/connected-worker.html"},
-    {"@type":"ListItem","position":45,"name":"Coverage Area","url":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-area.html"},
-    {"@type":"ListItem","position":46,"name":"Coverage Gap","url":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-gap.html"},
-    {"@type":"ListItem","position":47,"name":"Coverage Planning","url":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-planning.html"},
-    {"@type":"ListItem","position":48,"name":"CSS (Chirp Spread Spectrum)","url":"https://figlarkarel.github.io/rtls-glossary/terms/css-chirp-spread-spectrum.html"},
-    {"@type":"ListItem","position":49,"name":"Cycle Time","url":"https://figlarkarel.github.io/rtls-glossary/terms/cycle-time.html"},
-    {"@type":"ListItem","position":50,"name":"Data Mining","url":"https://figlarkarel.github.io/rtls-glossary/terms/data-mining.html"}
+    {"@type":"ListItem","position":1,"name":"5G Positioning","url":"https://industrial-rtls.github.io/rtls-glossary/terms/5g-positioning.html"},
+    {"@type":"ListItem","position":2,"name":"Access Control","url":"https://industrial-rtls.github.io/rtls-glossary/terms/access-control.html"},
+    {"@type":"ListItem","position":3,"name":"Access Point","url":"https://industrial-rtls.github.io/rtls-glossary/terms/access-point.html"},
+    {"@type":"ListItem","position":4,"name":"Accuracy","url":"https://industrial-rtls.github.io/rtls-glossary/terms/accuracy.html"},
+    {"@type":"ListItem","position":5,"name":"Active RFID","url":"https://industrial-rtls.github.io/rtls-glossary/terms/active-rfid.html"},
+    {"@type":"ListItem","position":6,"name":"Active Tag","url":"https://industrial-rtls.github.io/rtls-glossary/terms/active-tag.html"},
+    {"@type":"ListItem","position":7,"name":"Ad-Hoc Mode","url":"https://industrial-rtls.github.io/rtls-glossary/terms/ad-hoc-mode.html"},
+    {"@type":"ListItem","position":8,"name":"AGV (Automated Guided Vehicle) Navigation","url":"https://industrial-rtls.github.io/rtls-glossary/terms/agv-automated-guided-vehicle-navigation.html"},
+    {"@type":"ListItem","position":9,"name":"Alert System","url":"https://industrial-rtls.github.io/rtls-glossary/terms/alert-system.html"},
+    {"@type":"ListItem","position":10,"name":"Analytics Dashboard","url":"https://industrial-rtls.github.io/rtls-glossary/terms/analytics-dashboard.html"},
+    {"@type":"ListItem","position":11,"name":"Anchor","url":"https://industrial-rtls.github.io/rtls-glossary/terms/anchor.html"},
+    {"@type":"ListItem","position":12,"name":"Anchor Density","url":"https://industrial-rtls.github.io/rtls-glossary/terms/anchor-density.html"},
+    {"@type":"ListItem","position":13,"name":"Anchor Placement","url":"https://industrial-rtls.github.io/rtls-glossary/terms/anchor-placement.html"},
+    {"@type":"ListItem","position":14,"name":"Angle of Arrival (AoA)","url":"https://industrial-rtls.github.io/rtls-glossary/terms/angle-of-arrival-aoa.html"},
+    {"@type":"ListItem","position":15,"name":"Angle of Departure (AoD)","url":"https://industrial-rtls.github.io/rtls-glossary/terms/angle-of-departure-aod.html"},
+    {"@type":"ListItem","position":16,"name":"Anomaly Detection","url":"https://industrial-rtls.github.io/rtls-glossary/terms/anomaly-detection.html"},
+    {"@type":"ListItem","position":17,"name":"API (Application Programming Interface)","url":"https://industrial-rtls.github.io/rtls-glossary/terms/api-application-programming-interface.html"},
+    {"@type":"ListItem","position":18,"name":"Artificial Intelligence (AI) in RTLS","url":"https://industrial-rtls.github.io/rtls-glossary/terms/artificial-intelligence-ai-in-rtls.html"},
+    {"@type":"ListItem","position":19,"name":"Asset Tag","url":"https://industrial-rtls.github.io/rtls-glossary/terms/asset-tag.html"},
+    {"@type":"ListItem","position":20,"name":"Asset Tracking","url":"https://industrial-rtls.github.io/rtls-glossary/terms/asset-tracking.html"},
+    {"@type":"ListItem","position":21,"name":"Asset Utilization","url":"https://industrial-rtls.github.io/rtls-glossary/terms/asset-utilization.html"},
+    {"@type":"ListItem","position":22,"name":"Base Station","url":"https://industrial-rtls.github.io/rtls-glossary/terms/base-station.html"},
+    {"@type":"ListItem","position":23,"name":"Battery Life","url":"https://industrial-rtls.github.io/rtls-glossary/terms/battery-life.html"},
+    {"@type":"ListItem","position":24,"name":"Beacon","url":"https://industrial-rtls.github.io/rtls-glossary/terms/beacon.html"},
+    {"@type":"ListItem","position":25,"name":"BI Connector","url":"https://industrial-rtls.github.io/rtls-glossary/terms/bi-connector.html"},
+    {"@type":"ListItem","position":26,"name":"Bi-directional Integration","url":"https://industrial-rtls.github.io/rtls-glossary/terms/bi-directional-integration.html"},
+    {"@type":"ListItem","position":27,"name":"Big Data","url":"https://industrial-rtls.github.io/rtls-glossary/terms/big-data.html"},
+    {"@type":"ListItem","position":28,"name":"BLE (Bluetooth Low Energy)","url":"https://industrial-rtls.github.io/rtls-glossary/terms/ble-bluetooth-low-energy.html"},
+    {"@type":"ListItem","position":29,"name":"BLE Gateway","url":"https://industrial-rtls.github.io/rtls-glossary/terms/ble-gateway.html"},
+    {"@type":"ListItem","position":30,"name":"Bluetooth 5.x","url":"https://industrial-rtls.github.io/rtls-glossary/terms/bluetooth-5-x.html"},
+    {"@type":"ListItem","position":31,"name":"Business Intelligence","url":"https://industrial-rtls.github.io/rtls-glossary/terms/business-intelligence.html"},
+    {"@type":"ListItem","position":32,"name":"Calibration","url":"https://industrial-rtls.github.io/rtls-glossary/terms/calibration.html"},
+    {"@type":"ListItem","position":33,"name":"Capacity","url":"https://industrial-rtls.github.io/rtls-glossary/terms/capacity.html"},
+    {"@type":"ListItem","position":34,"name":"Cell of Origin (CoO)","url":"https://industrial-rtls.github.io/rtls-glossary/terms/cell-of-origin-coo.html"},
+    {"@type":"ListItem","position":35,"name":"Centimeter-Level Accuracy","url":"https://industrial-rtls.github.io/rtls-glossary/terms/centimeter-level-accuracy.html"},
+    {"@type":"ListItem","position":36,"name":"Centralized System","url":"https://industrial-rtls.github.io/rtls-glossary/terms/centralized-system.html"},
+    {"@type":"ListItem","position":37,"name":"Cloud-Based RTLS","url":"https://industrial-rtls.github.io/rtls-glossary/terms/cloud-based-rtls.html"},
+    {"@type":"ListItem","position":38,"name":"Collision Avoidance","url":"https://industrial-rtls.github.io/rtls-glossary/terms/collision-avoidance.html"},
+    {"@type":"ListItem","position":39,"name":"Commissioning","url":"https://industrial-rtls.github.io/rtls-glossary/terms/commissioning.html"},
+    {"@type":"ListItem","position":40,"name":"Compliance Monitoring","url":"https://industrial-rtls.github.io/rtls-glossary/terms/compliance-monitoring.html"},
+    {"@type":"ListItem","position":41,"name":"Computer Vision Tracking","url":"https://industrial-rtls.github.io/rtls-glossary/terms/computer-vision-tracking.html"},
+    {"@type":"ListItem","position":42,"name":"Condition Monitoring","url":"https://industrial-rtls.github.io/rtls-glossary/terms/condition-monitoring.html"},
+    {"@type":"ListItem","position":43,"name":"Configuration","url":"https://industrial-rtls.github.io/rtls-glossary/terms/configuration.html"},
+    {"@type":"ListItem","position":44,"name":"Connected Worker","url":"https://industrial-rtls.github.io/rtls-glossary/terms/connected-worker.html"},
+    {"@type":"ListItem","position":45,"name":"Coverage Area","url":"https://industrial-rtls.github.io/rtls-glossary/terms/coverage-area.html"},
+    {"@type":"ListItem","position":46,"name":"Coverage Gap","url":"https://industrial-rtls.github.io/rtls-glossary/terms/coverage-gap.html"},
+    {"@type":"ListItem","position":47,"name":"Coverage Planning","url":"https://industrial-rtls.github.io/rtls-glossary/terms/coverage-planning.html"},
+    {"@type":"ListItem","position":48,"name":"CSS (Chirp Spread Spectrum)","url":"https://industrial-rtls.github.io/rtls-glossary/terms/css-chirp-spread-spectrum.html"},
+    {"@type":"ListItem","position":49,"name":"Cycle Time","url":"https://industrial-rtls.github.io/rtls-glossary/terms/cycle-time.html"},
+    {"@type":"ListItem","position":50,"name":"Data Mining","url":"https://industrial-rtls.github.io/rtls-glossary/terms/data-mining.html"}
   ]
 }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V0EC23E2MF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V0EC23E2MF');
 </script>
 </head>
 <body>
 
 <header>
   <a href="index.html" class="logo">RTLS <span>Glossary</span></a>
-  <nav class="header-nav">
-    <a href="abbreviations.html">Abbreviations</a>
-    <a href="#pdf-download" class="header-cta">Download PDF</a>
-  </nav>
+  <a href="#pdf-download" class="header-cta">Download PDF</a>
 </header>
 
 <main>
@@ -522,16 +534,19 @@
     <div class="hero-stats">
       <div class="stat"><span class="stat-num">252</span><span class="stat-label">Terms defined</span></div>
       <div class="stat"><span class="stat-num">14</span><span class="stat-label">Categories</span></div>
-      <div class="stat"><span class="stat-num">112</span><span class="stat-label">Abbreviations</span></div>
+      <a href="abbreviations.html" class="stat stat-link"><span class="stat-num">112</span><span class="stat-label">Abbreviations ↗</span></a>
       <div class="stat"><span class="stat-num">3</span><span class="stat-label">Technologies</span></div>
     </div>
   </section>
 
   <div class="pdf-banner" id="pdf-download">
     <div class="pdf-banner-text">
-      <strong>Get the complete reference.</strong> The full glossary with 252 extended definitions and 112 abbreviations — available as a PDF.
+      <strong>Get the complete reference.</strong> Download the full glossary with 252 extended definitions and 112 abbreviations as a PDF. Enter your work email below.
     </div>
-    <a href="https://tally.so/r/VLqqEa" class="pdf-cta-btn" target="_blank" rel="noopener">Download PDF →</a>
+    <div class="tally-wrap">
+      <iframe data-tally-src="https://tally.so/embed/VLqqEa?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="180" frameborder="0" marginheight="0" marginwidth="0" title="Industrial RTLS"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    </div>
   </div>
 
   <div class="controls">
@@ -2576,7 +2591,7 @@
 </main>
 
 <footer>
-  Industrial RTLS Glossary · 252 terms · UWB · BLE · GNSS
+  Industrial RTLS Glossary · UWB · BLE · GNSS · <a href="abbreviations.html">Abbreviations</a>
 </footer>
 
 <script>

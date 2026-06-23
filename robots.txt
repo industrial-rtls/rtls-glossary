@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /download.html
 
-Sitemap: https://figlarkarel.github.io/rtls-glossary/sitemap.xml
+Sitemap: https://industrial-rtls.github.io/rtls-glossary/sitemap.xml
