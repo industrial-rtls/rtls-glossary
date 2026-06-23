@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Received Signal Strength Indicator (RSSI) – Industrial RTLS Glossary</title>
-<meta name="description" content="RSSI is a measurement of the power level in a received radio signal, expressed in decibels relative to one milliwatt (dBm). In RTLS applications, RSSI can ">
+<meta name="description" content="A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably ">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Received Signal Strength Indicator (RSSI)",
-  "description": "A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably with distance. Less accurate than time-based methods due to environmental variations affecting signal strength. Common in Wi-Fi and BLE positioni",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/received-signal-strength-indicator-rssi.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "received-signal-strength-indicator-rssi",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Received Signal Strength Indicator (RSSI)","description":"A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably ","url":"https://figlarkarel.github.io/rtls-glossary/terms/received-signal-strength-indicator-rssi.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Positioning Methods & Techniques","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Received Signal Strength Indicator (RSSI)","item":"https://figlarkarel.github.io/rtls-glossary/terms/received-signal-strength-indicator-rssi.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Positioning Methods &amp;amp; Techniques"},{"@type":"ListItem","position":3,"name":"Received Signal Strength Indicator (RSSI)","item":"https://figlarkarel.github.io/rtls-glossary/terms/received-signal-strength-indicator-rssi.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably with distance. Less accurate than time-based methods due to environmental variations affecting signal strength. Common in Wi-Fi and BLE positioning.">A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably with distance. Less accurate than time-based methods due to environmental variations affecting signal strength. Common in Wi-Fi and BLE positioning.</a> › Received Signal Strength Indicator (RSSI)
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp;amp; Techniques<span>›</span>Received Signal Strength Indicator (RSSI)
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably with distance. Less accurate than time-based methods due to environmental variations affecting signal strength. Common in Wi-Fi and BLE positioning.</div>
+    <div class="term-cat-tag">Positioning Methods &amp;amp; Techniques</div>
     <h1 class="term-title">Received Signal Strength Indicator (RSSI)</h1>
   </header>
-  <p class="def-short">RSSI is a measurement of the power level in a received radio signal, expressed in decibels relative to one milliwatt (dBm). In RTLS applications, RSSI can be used as a proximity indicator or for basic positioning, though it's less accurate than time-based methods. RSSI values typically <a href="../terms/range.html" class="term-link">range</a> from -30 dBm (very strong, close proximity) to -100 dBm (weak, distant or heavily obstructed). The fundamental principle behind RSSI-based positioning is that signal strength decreases predictably with distance according to the path loss model, theoretically allowing distance estimation. However, industrial environments severely complicate RSSI measurements due to <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a> (signals reflecting off metal surfaces, machinery, inventory), interference from other radio sources, and signal absorption by materials. These factors cause RSSI values to fluctuate significantly even when tags remain stationary, limiting <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> to room-level (3-10 meters) at best. Wi-Fi and Bluetooth Low Energy (BLE) systems commonly use RSSI for positioning, applying techniques like <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> (mapping RSSI patterns throughout a facility) or <a href="../terms/trilateration.html" class="term-link">trilateration</a> (using RSSI from multiple access points). RSSI-based systems offer lower infrastructure costs since they leverage existing Wi-Fi networks, but accuracy limitations restrict applications to asset <a href="../terms/zone-detection.html" class="term-link">zone detection</a> or presence sensing rather than precise tracking. Industrial RTLS implementations using RSSI often combine it with other data sources or apply Kalman filtering and <a href="../terms/machine-learning.html" class="term-link">machine learning</a> to improve accuracy. RSSI measurements are also valuable as diagnostic data in UWB or other systems, helping identify interference sources, verify <a href="../terms/reader.html" class="term-link">reader</a> coverage, and troubleshoot connectivity issues.</p>
-  
+  <p class="def-short">A measurement of the power level in received radio signals. Used in many RTLS technologies for distance estimation - signal strength decreases predictably with distance. Less accurate than time-based methods due to environmental variations affecting signal strength. Common in Wi-Fi and BLE positioning.</p>
+  <p class="def-long">RSSI is a measurement of the power level in a received radio signal, expressed in decibels relative to one milliwatt (dBm). In RTLS applications, RSSI can be used as a proximity indicator or for basic positioning, though it's less accurate than time-based methods. RSSI values typically <a href="../terms/range.html" class="term-link">range</a> from -30 dBm (very strong, close proximity) to -100 dBm (weak, distant or heavily obstructed). The fundamental principle behind RSSI-based positioning is that signal strength decreases predictably with distance according to the path loss model, theoretically allowing distance estimation. However, industrial environments severely complicate RSSI measurements due to <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a> (signals reflecting off metal surfaces, machinery, inventory), interference from other radio sources, and signal absorption by materials. These factors cause RSSI values to fluctuate significantly even when tags remain stationary, limiting <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> to room-level (3-10 meters) at best. Wi-Fi and Bluetooth Low Energy (BLE) systems commonly use RSSI for positioning, applying techniques like <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> (mapping RSSI patterns throughout a facility) or <a href="../terms/trilateration.html" class="term-link">trilateration</a> (using RSSI from multiple access points). RSSI-based systems offer lower infrastructure costs since they leverage existing Wi-Fi networks, but accuracy limitations restrict applications to asset <a href="../terms/zone-detection.html" class="term-link">zone detection</a> or presence sensing rather than precise tracking. Industrial RTLS implementations using RSSI often combine it with other data sources or apply Kalman filtering and <a href="../terms/machine-learning.html" class="term-link">machine learning</a> to improve accuracy. RSSI measurements are also valuable as diagnostic data in UWB or other systems, helping identify interference sources, verify <a href="../terms/reader.html" class="term-link">reader</a> coverage, and troubleshoot connectivity issues.</p>
   <nav class="term-nav"><a href="real-time-monitoring.html" class="nav-prev">← Real-Time Monitoring</a><a href="receiver.html" class="nav-next">Receiver →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

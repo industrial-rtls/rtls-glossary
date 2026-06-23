@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Supply Chain Visibility – Industrial RTLS Glossary</title>
-<meta name="description" content="Supply chain visibility refers to the ability to track and monitor goods, materials, and assets as they move through the supply chain from suppliers throug">
+<meta name="description" content="The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibility within facilities complementing transport">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#B45309;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #B45309;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Supply Chain Visibility",
-  "description": "The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibility within facilities complementing transportation tracking systems. Enables end-to-end visibility from supplier through production to customer. Improves planning, reduces delays, and enhanc",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/supply-chain-visibility.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "supply-chain-visibility",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Supply Chain Visibility","description":"The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibility within facilities complementing transport","url":"https://figlarkarel.github.io/rtls-glossary/terms/supply-chain-visibility.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Industrial Applications","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Supply Chain Visibility","item":"https://figlarkarel.github.io/rtls-glossary/terms/supply-chain-visibility.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Industrial Applications"},{"@type":"ListItem","position":3,"name":"Supply Chain Visibility","item":"https://figlarkarel.github.io/rtls-glossary/terms/supply-chain-visibility.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibility within facilities complementing transportation tracking systems. Enables end-to-end visibility from supplier through production to customer. Improves planning, reduces delays, and enhances customer service.">The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibility within facilities complementing transportation tracking systems. Enables end-to-end visibility from supplier through production to customer. Improves planning, reduces delays, and enhances customer service.</a> › Supply Chain Visibility
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Industrial Applications<span>›</span>Supply Chain Visibility
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibility within facilities complementing transportation tracking systems. Enables end-to-end visibility from supplier through production to customer. Improves planning, reduces delays, and enhances customer service.</div>
+    <div class="term-cat-tag">Industrial Applications</div>
     <h1 class="term-title">Supply Chain Visibility</h1>
   </header>
-  <p class="def-short">Supply chain visibility refers to the ability to track and monitor goods, materials, and assets as they move through the supply chain from suppliers through manufacturing, distribution, and ultimately to customers. While traditionally limited to checkpoint-based tracking (scanning at shipment, receipt, and major waypoints), RTLS enables unprecedented <a href="../terms/real-time.html" class="term-link">real-time</a> visibility within facilities and campuses, complementing global supply chain tracking systems. Industrial RTLS provides continuous location tracking as materials enter facilities, move through receiving, storage, production, and shipping processes, delivering granular visibility traditional systems cannot achieve. Supply chain visibility benefits enabled by RTLS include: inventory <a href="../terms/accuracy.html" class="term-link">accuracy</a> improvements (real-time <a href="../terms/location-data.html" class="term-link">location data</a> supplements WMS, reducing discrepancies), exception management (immediate alerts when materials deviate from expected routes or timelines), <a href="../terms/dwell-time.html" class="term-link">dwell time</a> reduction (identifying bottlenecks where materials wait excessively), process compliance (verifying materials follow required workflows), and customer responsiveness (providing accurate delivery commitments based on real-time status). Quantifiable improvements from enhanced visibility include: 30-50% inventory holding reductions through improved turnover, 40-60% search time elimination, 20-35% order fulfillment <a href="../terms/cycle-time.html" class="term-link">cycle time</a> reductions, 15-25% improvements in on-time delivery performance, and 25-40% reductions in expediting costs. The COVID-19 pandemic highlighted supply chain vulnerability, accelerating visibility investments as companies seek resilience through better understanding of inventory positions and material flows. Standards and protocols supporting supply chain visibility include: GS1 EPCIS (event-based sharing of object movements), blockchain for immutable supply chain records, and IoT platforms aggregating sensor and location data. Multi-technology RTLS deployments significantly enhance supply chain visibility: GNSS tracks materials in transit between facilities and in outdoor yards, BLE provides cost-effective visibility across large warehouses and storage areas, and UWB delivers precision tracking through production and assembly processes. A unified platform aggregating all three data streams provides end-to-end material visibility from inbound yard through production to outbound shipping.</p>
-  
+  <p class="def-short">The ability to track goods, materials, and assets throughout the supply chain. RTLS provides real-time visibility within facilities complementing transportation tracking systems. Enables end-to-end visibility from supplier through production to customer. Improves planning, reduces delays, and enhances customer service.</p>
+  <p class="def-long">Supply chain visibility refers to the ability to track and monitor goods, materials, and assets as they move through the supply chain from suppliers through manufacturing, distribution, and ultimately to customers. While traditionally limited to checkpoint-based tracking (scanning at shipment, receipt, and major waypoints), RTLS enables unprecedented <a href="../terms/real-time.html" class="term-link">real-time</a> visibility within facilities and campuses, complementing global supply chain tracking systems. Industrial RTLS provides continuous location tracking as materials enter facilities, move through receiving, storage, production, and shipping processes, delivering granular visibility traditional systems cannot achieve. Supply chain visibility benefits enabled by RTLS include: inventory <a href="../terms/accuracy.html" class="term-link">accuracy</a> improvements (real-time <a href="../terms/location-data.html" class="term-link">location data</a> supplements WMS, reducing discrepancies), exception management (immediate alerts when materials deviate from expected routes or timelines), <a href="../terms/dwell-time.html" class="term-link">dwell time</a> reduction (identifying bottlenecks where materials wait excessively), process compliance (verifying materials follow required workflows), and customer responsiveness (providing accurate delivery commitments based on real-time status). Quantifiable improvements from enhanced visibility include: 30-50% inventory holding reductions through improved turnover, 40-60% search time elimination, 20-35% order fulfillment <a href="../terms/cycle-time.html" class="term-link">cycle time</a> reductions, 15-25% improvements in on-time delivery performance, and 25-40% reductions in expediting costs. The COVID-19 pandemic highlighted supply chain vulnerability, accelerating visibility investments as companies seek resilience through better understanding of inventory positions and material flows. Standards and protocols supporting supply chain visibility include: GS1 EPCIS (event-based sharing of object movements), blockchain for immutable supply chain records, and IoT platforms aggregating sensor and location data. Multi-technology RTLS deployments significantly enhance supply chain visibility: GNSS tracks materials in transit between facilities and in outdoor yards, BLE provides cost-effective visibility across large warehouses and storage areas, and UWB delivers precision tracking through production and assembly processes. A unified platform aggregating all three data streams provides end-to-end material visibility from inbound yard through production to outbound shipping.</p>
   <nav class="term-nav"><a href="star-topology.html" class="nav-prev">← Star Topology</a><a href="synchronization.html" class="nav-next">Synchronization →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

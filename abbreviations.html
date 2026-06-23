@@ -16,6 +16,9 @@
   header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
   .logo span{color:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
   .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none}
   .page{max-width:900px;margin:0 auto;padding:3rem 2rem 5rem}
   .page-title{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem}
@@ -48,7 +51,10 @@
 <body>
 <header>
   <a href="index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="index.html">All terms</a>
+    <a href="index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
 <main class="page">
   <h1 class="page-title">Abbreviations</h1>

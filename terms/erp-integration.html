@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ERP Integration – Industrial RTLS Glossary</title>
-<meta name="description" content="Integration between RTLS and Enterprise Resource Planning systems enabling bidirectional data flow and closed-loop business processes. Industrial ERP integ">
+<meta name="description" content="Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation. Connects location in">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "ERP Integration",
-  "description": "Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation. Connects location intelligence with core business processes including asset management, inventory management, production planning, and maintenance management. Elimin",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/erp-integration.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "erp-integration",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"ERP Integration","description":"Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation. Connects location in","url":"https://figlarkarel.github.io/rtls-glossary/terms/erp-integration.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"ERP Integration","item":"https://figlarkarel.github.io/rtls-glossary/terms/erp-integration.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"ERP Integration","item":"https://figlarkarel.github.io/rtls-glossary/terms/erp-integration.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation. Connects location intelligence with core business processes including asset management, inventory management, production planning, and maintenance management. Eliminates manual data entry, ensures data consistency, and enables process automation. Typically uses standard APIs or middleware platforms.">Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation. Connects location intelligence with core business processes including asset management, inventory management, production planning, and maintenance management. Eliminates manual data entry, ensures data consistency, and enables process automation. Typically uses standard APIs or middleware platforms.</a> › ERP Integration
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>ERP Integration
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation. Connects location intelligence with core business processes including asset management, inventory management, production planning, and maintenance management. Eliminates manual data entry, ensures data consistency, and enables process automation. Typically uses standard APIs or middleware platforms.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">ERP Integration</h1>
   </header>
-  <p class="def-short">Integration between RTLS and Enterprise Resource Planning systems enabling bidirectional data flow and closed-loop business processes. Industrial ERP integration scenarios include: (1) RTLS consuming ERP data - receiving production schedules, work orders, material assignments, and routing information to configure expected movements and process steps. (2) RTLS providing data to ERP - sending actual material locations, work order progress, completion confirmations, and inventory movements for automatic ERP transaction posting. (3) Exception handling - RTLS detecting deviations (materials in wrong locations, out-of-sequence operations) and flagging ERP records for investigation. Integration typically uses: RESTful APIs for request/response transactions, message queues (MQTT, RabbitMQ) for event-driven updates, or direct database integration (carefully managed to avoid performance impacts). Critical integration patterns include: work order tracking (RTLS automatically advancing order status as materials move through process steps, eliminating manual transaction posting), <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (RTLS location changes automatically generating ERP inventory transfers), and labor tracking (RTLS <a href="../terms/dwell-time.html" class="term-link">dwell time</a> in work zones providing actual time-on-task for costing). Successful ERP integration requires: clear data ownership (determining which system is authoritative for each data type), robust error handling (managing out-of-sync conditions), and comprehensive testing (validating <a href="../terms/accuracy.html" class="term-link">accuracy</a> of automatically-posted transactions).</p>
-  <p class="def-long">Benefits include: 60-80% reduction in manual data entry, improved data <a href="../terms/accuracy.html" class="term-link">accuracy</a> (eliminating transcription errors), <a href="../terms/real-time.html" class="term-link">real-time</a> ERP data (minutes vs. hours/days lag), and closed-loop process control.</p>
+  <p class="def-short">Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation. Connects location intelligence with core business processes including asset management, inventory management, production planning, and maintenance management. Eliminates manual data entry, ensures data consistency, and enables process automation. Typically uses standard APIs or middleware platforms.</p>
+  <p class="def-long">Integration between RTLS and Enterprise Resource Planning systems enabling bidirectional data flow and closed-loop business processes. Industrial ERP integration scenarios include: (1) RTLS consuming ERP data - receiving production schedules, work orders, material assignments, and routing information to configure expected movements and process steps. (2) RTLS providing data to ERP - sending actual material locations, work order progress, completion confirmations, and inventory movements for automatic ERP transaction posting. (3) Exception handling - RTLS detecting deviations (materials in wrong locations, out-of-sequence operations) and flagging ERP records for investigation. Integration typically uses: RESTful APIs for request/response transactions, message queues (MQTT, RabbitMQ) for event-driven updates, or direct database integration (carefully managed to avoid performance impacts). Critical integration patterns include: work order tracking (RTLS automatically advancing order status as materials move through process steps, eliminating manual transaction posting), <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (RTLS location changes automatically generating ERP inventory transfers), and labor tracking (RTLS <a href="../terms/dwell-time.html" class="term-link">dwell time</a> in work zones providing actual time-on-task for costing). Successful ERP integration requires: clear data ownership (determining which system is authoritative for each data type), robust error handling (managing out-of-sync conditions), and comprehensive testing (validating <a href="../terms/accuracy.html" class="term-link">accuracy</a> of automatically-posted transactions).</p><p class="def-long">Benefits include: 60-80% reduction in manual data entry, improved data <a href="../terms/accuracy.html" class="term-link">accuracy</a> (eliminating transcription errors), <a href="../terms/real-time.html" class="term-link">real-time</a> ERP data (minutes vs. hours/days lag), and closed-loop process control.</p>
   <nav class="term-nav"><a href="equipment-monitoring.html" class="nav-prev">← Equipment Monitoring</a><a href="evacuation-management.html" class="nav-next">Evacuation Management →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

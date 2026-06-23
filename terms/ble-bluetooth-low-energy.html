@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BLE (Bluetooth Low Energy) – Industrial RTLS Glossary</title>
-<meta name="description" content="Wireless technology designed for short-range communication with minimal power consumption, used in RTLS applications. BLE operates at 2.4 GHz ISM band with">
+<meta name="description" content="An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning. Operates in 2.4 GHz band with low power">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#1D4ED8;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #1D4ED8;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "BLE (Bluetooth Low Energy)",
-  "description": "An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning. Operates in 2.4 GHz band with low power consumption enabling months or years of battery operation. Offers low-cost infrastructure, smartphone compatibility, reasonable range (10-50 met",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/ble-bluetooth-low-energy.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "ble-bluetooth-low-energy",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"BLE (Bluetooth Low Energy)","description":"An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning. Operates in 2.4 GHz band with low power","url":"https://figlarkarel.github.io/rtls-glossary/terms/ble-bluetooth-low-energy.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Localization Technologies","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"BLE (Bluetooth Low Energy)","item":"https://figlarkarel.github.io/rtls-glossary/terms/ble-bluetooth-low-energy.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Localization Technologies"},{"@type":"ListItem","position":3,"name":"BLE (Bluetooth Low Energy)","item":"https://figlarkarel.github.io/rtls-glossary/terms/ble-bluetooth-low-energy.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning. Operates in 2.4 GHz band with low power consumption enabling months or years of battery operation. Offers low-cost infrastructure, smartphone compatibility, reasonable range (10-50 meters), and adequate accuracy (room-level to 1-3 meters with 5.1). Cost-effective for large-scale deployments.">An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning. Operates in 2.4 GHz band with low power consumption enabling months or years of battery operation. Offers low-cost infrastructure, smartphone compatibility, reasonable range (10-50 meters), and adequate accuracy (room-level to 1-3 meters with 5.1). Cost-effective for large-scale deployments.</a> › BLE (Bluetooth Low Energy)
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Localization Technologies<span>›</span>BLE (Bluetooth Low Energy)
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning. Operates in 2.4 GHz band with low power consumption enabling months or years of battery operation. Offers low-cost infrastructure, smartphone compatibility, reasonable range (10-50 meters), and adequate accuracy (room-level to 1-3 meters with 5.1). Cost-effective for large-scale deployments.</div>
+    <div class="term-cat-tag">Localization Technologies</div>
     <h1 class="term-title">BLE (Bluetooth Low Energy)</h1>
   </header>
-  <p class="def-short">Wireless technology designed for short-<a href="../terms/range.html" class="term-link">range</a> communication with minimal power consumption, used in RTLS applications. BLE operates at 2.4 GHz ISM band with 40 channels (3 advertising channels, 37 data channels). In RTLS context, BLE enables positioning through RSSI-based ranging (3-15 meter <a href="../terms/accuracy.html" class="term-link">accuracy</a>), AoA/AoD in Bluetooth 5.1+ (0.5-3 meter accuracy with specialized antenna arrays), or <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a>. BLE advantages include: extremely low <a href="../terms/tag.html" class="term-link">tag</a> power consumption (10-50mW enabling 1-3 year <a href="../terms/battery-life.html" class="term-link">battery life</a>), ubiquitous support in smartphones and tablets, low infrastructure cost ($50-200 per <a href="../terms/gateway.html" class="term-link">gateway</a>), and good <a href="../terms/penetration.html" class="term-link">penetration</a> through obstacles. Limitations include: reduced accuracy compared to UWB, susceptibility to interference from Wi-Fi and other 2.4 GHz sources, and limited range (typically 10-50 meters in industrial environments). Update rates typically 1-5 Hz. BLE RTLS is cost-effective solution for applications tolerating <a href="../terms/meter-level-accuracy.html" class="term-link">meter-level accuracy</a> such as zone-based tracking, proximity detection, or large-area coverage where ultra-precise positioning is unnecessary.</p>
-  
+  <p class="def-short">An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning. Operates in 2.4 GHz band with low power consumption enabling months or years of battery operation. Offers low-cost infrastructure, smartphone compatibility, reasonable range (10-50 meters), and adequate accuracy (room-level to 1-3 meters with 5.1). Cost-effective for large-scale deployments.</p>
+  <p class="def-long">Wireless technology designed for short-<a href="../terms/range.html" class="term-link">range</a> communication with minimal power consumption, used in RTLS applications. BLE operates at 2.4 GHz ISM band with 40 channels (3 advertising channels, 37 data channels). In RTLS context, BLE enables positioning through RSSI-based ranging (3-15 meter <a href="../terms/accuracy.html" class="term-link">accuracy</a>), AoA/AoD in Bluetooth 5.1+ (0.5-3 meter accuracy with specialized antenna arrays), or <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a>. BLE advantages include: extremely low <a href="../terms/tag.html" class="term-link">tag</a> power consumption (10-50mW enabling 1-3 year <a href="../terms/battery-life.html" class="term-link">battery life</a>), ubiquitous support in smartphones and tablets, low infrastructure cost ($50-200 per <a href="../terms/gateway.html" class="term-link">gateway</a>), and good <a href="../terms/penetration.html" class="term-link">penetration</a> through obstacles. Limitations include: reduced accuracy compared to UWB, susceptibility to interference from Wi-Fi and other 2.4 GHz sources, and limited range (typically 10-50 meters in industrial environments). Update rates typically 1-5 Hz. BLE RTLS is cost-effective solution for applications tolerating <a href="../terms/meter-level-accuracy.html" class="term-link">meter-level accuracy</a> such as zone-based tracking, proximity detection, or large-area coverage where ultra-precise positioning is unnecessary.</p>
   <nav class="term-nav"><a href="big-data.html" class="nav-prev">← Big Data</a><a href="ble-gateway.html" class="nav-next">BLE Gateway →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

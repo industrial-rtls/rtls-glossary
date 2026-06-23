@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Forklift Tracking – Industrial RTLS Glossary</title>
-<meta name="description" content="Application of RTLS specifically to industrial forklifts and material handling vehicles enabling safety improvement, utilization optimization, and traffic ">
+<meta name="description" content="Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves objectives including location visibility, util">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#B45309;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #B45309;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Forklift Tracking",
-  "description": "Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves objectives including location visibility, utilization monitoring, operator assignment, safety monitoring, traffic management, and maintenance scheduling. Benefits include improved safety (20-",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/forklift-tracking.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "forklift-tracking",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Forklift Tracking","description":"Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves objectives including location visibility, util","url":"https://figlarkarel.github.io/rtls-glossary/terms/forklift-tracking.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Industrial Applications","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Forklift Tracking","item":"https://figlarkarel.github.io/rtls-glossary/terms/forklift-tracking.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Industrial Applications"},{"@type":"ListItem","position":3,"name":"Forklift Tracking","item":"https://figlarkarel.github.io/rtls-glossary/terms/forklift-tracking.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves objectives including location visibility, utilization monitoring, operator assignment, safety monitoring, traffic management, and maintenance scheduling. Benefits include improved safety (20-40% accident reduction), increased productivity, reduced costs (10-20% fleet reduction), and better maintenance.">Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves objectives including location visibility, utilization monitoring, operator assignment, safety monitoring, traffic management, and maintenance scheduling. Benefits include improved safety (20-40% accident reduction), increased productivity, reduced costs (10-20% fleet reduction), and better maintenance.</a> › Forklift Tracking
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Industrial Applications<span>›</span>Forklift Tracking
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves objectives including location visibility, utilization monitoring, operator assignment, safety monitoring, traffic management, and maintenance scheduling. Benefits include improved safety (20-40% accident reduction), increased productivity, reduced costs (10-20% fleet reduction), and better maintenance.</div>
+    <div class="term-cat-tag">Industrial Applications</div>
     <h1 class="term-title">Forklift Tracking</h1>
   </header>
-  <p class="def-short">Application of RTLS specifically to industrial forklifts and <a href="../terms/material-handling.html" class="term-link">material handling</a> vehicles enabling safety improvement, utilization optimization, and traffic management. Forklift tracking provides: (1) <a href="../terms/real-time.html" class="term-link">Real-time</a> location - operators, supervisors, and systems knowing positions of all forklifts (typical facility has 5-50 forklifts). (2) Safety monitoring - <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a> warning pedestrians of approaching forklifts, speed enforcement in designated zones, and <a href="../terms/restricted-area.html" class="term-link">restricted area</a> <a href="../terms/access-control.html" class="term-link">access control</a>. (3) Utilization metrics - operating hours, idle time, distance traveled, and utilization rates (typical <a href="../terms/range.html" class="term-link">range</a> 40-65%). (4) Traffic management - identifying congestion zones, optimizing traffic patterns, and coordinating movements at intersections. (5) Operator accountability - linking operators to vehicles for performance tracking, incident investigation, and training needs. (6) Maintenance scheduling - automated logging of operating hours triggering <a href="../terms/preventive-maintenance.html" class="term-link">preventive maintenance</a>.</p>
-  <p class="def-long">Implementation considerations: (1) <a href="../terms/tag.html" class="term-link">Tag</a> placement - typically roof mount or protective cage, ensuring 360-degree RF visibility and physical protection from impacts. (2) Power - hardwired to forklift battery (eliminating battery replacement) or self-powered with multi-year life. (3) Update rates - 1-5 Hz typical, 10 Hz for advanced <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>. (4) <a href="../terms/accuracy.html" class="term-link">Accuracy</a> requirements - 30-100 cm sufficient for most applications, centimeter-level unnecessary.</p><p class="def-long">Benefits: 40-70% reduction in forklift-pedestrian incidents, 20-35% fleet reduction through utilization optimization, 15-25% maintenance cost reduction through proper scheduling, and 10-15% productivity improvement through traffic optimization. Forklift tracking ROI typically 12-24 months with implementation costs $30k-100k depending on facility size and fleet. Technology selection: UWB preferred for collision avoidance requiring 10-30 cm accuracy and high update rates (5-10 Hz) in high-traffic zones; BLE adequate for utilization monitoring, zone-level tracking, and fleet management where 1-3 m accuracy suffices. Many facilities use BLE for outdoor yard tracking of forklifts (where GNSS also applicable) and UWB inside production buildings, with a unified platform tracking forklifts seamlessly across both environments.</p>
+  <p class="def-short">Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities. Serves objectives including location visibility, utilization monitoring, operator assignment, safety monitoring, traffic management, and maintenance scheduling. Benefits include improved safety (20-40% accident reduction), increased productivity, reduced costs (10-20% fleet reduction), and better maintenance.</p>
+  <p class="def-long">Application of RTLS specifically to industrial forklifts and <a href="../terms/material-handling.html" class="term-link">material handling</a> vehicles enabling safety improvement, utilization optimization, and traffic management. Forklift tracking provides: (1) <a href="../terms/real-time.html" class="term-link">Real-time</a> location - operators, supervisors, and systems knowing positions of all forklifts (typical facility has 5-50 forklifts). (2) Safety monitoring - <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a> warning pedestrians of approaching forklifts, speed enforcement in designated zones, and <a href="../terms/restricted-area.html" class="term-link">restricted area</a> <a href="../terms/access-control.html" class="term-link">access control</a>. (3) Utilization metrics - operating hours, idle time, distance traveled, and utilization rates (typical <a href="../terms/range.html" class="term-link">range</a> 40-65%). (4) Traffic management - identifying congestion zones, optimizing traffic patterns, and coordinating movements at intersections. (5) Operator accountability - linking operators to vehicles for performance tracking, incident investigation, and training needs. (6) Maintenance scheduling - automated logging of operating hours triggering <a href="../terms/preventive-maintenance.html" class="term-link">preventive maintenance</a>.</p><p class="def-long">Implementation considerations: (1) <a href="../terms/tag.html" class="term-link">Tag</a> placement - typically roof mount or protective cage, ensuring 360-degree RF visibility and physical protection from impacts. (2) Power - hardwired to forklift battery (eliminating battery replacement) or self-powered with multi-year life. (3) Update rates - 1-5 Hz typical, 10 Hz for advanced <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>. (4) <a href="../terms/accuracy.html" class="term-link">Accuracy</a> requirements - 30-100 cm sufficient for most applications, centimeter-level unnecessary.</p><p class="def-long">Benefits: 40-70% reduction in forklift-pedestrian incidents, 20-35% fleet reduction through utilization optimization, 15-25% maintenance cost reduction through proper scheduling, and 10-15% productivity improvement through traffic optimization. Forklift tracking ROI typically 12-24 months with implementation costs $30k-100k depending on facility size and fleet. Technology selection: UWB preferred for collision avoidance requiring 10-30 cm accuracy and high update rates (5-10 Hz) in high-traffic zones; BLE adequate for utilization monitoring, zone-level tracking, and fleet management where 1-3 m accuracy suffices. Many facilities use BLE for outdoor yard tracking of forklifts (where GNSS also applicable) and UWB inside production buildings, with a unified platform tracking forklifts seamlessly across both environments.</p>
   <nav class="term-nav"><a href="fog-computing.html" class="nav-prev">← Fog Computing</a><a href="gateway.html" class="nav-next">Gateway →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

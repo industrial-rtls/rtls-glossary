@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IR (Infrared) Positioning – Industrial RTLS Glossary</title>
-<meta name="description" content="Positioning technology using infrared light signals for line-of-sight communication and ranging. IR positioning operates at wavelengths 700-1000 nm (near-i">
+<meta name="description" content="A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offe">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#1D4ED8;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #1D4ED8;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "IR (Infrared) Positioning",
-  "description": "A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offers high accuracy in line-of-sight conditions and is immune to RF interference. Limitations include requiring line-of-sight, susceptibility to amb",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/ir-infrared-positioning.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "ir-infrared-positioning",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"IR (Infrared) Positioning","description":"A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offe","url":"https://figlarkarel.github.io/rtls-glossary/terms/ir-infrared-positioning.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Localization Technologies","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"IR (Infrared) Positioning","item":"https://figlarkarel.github.io/rtls-glossary/terms/ir-infrared-positioning.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Localization Technologies"},{"@type":"ListItem","position":3,"name":"IR (Infrared) Positioning","item":"https://figlarkarel.github.io/rtls-glossary/terms/ir-infrared-positioning.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offers high accuracy in line-of-sight conditions and is immune to RF interference. Limitations include requiring line-of-sight, susceptibility to ambient light interference, and limited range. Used in some industrial applications but less common than RF-based technologies.">A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offers high accuracy in line-of-sight conditions and is immune to RF interference. Limitations include requiring line-of-sight, susceptibility to ambient light interference, and limited range. Used in some industrial applications but less common than RF-based technologies.</a> › IR (Infrared) Positioning
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Localization Technologies<span>›</span>IR (Infrared) Positioning
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offers high accuracy in line-of-sight conditions and is immune to RF interference. Limitations include requiring line-of-sight, susceptibility to ambient light interference, and limited range. Used in some industrial applications but less common than RF-based technologies.</div>
+    <div class="term-cat-tag">Localization Technologies</div>
     <h1 class="term-title">IR (Infrared) Positioning</h1>
   </header>
-  <p class="def-short">Positioning technology using infrared light signals for line-of-sight communication and ranging. IR positioning operates at wavelengths 700-1000 nm (near-infrared), invisible to humans but detectable by photodiodes or cameras. IR positioning approaches include: (1) Active IR badges - tags containing IR LEDs broadcast identification signals to fixed receivers (typical <a href="../terms/range.html" class="term-link">range</a> 5-10 meters, requiring direct line-of-sight). (2) <a href="../terms/triangulation.html" class="term-link">Triangulation</a> - multiple IR receivers detecting <a href="../terms/tag.html" class="term-link">tag</a> signals determine position through angle calculations. (3) Phase-based ranging - measuring phase shift of modulated IR signals to calculate distance. IR advantages: immune to RF interference (useful in electromagnetically noisy environments), simple hardware (LEDs and photodiodes inexpensive), inherent privacy (IR doesn't penetrate walls limiting observation to single room). IR limitations severely restrict industrial RTLS use: strict line-of-sight requirement (any obstruction blocks signal - major issue in facilities with equipment, shelving, moving objects), short range (typically 5-15 meters maximum), affected by ambient lighting (sunlight or bright artificial lights can interfere), and poor coverage efficiency (many receivers needed for comprehensive coverage). IR positioning largely superseded by RF technologies (UWB, BLE, Wi-Fi) offering better range, through-obstacle propagation, and coverage efficiency. Historical use: IR was popular in 1990s-2000s RTLS (hospital patient tracking, conference badge systems) but rarely deployed in modern industrial RTLS. Remaining niche applications: rooms requiring RF-free operation (MRI suites, sensitive electronics areas), temporary tracking (conferences, events), or very short-range <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a> (docking stations, access points requiring physical proximity). Cost advantage (IR hardware $10-30 per tag vs. $50-150 for RF tags) insufficient to offset performance limitations for industrial applications.</p>
-  
+  <p class="def-short">A positioning technology using infrared light signals for location determination. Tags or beacons emit IR signals detected by receivers or vice versa. Offers high accuracy in line-of-sight conditions and is immune to RF interference. Limitations include requiring line-of-sight, susceptibility to ambient light interference, and limited range. Used in some industrial applications but less common than RF-based technologies.</p>
+  <p class="def-long">Positioning technology using infrared light signals for line-of-sight communication and ranging. IR positioning operates at wavelengths 700-1000 nm (near-infrared), invisible to humans but detectable by photodiodes or cameras. IR positioning approaches include: (1) Active IR badges - tags containing IR LEDs broadcast identification signals to fixed receivers (typical <a href="../terms/range.html" class="term-link">range</a> 5-10 meters, requiring direct line-of-sight). (2) <a href="../terms/triangulation.html" class="term-link">Triangulation</a> - multiple IR receivers detecting <a href="../terms/tag.html" class="term-link">tag</a> signals determine position through angle calculations. (3) Phase-based ranging - measuring phase shift of modulated IR signals to calculate distance. IR advantages: immune to RF interference (useful in electromagnetically noisy environments), simple hardware (LEDs and photodiodes inexpensive), inherent privacy (IR doesn't penetrate walls limiting observation to single room). IR limitations severely restrict industrial RTLS use: strict line-of-sight requirement (any obstruction blocks signal - major issue in facilities with equipment, shelving, moving objects), short range (typically 5-15 meters maximum), affected by ambient lighting (sunlight or bright artificial lights can interfere), and poor coverage efficiency (many receivers needed for comprehensive coverage). IR positioning largely superseded by RF technologies (UWB, BLE, Wi-Fi) offering better range, through-obstacle propagation, and coverage efficiency. Historical use: IR was popular in 1990s-2000s RTLS (hospital patient tracking, conference badge systems) but rarely deployed in modern industrial RTLS. Remaining niche applications: rooms requiring RF-free operation (MRI suites, sensitive electronics areas), temporary tracking (conferences, events), or very short-range <a href="../terms/proximity-detection.html" class="term-link">proximity detection</a> (docking stations, access points requiring physical proximity). Cost advantage (IR hardware $10-30 per tag vs. $50-150 for RF tags) insufficient to offset performance limitations for industrial applications.</p>
   <nav class="term-nav"><a href="ip-rating.html" class="nav-prev">← IP Rating</a><a href="iso-iec-24730.html" class="nav-next">ISO/IEC 24730 →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

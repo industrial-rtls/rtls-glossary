@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Positioning Accuracy – Industrial RTLS Glossary</title>
-<meta name="description" content="Measure of how precisely RTLS determines object positions relative to true positions, fundamental performance specification. Accuracy expressed as: mean er">
+<meta name="description" content="The degree of correctness in position measurements, encompassing both systematic and random errors. Should specify measurement conditions and confidence le">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Positioning Accuracy",
-  "description": "The degree of correctness in position measurements, encompassing both systematic and random errors. Should specify measurement conditions and confidence levels. Accuracy varies across coverage area, typically best near anchors and degrading at edges.",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/positioning-accuracy.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "positioning-accuracy",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Positioning Accuracy","description":"The degree of correctness in position measurements, encompassing both systematic and random errors. Should specify measurement conditions and confidence le","url":"https://figlarkarel.github.io/rtls-glossary/terms/positioning-accuracy.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Technical Parameters","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Positioning Accuracy","item":"https://figlarkarel.github.io/rtls-glossary/terms/positioning-accuracy.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Technical Parameters"},{"@type":"ListItem","position":3,"name":"Positioning Accuracy","item":"https://figlarkarel.github.io/rtls-glossary/terms/positioning-accuracy.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The degree of correctness in position measurements, encompassing both systematic and random errors. Should specify measurement conditions and confidence levels. Accuracy varies across coverage area, typically best near anchors and degrading at edges.">The degree of correctness in position measurements, encompassing both systematic and random errors. Should specify measurement conditions and confidence levels. Accuracy varies across coverage area, typically best near anchors and degrading at edges.</a> › Positioning Accuracy
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Technical Parameters<span>›</span>Positioning Accuracy
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The degree of correctness in position measurements, encompassing both systematic and random errors. Should specify measurement conditions and confidence levels. Accuracy varies across coverage area, typically best near anchors and degrading at edges.</div>
+    <div class="term-cat-tag">Technical Parameters</div>
     <h1 class="term-title">Positioning Accuracy</h1>
   </header>
-  <p class="def-short">Measure of how precisely RTLS determines object positions relative to true positions, fundamental performance specification. <a href="../terms/accuracy.html" class="term-link">Accuracy</a> expressed as: mean error (average distance between reported and true positions), percentile error (eg., 90th percentile: 90% of measurements within specified error), or error distribution showing error characteristics. Critical to specify conditions: static versus dynamic (moving tags typically show 20-50% worse accuracy), line-of-sight versus non-line-of-sight (NLoS degrades accuracy 30-100%+), and confidence level (50th percentile/median, 90th percentile, 95th percentile - vendor specifications often cite median which is optimistic compared to 90th percentile). Technology accuracy ranges: (1) UWB - 10-30 cm (90th percentile, good conditions), 20-50 cm (industrial environments with some NLoS). (2) BLE AoA - 0.5-2 meters (good conditions), 1-3 meters (realistic industrial). (3) BLE RSSI - 3-8 meters (highly variable, environment-dependent). (4) Wi-Fi <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> - 3-15 meters (depends on fingerprint database quality). (5) <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> - zone-level only (5-20 meter zones). (6) GPS - 3-10 meters (outdoors, civilian signals). Accuracy requirements vary by application: (1) Centimeter-level (5-30 cm) - AGV guidance, robotic picking, <a href="../terms/precision.html" class="term-link">precision</a> assembly tracking. (2) Decimeter-level (30-100 cm) - <a href="../terms/forklift-tracking.html" class="term-link">forklift tracking</a>, <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>, work cell tracking. (3) Meter-level (1-5 meters) - warehouse zone tracking, personnel location, large area <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a>. (4) Room/zone-level (5-20 meters) - basic asset location, presence detection, occupancy counting. Example: vendor claiming 15 cm accuracy might mean median in ideal LoS conditions, while 90th percentile in actual environment might be 40-60 cm. Understanding accuracy critical for setting requirements, evaluating vendors, managing expectations, and troubleshooting performance issues.</p>
-  
+  <p class="def-short">The degree of correctness in position measurements, encompassing both systematic and random errors. Should specify measurement conditions and confidence levels. Accuracy varies across coverage area, typically best near anchors and degrading at edges.</p>
+  <p class="def-long">Measure of how precisely RTLS determines object positions relative to true positions, fundamental performance specification. <a href="../terms/accuracy.html" class="term-link">Accuracy</a> expressed as: mean error (average distance between reported and true positions), percentile error (eg., 90th percentile: 90% of measurements within specified error), or error distribution showing error characteristics. Critical to specify conditions: static versus dynamic (moving tags typically show 20-50% worse accuracy), line-of-sight versus non-line-of-sight (NLoS degrades accuracy 30-100%+), and confidence level (50th percentile/median, 90th percentile, 95th percentile - vendor specifications often cite median which is optimistic compared to 90th percentile). Technology accuracy ranges: (1) UWB - 10-30 cm (90th percentile, good conditions), 20-50 cm (industrial environments with some NLoS). (2) BLE AoA - 0.5-2 meters (good conditions), 1-3 meters (realistic industrial). (3) BLE RSSI - 3-8 meters (highly variable, environment-dependent). (4) Wi-Fi <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> - 3-15 meters (depends on fingerprint database quality). (5) <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> - zone-level only (5-20 meter zones). (6) GPS - 3-10 meters (outdoors, civilian signals). Accuracy requirements vary by application: (1) Centimeter-level (5-30 cm) - AGV guidance, robotic picking, <a href="../terms/precision.html" class="term-link">precision</a> assembly tracking. (2) Decimeter-level (30-100 cm) - <a href="../terms/forklift-tracking.html" class="term-link">forklift tracking</a>, <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>, work cell tracking. (3) Meter-level (1-5 meters) - warehouse zone tracking, personnel location, large area <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a>. (4) Room/zone-level (5-20 meters) - basic asset location, presence detection, occupancy counting. Example: vendor claiming 15 cm accuracy might mean median in ideal LoS conditions, while 90th percentile in actual environment might be 40-60 cm. Understanding accuracy critical for setting requirements, evaluating vendors, managing expectations, and troubleshooting performance issues.</p>
   <nav class="term-nav"><a href="phase-difference-measurement.html" class="nav-prev">← Phase Difference Measurement</a><a href="positioning-algorithm.html" class="nav-next">Positioning Algorithm →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

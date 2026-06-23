@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Refresh Rate – Industrial RTLS Glossary</title>
-<meta name="description" content="Refresh rate in RTLS refers to how frequently the system updates displayed position information or recalculates asset locations, typically measured in Hert">
+<meta name="description" content="How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates range from once per second to 10+ times per ">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Refresh Rate",
-  "description": "How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates range from once per second to 10+ times per second depending on application requirements and technology. Real-time applications like collision avoidance need high refresh rates while asset ",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/refresh-rate.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "refresh-rate",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Refresh Rate","description":"How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates range from once per second to 10+ times per ","url":"https://figlarkarel.github.io/rtls-glossary/terms/refresh-rate.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Technical Parameters","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Refresh Rate","item":"https://figlarkarel.github.io/rtls-glossary/terms/refresh-rate.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Technical Parameters"},{"@type":"ListItem","position":3,"name":"Refresh Rate","item":"https://figlarkarel.github.io/rtls-glossary/terms/refresh-rate.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates range from once per second to 10+ times per second depending on application requirements and technology. Real-time applications like collision avoidance need high refresh rates while asset monitoring may need only occasional updates.">How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates range from once per second to 10+ times per second depending on application requirements and technology. Real-time applications like collision avoidance need high refresh rates while asset monitoring may need only occasional updates.</a> › Refresh Rate
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Technical Parameters<span>›</span>Refresh Rate
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates range from once per second to 10+ times per second depending on application requirements and technology. Real-time applications like collision avoidance need high refresh rates while asset monitoring may need only occasional updates.</div>
+    <div class="term-cat-tag">Technical Parameters</div>
     <h1 class="term-title">Refresh Rate</h1>
   </header>
-  <p class="def-short">Refresh rate in RTLS refers to how frequently the system updates displayed position information or recalculates asset locations, typically measured in Hertz (Hz) or updates per second. While related to <a href="../terms/update-rate.html" class="term-link">update rate</a> (how often tags transmit), refresh rate specifically describes the visualization or application layer update frequency.</p>
-  <p class="def-long">Typical refresh rates <a href="../terms/range.html" class="term-link">range</a> from 0.1 Hz (one update every 10 seconds) for slow-moving <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> to 10-20 Hz for safety applications or AGV anti-collision systems. Human perception research indicates that 2-5 Hz refresh rates provide sufficiently smooth visual tracking for most monitoring applications, while higher rates may be imperceptible to operators but consume more system resources. The complete refresh cycle includes: <a href="../terms/tag.html" class="term-link">tag</a> transmission time, signal processing, position calculation, data transmission over network infrastructure, database updates, and screen rendering. Each stage contributes <a href="../terms/latency.html" class="term-link">latency</a> that must be minimized for effective <a href="../terms/real-time-monitoring.html" class="term-link">real-time monitoring</a>. Industrial RTLS systems often implement adaptive refresh rates, updating frequently for moving assets while reducing rates for stationary objects to optimize <a href="../terms/system-capacity.html" class="term-link">system capacity</a>. Display refresh rates may differ from underlying position calculation rates - some systems calculate positions at 10 Hz but only refresh displays at 2-5 Hz to reduce visual clutter and rendering overhead.</p><p class="def-long">Applications requiring immediate response (safety zones, <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>) demand higher refresh rates with guaranteed maximum <a href="../terms/latency.html" class="term-link">latency</a> bounds, while <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> or analytics applications can tolerate lower refresh rates. <a href="../terms/system-capacity.html" class="term-link">System capacity</a> planning must account for total refresh rate demand across all active tags and connected applications.</p>
+  <p class="def-short">How frequently position information is updated in RTLS systems. Also called update rate. Typical refresh rates range from once per second to 10+ times per second depending on application requirements and technology. Real-time applications like collision avoidance need high refresh rates while asset monitoring may need only occasional updates.</p>
+  <p class="def-long">Refresh rate in RTLS refers to how frequently the system updates displayed position information or recalculates asset locations, typically measured in Hertz (Hz) or updates per second. While related to <a href="../terms/update-rate.html" class="term-link">update rate</a> (how often tags transmit), refresh rate specifically describes the visualization or application layer update frequency.</p><p class="def-long">Typical refresh rates <a href="../terms/range.html" class="term-link">range</a> from 0.1 Hz (one update every 10 seconds) for slow-moving <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> to 10-20 Hz for safety applications or AGV anti-collision systems. Human perception research indicates that 2-5 Hz refresh rates provide sufficiently smooth visual tracking for most monitoring applications, while higher rates may be imperceptible to operators but consume more system resources. The complete refresh cycle includes: <a href="../terms/tag.html" class="term-link">tag</a> transmission time, signal processing, position calculation, data transmission over network infrastructure, database updates, and screen rendering. Each stage contributes <a href="../terms/latency.html" class="term-link">latency</a> that must be minimized for effective <a href="../terms/real-time-monitoring.html" class="term-link">real-time monitoring</a>. Industrial RTLS systems often implement adaptive refresh rates, updating frequently for moving assets while reducing rates for stationary objects to optimize <a href="../terms/system-capacity.html" class="term-link">system capacity</a>. Display refresh rates may differ from underlying position calculation rates - some systems calculate positions at 10 Hz but only refresh displays at 2-5 Hz to reduce visual clutter and rendering overhead.</p><p class="def-long">Applications requiring immediate response (safety zones, <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>) demand higher refresh rates with guaranteed maximum <a href="../terms/latency.html" class="term-link">latency</a> bounds, while <a href="../terms/asset-tracking.html" class="term-link">asset tracking</a> or analytics applications can tolerate lower refresh rates. <a href="../terms/system-capacity.html" class="term-link">System capacity</a> planning must account for total refresh rate demand across all active tags and connected applications.</p>
   <nav class="term-nav"><a href="receiver-sensitivity.html" class="nav-prev">← Receiver Sensitivity</a><a href="reporting-module.html" class="nav-next">Reporting Module →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

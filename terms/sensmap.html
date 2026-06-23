@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Sensmap – Industrial RTLS Glossary</title>
-<meta name="description" content="Sensmap is Sewio Networks' digital floor plan management system that provides the spatial foundation for RTLS visualization, zone definition, and analytics">
+<meta name="description" content="Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, ">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Sensmap",
-  "description": "Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, alerting and notifications, real-time asset tracking, trajectory recording, anchor deployment visualization, and map-based system management. All",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/sensmap.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "sensmap",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Sensmap","description":"Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, ","url":"https://figlarkarel.github.io/rtls-glossary/terms/sensmap.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Sensmap","item":"https://figlarkarel.github.io/rtls-glossary/terms/sensmap.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"Sensmap","item":"https://figlarkarel.github.io/rtls-glossary/terms/sensmap.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, alerting and notifications, real-time asset tracking, trajectory recording, anchor deployment visualization, and map-based system management. Allows adding buildings and floor plans, auto-deploying anchors, and provides immediate valuable insights. Also available in 3D version (Sensmap 3D) using WebGL for three-dimensional position visualization. Core component of RTLS Studio.">Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, alerting and notifications, real-time asset tracking, trajectory recording, anchor deployment visualization, and map-based system management. Allows adding buildings and floor plans, auto-deploying anchors, and provides immediate valuable insights. Also available in 3D version (Sensmap 3D) using WebGL for three-dimensional position visualization. Core component of RTLS Studio.</a> › Sensmap
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>Sensmap
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, alerting and notifications, real-time asset tracking, trajectory recording, anchor deployment visualization, and map-based system management. Allows adding buildings and floor plans, auto-deploying anchors, and provides immediate valuable insights. Also available in 3D version (Sensmap 3D) using WebGL for three-dimensional position visualization. Core component of RTLS Studio.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">Sensmap</h1>
   </header>
-  <p class="def-short">Sensmap is Sewio Networks' digital floor plan management system that provides the spatial foundation for RTLS visualization, zone definition, and analytics. Sensmap enables users to: import facility floor plans from various sources (CAD files, PDFs, images), calibrate digital plans to real-world coordinates ensuring positions align correctly with physical space, manage multi-level buildings with multiple floors, define zones and geofences by drawing boundaries directly on floor plans, overlay operational context (equipment locations, work cells, storage areas, traffic routes), and maintain facility documentation as layouts change. The <a href="../terms/calibration.html" class="term-link">calibration</a> process is critical - users identify known reference points on the digital floor plan and specify their real-world coordinates (typically obtained through physical measurement or surveying), allowing the system to transform RTLS coordinates (typically in meters) to correct positions on the graphical representation. This calibration ensures that when RTLS reports an asset at coordinates (x=10.5, y=23.2), it appears at the correct location on the floor plan. Multi-floor support is essential for industrial facilities with multiple levels - Sensmap manages relationships between floors, enabling seamless visualization navigation and accurate 3D positioning when vertical <a href="../terms/accuracy.html" class="term-link">accuracy</a> is available. Integration with facilities management systems and CAD tools enables automated floor plan updates as facility layouts evolve. Sensmap supports various coordinate systems and units (meters, feet) accommodating different regional preferences and existing facility documentation standards. The spatial accuracy of floor plans directly impacts operational utility - inaccurate or improperly calibrated plans cause confusion when displayed positions don't match physical locations.</p>
-  
+  <p class="def-short">Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans. Features include virtual zone setup, geofencing, alerting and notifications, real-time asset tracking, trajectory recording, anchor deployment visualization, and map-based system management. Allows adding buildings and floor plans, auto-deploying anchors, and provides immediate valuable insights. Also available in 3D version (Sensmap 3D) using WebGL for three-dimensional position visualization. Core component of RTLS Studio.</p>
+  <p class="def-long">Sensmap is Sewio Networks' digital floor plan management system that provides the spatial foundation for RTLS visualization, zone definition, and analytics. Sensmap enables users to: import facility floor plans from various sources (CAD files, PDFs, images), calibrate digital plans to real-world coordinates ensuring positions align correctly with physical space, manage multi-level buildings with multiple floors, define zones and geofences by drawing boundaries directly on floor plans, overlay operational context (equipment locations, work cells, storage areas, traffic routes), and maintain facility documentation as layouts change. The <a href="../terms/calibration.html" class="term-link">calibration</a> process is critical - users identify known reference points on the digital floor plan and specify their real-world coordinates (typically obtained through physical measurement or surveying), allowing the system to transform RTLS coordinates (typically in meters) to correct positions on the graphical representation. This calibration ensures that when RTLS reports an asset at coordinates (x=10.5, y=23.2), it appears at the correct location on the floor plan. Multi-floor support is essential for industrial facilities with multiple levels - Sensmap manages relationships between floors, enabling seamless visualization navigation and accurate 3D positioning when vertical <a href="../terms/accuracy.html" class="term-link">accuracy</a> is available. Integration with facilities management systems and CAD tools enables automated floor plan updates as facility layouts evolve. Sensmap supports various coordinate systems and units (meters, feet) accommodating different regional preferences and existing facility documentation standards. The spatial accuracy of floor plans directly impacts operational utility - inaccurate or improperly calibrated plans cause confusion when displayed positions don't match physical locations.</p>
   <nav class="term-nav"><a href="scalability.html" class="nav-prev">← Scalability</a><a href="sensor-node.html" class="nav-next">Sensor Node →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

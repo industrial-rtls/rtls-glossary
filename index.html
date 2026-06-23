@@ -136,6 +136,8 @@
   }
 
   /* ── PDF Banner ── */
+  .pdf-cta-btn{background:var(--accent);color:#fff;padding:.55rem 1.25rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:600;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s}
+  .pdf-cta-btn:hover{background:var(--accent-hi);text-decoration:none;color:#fff}
   .pdf-banner {
     margin: 0 2rem 3rem;
     max-width: 860px;
@@ -506,7 +508,10 @@
 
 <header>
   <a href="index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="abbreviations.html">Abbreviations</a>
+    <a href="#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
 
 <main>
@@ -524,12 +529,9 @@
 
   <div class="pdf-banner" id="pdf-download">
     <div class="pdf-banner-text">
-      <strong>Get the complete reference.</strong> Download the full glossary with extended definitions as a PDF. Enter your work email and we'll send you straight to the download.
+      <strong>Get the complete reference.</strong> The full glossary with 252 extended definitions and 112 abbreviations — available as a PDF.
     </div>
-    <div class="tally-wrap">
-      <iframe data-tally-src="https://tally.so/embed/VLqqEa?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="120" frameborder="0" marginheight="0" marginwidth="0" title="Industrial RTLS"></iframe>
-      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-    </div>
+    <a href="https://tally.so/r/VLqqEa" class="pdf-cta-btn" target="_blank" rel="noopener">Download PDF →</a>
   </div>
 
   <div class="controls">

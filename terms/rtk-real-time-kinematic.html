@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>RTK (Real-Time Kinematic) – Industrial RTLS Glossary</title>
-<meta name="description" content="RTK positioning works by measuring the carrier phase of GNSS signals rather than just the code phase used by standard GPS. Carrier phase measurements have ">
+<meta name="description" content="A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outd">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#1D4ED8;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #1D4ED8;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "RTK (Real-Time Kinematic)",
-  "description": "A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outdoor accuracy (1-5 cm). Used in industrial applications requiring precision outdoor positioning including autonomous vehicle guidance, port crane ",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/rtk-real-time-kinematic.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "rtk-real-time-kinematic",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"RTK (Real-Time Kinematic)","description":"A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outd","url":"https://figlarkarel.github.io/rtls-glossary/terms/rtk-real-time-kinematic.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Localization Technologies","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"RTK (Real-Time Kinematic)","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtk-real-time-kinematic.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Localization Technologies"},{"@type":"ListItem","position":3,"name":"RTK (Real-Time Kinematic)","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtk-real-time-kinematic.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outdoor accuracy (1-5 cm). Used in industrial applications requiring precision outdoor positioning including autonomous vehicle guidance, port crane operations, and construction machine control. Requires unobstructed sky view and base station within 20-30 km. Represents the outdoor equivalent of UWB for precision positioning.">A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outdoor accuracy (1-5 cm). Used in industrial applications requiring precision outdoor positioning including autonomous vehicle guidance, port crane operations, and construction machine control. Requires unobstructed sky view and base station within 20-30 km. Represents the outdoor equivalent of UWB for precision positioning.</a> › RTK (Real-Time Kinematic)
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Localization Technologies<span>›</span>RTK (Real-Time Kinematic)
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outdoor accuracy (1-5 cm). Used in industrial applications requiring precision outdoor positioning including autonomous vehicle guidance, port crane operations, and construction machine control. Requires unobstructed sky view and base station within 20-30 km. Represents the outdoor equivalent of UWB for precision positioning.</div>
+    <div class="term-cat-tag">Localization Technologies</div>
     <h1 class="term-title">RTK (Real-Time Kinematic)</h1>
   </header>
-  <p class="def-short">RTK positioning works by measuring the carrier phase of GNSS signals rather than just the code phase used by standard GPS. Carrier phase measurements have centimeter-level resolution compared to meter-level resolution of code phase, but require resolving the integer ambiguity (the unknown number of complete wavelengths between satellite and receiver). A fixed base station at a known precise location transmits its carrier phase measurements to mobile RTK receivers, which use the difference between base and rover measurements to cancel common errors and resolve integer ambiguities. Once ambiguities are fixed (typically 5-30 seconds after initialization), RTK provides 1-5 cm horizontal accuracy and 2-10 cm vertical accuracy. Accuracy degrades with: distance from base station (baseline exceeding 20-30 km increases errors), poor satellite geometry (high HDOP), multipath (near buildings or metal structures), and signal obstruction. Network RTK (NRTK) uses a network of reference stations extending coverage and eliminating need for on-site base station, available via subscription.</p>
-  <p class="def-long">Industrial RTK applications: outdoor AGV and AMR guidance in yard and campus environments (2-5 cm accuracy enabling lane-following and precise docking), port operations (container crane positioning, ship-to-shore transfer guidance), construction site machine control (grading, excavation to design tolerances), and precision agriculture. RTK hardware costs: rover receivers $500-5000, base station receivers $1000-10000, network RTK subscriptions $500-3000/year. In industrial RTLS deployments combining UWB (indoor precision) with RTK GNSS (outdoor precision), organizations achieve consistent centimeter-level accuracy throughout their entire facility footprint - enabling precision automation both inside buildings and in outdoor yards. Time to first fix typically 5-30 seconds. RTK is increasingly used in hybrid industrial RTLS where high-value equipment (autonomous forklifts, precision cranes) requires centimeter accuracy across indoor-outdoor workflows.</p>
+  <p class="def-short">A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve centimeter-level outdoor accuracy (1-5 cm). Used in industrial applications requiring precision outdoor positioning including autonomous vehicle guidance, port crane operations, and construction machine control. Requires unobstructed sky view and base station within 20-30 km. Represents the outdoor equivalent of UWB for precision positioning.</p>
+  <p class="def-long">RTK positioning works by measuring the carrier phase of GNSS signals rather than just the code phase used by standard GPS. Carrier phase measurements have centimeter-level resolution compared to meter-level resolution of code phase, but require resolving the integer ambiguity (the unknown number of complete wavelengths between satellite and receiver). A fixed base station at a known precise location transmits its carrier phase measurements to mobile RTK receivers, which use the difference between base and rover measurements to cancel common errors and resolve integer ambiguities. Once ambiguities are fixed (typically 5-30 seconds after initialization), RTK provides 1-5 cm horizontal accuracy and 2-10 cm vertical accuracy. Accuracy degrades with: distance from base station (baseline exceeding 20-30 km increases errors), poor satellite geometry (high HDOP), multipath (near buildings or metal structures), and signal obstruction. Network RTK (NRTK) uses a network of reference stations extending coverage and eliminating need for on-site base station, available via subscription.</p><p class="def-long">Industrial RTK applications: outdoor AGV and AMR guidance in yard and campus environments (2-5 cm accuracy enabling lane-following and precise docking), port operations (container crane positioning, ship-to-shore transfer guidance), construction site machine control (grading, excavation to design tolerances), and precision agriculture. RTK hardware costs: rover receivers $500-5000, base station receivers $1000-10000, network RTK subscriptions $500-3000/year. In industrial RTLS deployments combining UWB (indoor precision) with RTK GNSS (outdoor precision), organizations achieve consistent centimeter-level accuracy throughout their entire facility footprint - enabling precision automation both inside buildings and in outdoor yards. Time to first fix typically 5-30 seconds. RTK is increasingly used in hybrid industrial RTLS where high-value equipment (autonomous forklifts, precision cranes) requires centimeter accuracy across indoor-outdoor workflows.</p>
   <nav class="term-nav"><a href="route-optimization.html" class="nav-prev">← Route Optimization</a><a href="rtls-antenna.html" class="nav-next">RTLS Antenna →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

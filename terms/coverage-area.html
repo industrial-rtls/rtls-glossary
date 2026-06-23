@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Coverage Area – Industrial RTLS Glossary</title>
-<meta name="description" content="Geographic extent where RTLS system provides reliable positioning. Coverage area depends on technology, infrastructure density, and environment. UWB anchor">
+<meta name="description" content="The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement d">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Coverage Area",
-  "description": "The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement density, transmission power, facility layout, and required accuracy. Industrial facilities prioritize coverage in critical operational areas while",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/coverage-area.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "coverage-area",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Coverage Area","description":"The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement d","url":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-area.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Technical Parameters","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Coverage Area","item":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-area.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Technical Parameters"},{"@type":"ListItem","position":3,"name":"Coverage Area","item":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-area.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement density, transmission power, facility layout, and required accuracy. Industrial facilities prioritize coverage in critical operational areas while accepting lower accuracy in peripheral spaces. Coverage planning involves site surveys, 3D modeling, and identifying shadow zones.">The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement density, transmission power, facility layout, and required accuracy. Industrial facilities prioritize coverage in critical operational areas while accepting lower accuracy in peripheral spaces. Coverage planning involves site surveys, 3D modeling, and identifying shadow zones.</a> › Coverage Area
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Technical Parameters<span>›</span>Coverage Area
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement density, transmission power, facility layout, and required accuracy. Industrial facilities prioritize coverage in critical operational areas while accepting lower accuracy in peripheral spaces. Coverage planning involves site surveys, 3D modeling, and identifying shadow zones.</div>
+    <div class="term-cat-tag">Technical Parameters</div>
     <h1 class="term-title">Coverage Area</h1>
   </header>
-  <p class="def-short">Geographic extent where RTLS system provides reliable positioning. Coverage area depends on technology, infrastructure density, and environment. UWB anchors typically cover 30-50 meter radius in industrial environments (less with metal obstacles, more in open areas), BLE gateways 20-40 meters, Wi-Fi access points 30-100 meters, and <a href="../terms/active-rfid.html" class="term-link">active RFID</a> readers 50-100 meters. Total facility coverage requires overlapping coverage from multiple devices. Coverage quality varies within coverage area - strongest near infrastructure devices, degrading toward edges. <a href="../terms/coverage-planning.html" class="term-link">Coverage planning</a> tools use facility CAD drawings plus RF propagation models to predict coverage and plan infrastructure <a href="../terms/deployment.html" class="term-link">deployment</a>.</p>
-  <p class="def-long">Key considerations include: required coverage height (tracking ceiling-mounted assets requires different planning than floor-level tracking), vertical coverage (multi-story facilities), outdoor areas (yards, loading docks), and redundancy (areas covered by multiple devices for reliability). Coverage verification during <a href="../terms/commissioning.html" class="term-link">commissioning</a> identifies gaps requiring additional infrastructure. Many industrial facilities accept some coverage gaps in less critical areas (bathrooms, break rooms, exterior perimeter) to control costs, focusing infrastructure investment on production and high-traffic zones. Coverage planning for multi-technology deployments must account for technology boundaries: BLE typically covers indoor areas with lower accuracy requirements, UWB covers precision zones, and GNSS covers outdoor areas. Transition zones between technologies (building entrances, loading docks) require careful design to ensure continuous tracking as assets move between coverage areas.</p>
+  <p class="def-short">The physical space within which RTLS can reliably detect and track tags with specified accuracy levels. Influenced by technology choice, anchor placement density, transmission power, facility layout, and required accuracy. Industrial facilities prioritize coverage in critical operational areas while accepting lower accuracy in peripheral spaces. Coverage planning involves site surveys, 3D modeling, and identifying shadow zones.</p>
+  <p class="def-long">Geographic extent where RTLS system provides reliable positioning. Coverage area depends on technology, infrastructure density, and environment. UWB anchors typically cover 30-50 meter radius in industrial environments (less with metal obstacles, more in open areas), BLE gateways 20-40 meters, Wi-Fi access points 30-100 meters, and <a href="../terms/active-rfid.html" class="term-link">active RFID</a> readers 50-100 meters. Total facility coverage requires overlapping coverage from multiple devices. Coverage quality varies within coverage area - strongest near infrastructure devices, degrading toward edges. <a href="../terms/coverage-planning.html" class="term-link">Coverage planning</a> tools use facility CAD drawings plus RF propagation models to predict coverage and plan infrastructure <a href="../terms/deployment.html" class="term-link">deployment</a>.</p><p class="def-long">Key considerations include: required coverage height (tracking ceiling-mounted assets requires different planning than floor-level tracking), vertical coverage (multi-story facilities), outdoor areas (yards, loading docks), and redundancy (areas covered by multiple devices for reliability). Coverage verification during <a href="../terms/commissioning.html" class="term-link">commissioning</a> identifies gaps requiring additional infrastructure. Many industrial facilities accept some coverage gaps in less critical areas (bathrooms, break rooms, exterior perimeter) to control costs, focusing infrastructure investment on production and high-traffic zones. Coverage planning for multi-technology deployments must account for technology boundaries: BLE typically covers indoor areas with lower accuracy requirements, UWB covers precision zones, and GNSS covers outdoor areas. Transition zones between technologies (building entrances, loading docks) require careful design to ensure continuous tracking as assets move between coverage areas.</p>
   <nav class="term-nav"><a href="connected-worker.html" class="nav-prev">← Connected Worker</a><a href="coverage-gap.html" class="nav-next">Coverage Gap →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

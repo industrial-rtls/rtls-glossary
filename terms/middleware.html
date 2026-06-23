@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Middleware – Industrial RTLS Glossary</title>
-<meta name="description" content="Software layer providing abstraction between RTLS positioning system and business applications, translating, routing, and enhancing location data for consu">
+<meta name="description" content="Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformation, protocol translation, message routing, and">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Middleware",
-  "description": "Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformation, protocol translation, message routing, and business logic. Enables integration without direct point-to-point connections. Provides flexibility and reduces coupling between systems.",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/middleware.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "middleware",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Middleware","description":"Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformation, protocol translation, message routing, and","url":"https://figlarkarel.github.io/rtls-glossary/terms/middleware.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Middleware","item":"https://figlarkarel.github.io/rtls-glossary/terms/middleware.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"Middleware","item":"https://figlarkarel.github.io/rtls-glossary/terms/middleware.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformation, protocol translation, message routing, and business logic. Enables integration without direct point-to-point connections. Provides flexibility and reduces coupling between systems.">Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformation, protocol translation, message routing, and business logic. Enables integration without direct point-to-point connections. Provides flexibility and reduces coupling between systems.</a> › Middleware
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>Middleware
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformation, protocol translation, message routing, and business logic. Enables integration without direct point-to-point connections. Provides flexibility and reduces coupling between systems.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">Middleware</h1>
   </header>
-  <p class="def-short">Software layer providing abstraction between RTLS positioning system and business applications, translating, routing, and enhancing <a href="../terms/location-data.html" class="term-link">location data</a> for consumption by enterprise systems. Middleware functions include: (1) Data translation - converting raw RTLS coordinates to business-meaningful locations (zone IDs, department names, semantic locations like 'Assembly Line 3, Station 5'). (2) Protocol conversion - translating between RTLS APIs and various enterprise system interfaces (REST to SOAP, JSON to XML, <a href="../terms/websocket.html" class="term-link">WebSocket</a> to MQTT). (3) Data enrichment - adding context to position data (joining <a href="../terms/tag.html" class="term-link">tag</a> IDs with asset master data, calculating derived metrics like speed and <a href="../terms/dwell-time.html" class="term-link">dwell time</a>, inferring activities from location patterns). (4) Filtering and aggregation - reducing data volume (transmitting only zone changes vs. every position update, aggregating 10 Hz positions to 1 Hz for applications not requiring full rate). (5) Business rules - implementing location-based logic (<a href="../terms/geofence.html" class="term-link">geofence</a> monitoring, exception detection, automated workflows triggered by location events). (6) Multi-<a href="../terms/system-integration.html" class="term-link">system integration</a> - orchestrating data flow between RTLS and multiple enterprise systems (MES, ERP, WMS, SCADA) with complex routing rules. Middleware costs: ESB platforms $50-500k depending on scale and licensing, message brokers $0-50k (open-source to commercial), custom development $50-200k depending on complexity. Middleware complexity consideration: simpler deployments (single application consuming RTLS data) may not justify middleware overhead - direct API integration adequate. Middleware design considerations: performance requirements (minimizing added <a href="../terms/latency.html" class="term-link">latency</a>, typical overhead 10-50ms), reliability (middleware becoming critical path - requires high availability), and maintainability (clear documentation, modular design enabling future changes).</p>
-  
+  <p class="def-short">Software acting as an intermediary layer between RTLS and other enterprise systems. Handles data transformation, protocol translation, message routing, and business logic. Enables integration without direct point-to-point connections. Provides flexibility and reduces coupling between systems.</p>
+  <p class="def-long">Software layer providing abstraction between RTLS positioning system and business applications, translating, routing, and enhancing <a href="../terms/location-data.html" class="term-link">location data</a> for consumption by enterprise systems. Middleware functions include: (1) Data translation - converting raw RTLS coordinates to business-meaningful locations (zone IDs, department names, semantic locations like 'Assembly Line 3, Station 5'). (2) Protocol conversion - translating between RTLS APIs and various enterprise system interfaces (REST to SOAP, JSON to XML, <a href="../terms/websocket.html" class="term-link">WebSocket</a> to MQTT). (3) Data enrichment - adding context to position data (joining <a href="../terms/tag.html" class="term-link">tag</a> IDs with asset master data, calculating derived metrics like speed and <a href="../terms/dwell-time.html" class="term-link">dwell time</a>, inferring activities from location patterns). (4) Filtering and aggregation - reducing data volume (transmitting only zone changes vs. every position update, aggregating 10 Hz positions to 1 Hz for applications not requiring full rate). (5) Business rules - implementing location-based logic (<a href="../terms/geofence.html" class="term-link">geofence</a> monitoring, exception detection, automated workflows triggered by location events). (6) Multi-<a href="../terms/system-integration.html" class="term-link">system integration</a> - orchestrating data flow between RTLS and multiple enterprise systems (MES, ERP, WMS, SCADA) with complex routing rules. Middleware costs: ESB platforms $50-500k depending on scale and licensing, message brokers $0-50k (open-source to commercial), custom development $50-200k depending on complexity. Middleware complexity consideration: simpler deployments (single application consuming RTLS data) may not justify middleware overhead - direct API integration adequate. Middleware design considerations: performance requirements (minimizing added <a href="../terms/latency.html" class="term-link">latency</a>, typical overhead 10-50ms), reliability (middleware becoming critical path - requires high availability), and maintainability (clear documentation, modular design enabling future changes).</p>
   <nav class="term-nav"><a href="meter-level-accuracy.html" class="nav-prev">← Meter-Level Accuracy</a><a href="mobile-infrastructure.html" class="nav-next">Mobile Infrastructure →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

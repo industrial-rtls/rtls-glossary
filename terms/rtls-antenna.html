@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>RTLS Antenna – Industrial RTLS Glossary</title>
-<meta name="description" content="An RTLS antenna is the physical component that radiates or receives radio frequency signals, serving as the interface between the electronic circuitry of t">
+<meta name="description" content="The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Dir">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#0369A1;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #0369A1;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "RTLS Antenna",
-  "description": "The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Directional antennas focus signals in specific directions while omnidirectional antennas radiate equally in all directions. Proper antenna selection",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/rtls-antenna.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "rtls-antenna",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"RTLS Antenna","description":"The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Dir","url":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-antenna.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Hardware Components","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"RTLS Antenna","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-antenna.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Hardware Components"},{"@type":"ListItem","position":3,"name":"RTLS Antenna","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-antenna.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Directional antennas focus signals in specific directions while omnidirectional antennas radiate equally in all directions. Proper antenna selection and placement critical for coverage and accuracy.">The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Directional antennas focus signals in specific directions while omnidirectional antennas radiate equally in all directions. Proper antenna selection and placement critical for coverage and accuracy.</a> › RTLS Antenna
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Hardware Components<span>›</span>RTLS Antenna
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Directional antennas focus signals in specific directions while omnidirectional antennas radiate equally in all directions. Proper antenna selection and placement critical for coverage and accuracy.</div>
+    <div class="term-cat-tag">Hardware Components</div>
     <h1 class="term-title">RTLS Antenna</h1>
   </header>
-  <p class="def-short">An RTLS antenna is the physical component that radiates or receives radio frequency signals, serving as the interface between the electronic circuitry of tags, anchors, or readers and the wireless propagation medium. Antenna design critically impacts RTLS system performance including <a href="../terms/range.html" class="term-link">range</a>, <a href="../terms/accuracy.html" class="term-link">accuracy</a>, and reliability. Industrial RTLS antennas must operate effectively in challenging environments with metal structures, machinery, and interference.</p>
-  <p class="def-long">Key antenna specifications include: operating frequency <a href="../terms/range.html" class="term-link">range</a> (must match the RTLS technology - UWB antennas typically cover 3.1-10.6 GHz, while BLE operates at 2.4 GHz), gain measured in dBi (higher gain increases range but narrows beam width), radiation pattern (omnidirectional for 360-degree coverage or directional for focused coverage), polarization (linear or circular - circular reduces orientation sensitivity), and physical durability for industrial environments. <a href="../terms/tag.html" class="term-link">Tag</a> antennas are typically compact omnidirectional designs to maintain performance regardless of tag orientation, though orientation sensitivity can still cause 3-10 dB signal strength variations affecting reliability. <a href="../terms/anchor.html" class="term-link">Anchor</a> or <a href="../terms/reader.html" class="term-link">reader</a> antennas may use directional designs to focus coverage in specific areas or omnidirectional designs for general coverage. Industrial installations must consider: antenna mounting positions (height, angle, orientation), mounting materials (avoiding metal backings that degrade performance), environmental protection (IP-rated enclosures for harsh conditions), and cable connections (minimizing cable length to reduce signal loss, with 1-2 dB loss per meter typical at UWB frequencies). Antenna selection and positioning significantly impact system performance, making it a critical consideration during RTLS site surveys and installation planning. Poor antenna placement can create dead zones, excessive multipath, or reduced range requiring additional infrastructure.</p>
+  <p class="def-short">The component transmitting and/or receiving radio signals in RTLS systems. Antenna type, gain, and orientation significantly affect system performance. Directional antennas focus signals in specific directions while omnidirectional antennas radiate equally in all directions. Proper antenna selection and placement critical for coverage and accuracy.</p>
+  <p class="def-long">An RTLS antenna is the physical component that radiates or receives radio frequency signals, serving as the interface between the electronic circuitry of tags, anchors, or readers and the wireless propagation medium. Antenna design critically impacts RTLS system performance including <a href="../terms/range.html" class="term-link">range</a>, <a href="../terms/accuracy.html" class="term-link">accuracy</a>, and reliability. Industrial RTLS antennas must operate effectively in challenging environments with metal structures, machinery, and interference.</p><p class="def-long">Key antenna specifications include: operating frequency <a href="../terms/range.html" class="term-link">range</a> (must match the RTLS technology - UWB antennas typically cover 3.1-10.6 GHz, while BLE operates at 2.4 GHz), gain measured in dBi (higher gain increases range but narrows beam width), radiation pattern (omnidirectional for 360-degree coverage or directional for focused coverage), polarization (linear or circular - circular reduces orientation sensitivity), and physical durability for industrial environments. <a href="../terms/tag.html" class="term-link">Tag</a> antennas are typically compact omnidirectional designs to maintain performance regardless of tag orientation, though orientation sensitivity can still cause 3-10 dB signal strength variations affecting reliability. <a href="../terms/anchor.html" class="term-link">Anchor</a> or <a href="../terms/reader.html" class="term-link">reader</a> antennas may use directional designs to focus coverage in specific areas or omnidirectional designs for general coverage. Industrial installations must consider: antenna mounting positions (height, angle, orientation), mounting materials (avoiding metal backings that degrade performance), environmental protection (IP-rated enclosures for harsh conditions), and cable connections (minimizing cable length to reduce signal loss, with 1-2 dB loss per meter typical at UWB frequencies). Antenna selection and positioning significantly impact system performance, making it a critical consideration during RTLS site surveys and installation planning. Poor antenna placement can create dead zones, excessive multipath, or reduced range requiring additional infrastructure.</p>
   <nav class="term-nav"><a href="rtk-real-time-kinematic.html" class="nav-prev">← RTK (Real-Time Kinematic)</a><a href="rtls-manager.html" class="nav-next">RTLS Manager →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

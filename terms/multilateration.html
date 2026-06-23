@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Multilateration – Industrial RTLS Glossary</title>
-<meta name="description" content="Positioning technique calculating location by measuring distances from object to multiple reference points (anchors) with known positions, then solving geo">
+<meta name="description" content="A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Ar">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Multilateration",
-  "description": "A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Arrival). Tag transmits a signal received by multiple anchors at slightly different times. Differences reveal distances enabling position calculati",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/multilateration.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "multilateration",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Multilateration","description":"A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Ar","url":"https://figlarkarel.github.io/rtls-glossary/terms/multilateration.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Positioning Methods & Techniques","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Multilateration","item":"https://figlarkarel.github.io/rtls-glossary/terms/multilateration.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Positioning Methods &amp;amp; Techniques"},{"@type":"ListItem","position":3,"name":"Multilateration","item":"https://figlarkarel.github.io/rtls-glossary/terms/multilateration.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Arrival). Tag transmits a signal received by multiple anchors at slightly different times. Differences reveal distances enabling position calculation. Commonly used in UWB and other RF-based RTLS.">A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Arrival). Tag transmits a signal received by multiple anchors at slightly different times. Differences reveal distances enabling position calculation. Commonly used in UWB and other RF-based RTLS.</a> › Multilateration
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp;amp; Techniques<span>›</span>Multilateration
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Arrival). Tag transmits a signal received by multiple anchors at slightly different times. Differences reveal distances enabling position calculation. Commonly used in UWB and other RF-based RTLS.</div>
+    <div class="term-cat-tag">Positioning Methods &amp;amp; Techniques</div>
     <h1 class="term-title">Multilateration</h1>
   </header>
-  <p class="def-short">Positioning technique calculating location by measuring distances from object to multiple reference points (anchors) with known positions, then solving geometric equations to determine position. Multilateration (also called <a href="../terms/trilateration.html" class="term-link">trilateration</a> in 2D) requires: minimum 3 anchors for 2D positioning, 4 anchors for 3D positioning (though 3D systems often use &amp;gt;4 for <a href="../terms/accuracy.html" class="term-link">accuracy</a> through redundancy). Distance measurements obtained through: Time of Flight (ToF) - measuring signal travel time and converting to distance using propagation speed (UWB primary method, achieving 10-30 cm accuracy), Received Signal Strength (RSSI) - estimating distance from <a href="../terms/signal-attenuation.html" class="term-link">signal attenuation</a> (BLE/Wi-Fi, 1-15 meter accuracy), or Two-Way Ranging (TWR) - bidirectional time measurements eliminating clock <a href="../terms/synchronization.html" class="term-link">synchronization</a> requirements. Multilateration mathematics: each distance measurement defines sphere (3D) or circle (2D) centered on <a href="../terms/anchor.html" class="term-link">anchor</a> with radius equal to measured distance. <a href="../terms/tag.html" class="term-link">Tag</a> position is intersection of these spheres/circles. Example: 10 cm ranging error with GDOP of 2 produces 20 cm position error, but same error with GDOP of 8 produces 80 cm position error. Industrial multilateration considerations: (1) <a href="../terms/anchor-placement.html" class="term-link">Anchor placement</a> optimization - ensuring good geometry throughout <a href="../terms/coverage-area.html" class="term-link">coverage area</a> (avoiding collinear arrangements, maximizing spatial separation). (2) Over-determination - using &amp;gt;4 anchors (6-10 typical) providing redundancy and accuracy improvement. (3) Outlier rejection - identifying and excluding anomalous distance measurements (NLoS paths, interference). (4) Kalman filtering - combining current multilateration result with movement model and previous positions for smoothing. Multilateration accuracy varies by technology: UWB achieving 10-30 cm (90th percentile) in industrial environments with proper anchor placement, Wi-Fi/BLE RSSI achieving 3-15 meters, GPS achieving 3-10 meters outdoors.</p>
-  
+  <p class="def-short">A positioning technique determining location by measuring time differences of signal arrival at multiple receivers. Also called TDOA (Time Difference of Arrival). Tag transmits a signal received by multiple anchors at slightly different times. Differences reveal distances enabling position calculation. Commonly used in UWB and other RF-based RTLS.</p>
+  <p class="def-long">Positioning technique calculating location by measuring distances from object to multiple reference points (anchors) with known positions, then solving geometric equations to determine position. Multilateration (also called <a href="../terms/trilateration.html" class="term-link">trilateration</a> in 2D) requires: minimum 3 anchors for 2D positioning, 4 anchors for 3D positioning (though 3D systems often use &amp;gt;4 for <a href="../terms/accuracy.html" class="term-link">accuracy</a> through redundancy). Distance measurements obtained through: Time of Flight (ToF) - measuring signal travel time and converting to distance using propagation speed (UWB primary method, achieving 10-30 cm accuracy), Received Signal Strength (RSSI) - estimating distance from <a href="../terms/signal-attenuation.html" class="term-link">signal attenuation</a> (BLE/Wi-Fi, 1-15 meter accuracy), or Two-Way Ranging (TWR) - bidirectional time measurements eliminating clock <a href="../terms/synchronization.html" class="term-link">synchronization</a> requirements. Multilateration mathematics: each distance measurement defines sphere (3D) or circle (2D) centered on <a href="../terms/anchor.html" class="term-link">anchor</a> with radius equal to measured distance. <a href="../terms/tag.html" class="term-link">Tag</a> position is intersection of these spheres/circles. Example: 10 cm ranging error with GDOP of 2 produces 20 cm position error, but same error with GDOP of 8 produces 80 cm position error. Industrial multilateration considerations: (1) <a href="../terms/anchor-placement.html" class="term-link">Anchor placement</a> optimization - ensuring good geometry throughout <a href="../terms/coverage-area.html" class="term-link">coverage area</a> (avoiding collinear arrangements, maximizing spatial separation). (2) Over-determination - using &amp;gt;4 anchors (6-10 typical) providing redundancy and accuracy improvement. (3) Outlier rejection - identifying and excluding anomalous distance measurements (NLoS paths, interference). (4) Kalman filtering - combining current multilateration result with movement model and previous positions for smoothing. Multilateration accuracy varies by technology: UWB achieving 10-30 cm (90th percentile) in industrial environments with proper anchor placement, Wi-Fi/BLE RSSI achieving 3-15 meters, GPS achieving 3-10 meters outdoors.</p>
   <nav class="term-nav"><a href="mqtt-protocol.html" class="nav-prev">← MQTT Protocol</a><a href="multipath-propagation.html" class="nav-next">Multipath Propagation →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

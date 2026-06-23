@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Tag Capacity – Industrial RTLS Glossary</title>
-<meta name="description" content="Tag capacity refers to the maximum number of tags that an RTLS infrastructure can simultaneously track while maintaining specified performance levels. Indu">
+<meta name="description" content="The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined by processing power, network bandwidth, and ">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Tag Capacity",
-  "description": "The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined by processing power, network bandwidth, and wireless spectrum. Must account for peak scenarios like shift changes or maximum facility occupancy.",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/tag-capacity.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "tag-capacity",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Tag Capacity","description":"The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined by processing power, network bandwidth, and ","url":"https://figlarkarel.github.io/rtls-glossary/terms/tag-capacity.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Performance Metrics & KPIs","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Tag Capacity","item":"https://figlarkarel.github.io/rtls-glossary/terms/tag-capacity.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Performance Metrics &amp;amp; KPIs"},{"@type":"ListItem","position":3,"name":"Tag Capacity","item":"https://figlarkarel.github.io/rtls-glossary/terms/tag-capacity.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined by processing power, network bandwidth, and wireless spectrum. Must account for peak scenarios like shift changes or maximum facility occupancy.">The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined by processing power, network bandwidth, and wireless spectrum. Must account for peak scenarios like shift changes or maximum facility occupancy.</a> › Tag Capacity
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics &amp;amp; KPIs<span>›</span>Tag Capacity
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined by processing power, network bandwidth, and wireless spectrum. Must account for peak scenarios like shift changes or maximum facility occupancy.</div>
+    <div class="term-cat-tag">Performance Metrics &amp;amp; KPIs</div>
     <h1 class="term-title">Tag Capacity</h1>
   </header>
-  <p class="def-short"><a href="../terms/tag.html" class="term-link">Tag</a> <a href="../terms/capacity.html" class="term-link">capacity</a> refers to the maximum number of tags that an RTLS infrastructure can simultaneously track while maintaining specified performance levels. Industrial tag capacity requirements <a href="../terms/range.html" class="term-link">range</a> widely: small pilot deployments may track 50-200 tags, departmental systems 200-1,000 tags, facility-wide implementations 1,000-5,000 tags, and enterprise deployments 5,000-20,000+ tags across multiple sites. A system tracking 2,000 tags at 1 Hz generates 2,000 position calculations per second, while tracking 200 tags at 10 Hz generates the same computational load. Therefore, capacity specifications should state maximum tags at specified update rates (eg., 3,000 tags at 1 Hz, 1,000 tags at 3 Hz, or 300 tags at 10 Hz). Per-<a href="../terms/anchor.html" class="term-link">anchor</a> tag capacity is typically the first bottleneck in distributed RTLS architectures. UWB anchors typically handle 100-500 tags depending on update rates, transmission protocols, and processing capabilities.</p>
-  <p class="def-long">When <a href="../terms/anchor.html" class="term-link">anchor</a> <a href="../terms/capacity.html" class="term-link">capacity</a> is exceeded, performance degrades: increased packet collisions, detection failures, positioning gaps, and reduced <a href="../terms/accuracy.html" class="term-link">accuracy</a>. High-performance positioning engines process 5,000-20,000 position calculations per second on modern server hardware. Application layer capacity limitations include: database write capacity (storing thousands of position updates per second requires optimized database architecture), visualization performance (rendering thousands of moving objects demands efficient graphics), and <a href="../terms/network-bandwidth.html" class="term-link">network bandwidth</a> (transmitting position data to multiple concurrent users and applications). Industrial deployments should plan <a href="../terms/tag.html" class="term-link">tag</a> capacity with growth margin: specifying <a href="../terms/system-capacity.html" class="term-link">system capacity</a> 30-50% beyond current requirements accommodates organic growth without infrastructure replacement. Documentation of system capacity (maximum supported tags at various update rates, recommended operating capacity, performance degradation characteristics beyond capacity) helps customers make informed decisions.</p>
+  <p class="def-short">The maximum number of active tags an RTLS can simultaneously track without performance degradation. Determined by processing power, network bandwidth, and wireless spectrum. Must account for peak scenarios like shift changes or maximum facility occupancy.</p>
+  <p class="def-long"><a href="../terms/tag.html" class="term-link">Tag</a> <a href="../terms/capacity.html" class="term-link">capacity</a> refers to the maximum number of tags that an RTLS infrastructure can simultaneously track while maintaining specified performance levels. Industrial tag capacity requirements <a href="../terms/range.html" class="term-link">range</a> widely: small pilot deployments may track 50-200 tags, departmental systems 200-1,000 tags, facility-wide implementations 1,000-5,000 tags, and enterprise deployments 5,000-20,000+ tags across multiple sites. A system tracking 2,000 tags at 1 Hz generates 2,000 position calculations per second, while tracking 200 tags at 10 Hz generates the same computational load. Therefore, capacity specifications should state maximum tags at specified update rates (eg., 3,000 tags at 1 Hz, 1,000 tags at 3 Hz, or 300 tags at 10 Hz). Per-<a href="../terms/anchor.html" class="term-link">anchor</a> tag capacity is typically the first bottleneck in distributed RTLS architectures. UWB anchors typically handle 100-500 tags depending on update rates, transmission protocols, and processing capabilities.</p><p class="def-long">When <a href="../terms/anchor.html" class="term-link">anchor</a> <a href="../terms/capacity.html" class="term-link">capacity</a> is exceeded, performance degrades: increased packet collisions, detection failures, positioning gaps, and reduced <a href="../terms/accuracy.html" class="term-link">accuracy</a>. High-performance positioning engines process 5,000-20,000 position calculations per second on modern server hardware. Application layer capacity limitations include: database write capacity (storing thousands of position updates per second requires optimized database architecture), visualization performance (rendering thousands of moving objects demands efficient graphics), and <a href="../terms/network-bandwidth.html" class="term-link">network bandwidth</a> (transmitting position data to multiple concurrent users and applications). Industrial deployments should plan <a href="../terms/tag.html" class="term-link">tag</a> capacity with growth margin: specifying <a href="../terms/system-capacity.html" class="term-link">system capacity</a> 30-50% beyond current requirements accommodates organic growth without infrastructure replacement. Documentation of system capacity (maximum supported tags at various update rates, recommended operating capacity, performance degradation characteristics beyond capacity) helps customers make informed decisions.</p>
   <nav class="term-nav"><a href="tag.html" class="nav-prev">← Tag</a><a href="tag-identifier.html" class="nav-next">Tag Identifier →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Triangulation – Industrial RTLS Glossary</title>
-<meta name="description" content="Triangulation is a positioning technique that determines location by measuring angles from multiple reference points with known positions. The geometric pr">
+<meta name="description" content="A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particular">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Triangulation",
-  "description": "A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particularly those using angle of arrival measurements. Requires fewer reference points than trilateration for 2D positioning. Used in systems employing An",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/triangulation.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "triangulation",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Triangulation","description":"A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particular","url":"https://figlarkarel.github.io/rtls-glossary/terms/triangulation.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Positioning Methods & Techniques","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Triangulation","item":"https://figlarkarel.github.io/rtls-glossary/terms/triangulation.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Positioning Methods &amp;amp; Techniques"},{"@type":"ListItem","position":3,"name":"Triangulation","item":"https://figlarkarel.github.io/rtls-glossary/terms/triangulation.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particularly those using angle of arrival measurements. Requires fewer reference points than trilateration for 2D positioning. Used in systems employing Angle of Arrival (AoA) measurements.">A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particularly those using angle of arrival measurements. Requires fewer reference points than trilateration for 2D positioning. Used in systems employing Angle of Arrival (AoA) measurements.</a> › Triangulation
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp;amp; Techniques<span>›</span>Triangulation
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particularly those using angle of arrival measurements. Requires fewer reference points than trilateration for 2D positioning. Used in systems employing Angle of Arrival (AoA) measurements.</div>
+    <div class="term-cat-tag">Positioning Methods &amp;amp; Techniques</div>
     <h1 class="term-title">Triangulation</h1>
   </header>
-  <p class="def-short">Triangulation is a positioning technique that determines location by measuring angles from multiple reference points with known positions. The geometric principle involves: establishing multiple reference points (anchors/base stations) with known positions, measuring the angle or direction from each reference point toward the target (<a href="../terms/tag.html" class="term-link">tag</a>/asset), and calculating the target position as the intersection of bearing lines extending from reference points at measured angles. In 2D positioning, bearings from two reference points theoretically suffice (two lines intersect at one point), though three or more improve <a href="../terms/accuracy.html" class="term-link">accuracy</a> through redundancy and ambiguity <a href="../terms/resolution.html" class="term-link">resolution</a>. In 3D, three or more references are needed considering elevation angles. Industrial RTLS implementations using triangulation-related principles include: Bluetooth 5.1 Direction Finding using angle of arrival (AoA) or angle of departure (AoD) methods - antenna arrays measure the phase difference of signals arriving at multiple antennas, calculating arrival angle, with multiple anchors providing bearing triangulation. Triangulation challenges in industrial environments include: angle measurement requiring antenna arrays (increasing complexity and cost compared to omnidirectional antennas), <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a> corrupting angle measurements (reflected signals appearing from wrong directions), NLOS conditions blocking direct paths preventing accurate angle measurement, and accuracy degradation with distance (angular errors translate to larger position errors at greater ranges - 1 degree angle error causes ~1.7 meter position error at 100 meters). Triangulation is more common in outdoor positioning (GPS uses <a href="../terms/trilateration.html" class="term-link">trilateration</a> via <a href="../terms/range.html" class="term-link">range</a>, but some radar and radio direction-finding uses triangulation) and consumer applications (Bluetooth AoA for indoor positioning in retail or hospitality) than in industrial RTLS.</p>
-  
+  <p class="def-short">A positioning technique determining location by measuring angles from multiple reference points to the target. Used in some RTLS implementations particularly those using angle of arrival measurements. Requires fewer reference points than trilateration for 2D positioning. Used in systems employing Angle of Arrival (AoA) measurements.</p>
+  <p class="def-long">Triangulation is a positioning technique that determines location by measuring angles from multiple reference points with known positions. The geometric principle involves: establishing multiple reference points (anchors/base stations) with known positions, measuring the angle or direction from each reference point toward the target (<a href="../terms/tag.html" class="term-link">tag</a>/asset), and calculating the target position as the intersection of bearing lines extending from reference points at measured angles. In 2D positioning, bearings from two reference points theoretically suffice (two lines intersect at one point), though three or more improve <a href="../terms/accuracy.html" class="term-link">accuracy</a> through redundancy and ambiguity <a href="../terms/resolution.html" class="term-link">resolution</a>. In 3D, three or more references are needed considering elevation angles. Industrial RTLS implementations using triangulation-related principles include: Bluetooth 5.1 Direction Finding using angle of arrival (AoA) or angle of departure (AoD) methods - antenna arrays measure the phase difference of signals arriving at multiple antennas, calculating arrival angle, with multiple anchors providing bearing triangulation. Triangulation challenges in industrial environments include: angle measurement requiring antenna arrays (increasing complexity and cost compared to omnidirectional antennas), <a href="../terms/multipath-propagation.html" class="term-link">multipath propagation</a> corrupting angle measurements (reflected signals appearing from wrong directions), NLOS conditions blocking direct paths preventing accurate angle measurement, and accuracy degradation with distance (angular errors translate to larger position errors at greater ranges - 1 degree angle error causes ~1.7 meter position error at 100 meters). Triangulation is more common in outdoor positioning (GPS uses <a href="../terms/trilateration.html" class="term-link">trilateration</a> via <a href="../terms/range.html" class="term-link">range</a>, but some radar and radio direction-finding uses triangulation) and consumer applications (Bluetooth AoA for indoor positioning in retail or hospitality) than in industrial RTLS.</p>
   <nav class="term-nav"><a href="travel-distance.html" class="nav-prev">← Travel Distance</a><a href="trilateration.html" class="nav-next">Trilateration →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

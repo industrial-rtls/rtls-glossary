@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Reader – Industrial RTLS Glossary</title>
-<meta name="description" content="A reader, also called an anchor or receiver in RTLS terminology, is a fixed infrastructure device that receives signals from mobile tags and forwards this ">
+<meta name="description" content="A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID sys">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#0369A1;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #0369A1;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Reader",
-  "description": "A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID systems, readers also energize tags. Readers forward collected data to the RTLS processing system. Reader placement, density, and configuration dete",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/reader.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "reader",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Reader","description":"A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID sys","url":"https://figlarkarel.github.io/rtls-glossary/terms/reader.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Hardware Components","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Reader","item":"https://figlarkarel.github.io/rtls-glossary/terms/reader.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Hardware Components"},{"@type":"ListItem","position":3,"name":"Reader","item":"https://figlarkarel.github.io/rtls-glossary/terms/reader.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID systems, readers also energize tags. Readers forward collected data to the RTLS processing system. Reader placement, density, and configuration determine system coverage and performance.">A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID systems, readers also energize tags. Readers forward collected data to the RTLS processing system. Reader placement, density, and configuration determine system coverage and performance.</a> › Reader
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Hardware Components<span>›</span>Reader
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID systems, readers also energize tags. Readers forward collected data to the RTLS processing system. Reader placement, density, and configuration determine system coverage and performance.</div>
+    <div class="term-cat-tag">Hardware Components</div>
     <h1 class="term-title">Reader</h1>
   </header>
-  <p class="def-short">A reader, also called an <a href="../terms/anchor.html" class="term-link">anchor</a> or <a href="../terms/receiver.html" class="term-link">receiver</a> in RTLS terminology, is a <a href="../terms/fixed-infrastructure.html" class="term-link">fixed infrastructure</a> device that receives signals from mobile tags and forwards this data to the <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> for location calculation. In industrial RTLS deployments, readers are strategically positioned throughout the facility to provide continuous coverage of the tracking area. The number and placement of readers directly impacts system <a href="../terms/accuracy.html" class="term-link">accuracy</a>, with most systems requiring 3-4 readers with line-of-sight to a <a href="../terms/tag.html" class="term-link">tag</a> for optimal 2D positioning, and 4-5 for 3D positioning. UWB readers typically operate at 6-9 GHz frequencies and can process ranging data from hundreds of tags simultaneously. Modern industrial RTLS readers feature synchronized clocks (often with nanosecond <a href="../terms/precision.html" class="term-link">precision</a>), Power over Ethernet (PoE) capability, and ruggedized enclosures rated to IP65 or higher for harsh environments. Reader density requirements vary by technology: UWB systems may need one reader per 100-200 square meters for sub-meter accuracy, while Wi-Fi systems might require one <a href="../terms/access-point.html" class="term-link">access point</a> per 500-1000 square meters with reduced precision. Readers must be carefully positioned to minimize dead zones, accounting for obstacles, metal shelving, machinery, and building structures that can block or reflect signals. Industrial readers often include diagnostic LEDs, local processing capabilities, and network redundancy features. Installation height typically ranges from 3-6 meters depending on application requirements and ceiling height. Reader <a href="../terms/synchronization.html" class="term-link">synchronization</a> is critical for Time Difference of Arrival (TDoA) systems, requiring either wired sync connections or wireless clock synchronization protocols.</p>
-  
+  <p class="def-short">A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor. In passive RFID systems, readers also energize tags. Readers forward collected data to the RTLS processing system. Reader placement, density, and configuration determine system coverage and performance.</p>
+  <p class="def-long">A reader, also called an <a href="../terms/anchor.html" class="term-link">anchor</a> or <a href="../terms/receiver.html" class="term-link">receiver</a> in RTLS terminology, is a <a href="../terms/fixed-infrastructure.html" class="term-link">fixed infrastructure</a> device that receives signals from mobile tags and forwards this data to the <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> for location calculation. In industrial RTLS deployments, readers are strategically positioned throughout the facility to provide continuous coverage of the tracking area. The number and placement of readers directly impacts system <a href="../terms/accuracy.html" class="term-link">accuracy</a>, with most systems requiring 3-4 readers with line-of-sight to a <a href="../terms/tag.html" class="term-link">tag</a> for optimal 2D positioning, and 4-5 for 3D positioning. UWB readers typically operate at 6-9 GHz frequencies and can process ranging data from hundreds of tags simultaneously. Modern industrial RTLS readers feature synchronized clocks (often with nanosecond <a href="../terms/precision.html" class="term-link">precision</a>), Power over Ethernet (PoE) capability, and ruggedized enclosures rated to IP65 or higher for harsh environments. Reader density requirements vary by technology: UWB systems may need one reader per 100-200 square meters for sub-meter accuracy, while Wi-Fi systems might require one <a href="../terms/access-point.html" class="term-link">access point</a> per 500-1000 square meters with reduced precision. Readers must be carefully positioned to minimize dead zones, accounting for obstacles, metal shelving, machinery, and building structures that can block or reflect signals. Industrial readers often include diagnostic LEDs, local processing capabilities, and network redundancy features. Installation height typically ranges from 3-6 meters depending on application requirements and ceiling height. Reader <a href="../terms/synchronization.html" class="term-link">synchronization</a> is critical for Time Difference of Arrival (TDoA) systems, requiring either wired sync connections or wireless clock synchronization protocols.</p>
   <nav class="term-nav"><a href="range.html" class="nav-prev">← Range</a><a href="real-time.html" class="nav-next">Real-Time →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

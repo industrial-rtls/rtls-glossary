@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Geofencing – Industrial RTLS Glossary</title>
-<meta name="description" content="Functionality that triggers actions or generates alerts when tracked assets or personnel cross virtual boundaries (geofences). Geofencing is core RTLS capa">
+<meta name="description" content="The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Ena">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Geofencing",
-  "description": "The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Enables location-based automation including alerts, access control, and process verification. Geofences can be simple shapes or complex 3D volumes, ",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/geofencing.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "geofencing",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Geofencing","description":"The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Ena","url":"https://figlarkarel.github.io/rtls-glossary/terms/geofencing.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Positioning Methods & Techniques","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Geofencing","item":"https://figlarkarel.github.io/rtls-glossary/terms/geofencing.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Positioning Methods &amp;amp; Techniques"},{"@type":"ListItem","position":3,"name":"Geofencing","item":"https://figlarkarel.github.io/rtls-glossary/terms/geofencing.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Enables location-based automation including alerts, access control, and process verification. Geofences can be simple shapes or complex 3D volumes, static or dynamic based on operational conditions.">The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Enables location-based automation including alerts, access control, and process verification. Geofences can be simple shapes or complex 3D volumes, static or dynamic based on operational conditions.</a> › Geofencing
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp;amp; Techniques<span>›</span>Geofencing
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Enables location-based automation including alerts, access control, and process verification. Geofences can be simple shapes or complex 3D volumes, static or dynamic based on operational conditions.</div>
+    <div class="term-cat-tag">Positioning Methods &amp;amp; Techniques</div>
     <h1 class="term-title">Geofencing</h1>
   </header>
-  <p class="def-short">Functionality that triggers actions or generates alerts when tracked assets or personnel cross virtual boundaries (geofences). Geofencing is core RTLS capability enabling location-based automation and monitoring. Geofencing event types: (1) Entry events - <a href="../terms/tag.html" class="term-link">tag</a> enters defined <a href="../terms/geofence.html" class="term-link">geofence</a>, triggering entry timestamp recording and optional entry actions. (2) Exit events - tag leaves geofence, recording exit timestamp and triggering exit actions. (3) Dwell events - tag remains in geofence exceeding specified duration threshold, indicating process completion, delays, or anomalies. (4) Proximity events - tag approaches but doesn't enter geofence (warning zone). Geofencing actions include: visual/audible alerts (notifying operators or security personnel), automated logging (recording zone transitions for analytics and compliance), external <a href="../terms/system-integration.html" class="term-link">system integration</a> (triggering MES operations, updating WMS inventory, notifying ERP), physical control (door unlocking, barrier operation), and workflow triggers (initiating next process step). Geofencing applications: <a href="../terms/access-control.html" class="term-link">access control</a> (restricting unauthorized personnel from hazardous or secure areas), process tracking (confirming work items progress through required process steps in correct sequence), safety enforcement (alerting when pedestrians enter forklift traffic zones), <a href="../terms/dwell-time.html" class="term-link">dwell time</a> monitoring (identifying bottlenecks from excessive dwell times), and <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (tracking material movements between zones for automatic inventory transactions). Geofencing performance requirements: detection <a href="../terms/latency.html" class="term-link">latency</a> 0.5-2 seconds typical (time from actual boundary crossing to event detection), false positive rate under 5% (incorrect triggers undermine user confidence), and false negative rate under 2% (missed events create compliance and safety risks). Proper geofence design critical - boundaries should provide adequate buffer zones accounting for <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (typically 2-3x position error tolerance).</p>
-  
+  <p class="def-short">The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within defined areas. Enables location-based automation including alerts, access control, and process verification. Geofences can be simple shapes or complex 3D volumes, static or dynamic based on operational conditions.</p>
+  <p class="def-long">Functionality that triggers actions or generates alerts when tracked assets or personnel cross virtual boundaries (geofences). Geofencing is core RTLS capability enabling location-based automation and monitoring. Geofencing event types: (1) Entry events - <a href="../terms/tag.html" class="term-link">tag</a> enters defined <a href="../terms/geofence.html" class="term-link">geofence</a>, triggering entry timestamp recording and optional entry actions. (2) Exit events - tag leaves geofence, recording exit timestamp and triggering exit actions. (3) Dwell events - tag remains in geofence exceeding specified duration threshold, indicating process completion, delays, or anomalies. (4) Proximity events - tag approaches but doesn't enter geofence (warning zone). Geofencing actions include: visual/audible alerts (notifying operators or security personnel), automated logging (recording zone transitions for analytics and compliance), external <a href="../terms/system-integration.html" class="term-link">system integration</a> (triggering MES operations, updating WMS inventory, notifying ERP), physical control (door unlocking, barrier operation), and workflow triggers (initiating next process step). Geofencing applications: <a href="../terms/access-control.html" class="term-link">access control</a> (restricting unauthorized personnel from hazardous or secure areas), process tracking (confirming work items progress through required process steps in correct sequence), safety enforcement (alerting when pedestrians enter forklift traffic zones), <a href="../terms/dwell-time.html" class="term-link">dwell time</a> monitoring (identifying bottlenecks from excessive dwell times), and <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (tracking material movements between zones for automatic inventory transactions). Geofencing performance requirements: detection <a href="../terms/latency.html" class="term-link">latency</a> 0.5-2 seconds typical (time from actual boundary crossing to event detection), false positive rate under 5% (incorrect triggers undermine user confidence), and false negative rate under 2% (missed events create compliance and safety risks). Proper geofence design critical - boundaries should provide adequate buffer zones accounting for <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (typically 2-3x position error tolerance).</p>
   <nav class="term-nav"><a href="geofence.html" class="nav-prev">← Geofence</a><a href="gnss-global-navigation-satellite-system.html" class="nav-next">GNSS (Global Navigation Satellite System) →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

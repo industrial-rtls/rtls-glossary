@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Connected Worker – Industrial RTLS Glossary</title>
-<meta name="description" content="Technology concept integrating personal location tracking with other digital tools (mobile devices, sensors, communication systems) to enhance worker safet">
+<meta name="description" content="An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety t">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#0369A1;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#0369A1}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #0369A1;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Connected Worker",
-  "description": "An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety through automatic hazardous zone detection, man-down alerts, and evacuation assistance. Improves efficiency by guiding workers to tasks and optimi",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/connected-worker.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "connected-worker",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Connected Worker","description":"An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety t","url":"https://figlarkarel.github.io/rtls-glossary/terms/connected-worker.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Industry-Specific Terms","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Connected Worker","item":"https://figlarkarel.github.io/rtls-glossary/terms/connected-worker.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Industry-Specific Terms"},{"@type":"ListItem","position":3,"name":"Connected Worker","item":"https://figlarkarel.github.io/rtls-glossary/terms/connected-worker.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety through automatic hazardous zone detection, man-down alerts, and evacuation assistance. Improves efficiency by guiding workers to tasks and optimizing allocation. Ensures compliance by verifying required training and tracking restricted zone time.">An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety through automatic hazardous zone detection, man-down alerts, and evacuation assistance. Improves efficiency by guiding workers to tasks and optimizing allocation. Ensures compliance by verifying required training and tracking restricted zone time.</a> › Connected Worker
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Industry-Specific Terms<span>›</span>Connected Worker
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety through automatic hazardous zone detection, man-down alerts, and evacuation assistance. Improves efficiency by guiding workers to tasks and optimizing allocation. Ensures compliance by verifying required training and tracking restricted zone time.</div>
+    <div class="term-cat-tag">Industry-Specific Terms</div>
     <h1 class="term-title">Connected Worker</h1>
   </header>
-  <p class="def-short">Technology concept integrating personal location tracking with other digital tools (mobile devices, sensors, communication systems) to enhance <a href="../terms/worker-safety.html" class="term-link">worker safety</a>, productivity, and support. In industrial RTLS context, connected worker solutions provide: <a href="../terms/real-time.html" class="term-link">real-time</a> worker location for <a href="../terms/emergency-response.html" class="term-link">emergency response</a>, <a href="../terms/lone-worker-protection.html" class="term-link">lone worker protection</a> with automated check-ins, proximity alerts for <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a> with vehicles, zone-based <a href="../terms/access-control.html" class="term-link">access control</a>, environmental hazard warnings (gas detection, high temperature), task guidance and digital work instructions delivered based on location, and automated time tracking by work zone. Workers typically carry or wear RTLS tags integrated with smartphones or dedicated wearable devices including emergency buttons. Connected worker implementations must balance operational benefits with privacy concerns - focus on safety and aggregate <a href="../terms/productivity-metrics.html" class="term-link">productivity metrics</a> rather than detailed individual surveillance. Successful implementations require worker input during design, transparent policies on data usage, and demonstrable safety improvements. Studies show connected worker programs reduce accidents 40-60% and improve productivity 10-15% through reduced time locating tools, materials, or assistance. BLE is the dominant technology for connected worker implementations due to low badge cost ($40-100), long battery life (2-5 years), and adequate accuracy (1-3 m) for safety and productivity applications. UWB supplements BLE in high-risk zones where precise positioning is needed for collision avoidance with vehicles. GNSS-enabled badges extend connected worker capabilities to outdoor areas such as construction sites, mining operations, and large industrial campuses.</p>
-  
+  <p class="def-short">An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring. Enhances safety through automatic hazardous zone detection, man-down alerts, and evacuation assistance. Improves efficiency by guiding workers to tasks and optimizing allocation. Ensures compliance by verifying required training and tracking restricted zone time.</p>
+  <p class="def-long">Technology concept integrating personal location tracking with other digital tools (mobile devices, sensors, communication systems) to enhance <a href="../terms/worker-safety.html" class="term-link">worker safety</a>, productivity, and support. In industrial RTLS context, connected worker solutions provide: <a href="../terms/real-time.html" class="term-link">real-time</a> worker location for <a href="../terms/emergency-response.html" class="term-link">emergency response</a>, <a href="../terms/lone-worker-protection.html" class="term-link">lone worker protection</a> with automated check-ins, proximity alerts for <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a> with vehicles, zone-based <a href="../terms/access-control.html" class="term-link">access control</a>, environmental hazard warnings (gas detection, high temperature), task guidance and digital work instructions delivered based on location, and automated time tracking by work zone. Workers typically carry or wear RTLS tags integrated with smartphones or dedicated wearable devices including emergency buttons. Connected worker implementations must balance operational benefits with privacy concerns - focus on safety and aggregate <a href="../terms/productivity-metrics.html" class="term-link">productivity metrics</a> rather than detailed individual surveillance. Successful implementations require worker input during design, transparent policies on data usage, and demonstrable safety improvements. Studies show connected worker programs reduce accidents 40-60% and improve productivity 10-15% through reduced time locating tools, materials, or assistance. BLE is the dominant technology for connected worker implementations due to low badge cost ($40-100), long battery life (2-5 years), and adequate accuracy (1-3 m) for safety and productivity applications. UWB supplements BLE in high-risk zones where precise positioning is needed for collision avoidance with vehicles. GNSS-enabled badges extend connected worker capabilities to outdoor areas such as construction sites, mining operations, and large industrial campuses.</p>
   <nav class="term-nav"><a href="configuration.html" class="nav-prev">← Configuration</a><a href="coverage-area.html" class="nav-next">Coverage Area →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

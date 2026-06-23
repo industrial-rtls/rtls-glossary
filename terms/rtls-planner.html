@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>RTLS Planner – Industrial RTLS Glossary</title>
-<meta name="description" content="RTLS Planner is Sewio Networks' planning and design tool for RTLS deployments, enabling system integrators and facility planners to design optimal anchor l">
+<meta name="description" content="Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation. Enables instant ">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "RTLS Planner",
-  "description": "Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation. Enables instant Dilution of Precision (DOP) simulation, supports 2D and 3D planning with CAD file import (DXF, PDF), calculates coverage and expected precision, ",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/rtls-planner.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "rtls-planner",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"RTLS Planner","description":"Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation. Enables instant ","url":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-planner.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"RTLS Planner","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-planner.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"RTLS Planner","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-planner.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation. Enables instant Dilution of Precision (DOP) simulation, supports 2D and 3D planning with CAD file import (DXF, PDF), calculates coverage and expected precision, and helps minimize project costs by preventing unplanned anchor deployment updates. Available exclusively to Sewio partners. Includes collaboration features for sharing designs with Sewio consultants.">Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation. Enables instant Dilution of Precision (DOP) simulation, supports 2D and 3D planning with CAD file import (DXF, PDF), calculates coverage and expected precision, and helps minimize project costs by preventing unplanned anchor deployment updates. Available exclusively to Sewio partners. Includes collaboration features for sharing designs with Sewio consultants.</a> › RTLS Planner
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>RTLS Planner
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation. Enables instant Dilution of Precision (DOP) simulation, supports 2D and 3D planning with CAD file import (DXF, PDF), calculates coverage and expected precision, and helps minimize project costs by preventing unplanned anchor deployment updates. Available exclusively to Sewio partners. Includes collaboration features for sharing designs with Sewio consultants.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">RTLS Planner</h1>
   </header>
-  <p class="def-short">RTLS Planner is Sewio Networks' planning and design tool for RTLS deployments, enabling system integrators and facility planners to design optimal <a href="../terms/anchor.html" class="term-link">anchor</a> layouts, predict system performance, and plan implementations before physical installation. This pre-<a href="../terms/deployment.html" class="term-link">deployment</a> tool addresses a critical challenge in RTLS projects: determining optimal infrastructure placement to achieve required coverage, <a href="../terms/accuracy.html" class="term-link">accuracy</a>, and reliability while minimizing costs. The software workflow begins with importing facility floor plans (CAD files, PDFs, or images) and defining the tracking area dimensions. Users then specify system requirements including desired <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>, coverage areas, expected <a href="../terms/tag.html" class="term-link">tag</a> density, and any special constraints (height restrictions, mounting limitations, power availability). The planning engine analyzes the <a href="../terms/facility-layout.html" class="term-link">facility layout</a> considering obstacles, RF propagation characteristics, and anchor visibility requirements to recommend optimal <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a>.</p>
-  <p class="def-long">Key capabilities include: RF propagation modeling accounting for building materials, obstacles, and reflective surfaces, coverage analysis visualizing which areas have adequate <a href="../terms/anchor.html" class="term-link">anchor</a> visibility for reliable positioning, <a href="../terms/accuracy.html" class="term-link">accuracy</a> prediction estimating expected positioning performance based on anchor geometry and environmental factors, and infrastructure optimization suggesting minimum anchor count while meeting requirements. <a href="../terms/site-survey.html" class="term-link">Site survey</a> integration allows importing actual RF measurements to refine propagation models and validate planned performance. RTLS Planner reduces <a href="../terms/deployment.html" class="term-link">deployment</a> risks by identifying issues before installation: insufficient coverage areas, accuracy limitations from poor anchor geometry, <a href="../terms/capacity.html" class="term-link">capacity</a> constraints, or unrealistic performance expectations. Export functions generate documentation for installation teams, project stakeholders, and system documentation. Using RTLS Planner in the pre-sales and project planning phases ensures deployments meet customer requirements, avoids costly redesigns during installation, and sets realistic performance expectations.</p>
+  <p class="def-short">Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation. Enables instant Dilution of Precision (DOP) simulation, supports 2D and 3D planning with CAD file import (DXF, PDF), calculates coverage and expected precision, and helps minimize project costs by preventing unplanned anchor deployment updates. Available exclusively to Sewio partners. Includes collaboration features for sharing designs with Sewio consultants.</p>
+  <p class="def-long">RTLS Planner is Sewio Networks' planning and design tool for RTLS deployments, enabling system integrators and facility planners to design optimal <a href="../terms/anchor.html" class="term-link">anchor</a> layouts, predict system performance, and plan implementations before physical installation. This pre-<a href="../terms/deployment.html" class="term-link">deployment</a> tool addresses a critical challenge in RTLS projects: determining optimal infrastructure placement to achieve required coverage, <a href="../terms/accuracy.html" class="term-link">accuracy</a>, and reliability while minimizing costs. The software workflow begins with importing facility floor plans (CAD files, PDFs, or images) and defining the tracking area dimensions. Users then specify system requirements including desired <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a>, coverage areas, expected <a href="../terms/tag.html" class="term-link">tag</a> density, and any special constraints (height restrictions, mounting limitations, power availability). The planning engine analyzes the <a href="../terms/facility-layout.html" class="term-link">facility layout</a> considering obstacles, RF propagation characteristics, and anchor visibility requirements to recommend optimal <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a>.</p><p class="def-long">Key capabilities include: RF propagation modeling accounting for building materials, obstacles, and reflective surfaces, coverage analysis visualizing which areas have adequate <a href="../terms/anchor.html" class="term-link">anchor</a> visibility for reliable positioning, <a href="../terms/accuracy.html" class="term-link">accuracy</a> prediction estimating expected positioning performance based on anchor geometry and environmental factors, and infrastructure optimization suggesting minimum anchor count while meeting requirements. <a href="../terms/site-survey.html" class="term-link">Site survey</a> integration allows importing actual RF measurements to refine propagation models and validate planned performance. RTLS Planner reduces <a href="../terms/deployment.html" class="term-link">deployment</a> risks by identifying issues before installation: insufficient coverage areas, accuracy limitations from poor anchor geometry, <a href="../terms/capacity.html" class="term-link">capacity</a> constraints, or unrealistic performance expectations. Export functions generate documentation for installation teams, project stakeholders, and system documentation. Using RTLS Planner in the pre-sales and project planning phases ensures deployments meet customer requirements, avoids costly redesigns during installation, and sets realistic performance expectations.</p>
   <nav class="term-nav"><a href="rtls-monitor.html" class="nav-prev">← RTLS Monitor</a><a href="rtls-platform.html" class="nav-next">RTLS Platform →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

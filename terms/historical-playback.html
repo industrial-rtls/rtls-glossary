@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Historical Playback – Industrial RTLS Glossary</title>
-<meta name="description" content="RTLS capability enabling visualization of past asset movements through time-synchronized replay of historical position data. Historical playback reconstruc">
+<meta name="description" content="A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. Enables users to &amp;amp;quot;rewind time&amp;amp;qu">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Historical Playback",
-  "description": "A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. Enables users to \"rewind time\" and observe what actually happened. Used for incident investigation, process validation, training, optimization analysis, and compliance demonstration. Featu",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/historical-playback.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "historical-playback",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Historical Playback","description":"A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. Enables users to &amp;amp;quot;rewind time&amp;amp;qu","url":"https://figlarkarel.github.io/rtls-glossary/terms/historical-playback.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Historical Playback","item":"https://figlarkarel.github.io/rtls-glossary/terms/historical-playback.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"Historical Playback","item":"https://figlarkarel.github.io/rtls-glossary/terms/historical-playback.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. Enables users to &amp;amp;quot;rewind time&amp;amp;quot; and observe what actually happened. Used for incident investigation, process validation, training, optimization analysis, and compliance demonstration. Features include time controls, speed adjustment, filtering, and synchronization with other data sources.">A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. Enables users to &amp;amp;quot;rewind time&amp;amp;quot; and observe what actually happened. Used for incident investigation, process validation, training, optimization analysis, and compliance demonstration. Features include time controls, speed adjustment, filtering, and synchronization with other data sources.</a> › Historical Playback
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>Historical Playback
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. Enables users to &amp;amp;quot;rewind time&amp;amp;quot; and observe what actually happened. Used for incident investigation, process validation, training, optimization analysis, and compliance demonstration. Features include time controls, speed adjustment, filtering, and synchronization with other data sources.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">Historical Playback</h1>
   </header>
-  <p class="def-short">RTLS capability enabling visualization of past asset movements through time-synchronized replay of historical position data. Historical playback reconstructs facility operations at any past moment, providing powerful tool for investigation and analysis. Playback features include: (1) Time controls - play, pause, rewind, fast-forward, jump to specific timestamp. (2) Speed control - playback at 1x <a href="../terms/real-time.html" class="term-link">real-time</a>, or accelerated (2x, 5x, 10x) to quickly observe long-duration processes. (3) Time <a href="../terms/range.html" class="term-link">range</a> selection - viewing specific incidents (last 5 minutes before accident) or extended processes (complete shift operations compressed into 10 minutes). (4) Asset filtering - displaying all assets or subset (only forklifts, only materials for specific order, only personnel in specific area). (5) Multi-view - comparing same time period across different dates to identify variations. (6) Annotation - adding notes to specific timestamps documenting observations. Historical playback applications: incident investigation (reconstructing accident sequences to understand root causes), process analysis (observing complete workflows to identify inefficiencies), training (demonstrating proper vs. improper procedures using real examples), compliance verification (confirming procedures were followed correctly), and continuous improvement (studying high-performing shifts to understand success factors).</p>
-  <p class="def-long">Technical requirements include: complete historical data retention (some systems retain only aggregated data, losing playback capability), sufficient data granularity (1-5 second position updates enable smooth playback, 30-60 second updates appear choppy), and adequate storage (1000 tags at 1 Hz requires 3-5 GB daily, retention for 90 days needs 300-500 GB).</p>
+  <p class="def-short">A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps. Enables users to &amp;quot;rewind time&amp;quot; and observe what actually happened. Used for incident investigation, process validation, training, optimization analysis, and compliance demonstration. Features include time controls, speed adjustment, filtering, and synchronization with other data sources.</p>
+  <p class="def-long">RTLS capability enabling visualization of past asset movements through time-synchronized replay of historical position data. Historical playback reconstructs facility operations at any past moment, providing powerful tool for investigation and analysis. Playback features include: (1) Time controls - play, pause, rewind, fast-forward, jump to specific timestamp. (2) Speed control - playback at 1x <a href="../terms/real-time.html" class="term-link">real-time</a>, or accelerated (2x, 5x, 10x) to quickly observe long-duration processes. (3) Time <a href="../terms/range.html" class="term-link">range</a> selection - viewing specific incidents (last 5 minutes before accident) or extended processes (complete shift operations compressed into 10 minutes). (4) Asset filtering - displaying all assets or subset (only forklifts, only materials for specific order, only personnel in specific area). (5) Multi-view - comparing same time period across different dates to identify variations. (6) Annotation - adding notes to specific timestamps documenting observations. Historical playback applications: incident investigation (reconstructing accident sequences to understand root causes), process analysis (observing complete workflows to identify inefficiencies), training (demonstrating proper vs. improper procedures using real examples), compliance verification (confirming procedures were followed correctly), and continuous improvement (studying high-performing shifts to understand success factors).</p><p class="def-long">Technical requirements include: complete historical data retention (some systems retain only aggregated data, losing playback capability), sufficient data granularity (1-5 second position updates enable smooth playback, 30-60 second updates appear choppy), and adequate storage (1000 tags at 1 Hz requires 3-5 GB daily, retention for 90 days needs 300-500 GB).</p>
   <nav class="term-nav"><a href="historical-data-analysis.html" class="nav-prev">← Historical Data Analysis</a><a href="hybrid-architecture.html" class="nav-next">Hybrid Architecture →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

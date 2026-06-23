@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Zone Entry – Industrial RTLS Glossary</title>
-<meta name="description" content="Zone entry in industrial RTLS is a specific type of zone detection event that triggers when a tracked asset or person transitions from outside to inside a ">
+<meta name="description" content="An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiates automated actions based on configured rule">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Zone Entry",
-  "description": "An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiates automated actions based on configured rules. Common use cases include access control, process verification, and safety monitoring.",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/zone-entry.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "zone-entry",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Zone Entry","description":"An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiates automated actions based on configured rule","url":"https://figlarkarel.github.io/rtls-glossary/terms/zone-entry.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Geofencing & Zones","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Zone Entry","item":"https://figlarkarel.github.io/rtls-glossary/terms/zone-entry.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Geofencing &amp;amp; Zones"},{"@type":"ListItem","position":3,"name":"Zone Entry","item":"https://figlarkarel.github.io/rtls-glossary/terms/zone-entry.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiates automated actions based on configured rules. Common use cases include access control, process verification, and safety monitoring.">An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiates automated actions based on configured rules. Common use cases include access control, process verification, and safety monitoring.</a> › Zone Entry
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Geofencing &amp;amp; Zones<span>›</span>Zone Entry
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiates automated actions based on configured rules. Common use cases include access control, process verification, and safety monitoring.</div>
+    <div class="term-cat-tag">Geofencing &amp;amp; Zones</div>
     <h1 class="term-title">Zone Entry</h1>
   </header>
-  <p class="def-short">Zone entry in industrial RTLS is a specific type of <a href="../terms/zone-detection.html" class="term-link">zone detection</a> event that triggers when a tracked asset or person transitions from outside to inside a defined geographical zone boundary.</p>
-  <p class="def-long">Technical considerations for reliable zone entry detection include: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> determining minimum reliable zone size (UWB's 30cm accuracy enables zones under 2 meters, BLE's 3-5m accuracy requires zones 10+ meters), <a href="../terms/update-rate.html" class="term-link">update rate</a> affecting entry detection <a href="../terms/latency.html" class="term-link">latency</a> (1 Hz updates detect entries within 1 second, 10 Hz within 0.1 seconds), boundary buffers preventing false entries from positioning uncertainty (boundary placed 1-2× positioning accuracy inside actual physical boundary), and entry confirmation logic requiring sustained presence vs. momentary detection preventing false triggers from positioning jitter. Zone entry analytics provide operational insights: entry frequency measuring how often zones accessed (high-traffic vs. low-traffic areas), entry patterns revealing when zones typically accessed (hourly, shift, or daily rhythms), entry authorization compliance tracking percentage of entries by authorized vs. unauthorized personnel, entry-exit matching verifying all entries have corresponding exits (detecting incomplete workflows or security issues), and entry timing distributions showing typical arrival times supporting <a href="../terms/capacity.html" class="term-link">capacity</a> planning. Best practices for zone entry <a href="../terms/configuration.html" class="term-link">configuration</a> include: zone sizing appropriate for positioning technology (3-5× positioning accuracy minimum), entry confirmation thresholds requiring 2-3 consecutive position updates inside boundary before confirming entry, boundary placement accounting for positioning uncertainty (margins around actual boundaries), temporal filtering requiring minimum <a href="../terms/dwell-time.html" class="term-link">dwell time</a> (5-30 seconds) before confirming intentional entry vs. brief incursion, and alert prioritization distinguishing critical entries (safety violations) from informational entries (workflow tracking).</p>
+  <p class="def-short">An event generated when a tracked tag enters a defined geofence zone. Triggers alerts, logs events, or initiates automated actions based on configured rules. Common use cases include access control, process verification, and safety monitoring.</p>
+  <p class="def-long">Zone entry in industrial RTLS is a specific type of <a href="../terms/zone-detection.html" class="term-link">zone detection</a> event that triggers when a tracked asset or person transitions from outside to inside a defined geographical zone boundary.</p><p class="def-long">Technical considerations for reliable zone entry detection include: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> determining minimum reliable zone size (UWB's 30cm accuracy enables zones under 2 meters, BLE's 3-5m accuracy requires zones 10+ meters), <a href="../terms/update-rate.html" class="term-link">update rate</a> affecting entry detection <a href="../terms/latency.html" class="term-link">latency</a> (1 Hz updates detect entries within 1 second, 10 Hz within 0.1 seconds), boundary buffers preventing false entries from positioning uncertainty (boundary placed 1-2× positioning accuracy inside actual physical boundary), and entry confirmation logic requiring sustained presence vs. momentary detection preventing false triggers from positioning jitter. Zone entry analytics provide operational insights: entry frequency measuring how often zones accessed (high-traffic vs. low-traffic areas), entry patterns revealing when zones typically accessed (hourly, shift, or daily rhythms), entry authorization compliance tracking percentage of entries by authorized vs. unauthorized personnel, entry-exit matching verifying all entries have corresponding exits (detecting incomplete workflows or security issues), and entry timing distributions showing typical arrival times supporting <a href="../terms/capacity.html" class="term-link">capacity</a> planning. Best practices for zone entry <a href="../terms/configuration.html" class="term-link">configuration</a> include: zone sizing appropriate for positioning technology (3-5× positioning accuracy minimum), entry confirmation thresholds requiring 2-3 consecutive position updates inside boundary before confirming entry, boundary placement accounting for positioning uncertainty (margins around actual boundaries), temporal filtering requiring minimum <a href="../terms/dwell-time.html" class="term-link">dwell time</a> (5-30 seconds) before confirming intentional entry vs. brief incursion, and alert prioritization distinguishing critical entries (safety violations) from informational entries (workflow tracking).</p>
   <nav class="term-nav"><a href="zone-detection.html" class="nav-prev">← Zone Detection</a><a href="zone-exit.html" class="nav-next">Zone Exit →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

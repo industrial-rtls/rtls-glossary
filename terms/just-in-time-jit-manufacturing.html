@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Just-in-Time (JIT) Manufacturing – Industrial RTLS Glossary</title>
-<meta name="description" content="Production strategy minimizing inventory by receiving materials only as needed for immediate use, enabled and enhanced by RTLS visibility. JIT principles i">
+<meta name="description" content="A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibilit">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#B45309;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #B45309;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Just-in-Time (JIT) Manufacturing",
-  "description": "A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibility of material locations and movements. Ensures materials are available precisely when required while avoiding excess inventory. Supports lean man",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/just-in-time-jit-manufacturing.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "just-in-time-jit-manufacturing",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Just-in-Time (JIT) Manufacturing","description":"A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibilit","url":"https://figlarkarel.github.io/rtls-glossary/terms/just-in-time-jit-manufacturing.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Industrial Applications","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Just-in-Time (JIT) Manufacturing","item":"https://figlarkarel.github.io/rtls-glossary/terms/just-in-time-jit-manufacturing.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Industrial Applications"},{"@type":"ListItem","position":3,"name":"Just-in-Time (JIT) Manufacturing","item":"https://figlarkarel.github.io/rtls-glossary/terms/just-in-time-jit-manufacturing.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibility of material locations and movements. Ensures materials are available precisely when required while avoiding excess inventory. Supports lean manufacturing principles by reducing waste and improving flow.">A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibility of material locations and movements. Ensures materials are available precisely when required while avoiding excess inventory. Supports lean manufacturing principles by reducing waste and improving flow.</a> › Just-in-Time (JIT) Manufacturing
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Industrial Applications<span>›</span>Just-in-Time (JIT) Manufacturing
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibility of material locations and movements. Ensures materials are available precisely when required while avoiding excess inventory. Supports lean manufacturing principles by reducing waste and improving flow.</div>
+    <div class="term-cat-tag">Industrial Applications</div>
     <h1 class="term-title">Just-in-Time (JIT) Manufacturing</h1>
   </header>
-  <p class="def-short">Production strategy minimizing inventory by receiving materials only as needed for immediate use, enabled and enhanced by RTLS visibility. JIT principles include: minimal work-in-progress inventory (only current job quantities), frequent small deliveries (vs. large batches), demand-pull production (manufacturing triggered by actual orders), and tight supplier coordination (reliable delivery timing). RTLS enables JIT manufacturing through: (1) Material tracking - knowing exact location and status of every component and assembly, enabling precise scheduling. (2) Arrival notification - automatically detecting material arrivals and alerting production of availability. (3) Process timing - measuring actual cycle times enabling accurate production scheduling. (4) Kanban automation - physical material movement triggering automatic reorder signals. (5) Exception management - immediately identifying material shortages or delays affecting production. Integration with MES and ERP systems enables: automated work order release (when materials confirmed present), supplier notification (triggering next delivery based on consumption), and schedule adjustments (revising production plans based on actual material availability). JIT benefits amplified by RTLS: inventory reduction (20-40% additional reduction beyond traditional JIT through better visibility), production flexibility (faster response to schedule changes), quality improvement (reducing work-in-progress aging), and floor space savings (less staging area required). JIT challenges addressed by RTLS: vulnerability to disruptions (RTLS providing early warning of material shortages), complex coordination (automated systems replacing manual communication), and schedule adherence (actual vs. planned performance visibility). Automotive and electronics manufacturing most aggressive JIT adopters, with RTLS increasingly standard in JIT implementations.</p>
-  
+  <p class="def-short">A production methodology where materials arrive exactly when needed for production, minimizing inventory. RTLS enables JIT by providing real-time visibility of material locations and movements. Ensures materials are available precisely when required while avoiding excess inventory. Supports lean manufacturing principles by reducing waste and improving flow.</p>
+  <p class="def-long">Production strategy minimizing inventory by receiving materials only as needed for immediate use, enabled and enhanced by RTLS visibility. JIT principles include: minimal work-in-progress inventory (only current job quantities), frequent small deliveries (vs. large batches), demand-pull production (manufacturing triggered by actual orders), and tight supplier coordination (reliable delivery timing). RTLS enables JIT manufacturing through: (1) Material tracking - knowing exact location and status of every component and assembly, enabling precise scheduling. (2) Arrival notification - automatically detecting material arrivals and alerting production of availability. (3) Process timing - measuring actual cycle times enabling accurate production scheduling. (4) Kanban automation - physical material movement triggering automatic reorder signals. (5) Exception management - immediately identifying material shortages or delays affecting production. Integration with MES and ERP systems enables: automated work order release (when materials confirmed present), supplier notification (triggering next delivery based on consumption), and schedule adjustments (revising production plans based on actual material availability). JIT benefits amplified by RTLS: inventory reduction (20-40% additional reduction beyond traditional JIT through better visibility), production flexibility (faster response to schedule changes), quality improvement (reducing work-in-progress aging), and floor space savings (less staging area required). JIT challenges addressed by RTLS: vulnerability to disruptions (RTLS providing early warning of material shortages), complex coordination (automated systems replacing manual communication), and schedule adherence (actual vs. planned performance visibility). Automotive and electronics manufacturing most aggressive JIT adopters, with RTLS increasingly standard in JIT implementations.</p>
   <nav class="term-nav"><a href="iso-iec-24730.html" class="nav-prev">← ISO/IEC 24730</a><a href="latency.html" class="nav-next">Latency →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

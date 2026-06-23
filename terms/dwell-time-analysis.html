@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Dwell Time Analysis – Industrial RTLS Glossary</title>
-<meta name="description" content="Analytical process examining patterns, distributions, and anomalies in dwell time data across locations, assets, and time periods. Industrial dwell time an">
+<meta name="description" content="Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. Applies statistical methods including distribu">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Dwell Time Analysis",
-  "description": "Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. Applies statistical methods including distribution analysis, trend analysis, comparative analysis, and correlation analysis. Reveals improvement opportunities like unnecessary wait times, pro",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/dwell-time-analysis.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "dwell-time-analysis",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Dwell Time Analysis","description":"Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. Applies statistical methods including distribu","url":"https://figlarkarel.github.io/rtls-glossary/terms/dwell-time-analysis.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Performance Metrics & KPIs","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Dwell Time Analysis","item":"https://figlarkarel.github.io/rtls-glossary/terms/dwell-time-analysis.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Performance Metrics &amp;amp; KPIs"},{"@type":"ListItem","position":3,"name":"Dwell Time Analysis","item":"https://figlarkarel.github.io/rtls-glossary/terms/dwell-time-analysis.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. Applies statistical methods including distribution analysis, trend analysis, comparative analysis, and correlation analysis. Reveals improvement opportunities like unnecessary wait times, process inconsistencies, and scheduling issues. Combines quantitative methods with qualitative investigation for understanding root causes.">Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. Applies statistical methods including distribution analysis, trend analysis, comparative analysis, and correlation analysis. Reveals improvement opportunities like unnecessary wait times, process inconsistencies, and scheduling issues. Combines quantitative methods with qualitative investigation for understanding root causes.</a> › Dwell Time Analysis
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Performance Metrics &amp;amp; KPIs<span>›</span>Dwell Time Analysis
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. Applies statistical methods including distribution analysis, trend analysis, comparative analysis, and correlation analysis. Reveals improvement opportunities like unnecessary wait times, process inconsistencies, and scheduling issues. Combines quantitative methods with qualitative investigation for understanding root causes.</div>
+    <div class="term-cat-tag">Performance Metrics &amp;amp; KPIs</div>
     <h1 class="term-title">Dwell Time Analysis</h1>
   </header>
-  <p class="def-short">Analytical process examining patterns, distributions, and anomalies in <a href="../terms/dwell-time.html" class="term-link">dwell time</a> data across locations, assets, and time periods. Industrial dwell time analysis encompasses: (1) Statistical analysis - computing mean, median, standard deviation, and percentile distributions for each zone, identifying zones with high variability or consistently long dwell times. (2) Comparative analysis - comparing dwell times across shifts, days of week, or product types, revealing operational inconsistencies. (3) Trend analysis - tracking dwell time evolution over weeks or months, identifying gradual degradation or improvements. (4) Correlation analysis - relating dwell times to other metrics (<a href="../terms/throughput.html" class="term-link">throughput</a>, quality, staffing levels), discovering root causes of delays. (5) Outlier detection - identifying exceptional events (dwell times &amp;gt;2-3 standard deviations from mean) for investigation.</p>
-  <p class="def-long">Typical analysis findings include: 20-30% of process time spent in queue/waiting rather than active processing, 3-5 specific zones accounting for 60-80% of total <a href="../terms/cycle-time.html" class="term-link">cycle time</a>, 2x-3x <a href="../terms/dwell-time.html" class="term-link">dwell time</a> variation between best and worst performing shifts. Analysis outputs guide improvement initiatives: rebalancing <a href="../terms/capacity.html" class="term-link">capacity</a> (addressing bottleneck zones), standardizing procedures (reducing variability), and eliminating non-value-added dwell time. Ongoing dwell time monitoring enables continuous improvement - facilities typically achieve 15-30% cycle time reduction through systematic dwell time optimization.</p>
+  <p class="def-short">Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities. Applies statistical methods including distribution analysis, trend analysis, comparative analysis, and correlation analysis. Reveals improvement opportunities like unnecessary wait times, process inconsistencies, and scheduling issues. Combines quantitative methods with qualitative investigation for understanding root causes.</p>
+  <p class="def-long">Analytical process examining patterns, distributions, and anomalies in <a href="../terms/dwell-time.html" class="term-link">dwell time</a> data across locations, assets, and time periods. Industrial dwell time analysis encompasses: (1) Statistical analysis - computing mean, median, standard deviation, and percentile distributions for each zone, identifying zones with high variability or consistently long dwell times. (2) Comparative analysis - comparing dwell times across shifts, days of week, or product types, revealing operational inconsistencies. (3) Trend analysis - tracking dwell time evolution over weeks or months, identifying gradual degradation or improvements. (4) Correlation analysis - relating dwell times to other metrics (<a href="../terms/throughput.html" class="term-link">throughput</a>, quality, staffing levels), discovering root causes of delays. (5) Outlier detection - identifying exceptional events (dwell times &amp;gt;2-3 standard deviations from mean) for investigation.</p><p class="def-long">Typical analysis findings include: 20-30% of process time spent in queue/waiting rather than active processing, 3-5 specific zones accounting for 60-80% of total <a href="../terms/cycle-time.html" class="term-link">cycle time</a>, 2x-3x <a href="../terms/dwell-time.html" class="term-link">dwell time</a> variation between best and worst performing shifts. Analysis outputs guide improvement initiatives: rebalancing <a href="../terms/capacity.html" class="term-link">capacity</a> (addressing bottleneck zones), standardizing procedures (reducing variability), and eliminating non-value-added dwell time. Ongoing dwell time monitoring enables continuous improvement - facilities typically achieve 15-30% cycle time reduction through systematic dwell time optimization.</p>
   <nav class="term-nav"><a href="dwell-time.html" class="nav-prev">← Dwell Time</a><a href="dynamic-geofencing.html" class="nav-next">Dynamic Geofencing →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

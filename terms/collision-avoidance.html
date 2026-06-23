@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Collision Avoidance – Industrial RTLS Glossary</title>
-<meta name="description" content="Safety system feature that detects potential collisions between moving objects and triggers preventive actions. In industrial RTLS, collision avoidance sys">
+<meta name="description" content="A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors p">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Collision Avoidance",
-  "description": "A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors positions and velocities, predicts collision scenarios, and triggers alerts or interventions. Includes visual/audible warnings, automatic speed re",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/collision-avoidance.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "collision-avoidance",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Collision Avoidance","description":"A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors p","url":"https://figlarkarel.github.io/rtls-glossary/terms/collision-avoidance.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Safety & Security","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Collision Avoidance","item":"https://figlarkarel.github.io/rtls-glossary/terms/collision-avoidance.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Safety &amp;amp; Security"},{"@type":"ListItem","position":3,"name":"Collision Avoidance","item":"https://figlarkarel.github.io/rtls-glossary/terms/collision-avoidance.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors positions and velocities, predicts collision scenarios, and triggers alerts or interventions. Includes visual/audible warnings, automatic speed reduction, emergency braking, and access control. Advanced systems incorporate 3D tracking and virtual safety bubbles around pedestrians.">A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors positions and velocities, predicts collision scenarios, and triggers alerts or interventions. Includes visual/audible warnings, automatic speed reduction, emergency braking, and access control. Advanced systems incorporate 3D tracking and virtual safety bubbles around pedestrians.</a> › Collision Avoidance
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Safety &amp;amp; Security<span>›</span>Collision Avoidance
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors positions and velocities, predicts collision scenarios, and triggers alerts or interventions. Includes visual/audible warnings, automatic speed reduction, emergency braking, and access control. Advanced systems incorporate 3D tracking and virtual safety bubbles around pedestrians.</div>
+    <div class="term-cat-tag">Safety &amp;amp; Security</div>
     <h1 class="term-title">Collision Avoidance</h1>
   </header>
-  <p class="def-short">Safety system feature that detects potential collisions between moving objects and triggers preventive actions. In industrial RTLS, collision avoidance systems monitor positions of vehicles (forklifts, AGVs), pedestrians, and stationary obstacles, predicting intersection of movement paths and issuing warnings or automatic interventions. System typically defines multiple warning zones: advance warning zone (3-5 meters, alerting operator), critical warning zone (1-2 meters, reducing vehicle speed automatically), and emergency zone (under 1 meter, immediate stop). Effective collision avoidance requires: high update rates (5-10 Hz minimum to track fast-moving vehicles), low <a href="../terms/latency.html" class="term-link">latency</a> (under 200ms from position detection to action), high <a href="../terms/accuracy.html" class="term-link">accuracy</a> (30-50 cm to avoid false alarms), and reliable communication paths for vehicle control commands.</p>
-  <p class="def-long">Implementation approaches include: visual/audible warnings to operators, automatic forklift speed reduction in congestion zones, AGV path replanning, and in extreme cases emergency braking. Collision avoidance systems in industrial environments have reduced forklift accidents by 60-80% in facilities with proper implementation and operator training. Technology selection for collision avoidance: UWB preferred for highest-risk zones requiring 10-30 cm accuracy and 10 Hz update rates (production floors, narrow aisles), BLE AoA viable for lower-speed environments requiring 0.5-2 m accuracy (warehouses, yard areas). Personnel wearing BLE badges provide proximity detection even in areas without full UWB infrastructure, enabling cost-effective protection across entire facility footprint.</p>
+  <p class="def-short">A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions. Continuously monitors positions and velocities, predicts collision scenarios, and triggers alerts or interventions. Includes visual/audible warnings, automatic speed reduction, emergency braking, and access control. Advanced systems incorporate 3D tracking and virtual safety bubbles around pedestrians.</p>
+  <p class="def-long">Safety system feature that detects potential collisions between moving objects and triggers preventive actions. In industrial RTLS, collision avoidance systems monitor positions of vehicles (forklifts, AGVs), pedestrians, and stationary obstacles, predicting intersection of movement paths and issuing warnings or automatic interventions. System typically defines multiple warning zones: advance warning zone (3-5 meters, alerting operator), critical warning zone (1-2 meters, reducing vehicle speed automatically), and emergency zone (under 1 meter, immediate stop). Effective collision avoidance requires: high update rates (5-10 Hz minimum to track fast-moving vehicles), low <a href="../terms/latency.html" class="term-link">latency</a> (under 200ms from position detection to action), high <a href="../terms/accuracy.html" class="term-link">accuracy</a> (30-50 cm to avoid false alarms), and reliable communication paths for vehicle control commands.</p><p class="def-long">Implementation approaches include: visual/audible warnings to operators, automatic forklift speed reduction in congestion zones, AGV path replanning, and in extreme cases emergency braking. Collision avoidance systems in industrial environments have reduced forklift accidents by 60-80% in facilities with proper implementation and operator training. Technology selection for collision avoidance: UWB preferred for highest-risk zones requiring 10-30 cm accuracy and 10 Hz update rates (production floors, narrow aisles), BLE AoA viable for lower-speed environments requiring 0.5-2 m accuracy (warehouses, yard areas). Personnel wearing BLE badges provide proximity detection even in areas without full UWB infrastructure, enabling cost-effective protection across entire facility footprint.</p>
   <nav class="term-nav"><a href="cloud-based-rtls.html" class="nav-prev">← Cloud-Based RTLS</a><a href="commissioning.html" class="nav-next">Commissioning →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

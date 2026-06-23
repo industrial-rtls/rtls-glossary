@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Passive RFID – Industrial RTLS Glossary</title>
-<meta name="description" content="Radio-frequency identification technology where tags have no battery, powered by electromagnetic energy from reader, responding with stored identification ">
+<meta name="description" content="Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID ">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#1D4ED8;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#1D4ED8}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #1D4ED8;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Passive RFID",
-  "description": "Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID but with limited range (typically centimeters to a few meters). Used for inventory management, access control, and zone detection at doorways or ",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/passive-rfid.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "passive-rfid",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Passive RFID","description":"Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID ","url":"https://figlarkarel.github.io/rtls-glossary/terms/passive-rfid.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Localization Technologies","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Passive RFID","item":"https://figlarkarel.github.io/rtls-glossary/terms/passive-rfid.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Localization Technologies"},{"@type":"ListItem","position":3,"name":"Passive RFID","item":"https://figlarkarel.github.io/rtls-glossary/terms/passive-rfid.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID but with limited range (typically centimeters to a few meters). Used for inventory management, access control, and zone detection at doorways or choke points. Not suitable for real-time tracking but excellent for item-level identification.">Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID but with limited range (typically centimeters to a few meters). Used for inventory management, access control, and zone detection at doorways or choke points. Not suitable for real-time tracking but excellent for item-level identification.</a> › Passive RFID
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Localization Technologies<span>›</span>Passive RFID
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID but with limited range (typically centimeters to a few meters). Used for inventory management, access control, and zone detection at doorways or choke points. Not suitable for real-time tracking but excellent for item-level identification.</div>
+    <div class="term-cat-tag">Localization Technologies</div>
     <h1 class="term-title">Passive RFID</h1>
   </header>
-  <p class="def-short">Radio-frequency identification technology where tags have no battery, powered by electromagnetic energy from <a href="../terms/reader.html" class="term-link">reader</a>, responding with stored identification data. Passive RFID operates at multiple frequencies: LF (125-134 KHz, 10-30 cm read <a href="../terms/range.html" class="term-link">range</a>), HF (13.56 MHz, 10-100 cm range, ISO 15693 standard), UHF (860-960 MHz, 1-12 meter range, EPC Gen2 standard). Passive RFID advantages: (1) Low <a href="../terms/tag.html" class="term-link">tag</a> cost - $0.05-$3 per tag, much cheaper than active RTLS tags ($25-150). (2) No battery maintenance - tags last indefinitely. (3) Small form factor - tags can be tiny labels, non-intrusive. (4) Mature technology - extensive vendor ecosystem, standardization, proven reliability. Passive RFID limitations for RTLS: (1) No continuous tracking - tags detected only when near reader versus active RTLS providing constant position updates. (2) No precise positioning - zone-level only, not coordinates. (3) Limited range - UHF maximum 12 meters (often 3-6 meters practical), requiring many readers for facility coverage. (4) Read reliability challenges - metal and liquids interfere with RF propagation, affecting detection rates (may miss 10-30% of tags in challenging environments). (5) Collision issues - many tags in reader field simultaneously can cause read failures though Gen2 protocols handle 100+ tags. (6) Orientation sensitivity - tag-reader orientation affects read success.</p>
-  <p class="def-long">Passive RFID infrastructure costs: fixed readers $500-3000 per location, handheld readers $1000-4000, antennas $100-500. UHF readers typically support 4 antennas covering multiple read zones. Total system cost dominated by <a href="../terms/reader.html" class="term-link">reader</a>/antenna infrastructure versus inexpensive tags.</p><p class="def-long">Passive RFID standards: EPC Gen2 (UHF), ISO 15693 (HF), ISO 14223 (LF), ensuring multi-vendor interoperability.</p>
+  <p class="def-short">Radio frequency identification technology where tags have no power source and only respond when energized by reader signals. Much cheaper than active RFID but with limited range (typically centimeters to a few meters). Used for inventory management, access control, and zone detection at doorways or choke points. Not suitable for real-time tracking but excellent for item-level identification.</p>
+  <p class="def-long">Radio-frequency identification technology where tags have no battery, powered by electromagnetic energy from <a href="../terms/reader.html" class="term-link">reader</a>, responding with stored identification data. Passive RFID operates at multiple frequencies: LF (125-134 KHz, 10-30 cm read <a href="../terms/range.html" class="term-link">range</a>), HF (13.56 MHz, 10-100 cm range, ISO 15693 standard), UHF (860-960 MHz, 1-12 meter range, EPC Gen2 standard). Passive RFID advantages: (1) Low <a href="../terms/tag.html" class="term-link">tag</a> cost - $0.05-$3 per tag, much cheaper than active RTLS tags ($25-150). (2) No battery maintenance - tags last indefinitely. (3) Small form factor - tags can be tiny labels, non-intrusive. (4) Mature technology - extensive vendor ecosystem, standardization, proven reliability. Passive RFID limitations for RTLS: (1) No continuous tracking - tags detected only when near reader versus active RTLS providing constant position updates. (2) No precise positioning - zone-level only, not coordinates. (3) Limited range - UHF maximum 12 meters (often 3-6 meters practical), requiring many readers for facility coverage. (4) Read reliability challenges - metal and liquids interfere with RF propagation, affecting detection rates (may miss 10-30% of tags in challenging environments). (5) Collision issues - many tags in reader field simultaneously can cause read failures though Gen2 protocols handle 100+ tags. (6) Orientation sensitivity - tag-reader orientation affects read success.</p><p class="def-long">Passive RFID infrastructure costs: fixed readers $500-3000 per location, handheld readers $1000-4000, antennas $100-500. UHF readers typically support 4 antennas covering multiple read zones. Total system cost dominated by <a href="../terms/reader.html" class="term-link">reader</a>/antenna infrastructure versus inexpensive tags.</p><p class="def-long">Passive RFID standards: EPC Gen2 (UHF), ISO 15693 (HF), ISO 14223 (LF), ensuring multi-vendor interoperability.</p>
   <nav class="term-nav"><a href="open-api.html" class="nav-prev">← Open API</a><a href="passive-tag.html" class="nav-next">Passive Tag →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Wireless Protocol – Industrial RTLS Glossary</title>
-<meta name="description" content="Wireless protocol in RTLS context refers to the standardized communication methods and rules governing how tags, anchors, and infrastructure exchange data ">
+<meta name="description" content="Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Wireless Protocol",
-  "description": "Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol choice affects range, power consumption, data rate, and positioning accuracy.",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/wireless-protocol.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "wireless-protocol",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Wireless Protocol","description":"Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol","url":"https://figlarkarel.github.io/rtls-glossary/terms/wireless-protocol.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Technical Parameters","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Wireless Protocol","item":"https://figlarkarel.github.io/rtls-glossary/terms/wireless-protocol.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Technical Parameters"},{"@type":"ListItem","position":3,"name":"Wireless Protocol","item":"https://figlarkarel.github.io/rtls-glossary/terms/wireless-protocol.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol choice affects range, power consumption, data rate, and positioning accuracy.">Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol choice affects range, power consumption, data rate, and positioning accuracy.</a> › Wireless Protocol
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Technical Parameters<span>›</span>Wireless Protocol
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol choice affects range, power consumption, data rate, and positioning accuracy.</div>
+    <div class="term-cat-tag">Technical Parameters</div>
     <h1 class="term-title">Wireless Protocol</h1>
   </header>
-  <p class="def-short">Wireless protocol in RTLS context refers to the standardized communication methods and rules governing how tags, anchors, and infrastructure exchange data using radio frequency transmissions. Different wireless protocols offer distinct characteristics affecting RTLS performance, cost, and suitability for industrial applications. Industrial RTLS employs various wireless protocols: UWB (Ultra-Wideband) protocols including IEEE 802.15.4a and 802.15.4z defining UWB physical and MAC layers for <a href="../terms/precision.html" class="term-link">precision</a> ranging and positioning, providing 10-30 cm <a href="../terms/accuracy.html" class="term-link">accuracy</a>, 50-200 meter <a href="../terms/range.html" class="term-link">range</a>, and nanosecond timing <a href="../terms/resolution.html" class="term-link">resolution</a>. Bluetooth Low Energy (BLE) based on Bluetooth Core Specification with positioning extensions including Bluetooth 5.1 Direction Finding (Angle of Arrival/Departure) providing 1-5 meter accuracy using phase-based angle measurement. Wi-Fi (IEEE 802.11 family) using RSSI <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> for positioning or newer Wi-Fi RTT (IEEE 802.11mc) for ranging-based positioning achieving 1-5 meter accuracy. <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> typically using proprietary protocols at frequencies from 433 MHz to 2.4 GHz providing checkpoint detection or zone-level positioning. <a href="../terms/zigbee.html" class="term-link">Zigbee</a> (<a href="../terms/ieee-802-15-4.html" class="term-link">IEEE 802.15.4</a>) used in sensor networks and occasionally for positioning with <a href="../terms/room-level-accuracy.html" class="term-link">room-level accuracy</a>. Wireless protocol selection impacts multiple system characteristics: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (UWB protocols achieve highest accuracy, Wi-Fi/BLE provide room-level), range (low frequencies like 433 MHz RFID achieve longest range, UWB intermediate, Wi-Fi/BLE shorter), power consumption (BLE optimized for ultra-low power, UWB moderate, Wi-Fi higher), data rate (Wi-Fi highest, UWB moderate, active RFID lowest), interference resistance (UWB's spread spectrum highly resistant, Wi-Fi/BLE susceptible to interference), cost (Wi-Fi and BLE leverage commodity chipsets reducing cost, UWB currently more expensive), and ecosystem maturity (Wi-Fi and Bluetooth have massive ecosystems, UWB growing rapidly).</p>
-  
+  <p class="def-short">Standardized rules governing communication between wireless devices. Common RTLS protocols include IEEE 802.15.4, Bluetooth Low Energy, and Wi-Fi. Protocol choice affects range, power consumption, data rate, and positioning accuracy.</p>
+  <p class="def-long">Wireless protocol in RTLS context refers to the standardized communication methods and rules governing how tags, anchors, and infrastructure exchange data using radio frequency transmissions. Different wireless protocols offer distinct characteristics affecting RTLS performance, cost, and suitability for industrial applications. Industrial RTLS employs various wireless protocols: UWB (Ultra-Wideband) protocols including IEEE 802.15.4a and 802.15.4z defining UWB physical and MAC layers for <a href="../terms/precision.html" class="term-link">precision</a> ranging and positioning, providing 10-30 cm <a href="../terms/accuracy.html" class="term-link">accuracy</a>, 50-200 meter <a href="../terms/range.html" class="term-link">range</a>, and nanosecond timing <a href="../terms/resolution.html" class="term-link">resolution</a>. Bluetooth Low Energy (BLE) based on Bluetooth Core Specification with positioning extensions including Bluetooth 5.1 Direction Finding (Angle of Arrival/Departure) providing 1-5 meter accuracy using phase-based angle measurement. Wi-Fi (IEEE 802.11 family) using RSSI <a href="../terms/fingerprinting.html" class="term-link">fingerprinting</a> for positioning or newer Wi-Fi RTT (IEEE 802.11mc) for ranging-based positioning achieving 1-5 meter accuracy. <a href="../terms/active-rfid.html" class="term-link">Active RFID</a> typically using proprietary protocols at frequencies from 433 MHz to 2.4 GHz providing checkpoint detection or zone-level positioning. <a href="../terms/zigbee.html" class="term-link">Zigbee</a> (<a href="../terms/ieee-802-15-4.html" class="term-link">IEEE 802.15.4</a>) used in sensor networks and occasionally for positioning with <a href="../terms/room-level-accuracy.html" class="term-link">room-level accuracy</a>. Wireless protocol selection impacts multiple system characteristics: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> (UWB protocols achieve highest accuracy, Wi-Fi/BLE provide room-level), range (low frequencies like 433 MHz RFID achieve longest range, UWB intermediate, Wi-Fi/BLE shorter), power consumption (BLE optimized for ultra-low power, UWB moderate, Wi-Fi higher), data rate (Wi-Fi highest, UWB moderate, active RFID lowest), interference resistance (UWB's spread spectrum highly resistant, Wi-Fi/BLE susceptible to interference), cost (Wi-Fi and BLE leverage commodity chipsets reducing cost, UWB currently more expensive), and ecosystem maturity (Wi-Fi and Bluetooth have massive ecosystems, UWB growing rapidly).</p>
   <nav class="term-nav"><a href="wi-fi-positioning.html" class="nav-prev">← Wi-Fi Positioning</a><a href="wms-integration.html" class="nav-next">WMS Integration →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

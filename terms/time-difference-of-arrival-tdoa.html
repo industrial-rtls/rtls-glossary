@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Time Difference of Arrival (TDoA) – Industrial RTLS Glossary</title>
-<meta name="description" content="Time Difference of Arrival (TDoA) is a positioning technique that determines location by measuring the difference in arrival time of a signal at multiple r">
+<meta name="description" content="A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location. Also called multilateration. Require">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Time Difference of Arrival (TDoA)",
-  "description": "A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location. Also called multilateration. Requires precise time synchronization between receivers. Commonly used in UWB systems providing high accuracy. Doesn't require tags to be synchronized.",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/time-difference-of-arrival-tdoa.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "time-difference-of-arrival-tdoa",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Time Difference of Arrival (TDoA)","description":"A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location. Also called multilateration. Require","url":"https://figlarkarel.github.io/rtls-glossary/terms/time-difference-of-arrival-tdoa.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Positioning Methods & Techniques","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Time Difference of Arrival (TDoA)","item":"https://figlarkarel.github.io/rtls-glossary/terms/time-difference-of-arrival-tdoa.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Positioning Methods &amp;amp; Techniques"},{"@type":"ListItem","position":3,"name":"Time Difference of Arrival (TDoA)","item":"https://figlarkarel.github.io/rtls-glossary/terms/time-difference-of-arrival-tdoa.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location. Also called multilateration. Requires precise time synchronization between receivers. Commonly used in UWB systems providing high accuracy. Doesn't require tags to be synchronized.">A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location. Also called multilateration. Requires precise time synchronization between receivers. Commonly used in UWB systems providing high accuracy. Doesn't require tags to be synchronized.</a> › Time Difference of Arrival (TDoA)
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp;amp; Techniques<span>›</span>Time Difference of Arrival (TDoA)
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location. Also called multilateration. Requires precise time synchronization between receivers. Commonly used in UWB systems providing high accuracy. Doesn't require tags to be synchronized.</div>
+    <div class="term-cat-tag">Positioning Methods &amp;amp; Techniques</div>
     <h1 class="term-title">Time Difference of Arrival (TDoA)</h1>
   </header>
-  <p class="def-short">Time Difference of Arrival (TDoA) is a positioning technique that determines location by measuring the difference in arrival time of a signal at multiple receivers (anchors). The underlying principle involves: a <a href="../terms/tag.html" class="term-link">tag</a> transmitting a signal at an unknown time, multiple anchors receiving the signal at slightly different times due to varying distances, anchors precisely timestamping reception with synchronized clocks, and the <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> calculating position from the time differences. However, this shifts the <a href="../terms/synchronization.html" class="term-link">synchronization</a> burden to the <a href="../terms/anchor.html" class="term-link">anchor</a> network - all anchors must share a common time reference with sub-nanosecond <a href="../terms/precision.html" class="term-link">precision</a> since time differences translate directly to position estimates (1 nanosecond time error equals approximately 30 cm distance error). In 2D positioning, three anchors provide two independent time differences. In 3D, four anchors are minimum. Industrial implementation considerations include: <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> for good GDOP (square or rectangular patterns provide better <a href="../terms/accuracy.html" class="term-link">accuracy</a> than linear arrangements), synchronization infrastructure (wired connections, GPS-disciplined oscillators, or wireless sync protocols), multipath mitigation (algorithms detecting and rejecting reflected signals), and sufficient <a href="../terms/anchor-density.html" class="term-link">anchor density</a> (typically one anchor per 100-200 square meters). Accuracy achievable with TDoA in industrial environments ranges from 10-50 cm depending on anchor geometry and density, multipath environment characteristics, synchronization quality, and signal bandwidth. Comparing TDoA to alternative methods: Two-Way Ranging doesn't require anchor synchronization but consumes more tag power and has lower <a href="../terms/capacity.html" class="term-link">capacity</a>, Time of Arrival requires tag-anchor synchronization challenging for mobile tags, and RSSI-based methods are simpler but far less accurate (3-10 meter accuracy versus 10-30 cm for TDoA).</p>
-  
+  <p class="def-short">A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location. Also called multilateration. Requires precise time synchronization between receivers. Commonly used in UWB systems providing high accuracy. Doesn't require tags to be synchronized.</p>
+  <p class="def-long">Time Difference of Arrival (TDoA) is a positioning technique that determines location by measuring the difference in arrival time of a signal at multiple receivers (anchors). The underlying principle involves: a <a href="../terms/tag.html" class="term-link">tag</a> transmitting a signal at an unknown time, multiple anchors receiving the signal at slightly different times due to varying distances, anchors precisely timestamping reception with synchronized clocks, and the <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> calculating position from the time differences. However, this shifts the <a href="../terms/synchronization.html" class="term-link">synchronization</a> burden to the <a href="../terms/anchor.html" class="term-link">anchor</a> network - all anchors must share a common time reference with sub-nanosecond <a href="../terms/precision.html" class="term-link">precision</a> since time differences translate directly to position estimates (1 nanosecond time error equals approximately 30 cm distance error). In 2D positioning, three anchors provide two independent time differences. In 3D, four anchors are minimum. Industrial implementation considerations include: <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> for good GDOP (square or rectangular patterns provide better <a href="../terms/accuracy.html" class="term-link">accuracy</a> than linear arrangements), synchronization infrastructure (wired connections, GPS-disciplined oscillators, or wireless sync protocols), multipath mitigation (algorithms detecting and rejecting reflected signals), and sufficient <a href="../terms/anchor-density.html" class="term-link">anchor density</a> (typically one anchor per 100-200 square meters). Accuracy achievable with TDoA in industrial environments ranges from 10-50 cm depending on anchor geometry and density, multipath environment characteristics, synchronization quality, and signal bandwidth. Comparing TDoA to alternative methods: Two-Way Ranging doesn't require anchor synchronization but consumes more tag power and has lower <a href="../terms/capacity.html" class="term-link">capacity</a>, Time of Arrival requires tag-anchor synchronization challenging for mobile tags, and RSSI-based methods are simpler but far less accurate (3-10 meter accuracy versus 10-30 cm for TDoA).</p>
   <nav class="term-nav"><a href="throughput.html" class="nav-prev">← Throughput</a><a href="time-of-arrival-toa.html" class="nav-next">Time of Arrival (ToA) →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

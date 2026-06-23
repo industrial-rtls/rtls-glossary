@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Evacuation Management – Industrial RTLS Glossary</title>
-<meta name="description" content="RTLS application ensuring safe and complete facility evacuation during emergencies by tracking personnel movement to designated assembly points. Evacuation">
+<meta name="description" content="The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountabili">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Evacuation Management",
-  "description": "The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountability, identification of missing individuals, and evacuation progress tracking. Features include pre-defined muster point zones, evacuation route gu",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/evacuation-management.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "evacuation-management",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Evacuation Management","description":"The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountabili","url":"https://figlarkarel.github.io/rtls-glossary/terms/evacuation-management.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Safety & Security","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Evacuation Management","item":"https://figlarkarel.github.io/rtls-glossary/terms/evacuation-management.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Safety &amp;amp; Security"},{"@type":"ListItem","position":3,"name":"Evacuation Management","item":"https://figlarkarel.github.io/rtls-glossary/terms/evacuation-management.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountability, identification of missing individuals, and evacuation progress tracking. Features include pre-defined muster point zones, evacuation route guidance, zone-by-zone clearance, and emergency contact notification. Provides incident commanders with comprehensive situational awareness.">The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountability, identification of missing individuals, and evacuation progress tracking. Features include pre-defined muster point zones, evacuation route guidance, zone-by-zone clearance, and emergency contact notification. Provides incident commanders with comprehensive situational awareness.</a> › Evacuation Management
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Safety &amp;amp; Security<span>›</span>Evacuation Management
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountability, identification of missing individuals, and evacuation progress tracking. Features include pre-defined muster point zones, evacuation route guidance, zone-by-zone clearance, and emergency contact notification. Provides incident commanders with comprehensive situational awareness.</div>
+    <div class="term-cat-tag">Safety &amp;amp; Security</div>
     <h1 class="term-title">Evacuation Management</h1>
   </header>
-  <p class="def-short">RTLS application ensuring safe and complete facility evacuation during emergencies by tracking personnel movement to designated assembly points. Evacuation management systems provide: (1) Pre-evacuation status - current location of all personnel at moment emergency declared, baseline for tracking evacuation progress. (2) <a href="../terms/real-time.html" class="term-link">Real-time</a> evacuation monitoring - watching personnel movement toward exits and <a href="../terms/mustering.html" class="term-link">mustering</a> points, identifying individuals moving wrong direction or not evacuating. (3) Mustering verification - automatically checking personnel arrival at assembly points against complete roster, generating missing persons list. (4) Search guidance - directing rescue personnel to last known locations of missing individuals. (5) Re-entry management - controlling facility re-entry after all-clear, ensuring only authorized personnel return. System displays: facility map showing all personnel positions color-coded by status (evacuating, mustered, unaccounted), mustering point status (percentage complete), and timer showing evacuation duration.</p>
-  <p class="def-long">Key performance metrics: time to 90% mustered (typically target 3-5 minutes for office areas, 5-10 minutes for large industrial facilities), percentage accounted (must reach 100% before rescue operations cease), and false positive rate (people system thinks missing but actually safe, should be under 2%). Evacuation management requires reliable RTLS infrastructure (battery backup, redundancy), dedicated emergency interfaces accessible from outside facility, and integration with emergency notification systems. Regular evacuation drills validate system performance and familiarize personnel with procedures.</p>
+  <p class="def-short">The use of RTLS to coordinate and verify safe personnel evacuation during emergencies. Provides real-time location of all personnel, automated accountability, identification of missing individuals, and evacuation progress tracking. Features include pre-defined muster point zones, evacuation route guidance, zone-by-zone clearance, and emergency contact notification. Provides incident commanders with comprehensive situational awareness.</p>
+  <p class="def-long">RTLS application ensuring safe and complete facility evacuation during emergencies by tracking personnel movement to designated assembly points. Evacuation management systems provide: (1) Pre-evacuation status - current location of all personnel at moment emergency declared, baseline for tracking evacuation progress. (2) <a href="../terms/real-time.html" class="term-link">Real-time</a> evacuation monitoring - watching personnel movement toward exits and <a href="../terms/mustering.html" class="term-link">mustering</a> points, identifying individuals moving wrong direction or not evacuating. (3) Mustering verification - automatically checking personnel arrival at assembly points against complete roster, generating missing persons list. (4) Search guidance - directing rescue personnel to last known locations of missing individuals. (5) Re-entry management - controlling facility re-entry after all-clear, ensuring only authorized personnel return. System displays: facility map showing all personnel positions color-coded by status (evacuating, mustered, unaccounted), mustering point status (percentage complete), and timer showing evacuation duration.</p><p class="def-long">Key performance metrics: time to 90% mustered (typically target 3-5 minutes for office areas, 5-10 minutes for large industrial facilities), percentage accounted (must reach 100% before rescue operations cease), and false positive rate (people system thinks missing but actually safe, should be under 2%). Evacuation management requires reliable RTLS infrastructure (battery backup, redundancy), dedicated emergency interfaces accessible from outside facility, and integration with emergency notification systems. Regular evacuation drills validate system performance and familiarize personnel with procedures.</p>
   <nav class="term-nav"><a href="erp-integration.html" class="nav-prev">← ERP Integration</a><a href="facility-layout.html" class="nav-next">Facility Layout →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Asset Tracking – Industrial RTLS Glossary</title>
-<meta name="description" content="Application of RTLS to monitor location and movement of physical items throughout a facility. In industrial contexts, asset tracking provides: real-time vi">
+<meta name="description" content="Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to la">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,24 +18,30 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#B45309;margin-bottom:.75rem}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#B45309}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
-  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
+  .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #B45309;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
   .term-nav{display:flex;justify-content:space-between;align-items:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);gap:1rem;flex-wrap:wrap}
   .nav-prev,.nav-next{font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Asset Tracking",
-  "description": "Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to large equipment and vehicles. Serves purposes including quick location, inventory verification, movement monitoring, loss prevention, and utilizati",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/asset-tracking.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "asset-tracking",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Asset Tracking","description":"Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to la","url":"https://figlarkarel.github.io/rtls-glossary/terms/asset-tracking.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Industrial Applications","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Asset Tracking","item":"https://figlarkarel.github.io/rtls-glossary/terms/asset-tracking.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Industrial Applications"},{"@type":"ListItem","position":3,"name":"Asset Tracking","item":"https://figlarkarel.github.io/rtls-glossary/terms/asset-tracking.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to large equipment and vehicles. Serves purposes including quick location, inventory verification, movement monitoring, loss prevention, and utilization analysis. Tracking granularity varies from zone-level to centimeter-level precision.">Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to large equipment and vehicles. Serves purposes including quick location, inventory verification, movement monitoring, loss prevention, and utilization analysis. Tracking granularity varies from zone-level to centimeter-level precision.</a> › Asset Tracking
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Industrial Applications<span>›</span>Asset Tracking
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to large equipment and vehicles. Serves purposes including quick location, inventory verification, movement monitoring, loss prevention, and utilization analysis. Tracking granularity varies from zone-level to centimeter-level precision.</div>
+    <div class="term-cat-tag">Industrial Applications</div>
     <h1 class="term-title">Asset Tracking</h1>
   </header>
-  <p class="def-short">Application of RTLS to monitor location and movement of physical items throughout a facility. In industrial contexts, asset tracking provides: <a href="../terms/real-time.html" class="term-link">real-time</a> visibility of equipment location (reducing search time by 60-80%), utilization metrics (identifying underused assets for redeployment), movement history and <a href="../terms/dwell-time-analysis.html" class="term-link">dwell time analysis</a> (optimizing workflows), and automated <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (confirming assets in correct zones).</p>
-  <p class="def-long">Typical tracked assets include forklifts (5-50 per facility), tools and equipment ($500+ value items), work-in-progress containers, returnable transport items, and high-value finished goods. ROI typically comes from: reduced asset purchases through better utilization (15-30% reduction), decreased labor time searching for items (saving 30-60 minutes per shift per worker), improved <a href="../terms/throughput.html" class="term-link">throughput</a> from <a href="../terms/process-optimization.html" class="term-link">process optimization</a>, and reduced inventory shrinkage. Successful implementations require clear asset identification, regular <a href="../terms/tag.html" class="term-link">tag</a> battery maintenance, and integration with existing inventory systems. Technology choice significantly impacts deployment strategy: UWB provides highest accuracy for production floor tracking, BLE offers lower-cost coverage for large warehouses and storage areas, and GNSS enables outdoor yard tracking. Many facilities deploy all three in combination - UWB in precision manufacturing zones, BLE in general warehousing, and GNSS in outdoor areas - with a unified software platform aggregating all location data.</p>
+  <p class="def-short">Real-time or historical monitoring of physical asset locations and movements within a defined area. Involves attaching tags to items from small tools to large equipment and vehicles. Serves purposes including quick location, inventory verification, movement monitoring, loss prevention, and utilization analysis. Tracking granularity varies from zone-level to centimeter-level precision.</p>
+  <p class="def-long">Application of RTLS to monitor location and movement of physical items throughout a facility. In industrial contexts, asset tracking provides: <a href="../terms/real-time.html" class="term-link">real-time</a> visibility of equipment location (reducing search time by 60-80%), utilization metrics (identifying underused assets for redeployment), movement history and <a href="../terms/dwell-time-analysis.html" class="term-link">dwell time analysis</a> (optimizing workflows), and automated <a href="../terms/inventory-management.html" class="term-link">inventory management</a> (confirming assets in correct zones).</p><p class="def-long">Typical tracked assets include forklifts (5-50 per facility), tools and equipment ($500+ value items), work-in-progress containers, returnable transport items, and high-value finished goods. ROI typically comes from: reduced asset purchases through better utilization (15-30% reduction), decreased labor time searching for items (saving 30-60 minutes per shift per worker), improved <a href="../terms/throughput.html" class="term-link">throughput</a> from <a href="../terms/process-optimization.html" class="term-link">process optimization</a>, and reduced inventory shrinkage. Successful implementations require clear asset identification, regular <a href="../terms/tag.html" class="term-link">tag</a> battery maintenance, and integration with existing inventory systems. Technology choice significantly impacts deployment strategy: UWB provides highest accuracy for production floor tracking, BLE offers lower-cost coverage for large warehouses and storage areas, and GNSS enables outdoor yard tracking. Many facilities deploy all three in combination - UWB in precision manufacturing zones, BLE in general warehousing, and GNSS in outdoor areas - with a unified software platform aggregating all location data.</p>
   <nav class="term-nav"><a href="asset-tag.html" class="nav-prev">← Asset Tag</a><a href="asset-utilization.html" class="nav-next">Asset Utilization →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

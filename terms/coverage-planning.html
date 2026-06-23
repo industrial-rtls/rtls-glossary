@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Coverage Planning – Industrial RTLS Glossary</title>
-<meta name="description" content="Engineering process of determining RTLS infrastructure quantities, locations, and configurations to meet performance requirements. Coverage planning workfl">
+<meta name="description" content="The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analys">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Coverage Planning",
-  "description": "The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analysis, technology selection, preliminary design, site survey, refined design, and validation. Industrial planning addresses challenges from metal st",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/coverage-planning.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "coverage-planning",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Coverage Planning","description":"The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analys","url":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-planning.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Installation & Configuration","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Coverage Planning","item":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-planning.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Installation &amp;amp; Configuration"},{"@type":"ListItem","position":3,"name":"Coverage Planning","item":"https://figlarkarel.github.io/rtls-glossary/terms/coverage-planning.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analysis, technology selection, preliminary design, site survey, refined design, and validation. Industrial planning addresses challenges from metal structures, changing layouts, and harsh environments. Balances maximizing coverage, meeting accuracy requirements, and minimizing costs.">The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analysis, technology selection, preliminary design, site survey, refined design, and validation. Industrial planning addresses challenges from metal structures, changing layouts, and harsh environments. Balances maximizing coverage, meeting accuracy requirements, and minimizing costs.</a> › Coverage Planning
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Installation &amp;amp; Configuration<span>›</span>Coverage Planning
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analysis, technology selection, preliminary design, site survey, refined design, and validation. Industrial planning addresses challenges from metal structures, changing layouts, and harsh environments. Balances maximizing coverage, meeting accuracy requirements, and minimizing costs.</div>
+    <div class="term-cat-tag">Installation &amp;amp; Configuration</div>
     <h1 class="term-title">Coverage Planning</h1>
   </header>
-  <p class="def-short">Engineering process of determining RTLS infrastructure quantities, locations, and configurations to meet performance requirements. Coverage planning workflow includes: (1) Requirements definition - <a href="../terms/accuracy.html" class="term-link">accuracy</a> targets, <a href="../terms/coverage-area.html" class="term-link">coverage area</a> extent, <a href="../terms/tag.html" class="term-link">tag</a> update rates, <a href="../terms/capacity.html" class="term-link">capacity</a> needs. (2) Facility survey - CAD drawings or <a href="../terms/site-survey.html" class="term-link">site survey</a> to map physical layout, identify RF obstacles (metal structures, machinery), measure ceiling heights, note interference sources. (3) Predictive modeling - RF propagation simulation tools predict coverage and accuracy based on planned <a href="../terms/anchor.html" class="term-link">anchor</a> locations. (4) Optimization - iteratively adjust anchor placements to maximize coverage and accuracy while minimizing infrastructure cost. (5) Validation - limited test <a href="../terms/deployment.html" class="term-link">deployment</a> or pilot area confirming predicted vs. actual performance. Experienced RTLS engineers develop anchor plans more efficiently than pure theoretical approaches - industrial facilities typically need 25-30% more anchors than ideal calculations suggest. Planning tools <a href="../terms/range.html" class="term-link">range</a> from simple spreadsheet calculations to sophisticated 3D RF modeling software. Critical outputs include: <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> drawings with mounting specifications, bill of materials with quantities, cabling requirements, and expected performance predictions by zone. Proper planning reduces deployment time, ensures performance targets met, and minimizes expensive post-installation remediation.</p>
-  
+  <p class="def-short">The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost. Involves requirements analysis, technology selection, preliminary design, site survey, refined design, and validation. Industrial planning addresses challenges from metal structures, changing layouts, and harsh environments. Balances maximizing coverage, meeting accuracy requirements, and minimizing costs.</p>
+  <p class="def-long">Engineering process of determining RTLS infrastructure quantities, locations, and configurations to meet performance requirements. Coverage planning workflow includes: (1) Requirements definition - <a href="../terms/accuracy.html" class="term-link">accuracy</a> targets, <a href="../terms/coverage-area.html" class="term-link">coverage area</a> extent, <a href="../terms/tag.html" class="term-link">tag</a> update rates, <a href="../terms/capacity.html" class="term-link">capacity</a> needs. (2) Facility survey - CAD drawings or <a href="../terms/site-survey.html" class="term-link">site survey</a> to map physical layout, identify RF obstacles (metal structures, machinery), measure ceiling heights, note interference sources. (3) Predictive modeling - RF propagation simulation tools predict coverage and accuracy based on planned <a href="../terms/anchor.html" class="term-link">anchor</a> locations. (4) Optimization - iteratively adjust anchor placements to maximize coverage and accuracy while minimizing infrastructure cost. (5) Validation - limited test <a href="../terms/deployment.html" class="term-link">deployment</a> or pilot area confirming predicted vs. actual performance. Experienced RTLS engineers develop anchor plans more efficiently than pure theoretical approaches - industrial facilities typically need 25-30% more anchors than ideal calculations suggest. Planning tools <a href="../terms/range.html" class="term-link">range</a> from simple spreadsheet calculations to sophisticated 3D RF modeling software. Critical outputs include: <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> drawings with mounting specifications, bill of materials with quantities, cabling requirements, and expected performance predictions by zone. Proper planning reduces deployment time, ensures performance targets met, and minimizes expensive post-installation remediation.</p>
   <nav class="term-nav"><a href="coverage-gap.html" class="nav-prev">← Coverage Gap</a><a href="css-chirp-spread-spectrum.html" class="nav-next">CSS (Chirp Spread Spectrum) →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

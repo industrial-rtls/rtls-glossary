@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Data Visualization – Industrial RTLS Glossary</title>
-<meta name="description" content="Graphical representation of RTLS location and operational data enabling intuitive understanding of complex patterns. Industrial RTLS visualization types in">
+<meta name="description" content="Graphical representation of RTLS data making complex tracking information easily understandable. Common visualizations include facility maps with real-time">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Data Visualization",
-  "description": "Graphical representation of RTLS data making complex tracking information easily understandable. Common visualizations include facility maps with real-time positions, heat maps, trajectory plots, timeline views, and dashboards with KPI gauges. Effective visualizations use appropriate chart types, cl",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/data-visualization.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "data-visualization",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Data Visualization","description":"Graphical representation of RTLS data making complex tracking information easily understandable. Common visualizations include facility maps with real-time","url":"https://figlarkarel.github.io/rtls-glossary/terms/data-visualization.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Data Visualization","item":"https://figlarkarel.github.io/rtls-glossary/terms/data-visualization.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"Data Visualization","item":"https://figlarkarel.github.io/rtls-glossary/terms/data-visualization.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=Graphical representation of RTLS data making complex tracking information easily understandable. Common visualizations include facility maps with real-time positions, heat maps, trajectory plots, timeline views, and dashboards with KPI gauges. Effective visualizations use appropriate chart types, clear visual hierarchy, intuitive color coding, and interactive capabilities. Bridges the gap between complex systems and non-technical users.">Graphical representation of RTLS data making complex tracking information easily understandable. Common visualizations include facility maps with real-time positions, heat maps, trajectory plots, timeline views, and dashboards with KPI gauges. Effective visualizations use appropriate chart types, clear visual hierarchy, intuitive color coding, and interactive capabilities. Bridges the gap between complex systems and non-technical users.</a> › Data Visualization
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>Data Visualization
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">Graphical representation of RTLS data making complex tracking information easily understandable. Common visualizations include facility maps with real-time positions, heat maps, trajectory plots, timeline views, and dashboards with KPI gauges. Effective visualizations use appropriate chart types, clear visual hierarchy, intuitive color coding, and interactive capabilities. Bridges the gap between complex systems and non-technical users.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">Data Visualization</h1>
   </header>
-  <p class="def-short">Graphical representation of RTLS location and operational data enabling intuitive understanding of complex patterns. Industrial RTLS visualization types include: (1) <a href="../terms/real-time.html" class="term-link">Real-time</a> facility maps - 2D or 3D facility layouts showing current positions of all tracked assets, color-coded by status, updated sub-second. (2) Heatmaps - density visualizations showing high-traffic areas, <a href="../terms/dwell-time.html" class="term-link">dwell time</a> concentrations, or congestion zones aggregated over hours/days/weeks. (3) Spaghetti diagrams - path traces showing movement routes, revealing inefficient workflows and unnecessary travel. (4) Timeline charts - Gantt-style views showing asset progression through process steps over time. (5) Statistical dashboards - KPI trends, histograms of cycle times, utilization gauges. (6) 3D visualizations - perspective views useful for multi-level facilities or complex equipment arrangements. Effective visualization design principles include: appropriate aggregation level (showing 1000 assets individually is overwhelming, zones/heatmaps more useful), time window selection (real-time for operations, historical for analysis), color schemes (color-blind friendly, sufficient contrast), and interactive capabilities (zoom, filter, drill-down). Modern RTLS platforms support customizable dashboards allowing different stakeholder groups to view relevant metrics without technical expertise.</p>
-  
+  <p class="def-short">Graphical representation of RTLS data making complex tracking information easily understandable. Common visualizations include facility maps with real-time positions, heat maps, trajectory plots, timeline views, and dashboards with KPI gauges. Effective visualizations use appropriate chart types, clear visual hierarchy, intuitive color coding, and interactive capabilities. Bridges the gap between complex systems and non-technical users.</p>
+  <p class="def-long">Graphical representation of RTLS location and operational data enabling intuitive understanding of complex patterns. Industrial RTLS visualization types include: (1) <a href="../terms/real-time.html" class="term-link">Real-time</a> facility maps - 2D or 3D facility layouts showing current positions of all tracked assets, color-coded by status, updated sub-second. (2) Heatmaps - density visualizations showing high-traffic areas, <a href="../terms/dwell-time.html" class="term-link">dwell time</a> concentrations, or congestion zones aggregated over hours/days/weeks. (3) Spaghetti diagrams - path traces showing movement routes, revealing inefficient workflows and unnecessary travel. (4) Timeline charts - Gantt-style views showing asset progression through process steps over time. (5) Statistical dashboards - KPI trends, histograms of cycle times, utilization gauges. (6) 3D visualizations - perspective views useful for multi-level facilities or complex equipment arrangements. Effective visualization design principles include: appropriate aggregation level (showing 1000 assets individually is overwhelming, zones/heatmaps more useful), time window selection (real-time for operations, historical for analysis), color schemes (color-blind friendly, sufficient contrast), and interactive capabilities (zoom, filter, drill-down). Modern RTLS platforms support customizable dashboards allowing different stakeholder groups to view relevant metrics without technical expertise.</p>
   <nav class="term-nav"><a href="data-mining.html" class="nav-prev">← Data Mining</a><a href="dead-reckoning.html" class="nav-next">Dead Reckoning →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

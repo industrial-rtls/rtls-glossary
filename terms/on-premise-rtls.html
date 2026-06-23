@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>On-Premise RTLS – Industrial RTLS Glossary</title>
-<meta name="description" content="RTLS system architecture where all software, data storage, and processing occur on servers located at customer facility rather than cloud/hosted environmen">
+<meta name="description" content="An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud. Provides complete">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "On-Premise RTLS",
-  "description": "An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud. Provides complete control over data and infrastructure but requires capital investment and internal IT management. Suitable for organizations with security requir",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/on-premise-rtls.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "on-premise-rtls",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"On-Premise RTLS","description":"An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud. Provides complete","url":"https://figlarkarel.github.io/rtls-glossary/terms/on-premise-rtls.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"On-Premise RTLS","item":"https://figlarkarel.github.io/rtls-glossary/terms/on-premise-rtls.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"On-Premise RTLS","item":"https://figlarkarel.github.io/rtls-glossary/terms/on-premise-rtls.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud. Provides complete control over data and infrastructure but requires capital investment and internal IT management. Suitable for organizations with security requirements preventing cloud use.">An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud. Provides complete control over data and infrastructure but requires capital investment and internal IT management. Suitable for organizations with security requirements preventing cloud use.</a> › On-Premise RTLS
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>On-Premise RTLS
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud. Provides complete control over data and infrastructure but requires capital investment and internal IT management. Suitable for organizations with security requirements preventing cloud use.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">On-Premise RTLS</h1>
   </header>
-  <p class="def-short">RTLS system architecture where all software, data storage, and processing occur on servers located at customer facility rather than cloud/hosted environments. On-premise advantages: (1) Data sovereignty - <a href="../terms/location-data.html" class="term-link">location data</a> remains on customer premises, addressing privacy and security concerns (particularly for facilities handling sensitive information). (2) Network independence - system operates without internet connectivity, immune to ISP outages. (3) Low <a href="../terms/latency.html" class="term-link">latency</a> - local processing provides minimal delay (10-100ms vs. 100-500ms for cloud round-trips), critical for time-sensitive applications like <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>. (4) Performance control - customer controls server sizing and performance. (5) Compliance - easier to satisfy regulatory requirements requiring data remain in specific jurisdictions. (6) Predictable costs - capital expenditure for infrastructure vs. ongoing operational expenses for cloud subscriptions. On-premise challenges: (1) IT infrastructure requirements - customer must provide servers, storage, networking, backup systems (typical requirements: 2-4 servers with 16-64GB RAM, 500GB-5TB storage depending on scale). (2) IT expertise - customer responsible for installation, <a href="../terms/configuration.html" class="term-link">configuration</a>, maintenance, updates, troubleshooting (requiring dedicated IT staff or vendor support contracts). (3) Uptime responsibility - customer ensures availability through backup power, redundant systems, disaster recovery. (4) <a href="../terms/scalability.html" class="term-link">Scalability</a> - expanding system requires hardware procurement and installation vs. elastic cloud scaling. (5) Capital investment - upfront infrastructure costs $20-100k depending on scale vs. incremental cloud subscription. (6) Software updates - customer manages update process vs. automatic cloud updates.</p>
-  <p class="def-long">Typical on-premise <a href="../terms/deployment.html" class="term-link">deployment</a> timeline: 8-16 weeks (hardware procurement, software installation, <a href="../terms/configuration.html" class="term-link">configuration</a>, testing), vs. 2-4 weeks for cloud.</p><p class="def-long">Most industrial RTLS deployments remain on-premise: 60-70% installed on-premise, 20-30% cloud, 10-20% hybrid.</p>
+  <p class="def-short">An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud. Provides complete control over data and infrastructure but requires capital investment and internal IT management. Suitable for organizations with security requirements preventing cloud use.</p>
+  <p class="def-long">RTLS system architecture where all software, data storage, and processing occur on servers located at customer facility rather than cloud/hosted environments. On-premise advantages: (1) Data sovereignty - <a href="../terms/location-data.html" class="term-link">location data</a> remains on customer premises, addressing privacy and security concerns (particularly for facilities handling sensitive information). (2) Network independence - system operates without internet connectivity, immune to ISP outages. (3) Low <a href="../terms/latency.html" class="term-link">latency</a> - local processing provides minimal delay (10-100ms vs. 100-500ms for cloud round-trips), critical for time-sensitive applications like <a href="../terms/collision-avoidance.html" class="term-link">collision avoidance</a>. (4) Performance control - customer controls server sizing and performance. (5) Compliance - easier to satisfy regulatory requirements requiring data remain in specific jurisdictions. (6) Predictable costs - capital expenditure for infrastructure vs. ongoing operational expenses for cloud subscriptions. On-premise challenges: (1) IT infrastructure requirements - customer must provide servers, storage, networking, backup systems (typical requirements: 2-4 servers with 16-64GB RAM, 500GB-5TB storage depending on scale). (2) IT expertise - customer responsible for installation, <a href="../terms/configuration.html" class="term-link">configuration</a>, maintenance, updates, troubleshooting (requiring dedicated IT staff or vendor support contracts). (3) Uptime responsibility - customer ensures availability through backup power, redundant systems, disaster recovery. (4) <a href="../terms/scalability.html" class="term-link">Scalability</a> - expanding system requires hardware procurement and installation vs. elastic cloud scaling. (5) Capital investment - upfront infrastructure costs $20-100k depending on scale vs. incremental cloud subscription. (6) Software updates - customer manages update process vs. automatic cloud updates.</p><p class="def-long">Typical on-premise <a href="../terms/deployment.html" class="term-link">deployment</a> timeline: 8-16 weeks (hardware procurement, software installation, <a href="../terms/configuration.html" class="term-link">configuration</a>, testing), vs. 2-4 weeks for cloud.</p><p class="def-long">Most industrial RTLS deployments remain on-premise: 60-70% installed on-premise, 20-30% cloud, 10-20% hybrid.</p>
   <nav class="term-nav"><a href="omlox-standard.html" class="nav-prev">← OMLOX Standard</a><a href="open-api.html" class="nav-next">Open API →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>RTLS Manager – Industrial RTLS Glossary</title>
-<meta name="description" content="RTLS Manager is Sewio Networks' core software platform for administering, configuring, and monitoring industrial RTLS deployments. This enterprise-grade ma">
+<meta name="description" content="The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status f">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "RTLS Manager",
-  "description": "The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status for all anchors, tags, and servers, allows system initialization, rescan and resync, and offers full control over settings and system parameters. ",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/rtls-manager.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "rtls-manager",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"RTLS Manager","description":"The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status f","url":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-manager.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"RTLS Manager","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-manager.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"RTLS Manager","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-manager.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status for all anchors, tags, and servers, allows system initialization, rescan and resync, and offers full control over settings and system parameters. Enables remote firmware upgrades and device reconfiguration online. Designed for simple, accessible, and user-friendly real-time location system management.">The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status for all anchors, tags, and servers, allows system initialization, rescan and resync, and offers full control over settings and system parameters. Enables remote firmware upgrades and device reconfiguration online. Designed for simple, accessible, and user-friendly real-time location system management.</a> › RTLS Manager
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>RTLS Manager
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status for all anchors, tags, and servers, allows system initialization, rescan and resync, and offers full control over settings and system parameters. Enables remote firmware upgrades and device reconfiguration online. Designed for simple, accessible, and user-friendly real-time location system management.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">RTLS Manager</h1>
   </header>
-  <p class="def-short">RTLS Manager is Sewio Networks' core software platform for administering, configuring, and monitoring industrial RTLS deployments. This enterprise-grade management application serves as the central control point for the entire location system, providing tools for system administrators, integrators, and facility managers to optimize RTLS performance and manage operational aspects.</p>
-  <p class="def-long">Key capabilities include: infrastructure management (configuring and monitoring anchors/readers, managing network connectivity, monitoring system health), <a href="../terms/tag.html" class="term-link">tag</a> administration (provisioning tags, assigning to assets or personnel, configuring transmission parameters, managing battery status), zone and <a href="../terms/geofence.html" class="term-link">geofence</a> definition (creating virtual boundaries on digital floor plans, configuring alert rules and access permissions), user <a href="../terms/access-control.html" class="term-link">access control</a> (role-based permissions for different organizational functions), <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> <a href="../terms/configuration.html" class="term-link">configuration</a> (selecting algorithms, tuning parameters for <a href="../terms/accuracy.html" class="term-link">accuracy</a> vs. <a href="../terms/update-rate.html" class="term-link">update rate</a> tradeoffs), and system diagnostics (troubleshooting connectivity issues, analyzing signal quality, identifying interference sources). RTLS Manager integrates with Sewio's positioning engine and provides interfaces for <a href="../terms/site-survey.html" class="term-link">site survey</a> planning, <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> optimization based on <a href="../terms/facility-layout.html" class="term-link">facility layout</a>, and RF environment analysis. Performance monitoring capabilities track key metrics including: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> and availability, anchor uptime and connectivity, tag battery levels and estimated replacement dates, <a href="../terms/system-capacity.html" class="term-link">system capacity</a> utilization (active tags vs. maximum supported), and network health. Alert management features notify administrators of system issues requiring attention: anchor offline conditions, communication failures, positioning engine errors, or capacity approaching limits. RTLS Manager is designed for 24/7 industrial operation with high availability architecture, automated backup capabilities, and disaster recovery features. The web-based interface enables remote administration and monitoring, critical for multi-site industrial enterprises.</p>
+  <p class="def-short">The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS. Provides overview of health status for all anchors, tags, and servers, allows system initialization, rescan and resync, and offers full control over settings and system parameters. Enables remote firmware upgrades and device reconfiguration online. Designed for simple, accessible, and user-friendly real-time location system management.</p>
+  <p class="def-long">RTLS Manager is Sewio Networks' core software platform for administering, configuring, and monitoring industrial RTLS deployments. This enterprise-grade management application serves as the central control point for the entire location system, providing tools for system administrators, integrators, and facility managers to optimize RTLS performance and manage operational aspects.</p><p class="def-long">Key capabilities include: infrastructure management (configuring and monitoring anchors/readers, managing network connectivity, monitoring system health), <a href="../terms/tag.html" class="term-link">tag</a> administration (provisioning tags, assigning to assets or personnel, configuring transmission parameters, managing battery status), zone and <a href="../terms/geofence.html" class="term-link">geofence</a> definition (creating virtual boundaries on digital floor plans, configuring alert rules and access permissions), user <a href="../terms/access-control.html" class="term-link">access control</a> (role-based permissions for different organizational functions), <a href="../terms/positioning-engine.html" class="term-link">positioning engine</a> <a href="../terms/configuration.html" class="term-link">configuration</a> (selecting algorithms, tuning parameters for <a href="../terms/accuracy.html" class="term-link">accuracy</a> vs. <a href="../terms/update-rate.html" class="term-link">update rate</a> tradeoffs), and system diagnostics (troubleshooting connectivity issues, analyzing signal quality, identifying interference sources). RTLS Manager integrates with Sewio's positioning engine and provides interfaces for <a href="../terms/site-survey.html" class="term-link">site survey</a> planning, <a href="../terms/anchor-placement.html" class="term-link">anchor placement</a> optimization based on <a href="../terms/facility-layout.html" class="term-link">facility layout</a>, and RF environment analysis. Performance monitoring capabilities track key metrics including: <a href="../terms/positioning-accuracy.html" class="term-link">positioning accuracy</a> and availability, anchor uptime and connectivity, tag battery levels and estimated replacement dates, <a href="../terms/system-capacity.html" class="term-link">system capacity</a> utilization (active tags vs. maximum supported), and network health. Alert management features notify administrators of system issues requiring attention: anchor offline conditions, communication failures, positioning engine errors, or capacity approaching limits. RTLS Manager is designed for 24/7 industrial operation with high availability architecture, automated backup capabilities, and disaster recovery features. The web-based interface enables remote administration and monitoring, critical for multi-site industrial enterprises.</p>
   <nav class="term-nav"><a href="rtls-antenna.html" class="nav-prev">← RTLS Antenna</a><a href="rtls-monitor.html" class="nav-next">RTLS Monitor →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Time of Arrival (ToA) – Industrial RTLS Glossary</title>
-<meta name="description" content="Time of Arrival (ToA) is a positioning technique that determines distance between a tag and anchor by measuring the absolute time required for a signal to ">
+<meta name="description" content="A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization betwee">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Time of Arrival (ToA)",
-  "description": "A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization between tags and receivers. Combined with measurements to multiple receivers enables position calculation through trilateration. Used in some UWB syste",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/time-of-arrival-toa.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "time-of-arrival-toa",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Time of Arrival (ToA)","description":"A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization betwee","url":"https://figlarkarel.github.io/rtls-glossary/terms/time-of-arrival-toa.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Positioning Methods & Techniques","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"Time of Arrival (ToA)","item":"https://figlarkarel.github.io/rtls-glossary/terms/time-of-arrival-toa.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Positioning Methods &amp;amp; Techniques"},{"@type":"ListItem","position":3,"name":"Time of Arrival (ToA)","item":"https://figlarkarel.github.io/rtls-glossary/terms/time-of-arrival-toa.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization between tags and receivers. Combined with measurements to multiple receivers enables position calculation through trilateration. Used in some UWB systems.">A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization between tags and receivers. Combined with measurements to multiple receivers enables position calculation through trilateration. Used in some UWB systems.</a> › Time of Arrival (ToA)
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Positioning Methods &amp;amp; Techniques<span>›</span>Time of Arrival (ToA)
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization between tags and receivers. Combined with measurements to multiple receivers enables position calculation through trilateration. Used in some UWB systems.</div>
+    <div class="term-cat-tag">Positioning Methods &amp;amp; Techniques</div>
     <h1 class="term-title">Time of Arrival (ToA)</h1>
   </header>
-  <p class="def-short">Time of Arrival (ToA) is a positioning technique that determines distance between a <a href="../terms/tag.html" class="term-link">tag</a> and <a href="../terms/anchor.html" class="term-link">anchor</a> by measuring the absolute time required for a signal to propagate between them. The fundamental physics: electromagnetic signals propagate at the speed of light (approximately 30 cm per nanosecond), so measuring propagation time directly yields distance. A signal taking 100 nanoseconds traveled approximately 30 meters. ToA ranging requires: precise knowledge of transmission time, precise measurement of reception time, and calculation of time difference (time of arrival minus time of transmission equals propagation time). The critical challenge is <a href="../terms/synchronization.html" class="term-link">synchronization</a> - accurate ToA requires tag and anchor share a common time reference with nanosecond <a href="../terms/precision.html" class="term-link">precision</a>. If clocks are misaligned, calculated distance includes clock offset error. One nanosecond clock difference creates 30 cm distance error. In 2D, three distance measurements theoretically suffice, though four or more improve <a href="../terms/accuracy.html" class="term-link">accuracy</a>. In 3D, four distances minimum required. ToA advantages include: conceptual simplicity (direct distance measurement), geometric straightforwardness (circular intersections in 2D, spherical in 3D, simpler than hyperbolic geometry in TDoA), and independence between anchors (each anchor independently measures distance without requiring inter-anchor coordination). Accuracy achievable with ToA in industrial environments is comparable to TDoA (10-30 cm under good conditions) since both measure signal propagation time with equivalent precision. System designers consider: ToA's simpler geometry but synchronization complexity, TDoA's synchronization in infrastructure but more complex position calculation, TWR's independence from synchronization but lower <a href="../terms/tag-capacity.html" class="term-link">tag capacity</a>, and accuracy-capacity-cost tradeoffs. Many industrial RTLS systems favor TDoA for high tag capacity and simplified tags.</p>
-  
+  <p class="def-short">A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance. Requires precise time synchronization between tags and receivers. Combined with measurements to multiple receivers enables position calculation through trilateration. Used in some UWB systems.</p>
+  <p class="def-long">Time of Arrival (ToA) is a positioning technique that determines distance between a <a href="../terms/tag.html" class="term-link">tag</a> and <a href="../terms/anchor.html" class="term-link">anchor</a> by measuring the absolute time required for a signal to propagate between them. The fundamental physics: electromagnetic signals propagate at the speed of light (approximately 30 cm per nanosecond), so measuring propagation time directly yields distance. A signal taking 100 nanoseconds traveled approximately 30 meters. ToA ranging requires: precise knowledge of transmission time, precise measurement of reception time, and calculation of time difference (time of arrival minus time of transmission equals propagation time). The critical challenge is <a href="../terms/synchronization.html" class="term-link">synchronization</a> - accurate ToA requires tag and anchor share a common time reference with nanosecond <a href="../terms/precision.html" class="term-link">precision</a>. If clocks are misaligned, calculated distance includes clock offset error. One nanosecond clock difference creates 30 cm distance error. In 2D, three distance measurements theoretically suffice, though four or more improve <a href="../terms/accuracy.html" class="term-link">accuracy</a>. In 3D, four distances minimum required. ToA advantages include: conceptual simplicity (direct distance measurement), geometric straightforwardness (circular intersections in 2D, spherical in 3D, simpler than hyperbolic geometry in TDoA), and independence between anchors (each anchor independently measures distance without requiring inter-anchor coordination). Accuracy achievable with ToA in industrial environments is comparable to TDoA (10-30 cm under good conditions) since both measure signal propagation time with equivalent precision. System designers consider: ToA's simpler geometry but synchronization complexity, TDoA's synchronization in infrastructure but more complex position calculation, TWR's independence from synchronization but lower <a href="../terms/tag-capacity.html" class="term-link">tag capacity</a>, and accuracy-capacity-cost tradeoffs. Many industrial RTLS systems favor TDoA for high tag capacity and simplified tags.</p>
   <nav class="term-nav"><a href="time-difference-of-arrival-tdoa.html" class="nav-prev">← Time Difference of Arrival (TDoA)</a><a href="time-synchronization.html" class="nav-next">Time Synchronization →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>

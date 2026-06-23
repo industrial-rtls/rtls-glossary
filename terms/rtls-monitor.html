@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>RTLS Monitor – Industrial RTLS Glossary</title>
-<meta name="description" content="RTLS Monitor is Sewio Networks' real-time visualization and monitoring application designed for operational personnel to observe asset and personnel locati">
+<meta name="description" content="A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. D">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -18,22 +18,28 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
   a{color:var(--accent-hi);text-decoration:none}
   a:hover{text-decoration:underline}
-  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none}
+  header{border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;background:rgba(10,15,30,0.96);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.05em;color:var(--text);text-decoration:none;flex-shrink:0}
   .logo span{color:var(--accent-hi)}
-  .header-cta{background:var(--accent);color:#fff;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .15s}
-  .header-cta:hover{background:var(--accent-hi)}
+  .header-nav{display:flex;align-items:center;gap:1.5rem}
+  .header-nav a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .15s}
+  .header-nav a:hover{color:var(--text)}
+  .header-cta{background:var(--accent);color:#fff !important;padding:.4rem 1rem;border-radius:4px;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:600;text-decoration:none !important;transition:background .15s;flex-shrink:0}
+  .header-cta:hover{background:var(--accent-hi) !important}
   .term-link{color:var(--accent-hi);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
   .term-link:hover{color:#fff}
   footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent-hi)}
 
-  .breadcrumb{max-width:780px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:780px;margin:0 auto;padding:1.25rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted)}
   .breadcrumb a:hover{color:var(--accent-hi)}
-  .term-page{max-width:780px;margin:0 auto;padding:2rem 2rem 5rem}
-  .term-header{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+  .breadcrumb span{color:var(--border);margin:0 .3rem}
+  .term-page{max-width:780px;margin:0 auto;padding:1.5rem 2rem 5rem}
+  .term-header{margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
   .term-cat-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:.75rem}
-  .term-cat-tag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#475569}
+  .term-cat-tag::before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:#475569}
   .term-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.15}
   .def-short{font-size:1rem;color:var(--text);margin-bottom:1.5rem;padding:.875rem 1rem .875rem 1.25rem;background:var(--surface);border-left:3px solid #475569;border-radius:0 4px 4px 0;line-height:1.65}
   .def-long{font-size:.93rem;color:#C8D5EA;margin-bottom:1.25rem;line-height:1.8}
@@ -43,50 +49,34 @@
   .nav-next{margin-left:auto}
 </style>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "RTLS Monitor",
-  "description": "A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. Displays CPU usage, RAM usage, network traffic, disk partition status, RTLS Studio uptime, and identifies performance bottlenecks. Helps administr",
-  "url": "https://figlarkarel.github.io/rtls-glossary/terms/rtls-monitor.html",
-  "inDefinedTermSet": {
-    "@type": "DefinedTermSet",
-    "name": "Industrial RTLS Glossary",
-    "url": "https://figlarkarel.github.io/rtls-glossary/index.html"
-  },
-  "termCode": "rtls-monitor",
-  "additionalType": "https://schema.org/DefinedTerm"
-}
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"RTLS Monitor","description":"A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. D","url":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-monitor.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Industrial RTLS Glossary","url":"https://figlarkarel.github.io/rtls-glossary/index.html"}}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":2,"name":"Software & Data Management","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},
-    {"@type":"ListItem","position":3,"name":"RTLS Monitor","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-monitor.html"}
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Glossary","item":"https://figlarkarel.github.io/rtls-glossary/index.html"},{"@type":"ListItem","position":2,"name":"Software &amp;amp; Data Management"},{"@type":"ListItem","position":3,"name":"RTLS Monitor","item":"https://figlarkarel.github.io/rtls-glossary/terms/rtls-monitor.html"}]}
 </script>
 </head>
 <body>
 <header>
   <a href="../index.html" class="logo">RTLS <span>Glossary</span></a>
-  <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  <nav class="header-nav">
+    <a href="../abbreviations.html">Abbreviations</a>
+    <a href="../index.html#pdf-download" class="header-cta">Download PDF</a>
+  </nav>
 </header>
-<div class="breadcrumb">
-  <a href="../index.html">Glossary</a> › <a href="../index.html?cat=A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. Displays CPU usage, RAM usage, network traffic, disk partition status, RTLS Studio uptime, and identifies performance bottlenecks. Helps administrators ensure optimal system performance and identify issues before they impact operations.">A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. Displays CPU usage, RAM usage, network traffic, disk partition status, RTLS Studio uptime, and identifies performance bottlenecks. Helps administrators ensure optimal system performance and identify issues before they impact operations.</a> › RTLS Monitor
-</div>
+<nav class="breadcrumb">
+  <a href="../index.html">Glossary</a><span>›</span>Software &amp;amp; Data Management<span>›</span>RTLS Monitor
+</nav>
 <article class="term-page">
   <header class="term-header">
-    <div class="term-cat-tag">A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. Displays CPU usage, RAM usage, network traffic, disk partition status, RTLS Studio uptime, and identifies performance bottlenecks. Helps administrators ensure optimal system performance and identify issues before they impact operations.</div>
+    <div class="term-cat-tag">Software &amp;amp; Data Management</div>
     <h1 class="term-title">RTLS Monitor</h1>
   </header>
-  <p class="def-short">RTLS Monitor is Sewio Networks' <a href="../terms/real-time.html" class="term-link">real-time</a> visualization and monitoring application designed for operational personnel to observe asset and personnel locations across industrial facilities. This user-facing application transforms raw positioning data into intuitive visual representations, enabling supervisors, safety officers, and production managers to maintain situational awareness of facility operations. The interface displays live positions of tracked objects overlaid on digital floor plans, updating continuously (typically 1-5 Hz) to reflect current locations.</p>
-  <p class="def-long">Key visualization features include: multi-level floor plans with seamless navigation between building levels, asset filtering by type, zone, or status to reduce visual clutter in high-density environments, heat maps showing asset density and traffic patterns, historical trails visualizing movement paths over recent time periods, and status indicators displaying asset conditions (battery level, sensor readings, alerts). The application supports various zoom levels from facility overview to detailed room-level views, allowing users to focus on areas of interest.</p><p class="def-long">Color-coding and iconography provide quick status recognition: green for normal operation, yellow for warnings, red for alerts or violations. <a href="../terms/real-time.html" class="term-link">Real-time</a> alert display notifies operators of exceptions requiring attention: zone violations, assets missing from expected locations, prolonged dwell times indicating bottlenecks, low battery warnings, or potential collision scenarios. Performance optimization ensures smooth visualization even when tracking hundreds or thousands of assets simultaneously, using techniques like selective rendering, level-of-detail management, and efficient data streaming.</p><p class="def-long">Customizable dashboards display key performance indicators (KPIs) alongside the visual tracking display, providing operational context: current <a href="../terms/throughput.html" class="term-link">throughput</a> rates, utilization metrics, safety compliance scores, or production status.</p>
+  <p class="def-short">A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and resource utilization. Displays CPU usage, RAM usage, network traffic, disk partition status, RTLS Studio uptime, and identifies performance bottlenecks. Helps administrators ensure optimal system performance and identify issues before they impact operations.</p>
+  <p class="def-long">RTLS Monitor is Sewio Networks' <a href="../terms/real-time.html" class="term-link">real-time</a> visualization and monitoring application designed for operational personnel to observe asset and personnel locations across industrial facilities. This user-facing application transforms raw positioning data into intuitive visual representations, enabling supervisors, safety officers, and production managers to maintain situational awareness of facility operations. The interface displays live positions of tracked objects overlaid on digital floor plans, updating continuously (typically 1-5 Hz) to reflect current locations.</p><p class="def-long">Key visualization features include: multi-level floor plans with seamless navigation between building levels, asset filtering by type, zone, or status to reduce visual clutter in high-density environments, heat maps showing asset density and traffic patterns, historical trails visualizing movement paths over recent time periods, and status indicators displaying asset conditions (battery level, sensor readings, alerts). The application supports various zoom levels from facility overview to detailed room-level views, allowing users to focus on areas of interest.</p><p class="def-long">Color-coding and iconography provide quick status recognition: green for normal operation, yellow for warnings, red for alerts or violations. <a href="../terms/real-time.html" class="term-link">Real-time</a> alert display notifies operators of exceptions requiring attention: zone violations, assets missing from expected locations, prolonged dwell times indicating bottlenecks, low battery warnings, or potential collision scenarios. Performance optimization ensures smooth visualization even when tracking hundreds or thousands of assets simultaneously, using techniques like selective rendering, level-of-detail management, and efficient data streaming.</p><p class="def-long">Customizable dashboards display key performance indicators (KPIs) alongside the visual tracking display, providing operational context: current <a href="../terms/throughput.html" class="term-link">throughput</a> rates, utilization metrics, safety compliance scores, or production status.</p>
   <nav class="term-nav"><a href="rtls-manager.html" class="nav-prev">← RTLS Manager</a><a href="rtls-planner.html" class="nav-next">RTLS Planner →</a></nav>
 </article>
-<footer>Industrial RTLS Glossary · <a href="../index.html">← All terms</a> · <a href="../abbreviations.html">Abbreviations</a></footer>
+<footer>
+  Industrial RTLS Glossary · <a href="../index.html">All terms</a> · <a href="../abbreviations.html">Abbreviations</a>
+</footer>
 </body>
 </html>
