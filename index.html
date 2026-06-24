@@ -21,7 +21,7 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 75px; }
 
   body {
     background: var(--bg);
@@ -2622,27 +2622,6 @@
     document.getElementById('results-count').textContent = visible + ' term' + (visible !== 1 ? 's' : '');
     document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
     document.getElementById('glossary-body').style.display = visible === 0 ? 'none' : '';
-  }
-if (!emailRegex.test(email)) {
-      emailInput.style.borderColor = '#DC2626';
-      emailInput.placeholder = 'Please enter a valid email address';
-      emailInput.value = '';
-      emailInput.focus();
-      return;
-    }
-    emailInput.style.borderColor = '';
-    // Store email (in production: send to backend/Tally/Mailchimp)
-    localStorage.setItem('rtls_email', email);
-    // Trigger download
-    const link = document.createElement('a');
-    link.href = 'Industrial-RTLS-Glossary.pdf';
-    link.download = 'Industrial-RTLS-Glossary.pdf';
-    link.click();
-    // Show confirmation
-    const btn = e.target.querySelector('button');
-    btn.textContent = '✓ Downloading…';
-    btn.style.background = '#059669';
-    setTimeout(() => { btn.textContent = 'Download PDF →'; btn.style.background = ''; }, 3000);
   }
 </script>
 
