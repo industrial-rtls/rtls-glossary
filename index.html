@@ -518,6 +518,7 @@
   gtag('js', new Date());
   gtag('config', 'G-V0EC23E2MF');
 </script>
+<!-- Microsoft Clarity --><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xc2qea2l9w");</script>
 </head>
 <body>
 
@@ -2623,6 +2624,43 @@
     document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
     document.getElementById('glossary-body').style.display = visible === 0 ? 'none' : '';
   }
+
+  // GA4 event tracking (safe guard)
+  function trackEvent(name, params){ if(typeof gtag==='function'){try{gtag('event',name,params||{});}catch(e){}} }
+  (function(){
+    // Category filter change
+    var catSel = document.getElementById('cat-filter');
+    if (catSel) catSel.addEventListener('change', function(){
+      if (catSel.value) trackEvent('filter_category', {category: catSel.value});
+    });
+    // Search (debounced, only fire when user pauses)
+    var searchEl = document.getElementById('search');
+    if (searchEl) {
+      var st;
+      searchEl.addEventListener('input', function(){
+        clearTimeout(st);
+        st = setTimeout(function(){
+          var q = searchEl.value.trim();
+          if (q.length >= 3) trackEvent('search', {search_term: q});
+        }, 1200);
+      });
+    }
+    // Term card clicks
+    document.querySelectorAll('.term-card').forEach(function(card){
+      card.addEventListener('click', function(){
+        var n = card.querySelector('.term-name');
+        trackEvent('open_term', {term: n ? n.textContent : ''});
+      });
+    });
+    // PDF download CTA (header + any #pdf-download anchor)
+    document.querySelectorAll('a[href*="pdf-download"], a[href="#pdf-download"]').forEach(function(a){
+      a.addEventListener('click', function(){ trackEvent('pdf_cta_click', {}); });
+    });
+    // Abbreviations stat link
+    document.querySelectorAll('.stat-link').forEach(function(a){
+      a.addEventListener('click', function(){ trackEvent('open_abbreviations', {}); });
+    });
+  })();
 </script>
 
 </body>
