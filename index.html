@@ -6,6 +6,7 @@
 <title>Industrial RTLS Glossary – 252 Terms Defined</title>
 <meta name="description" content="The most comprehensive Industrial RTLS glossary. 252 terms covering UWB, BLE, GNSS, positioning methods, hardware, and industrial applications. Free reference for engineers and managers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -553,9 +554,9 @@
   <div class="controls">
     <div class="search-wrap">
       <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="search" class="search-input" placeholder="Search terms…" id="search" oninput="filterTerms()">
+      <input type="search" class="search-input" placeholder="Search terms…" id="search" oninput="filterTerms()" aria-label="Search RTLS terms">
     </div>
-    <select class="filter-select" id="cat-filter" onchange="filterTerms()">
+    <select class="filter-select" id="cat-filter" onchange="filterTerms()" aria-label="Filter terms by category">
       <option value="">All categories</option><option value="Data &amp; Analytics">Data &amp; Analytics (12)</option><option value="Geofencing &amp; Zones">Geofencing &amp; Zones (12)</option><option value="Hardware Components">Hardware Components (24)</option><option value="Industrial Applications">Industrial Applications (22)</option><option value="Industry-Specific Terms">Industry-Specific Terms (13)</option><option value="Installation &amp; Configuration">Installation &amp; Configuration (13)</option><option value="Localization Technologies">Localization Technologies (20)</option><option value="Performance Metrics &amp; KPIs">Performance Metrics &amp; KPIs (15)</option><option value="Positioning Methods &amp; Techniques">Positioning Methods &amp; Techniques (18)</option><option value="Safety &amp; Security">Safety &amp; Security (13)</option><option value="Software &amp; Data Management">Software &amp; Data Management (42)</option><option value="Standards &amp; Protocols">Standards &amp; Protocols (7)</option><option value="System Architecture">System Architecture (12)</option><option value="Technical Parameters">Technical Parameters (29)</option>
     </select>
     <span class="results-count" id="results-count">252 terms</span>

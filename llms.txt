@@ -1,0 +1,310 @@
+# Industrial RTLS Glossary
+
+> A comprehensive reference of 252 terms and 112 abbreviations covering
+> industrial Real-Time Location Systems (RTLS), including UWB (Ultra-Wideband),
+> BLE (Bluetooth Low Energy), and GNSS positioning technologies.
+
+This glossary helps engineers, system integrators, and decision-makers understand
+RTLS terminology for industrial deployments such as asset tracking, personnel safety,
+and process optimization in manufacturing, logistics, and warehousing.
+
+Each term links to a full definition with short and extended explanations.
+
+## Core Pages
+
+- [Glossary Home](https://rtls-glossary.pages.dev/index.html): Searchable index of all 252 RTLS terms
+- [Abbreviations](https://rtls-glossary.pages.dev/abbreviations.html): 112 RTLS abbreviations with full meanings
+
+## Localization Technologies
+
+- [5G Positioning](https://rtls-glossary.pages.dev/terms/5g-positioning.html): A localization technology leveraging 5G cellular networks to determine asset or personnel positions.
+- [Active RFID](https://rtls-glossary.pages.dev/terms/active-rfid.html): Radio frequency identification technology where battery-powered tags actively transmit signals at regular intervals.
+- [BLE (Bluetooth Low Energy)](https://rtls-glossary.pages.dev/terms/ble-bluetooth-low-energy.html): An energy-efficient wireless protocol widely used for asset tracking, personnel monitoring, and indoor positioning.
+- [Computer Vision Tracking](https://rtls-glossary.pages.dev/terms/computer-vision-tracking.html): Positioning technology using cameras and image processing algorithms to track assets, vehicles, or personnel.
+- [CSS (Chirp Spread Spectrum)](https://rtls-glossary.pages.dev/terms/css-chirp-spread-spectrum.html): A wireless modulation technique where signals are transmitted using frequency sweeps (chirps) across wide bandwidth.
+- [DGPS (Differential GPS)](https://rtls-glossary.pages.dev/terms/dgps-differential-gps.html): An enhancement to standard GPS using a fixed reference station at a known position to calculate and broadcast correction signals,...
+- [GNSS (Global Navigation Satellite System)](https://rtls-glossary.pages.dev/terms/gnss-global-navigation-satellite-system.html): The generic term for satellite-based positioning systems providing global coverage for outdoor tracking.
+- [GPS (Global Positioning System)](https://rtls-glossary.pages.dev/terms/gps-global-positioning-system.html): The United States' satellite-based navigation system providing global positioning, navigation, and timing services.
+- [IR (Infrared) Positioning](https://rtls-glossary.pages.dev/terms/ir-infrared-positioning.html): A positioning technology using infrared light signals for location determination.
+- [LiDAR (Light Detection and Ranging)](https://rtls-glossary.pages.dev/terms/lidar-light-detection-and-ranging.html): A remote sensing technology using laser light to measure distances and create detailed 3D maps.
+- [LoRaWAN](https://rtls-glossary.pages.dev/terms/lorawan.html): A low-power wide-area network protocol designed for wireless battery-operated devices.
+- [Magnetic Positioning](https://rtls-glossary.pages.dev/terms/magnetic-positioning.html): A positioning technology using variations in Earth's magnetic field or artificially generated magnetic fields for location determination.
+- [Passive RFID](https://rtls-glossary.pages.dev/terms/passive-rfid.html): Radio frequency identification technology where tags have no power source and only respond when energized by reader signals.
+- [RFID (Radio-Frequency Identification)](https://rtls-glossary.pages.dev/terms/rfid-radio-frequency-identification.html): A technology using electromagnetic fields to automatically identify and track tags attached to objects.
+- [RTK (Real-Time Kinematic)](https://rtls-glossary.pages.dev/terms/rtk-real-time-kinematic.html): A high-precision GNSS positioning technique using carrier phase measurements and real-time corrections from a base station to achieve...
+- [Satellite Constellation](https://rtls-glossary.pages.dev/terms/satellite-constellation.html): A group of satellites working together as a system to provide positioning coverage.
+- [Ultrasonic Positioning](https://rtls-glossary.pages.dev/terms/ultrasonic-positioning.html): A positioning technology using ultrasonic sound waves for location determination.
+- [UWB (Ultra-Wideband)](https://rtls-glossary.pages.dev/terms/uwb-ultra-wideband.html): A radio technology using extremely short pulses across wide frequency spectrum (typically 3.1-10.6 GHz).
+- [Wi-Fi Positioning](https://rtls-glossary.pages.dev/terms/wi-fi-positioning.html): A positioning technology using existing Wi-Fi infrastructure for location determination.
+- [Zigbee](https://rtls-glossary.pages.dev/terms/zigbee.html): A low-power wireless mesh networking protocol based on IEEE 802.15.4.
+
+## Positioning Methods & Techniques
+
+- [Angle of Arrival (AoA)](https://rtls-glossary.pages.dev/terms/angle-of-arrival-aoa.html): A positioning technique determining tag location by measuring the angle at which signals arrive at receiving antennas.
+- [Angle of Departure (AoD)](https://rtls-glossary.pages.dev/terms/angle-of-departure-aod.html): A positioning technique where fixed infrastructure transmits signals from antenna arrays with known geometry, and mobile devices...
+- [Cell of Origin (CoO)](https://rtls-glossary.pages.dev/terms/cell-of-origin-coo.html): A basic positioning method determining location based on which anchor/access point is communicating with a tag.
+- [Dead Reckoning](https://rtls-glossary.pages.dev/terms/dead-reckoning.html): A positioning technique estimating current location by calculating movement from a known starting position using motion sensors...
+- [Direction Finding](https://rtls-glossary.pages.dev/terms/direction-finding.html): A set of techniques determining the bearing or angle between a transmitter and receiver using multi-element antenna arrays.
+- [Fingerprinting](https://rtls-glossary.pages.dev/terms/fingerprinting.html): A positioning technique creating a database mapping signal characteristics to specific locations, then matching observed signals against...
+- [Geofencing](https://rtls-glossary.pages.dev/terms/geofencing.html): The creation of virtual boundaries in RTLS software that trigger automated actions when assets or personnel enter, exit, or dwell within...
+- [Mesh Networking](https://rtls-glossary.pages.dev/terms/mesh-networking.html): A network topology where devices connect to multiple neighbors and relay data for each other, creating self-healing networks.
+- [Multilateration](https://rtls-glossary.pages.dev/terms/multilateration.html): A positioning technique determining location by measuring time differences of signal arrival at multiple receivers.
+- [Phase Difference Measurement](https://rtls-glossary.pages.dev/terms/phase-difference-measurement.html): A positioning technique measuring differences in RF signal phase at multiple antennas to determine angle of arrival.
+- [Proximity Detection](https://rtls-glossary.pages.dev/terms/proximity-detection.html): The capability to detect when tracked objects are near each other or near specific locations.
+- [Received Signal Strength Indicator (RSSI)](https://rtls-glossary.pages.dev/terms/received-signal-strength-indicator-rssi.html): A measurement of the power level in received radio signals.
+- [Time Difference of Arrival (TDoA)](https://rtls-glossary.pages.dev/terms/time-difference-of-arrival-tdoa.html): A positioning technique measuring differences in signal arrival times at multiple receivers to determine tag location.
+- [Time of Arrival (ToA)](https://rtls-glossary.pages.dev/terms/time-of-arrival-toa.html): A positioning technique measuring absolute signal propagation time from tag to receiver to determine distance.
+- [Time-of-Flight (ToF)](https://rtls-glossary.pages.dev/terms/time-of-flight-tof.html): A distance measurement technique calculating signal travel time between transmitter and receiver, then converting to distance.
+- [Triangulation](https://rtls-glossary.pages.dev/terms/triangulation.html): A positioning technique determining location by measuring angles from multiple reference points to the target.
+- [Trilateration](https://rtls-glossary.pages.dev/terms/trilateration.html): A positioning technique determining location by measuring distances to three or more anchors with known positions.
+- [Two-Way Ranging (TWR)](https://rtls-glossary.pages.dev/terms/two-way-ranging-twr.html): A positioning technique where tags and anchors exchange messages to measure round-trip signal propagation time, determining distance.
+
+## Hardware Components
+
+- [Access Point](https://rtls-glossary.pages.dev/terms/access-point.html): A hardware device serving as a communication hub in wireless RTLS networks.
+- [Active Tag](https://rtls-glossary.pages.dev/terms/active-tag.html): A battery-powered tracking device that actively broadcasts signals containing its unique identifier and optional sensor data.
+- [Anchor](https://rtls-glossary.pages.dev/terms/anchor.html): A fixed-position reference device with known coordinates that receives signals from mobile tags to determine positions.
+- [Asset Tag](https://rtls-glossary.pages.dev/terms/asset-tag.html): A physical tracking device attached to assets enabling identification and location tracking.
+- [Base Station](https://rtls-glossary.pages.dev/terms/base-station.html): A fixed infrastructure component communicating with mobile tags and relaying information to the central system.
+- [Beacon](https://rtls-glossary.pages.dev/terms/beacon.html): A small wireless transmitter broadcasting signals at regular intervals, typically using BLE technology.
+- [BLE Gateway](https://rtls-glossary.pages.dev/terms/ble-gateway.html): The primary fixed infrastructure device in BLE-based RTLS, equivalent to the anchor in UWB systems.
+- [Environmental Sensor](https://rtls-glossary.pages.dev/terms/environmental-sensor.html): Sensors integrated with RTLS tags measuring conditions beyond location.
+- [Fixed Infrastructure](https://rtls-glossary.pages.dev/terms/fixed-infrastructure.html): The stationary network components of RTLS including anchors, access points, gateways, servers, and network equipment.
+- [Gateway](https://rtls-glossary.pages.dev/terms/gateway.html): A network device bridging between RTLS infrastructure components and central systems.
+- [GNSS Antenna](https://rtls-glossary.pages.dev/terms/gnss-antenna.html): The receiving element in GNSS-enabled devices that captures satellite signals for positioning.
+- [Location Badge](https://rtls-glossary.pages.dev/terms/location-badge.html): A wearable RTLS tag designed for personnel tracking, typically worn on lanyards, belts, or hard hats.
+- [Mobile Infrastructure](https://rtls-glossary.pages.dev/terms/mobile-infrastructure.html): RTLS infrastructure components that are not permanently fixed, including portable anchors, mobile gateways, and vehicle-mounted equipment.
+- [Passive Tag](https://rtls-glossary.pages.dev/terms/passive-tag.html): An RFID tag without its own power source, activated by electromagnetic energy from readers.
+- [Reader](https://rtls-glossary.pages.dev/terms/reader.html): A device that receives signals from RTLS tags, also called access points, anchors, or base stations depending on technology and vendor.
+- [Receiver](https://rtls-glossary.pages.dev/terms/receiver.html): A device or component that receives radio signals from transmitters or tags.
+- [RTLS Antenna](https://rtls-glossary.pages.dev/terms/rtls-antenna.html): The component transmitting and/or receiving radio signals in RTLS systems.
+- [Sensor Node](https://rtls-glossary.pages.dev/terms/sensor-node.html): A device combining positioning technology with environmental sensors for tracking both location and conditions.
+- [Tag](https://rtls-glossary.pages.dev/terms/tag.html): The fundamental RTLS component attached to assets or worn by personnel to enable tracking.
+- [Tag Identifier](https://rtls-glossary.pages.dev/terms/tag-identifier.html): A unique digital code assigned to each tag enabling individual identification and tracking.
+- [Transmitter](https://rtls-glossary.pages.dev/terms/transmitter.html): A device or component that sends radio signals.
+- [Transponder](https://rtls-glossary.pages.dev/terms/transponder.html): A device that receives a signal and automatically transmits a response signal.
+- [Vehicle Tag](https://rtls-glossary.pages.dev/terms/vehicle-tag.html): An RTLS tag designed for mounting on industrial vehicles like forklifts, tuggers, and AGVs.
+- [Wearable Tag](https://rtls-glossary.pages.dev/terms/wearable-tag.html): An RTLS tag designed to be worn by personnel, typically as badges, wristbands, or hard hat attachments.
+
+## System Architecture
+
+- [Ad-Hoc Mode](https://rtls-glossary.pages.dev/terms/ad-hoc-mode.html): A network configuration where RTLS devices communicate directly peer-to-peer without centralized infrastructure.
+- [Centralized System](https://rtls-glossary.pages.dev/terms/centralized-system.html): An architecture where all positioning calculations and data processing occur on a central server.
+- [Distributed System](https://rtls-glossary.pages.dev/terms/distributed-system.html): An architecture where positioning calculations occur across multiple distributed nodes rather than a central server.
+- [Edge Computing](https://rtls-glossary.pages.dev/terms/edge-computing.html): A distributed computing paradigm where data processing occurs on devices at the network edge near data sources.
+- [Fog Computing](https://rtls-glossary.pages.dev/terms/fog-computing.html): A distributed computing architecture extending cloud capabilities to the network edge while maintaining connection to central cloud...
+- [Hybrid Architecture](https://rtls-glossary.pages.dev/terms/hybrid-architecture.html): An RTLS system design combining multiple positioning technologies, computing approaches, or architectural patterns to optimize...
+- [Indoor-Outdoor Handover](https://rtls-glossary.pages.dev/terms/indoor-outdoor-handover.html): The process of seamlessly transitioning a tracked asset or person between indoor positioning (UWB or BLE) and outdoor positioning (GNSS)...
+- [Infrastructure Mode](https://rtls-glossary.pages.dev/terms/infrastructure-mode.html): A network configuration where RTLS devices communicate through centralized access points or base stations rather than directly with each...
+- [Mesh Network](https://rtls-glossary.pages.dev/terms/mesh-network.html): A network topology where devices connect to multiple neighbors, each device able to relay data for others.
+- [Multi-Technology RTLS](https://rtls-glossary.pages.dev/terms/multi-technology-rtls.html): An RTLS deployment combining two or more positioning technologies within a unified platform to optimize accuracy, coverage, and cost...
+- [Network Topology](https://rtls-glossary.pages.dev/terms/network-topology.html): The arrangement and configuration of RTLS network components including tags, anchors, gateways, and servers.
+- [Star Topology](https://rtls-glossary.pages.dev/terms/star-topology.html): A network configuration where all devices connect to a central hub or controller.
+
+## Technical Parameters
+
+- [Accuracy](https://rtls-glossary.pages.dev/terms/accuracy.html): The degree of closeness between measured and actual physical positions, typically expressed as distance (e.g., ±30 cm).
+- [Battery Life](https://rtls-glossary.pages.dev/terms/battery-life.html): The operational duration of battery-powered tags before replacement or recharging is required.
+- [Capacity](https://rtls-glossary.pages.dev/terms/capacity.html): The maximum number of tags, assets, or transactions an RTLS can reliably track simultaneously without performance degradation.
+- [Centimeter-Level Accuracy](https://rtls-glossary.pages.dev/terms/centimeter-level-accuracy.html): The highest precision positioning category with measurements within ±5-30 cm of true location.
+- [Coverage Area](https://rtls-glossary.pages.dev/terms/coverage-area.html): The physical space within which RTLS can reliably detect and track tags with specified accuracy levels.
+- [Dilution of Precision (DOP)](https://rtls-glossary.pages.dev/terms/dilution-of-precision-dop.html): A measure of geometric quality in positioning systems indicating how anchor placement affects position accuracy.
+- [IP Rating](https://rtls-glossary.pages.dev/terms/ip-rating.html): Ingress Protection rating indicating device resistance to dust and water, expressed as two digits (e.g., IP65, IP67).
+- [Latency](https://rtls-glossary.pages.dev/terms/latency.html): The time delay between an event occurring (tag moving, entering zone) and the system detecting and responding to that event.
+- [Line of Sight (LoS)](https://rtls-glossary.pages.dev/terms/line-of-sight-los.html): A direct, unobstructed path between transmitter and receiver allowing signals to travel without reflection or diffraction.
+- [Meter-Level Accuracy](https://rtls-glossary.pages.dev/terms/meter-level-accuracy.html): Positioning accuracy determining positions within 1-3 meters of true location.
+- [Multipath Propagation](https://rtls-glossary.pages.dev/terms/multipath-propagation.html): The phenomenon where radio signals reach receivers via multiple paths due to reflections, diffractions, and scattering.
+- [Network Bandwidth](https://rtls-glossary.pages.dev/terms/network-bandwidth.html): The data transmission capacity available for RTLS communication, measured in bits per second or packets per second.
+- [Non-Line of Sight (NLoS)](https://rtls-glossary.pages.dev/terms/non-line-of-sight-nlos.html): Conditions where direct path between transmitter and receiver is blocked by obstacles like walls, equipment, or structures.
+- [Penetration](https://rtls-glossary.pages.dev/terms/penetration.html): The ability of radio signals to pass through obstacles like walls, floors, and materials.
+- [Positioning Accuracy](https://rtls-glossary.pages.dev/terms/positioning-accuracy.html): The degree of correctness in position measurements, encompassing both systematic and random errors.
+- [Precision](https://rtls-glossary.pages.dev/terms/precision.html): The repeatability or consistency of position measurements - how close repeated measurements are to each other.
+- [Range](https://rtls-glossary.pages.dev/terms/range.html): The maximum distance over which RTLS components can reliably communicate.
+- [Real-Time](https://rtls-glossary.pages.dev/terms/real-time.html): The capability to process and respond to events within milliseconds to seconds of occurrence.
+- [Receiver Sensitivity](https://rtls-glossary.pages.dev/terms/receiver-sensitivity.html): The minimum signal strength a receiver can detect and process, measured in dBm.
+- [Refresh Rate](https://rtls-glossary.pages.dev/terms/refresh-rate.html): How frequently position information is updated in RTLS systems.
+- [Resolution](https://rtls-glossary.pages.dev/terms/resolution.html): The smallest change in position that the RTLS can detect and report.
+- [Response Time](https://rtls-glossary.pages.dev/terms/response-time.html): The time elapsed between an event occurring and the system responding with appropriate action.
+- [Room-Level Accuracy](https://rtls-glossary.pages.dev/terms/room-level-accuracy.html): Positioning accuracy where RTLS determines which room or enclosed space a tag occupies, typically 2-5 meters resolution.
+- [Scalability](https://rtls-glossary.pages.dev/terms/scalability.html): The ability of RTLS systems to grow and handle increasing loads without performance degradation.
+- [Signal Attenuation](https://rtls-glossary.pages.dev/terms/signal-attenuation.html): The reduction in signal strength as radio waves propagate through space and obstacles in industrial environments.
+- [Signal Interference](https://rtls-glossary.pages.dev/terms/signal-interference.html): Disruption of RTLS signals by other radio sources, electrical equipment, or environmental factors.
+- [Transmission Power](https://rtls-glossary.pages.dev/terms/transmission-power.html): The RF power level used by tags and anchors when transmitting, measured in milliwatts or dBm.
+- [Wireless Protocol](https://rtls-glossary.pages.dev/terms/wireless-protocol.html): Standardized rules governing communication between wireless devices.
+- [Zone-Level Accuracy](https://rtls-glossary.pages.dev/terms/zone-level-accuracy.html): Positioning accuracy where RTLS determines which defined zone a tag occupies, typically 5-50 meters resolution.
+
+## Performance Metrics & KPIs
+
+- [Asset Utilization](https://rtls-glossary.pages.dev/terms/asset-utilization.html): A metric measuring how effectively assets are used relative to availability, calculated through RTLS tracking data.
+- [Cycle Time](https://rtls-glossary.pages.dev/terms/cycle-time.html): The total time required for a process or operation to complete from start to finish, measured using RTLS tracking.
+- [Dwell Time Analysis](https://rtls-glossary.pages.dev/terms/dwell-time-analysis.html): Systematic examination of dwell time data to identify patterns, root causes, and optimization opportunities.
+- [Location History](https://rtls-glossary.pages.dev/terms/location-history.html): The historical record of where assets or personnel have been over time.
+- [Movement Pattern](https://rtls-glossary.pages.dev/terms/movement-pattern.html): The characteristic ways assets or personnel move through facilities over time.
+- [Productivity Metrics](https://rtls-glossary.pages.dev/terms/productivity-metrics.html): Key performance indicators derived from RTLS data measuring operational efficiency.
+- [Route Optimization](https://rtls-glossary.pages.dev/terms/route-optimization.html): The process of improving paths or sequences for moving assets, materials, or personnel through facilities.
+- [Space Utilization](https://rtls-glossary.pages.dev/terms/space-utilization.html): Analysis of how effectively facility space is being used based on RTLS tracking data.
+- [System Capacity](https://rtls-glossary.pages.dev/terms/system-capacity.html): The maximum operational load an RTLS can handle including concurrent tags, updates per second, and data storage.
+- [Tag Capacity](https://rtls-glossary.pages.dev/terms/tag-capacity.html): The maximum number of active tags an RTLS can simultaneously track without performance degradation.
+- [Throughput](https://rtls-glossary.pages.dev/terms/throughput.html): The rate at which items, materials, or processes move through a facility or operation.
+- [Travel Distance](https://rtls-glossary.pages.dev/terms/travel-distance.html): The total distance traveled by assets or personnel measured by RTLS.
+- [Turnaround Time](https://rtls-glossary.pages.dev/terms/turnaround-time.html): The time required to complete a process from start to finish, often used in logistics for vehicle or shipment processing times.
+- [Update Rate](https://rtls-glossary.pages.dev/terms/update-rate.html): The frequency at which RTLS reports new positions, measured in Hertz or updates per second.
+- [Utilization Rate](https://rtls-glossary.pages.dev/terms/utilization-rate.html): The percentage of time assets or resources are actively in use versus available time.
+
+## Software & Data Management
+
+- [Alert System](https://rtls-glossary.pages.dev/terms/alert-system.html): Software that monitors RTLS data in real-time and generates notifications when predefined conditions occur.
+- [Analytics Dashboard](https://rtls-glossary.pages.dev/terms/analytics-dashboard.html): A visual interface aggregating and displaying RTLS data to support decision-making and operational monitoring.
+- [API (Application Programming Interface)](https://rtls-glossary.pages.dev/terms/api-application-programming-interface.html): Protocols and tools enabling different software applications to communicate and exchange data with RTLS systems.
+- [BI Connector](https://rtls-glossary.pages.dev/terms/bi-connector.html): Software enabling RTLS data integration with Business Intelligence platforms and analytics tools.
+- [Bi-directional Integration](https://rtls-glossary.pages.dev/terms/bi-directional-integration.html): System integration where data flows in both directions between RTLS and connected applications.
+- [Cloud-Based RTLS](https://rtls-glossary.pages.dev/terms/cloud-based-rtls.html): An architecture where processing, storage, and hosting occur on remote cloud servers accessed via internet.
+- [Data Visualization](https://rtls-glossary.pages.dev/terms/data-visualization.html): Graphical representation of RTLS data making complex tracking information easily understandable.
+- [ERP Integration](https://rtls-glossary.pages.dev/terms/erp-integration.html): Bidirectional connection between RTLS and Enterprise Resource Planning systems enabling seamless data exchange and process automation.
+- [Factory Defaults](https://rtls-glossary.pages.dev/terms/factory-defaults.html): Original configuration settings programmed into RTLS devices at manufacture, restorable to return devices to known baseline state.
+- [Factory Restore](https://rtls-glossary.pages.dev/terms/factory-restore.html): The process of returning RTLS devices or systems to original factory default state, erasing all custom configurations and stored data.
+- [FMS Integration](https://rtls-glossary.pages.dev/terms/fms-integration.html): Integration of RTLS with Fleet Management Systems for comprehensive tracking of industrial vehicles including forklifts, tuggers, and...
+- [Heatmap](https://rtls-glossary.pages.dev/terms/heatmap.html): A data visualization displaying RTLS tracking density or dwell time using color intensity overlaid on facility maps.
+- [Historical Playback](https://rtls-glossary.pages.dev/terms/historical-playback.html): A visualization feature recreating past operations by replaying recorded RTLS tracking data on facility maps.
+- [Integration Layer](https://rtls-glossary.pages.dev/terms/integration-layer.html): The software component or middleware facilitating communication and data exchange between RTLS and other enterprise systems.
+- [Location Data](https://rtls-glossary.pages.dev/terms/location-data.html): The position information and associated metadata generated by RTLS including coordinates (x, y, z), timestamps, tag identifiers, quality...
+- [Location Engine](https://rtls-glossary.pages.dev/terms/location-engine.html): The software component performing position calculations based on raw measurements from anchors and tags.
+- [Location Intelligence](https://rtls-glossary.pages.dev/terms/location-intelligence.html): The insights and actionable information derived from RTLS location data through analysis and visualization.
+- [Middleware](https://rtls-glossary.pages.dev/terms/middleware.html): Software acting as an intermediary layer between RTLS and other enterprise systems.
+- [myRTLS Insights](https://rtls-glossary.pages.dev/terms/myrtls-insights.html): Sewio's analytics application that transforms raw RTLS location data into clear, actionable insights through simple graphs and dashboards.
+- [Notification Engine](https://rtls-glossary.pages.dev/terms/notification-engine.html): The software component managing alert generation, delivery, and escalation in RTLS systems.
+- [On-Premise RTLS](https://rtls-glossary.pages.dev/terms/on-premise-rtls.html): An RTLS architecture where all hardware and software components are hosted within the customer's own facilities rather than in the cloud.
+- [Open API](https://rtls-glossary.pages.dev/terms/open-api.html): An application programming interface publicly documented and available for third-party developers to integrate with.
+- [Positioning Algorithm](https://rtls-glossary.pages.dev/terms/positioning-algorithm.html): The mathematical method used to calculate tag locations from raw signal measurements.
+- [Positioning Engine](https://rtls-glossary.pages.dev/terms/positioning-engine.html): Software that calculates tag positions from raw signal measurements.
+- [Real-Time Monitoring](https://rtls-glossary.pages.dev/terms/real-time-monitoring.html): The continuous observation of current RTLS data showing asset and personnel positions, status, and activities as they happen.
+- [Reporting Module](https://rtls-glossary.pages.dev/terms/reporting-module.html): The software component generating reports from RTLS data.
+- [REST API](https://rtls-glossary.pages.dev/terms/rest-api.html): Representational State Transfer Application Programming Interface - a software architectural style for web-based APIs using HTTP requests.
+- [RTLS Manager](https://rtls-glossary.pages.dev/terms/rtls-manager.html): The core configuration and control component of RTLS Studio enabling easy deployment and management of the Sewio RTLS.
+- [RTLS Monitor](https://rtls-glossary.pages.dev/terms/rtls-monitor.html): A system performance monitoring tool within RTLS Studio providing complete real-time overview of system health, network status, and...
+- [RTLS Planner](https://rtls-glossary.pages.dev/terms/rtls-planner.html): Sewio's project design tool that streamlines RTLS deployments by optimizing anchor placement and system configuration before installation.
+- [RTLS Platform](https://rtls-glossary.pages.dev/terms/rtls-platform.html): Sewio's complete real-time location system encompassing both hardware (UWB/BLE tags and anchors) and software (RTLS Studio) forming an...
+- [RTLS Player](https://rtls-glossary.pages.dev/terms/rtls-player.html): A cloud-based evaluation and optimization tool enabling replay of historical RTLS data to assess system performance and fine-tune...
+- [RTLS Studio](https://rtls-glossary.pages.dev/terms/rtls-studio.html): Sewio's all-in-one software package for installation, deployment, maintenance, and control of the RTLS platform.
+- [Sage Analytics](https://rtls-glossary.pages.dev/terms/sage-analytics.html): Sewio's starter analytics tool designed for pilots and proof-of-concept projects that demonstrates insights available from RTLS data.
+- [Sensmap](https://rtls-glossary.pages.dev/terms/sensmap.html): Sewio's real-time visualization tool providing live overview of facility operations on 2D building plans.
+- [System Backup](https://rtls-glossary.pages.dev/terms/system-backup.html): Procedures and technologies for protecting RTLS data and configurations.
+- [Telemetry](https://rtls-glossary.pages.dev/terms/telemetry.html): The automated collection and transmission of data from remote sensors or tracked assets.
+- [Third-Party Integration](https://rtls-glossary.pages.dev/terms/third-party-integration.html): Connecting RTLS with software or systems from other vendors.
+- [Tracking Software](https://rtls-glossary.pages.dev/terms/tracking-software.html): The application layer of RTLS systems providing user interfaces, data management, analytics, and reporting.
+- [UDP Stream](https://rtls-glossary.pages.dev/terms/udp-stream.html): User Datagram Protocol data streaming - a method for transmitting RTLS data over networks.
+- [WebSocket](https://rtls-glossary.pages.dev/terms/websocket.html): A communication protocol providing full-duplex communication channels over TCP connections.
+- [WMS Integration](https://rtls-glossary.pages.dev/terms/wms-integration.html): Integration between RTLS and Warehouse Management Systems.
+
+## Data & Analytics
+
+- [Anomaly Detection](https://rtls-glossary.pages.dev/terms/anomaly-detection.html): Automated identification of unusual patterns or behaviors in RTLS data deviating from expected norms.
+- [Artificial Intelligence (AI) in RTLS](https://rtls-glossary.pages.dev/terms/artificial-intelligence-ai-in-rtls.html): The application of artificial intelligence techniques to RTLS data for positioning improvement, operational analytics, and automated...
+- [Big Data](https://rtls-glossary.pages.dev/terms/big-data.html): The massive volumes of data generated by RTLS deployments requiring specialized storage, processing, and analysis technologies.
+- [Business Intelligence](https://rtls-glossary.pages.dev/terms/business-intelligence.html): Strategic use of RTLS data combined with enterprise information to gain actionable insights for business decisions.
+- [Data Mining](https://rtls-glossary.pages.dev/terms/data-mining.html): Discovering patterns, correlations, and insights from large volumes of historical RTLS data using statistical analysis and machine learning.
+- [Historical Data Analysis](https://rtls-glossary.pages.dev/terms/historical-data-analysis.html): Systematic examination of past RTLS tracking data to identify trends, patterns, and improvement opportunities.
+- [Machine Learning](https://rtls-glossary.pages.dev/terms/machine-learning.html): Artificial intelligence techniques enabling systems to learn from data and improve performance without explicit programming.
+- [Occupancy Analytics](https://rtls-glossary.pages.dev/terms/occupancy-analytics.html): Analysis of how many people or assets occupy specific areas over time.
+- [Pattern Recognition](https://rtls-glossary.pages.dev/terms/pattern-recognition.html): The use of algorithms and machine learning to identify meaningful patterns in RTLS data.
+- [Predictive Analytics](https://rtls-glossary.pages.dev/terms/predictive-analytics.html): The use of statistical techniques and machine learning to forecast future events, behaviors, or conditions based on historical RTLS data.
+- [Real-Time Analytics](https://rtls-glossary.pages.dev/terms/real-time-analytics.html): The processing and analysis of RTLS data as it is generated, enabling immediate insights and responses.
+- [Traffic Pattern](https://rtls-glossary.pages.dev/terms/traffic-pattern.html): Characteristic movement flows of assets or personnel through facilities revealed through RTLS data analysis.
+
+## Industrial Applications
+
+- [AGV (Automated Guided Vehicle) Navigation](https://rtls-glossary.pages.dev/terms/agv-automated-guided-vehicle-navigation.html): The use of RTLS to guide and track autonomous vehicles within industrial facilities.
+- [Asset Tracking](https://rtls-glossary.pages.dev/terms/asset-tracking.html): Real-time or historical monitoring of physical asset locations and movements within a defined area.
+- [Dock Management](https://rtls-glossary.pages.dev/terms/dock-management.html): The use of RTLS to optimize loading dock operations by tracking vehicles, shipments, personnel, and equipment.
+- [Equipment Monitoring](https://rtls-glossary.pages.dev/terms/equipment-monitoring.html): Continuous tracking and analysis of equipment location, usage, condition, and performance using RTLS combined with sensors.
+- [Forklift Tracking](https://rtls-glossary.pages.dev/terms/forklift-tracking.html): Specialized application of RTLS to track and monitor powered industrial trucks throughout facilities.
+- [Inventory Management](https://rtls-glossary.pages.dev/terms/inventory-management.html): The use of RTLS to track and manage inventory locations, movements, and levels in real-time.
+- [Just-in-Time (JIT) Manufacturing](https://rtls-glossary.pages.dev/terms/just-in-time-jit-manufacturing.html): A production methodology where materials arrive exactly when needed for production, minimizing inventory.
+- [Lean Manufacturing](https://rtls-glossary.pages.dev/terms/lean-manufacturing.html): A production methodology focused on minimizing waste while maximizing productivity.
+- [Material Flow](https://rtls-glossary.pages.dev/terms/material-flow.html): The movement of materials through production or logistics processes.
+- [Material Handling](https://rtls-glossary.pages.dev/terms/material-handling.html): The movement, storage, and control of materials throughout manufacturing and warehousing.
+- [Personnel Tracking](https://rtls-glossary.pages.dev/terms/personnel-tracking.html): The real-time monitoring of worker locations within facilities for safety, efficiency, and compliance purposes.
+- [Preventive Maintenance](https://rtls-glossary.pages.dev/terms/preventive-maintenance.html): Maintenance strategy where equipment is serviced on fixed schedules to prevent failures.
+- [Process Optimization](https://rtls-glossary.pages.dev/terms/process-optimization.html): The systematic improvement of operational processes using insights from RTLS data analysis.
+- [Production Monitoring](https://rtls-glossary.pages.dev/terms/production-monitoring.html): The use of RTLS to track work-in-progress, materials, and equipment through production processes.
+- [Supply Chain Visibility](https://rtls-glossary.pages.dev/terms/supply-chain-visibility.html): The ability to track goods, materials, and assets throughout the supply chain.
+- [Tool Tracking](https://rtls-glossary.pages.dev/terms/tool-tracking.html): Specialized RTLS application for tracking tools and equipment in manufacturing, maintenance, and construction environments.
+- [Vehicle Tracking](https://rtls-glossary.pages.dev/terms/vehicle-tracking.html): The use of RTLS to monitor locations and movements of industrial vehicles within facilities.
+- [Warehouse Management](https://rtls-glossary.pages.dev/terms/warehouse-management.html): The use of RTLS to optimize warehouse operations including receiving, putaway, picking, packing, and shipping.
+- [Worker Safety](https://rtls-glossary.pages.dev/terms/worker-safety.html): The use of RTLS to protect personnel from workplace hazards.
+- [Workflow Management](https://rtls-glossary.pages.dev/terms/workflow-management.html): The coordination and optimization of work processes using RTLS data.
+- [Work-in-Progress (WIP) Tracking](https://rtls-glossary.pages.dev/terms/work-in-progress-wip-tracking.html): The use of RTLS to monitor materials and products currently being processed through production.
+- [Yard Management](https://rtls-glossary.pages.dev/terms/yard-management.html): The use of RTLS to track and manage trailers, containers, and vehicles in outdoor facility yards.
+
+## Safety & Security
+
+- [Access Control](https://rtls-glossary.pages.dev/terms/access-control.html): A security mechanism regulating who or what can enter specific facility areas.
+- [Collision Avoidance](https://rtls-glossary.pages.dev/terms/collision-avoidance.html): A safety system using RTLS to detect potential collisions between equipment, vehicles, or personnel and trigger preventive actions.
+- [Compliance Monitoring](https://rtls-glossary.pages.dev/terms/compliance-monitoring.html): Automated tracking and verification of adherence to safety regulations, operational procedures, and quality standards using RTLS.
+- [Emergency Response](https://rtls-glossary.pages.dev/terms/emergency-response.html): The use of RTLS to enhance safety and effectiveness during emergencies such as fires, spills, or security threats.
+- [Evacuation Management](https://rtls-glossary.pages.dev/terms/evacuation-management.html): The use of RTLS to coordinate and verify safe personnel evacuation during emergencies.
+- [Intrusion Detection](https://rtls-glossary.pages.dev/terms/intrusion-detection.html): The use of RTLS to identify unauthorized access or movement within facilities.
+- [Lone Worker Protection](https://rtls-glossary.pages.dev/terms/lone-worker-protection.html): The use of RTLS to enhance safety for personnel working alone or in isolated locations.
+- [Man-Down Detection](https://rtls-glossary.pages.dev/terms/man-down-detection.html): A safety feature automatically detecting when a worker falls or becomes motionless and generating emergency alerts.
+- [Mustering](https://rtls-glossary.pages.dev/terms/mustering.html): The process of accounting for all personnel during emergencies by gathering them at designated assembly points.
+- [PPE (Personal Protective Equipment) Compliance](https://rtls-glossary.pages.dev/terms/ppe-personal-protective-equipment-compliance.html): The use of RTLS to verify workers wear required safety equipment in designated areas.
+- [Proximity Warning](https://rtls-glossary.pages.dev/terms/proximity-warning.html): A subset of proximity alert specifically focused on safety applications.
+- [Safety Zone Enforcement](https://rtls-glossary.pages.dev/terms/safety-zone-enforcement.html): The use of RTLS to ensure compliance with safety zones including restricted access to hazardous areas, maximum occupancy limits,...
+- [Theft Prevention](https://rtls-glossary.pages.dev/terms/theft-prevention.html): The use of RTLS to detect and prevent unauthorized removal of assets from facilities.
+
+## Geofencing & Zones
+
+- [Dwell Time](https://rtls-glossary.pages.dev/terms/dwell-time.html): The duration an asset, material, or person remains in a defined location or zone, automatically tracked by RTLS.
+- [Dynamic Geofencing](https://rtls-glossary.pages.dev/terms/dynamic-geofencing.html): Geofencing capability where virtual boundaries are created, modified, or removed programmatically in real-time based on conditions.
+- [Geofence](https://rtls-glossary.pages.dev/terms/geofence.html): A virtual boundary or zone defined in RTLS software representing a physical facility area.
+- [Hazardous Zone](https://rtls-glossary.pages.dev/terms/hazardous-zone.html): A designated facility area where dangerous conditions exist requiring special safety protocols and monitoring.
+- [Perimeter Control](https://rtls-glossary.pages.dev/terms/perimeter-control.html): The use of RTLS to monitor and control movement across facility boundaries.
+- [Proximity Alert](https://rtls-glossary.pages.dev/terms/proximity-alert.html): An alert generated when two or more tracked objects come within a defined distance of each other.
+- [Restricted Area](https://rtls-glossary.pages.dev/terms/restricted-area.html): A facility zone where access is controlled and limited to authorized personnel only.
+- [Safe Zone](https://rtls-glossary.pages.dev/terms/safe-zone.html): A designated area where personnel are protected from hazards or where safety procedures are relaxed.
+- [Virtual Boundary](https://rtls-glossary.pages.dev/terms/virtual-boundary.html): See Geofence - a software-defined boundary triggering actions when crossed.
+- [Zone Detection](https://rtls-glossary.pages.dev/terms/zone-detection.html): The capability to determine which defined zone or area a tracked tag currently occupies.
+- [Zone Entry](https://rtls-glossary.pages.dev/terms/zone-entry.html): An event generated when a tracked tag enters a defined geofence zone.
+- [Zone Exit](https://rtls-glossary.pages.dev/terms/zone-exit.html): An event generated when a tracked tag leaves a defined geofence zone.
+
+## Installation & Configuration
+
+- [Anchor Density](https://rtls-glossary.pages.dev/terms/anchor-density.html): The number of anchors deployed per unit area, typically per 100 square meters.
+- [Anchor Placement](https://rtls-glossary.pages.dev/terms/anchor-placement.html): The strategic positioning of anchors/access points to achieve optimal tracking performance, coverage, and accuracy.
+- [Calibration](https://rtls-glossary.pages.dev/terms/calibration.html): Configuring and fine-tuning RTLS to ensure accurate position measurements matching real-world coordinates.
+- [Commissioning](https://rtls-glossary.pages.dev/terms/commissioning.html): The systematic process of configuring, testing, and validating RTLS installation before operational handover.
+- [Configuration](https://rtls-glossary.pages.dev/terms/configuration.html): The process of defining and customizing RTLS parameters, settings, and behaviors to match operational requirements.
+- [Coverage Gap](https://rtls-glossary.pages.dev/terms/coverage-gap.html): An area where RTLS cannot reliably track tags due to insufficient anchor coverage or signal blocking.
+- [Coverage Planning](https://rtls-glossary.pages.dev/terms/coverage-planning.html): The systematic process of designing RTLS infrastructure layout to achieve required tracking performance while optimizing cost.
+- [Deployment](https://rtls-glossary.pages.dev/terms/deployment.html): The comprehensive process of planning, installing, configuring, and operationalizing RTLS in an industrial facility.
+- [Facility Layout](https://rtls-glossary.pages.dev/terms/facility-layout.html): The physical arrangement of equipment, workstations, and infrastructure within a building.
+- [Site Survey](https://rtls-glossary.pages.dev/terms/site-survey.html): The systematic physical examination of a facility before RTLS deployment to assess RF propagation, identify interference sources, and...
+- [Synchronization](https://rtls-glossary.pages.dev/terms/synchronization.html): The process of ensuring RTLS system components operate with coordinated timing.
+- [System Integration](https://rtls-glossary.pages.dev/terms/system-integration.html): The process of connecting RTLS with other enterprise systems including ERP, WMS, MES, and BMS.
+- [Time Synchronization](https://rtls-glossary.pages.dev/terms/time-synchronization.html): The process of coordinating system clocks to a common time reference.
+
+## Standards & Protocols
+
+- [Bluetooth 5.x](https://rtls-glossary.pages.dev/terms/bluetooth-5-x.html): The latest Bluetooth generation offering significant improvements for industrial RTLS.
+- [FiRa Consortium](https://rtls-glossary.pages.dev/terms/fira-consortium.html): A global industry consortium established in 2019 to promote and support UWB technology development for secure fine ranging and positioning.
+- [iBeacon / Eddystone](https://rtls-glossary.pages.dev/terms/ibeacon-eddystone.html): Standardized BLE beacon advertisement protocols defining how beacons broadcast their identity and data.
+- [IEEE 802.15.4](https://rtls-glossary.pages.dev/terms/ieee-802-15-4.html): A technical standard defining the physical layer and media access control for low-rate wireless personal area networks.
+- [ISO/IEC 24730](https://rtls-glossary.pages.dev/terms/iso-iec-24730.html): An international standard for real-time locating systems defining air interface protocols, system architecture, and performance testing...
+- [MQTT Protocol](https://rtls-glossary.pages.dev/terms/mqtt-protocol.html): A lightweight messaging protocol designed for IoT applications with low bandwidth and unreliable networks.
+- [OMLOX Standard](https://rtls-glossary.pages.dev/terms/omlox-standard.html): An open standard for industrial locating services enabling interoperability between different RTLS technologies and applications.
+
+## Industry-Specific Terms
+
+- [Condition Monitoring](https://rtls-glossary.pages.dev/terms/condition-monitoring.html): Continuous observation and analysis of asset health parameters using sensors integrated with RTLS tags.
+- [Connected Worker](https://rtls-glossary.pages.dev/terms/connected-worker.html): An operational paradigm where personnel equipped with wearable RTLS tags enable real-time tracking, communication, and safety monitoring.
+- [Digital Twin](https://rtls-glossary.pages.dev/terms/digital-twin.html): A virtual representation of physical facilities or processes integrating real-time RTLS data to mirror actual state and behavior.
+- [Indoor Navigation](https://rtls-glossary.pages.dev/terms/indoor-navigation.html): The use of RTLS technology to provide real-time routing and guidance for personnel moving within buildings or facilities.
+- [Indoor Positioning System (IPS)](https://rtls-glossary.pages.dev/terms/indoor-positioning-system-ips.html): A general term for any technology enabling location determination within buildings where GPS is unavailable.
+- [Industrial IoT (IIoT)](https://rtls-glossary.pages.dev/terms/industrial-iot-iiot.html): The use of Internet of Things technologies in industrial settings to connect equipment, sensors, and systems for data collection and...
+- [Industry 4.0](https://rtls-glossary.pages.dev/terms/industry-4-0.html): The fourth industrial revolution characterized by automation, data exchange, cyber-physical systems, and smart factories.
+- [Logistics 4.0](https://rtls-glossary.pages.dev/terms/logistics-4-0.html): The application of Industry 4.0 principles to logistics and supply chain operations.
+- [Predictive Maintenance](https://rtls-glossary.pages.dev/terms/predictive-maintenance.html): A maintenance strategy using condition monitoring and predictive analytics to service equipment just before failure is likely.
+- [Production Floor](https://rtls-glossary.pages.dev/terms/production-floor.html): The manufacturing area where actual production activities occur, including assembly lines and work cells.
+- [Shop Floor](https://rtls-glossary.pages.dev/terms/shop-floor.html): Synonym for production floor - the manufacturing area where products are made.
+- [Smart Factory](https://rtls-glossary.pages.dev/terms/smart-factory.html): A manufacturing facility using advanced technologies including RTLS, IoT, automation, and data analytics to optimize operations.
+- [Smart Warehouse](https://rtls-glossary.pages.dev/terms/smart-warehouse.html): A warehouse facility leveraging RTLS, automation, and data analytics for optimal operations.
